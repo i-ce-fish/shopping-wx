@@ -1,0 +1,15 @@
+<view class="container">
+	<tui-list-view title="测试模块">
+		<tui-list-cell wx:for="{{list}}" wx:key="index" bindtap="go" 
+    data-item="{{item}}" data-url="edit">
+			<view>
+				{{item.id}}
+			</view>
+			<view>
+				{{item.title}}
+			</view>
+		</tui-list-cell>
+	</tui-list-view>
+	<button bindtap="go" data-url="/pages/test/add/main">增加</button>
+	<button bindtap="getlist">查列表</button>
+</view>

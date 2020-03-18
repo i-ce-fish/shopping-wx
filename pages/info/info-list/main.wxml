@@ -1,0 +1,6 @@
+<!--pages/info/info-list/main.wxml-->
+<view class="container">
+    <van-cell-group title="标题">
+      <van-cell wx:for="{{5}}" wx:key="index" title="单元格" value="内容123" label="描述信息1" is-link/>
+    </van-cell-group>
+  </view>

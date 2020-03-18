@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "等级折扣规则",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider",
+    "van-collapse": "@vant/weapp/collapse",
+    "van-collapse-item": "@vant/weapp/collapse-item"
+  }
+}

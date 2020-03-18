@@ -1,0 +1,57 @@
+/* pages/home/index/main.wxss */
+.title {
+  padding: 10rpx 0;
+}
+
+.swiper-box {
+  position: relative;
+}
+
+  .swiper-box .address {
+    position: absolute;
+    color: white;
+    bottom: 10rpx;
+    right: 10rpx;
+  }
+
+
+  .userinfo-box{
+    padding:16rpx 30rpx;
+    background-color: #ee6310;
+    color: white;
+  }
+    .userinfo-box .avatar{
+      padding-right: 30rpx;
+
+    }
+    .info-box{
+      box-sizing: border-box;
+      padding-right: 30rpx;
+    }
+
+      .info-box view{
+        padding: 5rpx 0;
+      }
+      .info-box .right-box{
+      position: relative;
+    }
+
+      .info-box .detail{
+        position: absolute;
+        bottom: 5rpx;
+      }
+
+  .userinfo-detail-box{
+    padding:20rpx 30rpx;
+    background-color: white;
+  }
+
+    .userinfo-detail-box >view{
+      padding: 10rpx 0 ;
+    }
+
+  .activity-box,.wear-box,.friend-box,.explore-box .item-box >view{
+        padding: 10rpx 0 ;
+  }
+
+

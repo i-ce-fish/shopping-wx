@@ -1,0 +1,4 @@
+<!--components/test.wxml-->
+<text>start{{name}}</text>
+<slot></slot>
+<view>end</view>

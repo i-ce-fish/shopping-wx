@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "完善个人资料",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tui-list-cell": "/components/list-cell/list-cell",
+    "tui-list-view": "/components/list-view/list-view",
+    "van-button": "@vant/weapp/button",
+    "van-radio": "@vant/weapp/radio",
+    "van-radio-group": "@vant/weapp/radio-group",
+    "van-popup": "@vant/weapp/popup",
+    "van-area": "@vant/weapp/area",
+    "van-stepper": "@vant/weapp/stepper",
+    "van-picker": "@vant/weapp/picker",
+    "van-checkbox": "@vant/weapp/checkbox",
+    "van-checkbox-group": "@vant/weapp/checkbox-group",
+    "van-datetime-picker": "@vant/weapp/datetime-picker"
+  }
+}

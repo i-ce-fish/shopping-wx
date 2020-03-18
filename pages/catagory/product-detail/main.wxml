@@ -1,0 +1,317 @@
+<view class="container">
+    <!--header-->
+    <!--header-->
+
+    <!--banner-->
+    <view class="tui-banner-swiper">
+      <swiper autoplay="{{true}}" interval="{{5000}}" indicator-dots  duration="{{150}}" circular="{{true}}"  style="height:{{scrollH}}px" bindchange="bannerChange">
+      <block wx:for="{{banner}}" wx:key="{{index}}">
+        <swiper-item data-index="{{index}}" catchtap="previewImage">
+          <image src="{{item}}" class="tui-slide-image" style="height:{{scrollH}}px" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!--banner-->
+
+    <view class="tui-pro-detail">
+      <view class="tui-product-title tui-border-radius">
+        <view class="tui-pro-pricebox tui-padding">
+          <view class="tui-pro-price">
+            <view>￥
+              <text class="tui-price">49</text>
+              .00
+            </view>
+            <van-tag size="small" plain="{{true}}" type="success" round>新品</van-tag>
+
+          </view>
+          <view class="tui-collection tui-size" bindtap="collecting">
+            <van-icon  name="{{collected?'like':'like-o'}}"  color="{{collected?'#ff201f':'#333'}}" size="20"
+                      class="tui-icon-collection"></van-icon>
+            <view class="tui-scale {{collected?'tui-red':''}}">收藏</view>
+
+          </view>
+        </view>
+        <view class="tui-original-price tui-gray">
+          价格
+          <text class="tui-line-through">￥199.00</text>
+        </view>
+        <view class="tui-pro-titbox">
+          <view class="tui-pro-title">谈判官明星同款耳坠韩国气质简约显脸瘦的耳环女百搭个性长款耳钉 个性水滴耳环【A2】</view>
+          <view  class="tui-share-btn tui-share-position">
+            <van-tag   round size="small">
+              <van-icon name="like-o" color="#fff" size="15"></van-icon>
+              <text class="tui-share-text y-color-white" >分享</text>
+            </van-tag>
+          </view>
+        </view>
+        <view class="tui-padding">
+          <view class="tui-sub-title tui-size tui-gray">此商品将于2019-06-28,10点结束闪购特卖，时尚美饰联合专场</view>
+          <view class="tui-sale-info tui-size tui-gray">
+            <view>快递：0.00</view>
+            <view>月销2000</view>
+            <view>浙江杭州</view>
+          </view>
+        </view>
+      </view>
+
+<!--      领券  满减 -->
+<!--      <view class="tui-discount-box tui-radius-all tui-mtop">-->
+<!--        <view class="tui-list-cell" bindtap="coupon">-->
+<!--          <view class="tui-bold tui-cell-title">领券</view>-->
+<!--          <view class="tui-tag-coupon-box">-->
+<!--            <van-tag  size="medium"  type="danger" round class="tui-tag-coupon">满99减8</van-tag>-->
+<!--            <van-tag size="medium" type="danger" round class="tui-tag-coupon">满59减5</van-tag>-->
+<!--          </view>-->
+<!--          <van-icon name="ellipsis" size="20" class="tui-right tui-top40" color="#666"></van-icon>-->
+<!--        </view>-->
+
+<!--        <view class="tui-list-cell tui-last" bindtap="showPopup">-->
+<!--          <view class="tui-bold tui-cell-title">促销</view>-->
+<!--          <view>-->
+<!--            <view class="tui-promotion-box">-->
+<!--              <van-tag size="small" type="danger" round plain class="tui-inline-block">多买优惠</van-tag>-->
+<!--              <text>满1件，立减最低1件商品价格，包邮（限中国内地）</text>-->
+<!--            </view>-->
+<!--            <view class="tui-promotion-box">-->
+<!--              <van-tag size="small" type="danger" round plain class="tui-inline-block">满额返券</van-tag>-->
+<!--              <text>满2件，立减最低2件商品价格，包邮（限中国内地）</text>-->
+<!--            </view>-->
+<!--            <view class="tui-promotion-box">-->
+<!--              <van-tag size="small" type="danger" round plain class="tui-inline-block">特别赠品</van-tag>-->
+<!--              <text>满3件，立减最低3件商品价格，包邮（限中国内地）</text>-->
+<!--            </view>-->
+<!--          </view>-->
+<!--          <van-icon name="ellipsis" size="20" class="tui-right tui-top40" color="#666"></van-icon>-->
+<!--        </view>-->
+
+<!--      </view>-->
+
+      <view class="tui-basic-info tui-mtop tui-radius-all">
+        <view class="tui-list-cell" bindtap="showPopup">
+          <view class="tui-bold tui-cell-title">已选</view>
+          <view class="tui-selected-box">个性水滴耳环【A2】,1个，可选服务</view>
+          <van-icon name="ellipsis" size="20" class="tui-right" color="#666"></van-icon>
+        </view>
+        <view class="tui-list-cell" bindtap="showPopup">
+          <view class="tui-bold tui-cell-title">送至</view>
+          <view class="tui-addr-box">
+            <view class="tui-addr-item">北京朝阳区三环到四环之间</view>
+            <view class="tui-addr-item">今日23:59前完成下单，预计6月28日23:30前发货，7月1日24:00前送达</view>
+          </view>
+          <van-icon name="ellipsis" size="20" class="tui-right" color="#666"></van-icon>
+        </view>
+        <view class="tui-list-cell tui-last">
+          <view class="tui-bold tui-cell-title">运费</view>
+          <view class="tui-selected-box">在线支付免运费</view>
+        </view>
+        <view class="tui-guarantee">
+          <view class="tui-guarantee-item">
+            <van-icon name="passed" size="14" color="#999"></van-icon>
+            <text class="tui-pl">可配送海外</text>
+          </view>
+          <view class="tui-guarantee-item">
+            <van-icon name="passed" size="14" color="#999"></van-icon>
+            <text class="tui-pl">店铺发货&售后</text>
+          </view>
+          <view class="tui-guarantee-item">
+            <van-icon name="passed" size="14" color="#999"></van-icon>
+            <text class="tui-pl">7天无理由退货</text>
+          </view>
+          <view class="tui-guarantee-item">
+            <van-icon name="passed" size="14" color="#999"></van-icon>
+            <text class="tui-pl">闪电退款</text>
+          </view>
+          <view class="tui-guarantee-item">
+            <van-icon name="passed" size="14" color="#999"></van-icon>
+            <text class="tui-pl">极速审核</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="tui-cmt-box tui-mtop tui-radius-all">
+        <view class="tui-list-cell tui-last tui-between">
+          <view class="tui-bold tui-cell-title">评价</view>
+          <view bindtap="common">
+            <text class="tui-cmt-all">查看全部</text>
+            <van-icon name="ellipsis" size="20" color="#ff201f"></van-icon>
+          </view>
+        </view>
+
+        <view class="tui-cmt-content tui-padding">
+          <view class="tui-cmt-user">
+            <image src="../../../static/images/news/avatar_2.jpg" class="tui-acatar"></image>
+            <view>z***9</view>
+          </view>
+          <view class="tui-cmt">物流很快，很适合我的风格❤</view>
+          <view class="tui-attr">颜色：叠层钛钢流苏耳环（A74）</view>
+        </view>
+
+        <view class="tui-cmt-btn">
+          <van-tag type="black" plain="{{true}}" class="tui-tag-cmt" bind:click="common">查看全部评价</van-tag>
+        </view>
+      </view>
+
+      <view class="tui-nomore-box">
+      <van-divider contentPosition="center" >宝贝详情</van-divider>
+      </view>
+      <view class="tui-product-img tui-radius-all">
+        <image src="https://www.thorui.cn/img/detail/{{index+1}}.jpg" wx:for="{{20}}" wx:key="{{index}}" mode="widthFix">
+      </image>
+      <van-divider contentPosition="center">已经到最底了</van-divider>
+
+      <view class="tui-safearea-bottom"></view>
+    </view>
+
+    <!--底部操作栏-->
+<!--    <view class="tui-operation">-->
+<!--      <view class="tui-operation-left tui-col-5">-->
+<!--        <view class="tui-operation-item" hover-class="tui-opacity" hover-stay-time="150" bindtap="common">-->
+<!--          <van-icon name="kefu" size="22" color='#333'></van-icon>-->
+<!--          <view class="tui-operation-text tui-scale-small">客服</view>-->
+<!--        </view>-->
+<!--        <view class="tui-operation-item" hover-class="tui-opacity" hover-stay-time="150" bindtap="common">-->
+<!--          <van-icon name="shop" size="22" color='#333'></van-icon>-->
+<!--          <view class="tui-operation-text tui-scale-small">店铺</view>-->
+<!--        </view>-->
+<!--        <view class="tui-operation-item" hover-class="tui-opacity" hover-stay-time="150" bindtap="common">-->
+<!--          <van-icon name="cart" size="22" color='#333'></van-icon>-->
+<!--          <view class="tui-operation-text tui-scale-small">购物车</view>-->
+<!--&lt;!&ndash;          <tui-badge type="danger" size="small" tui-badge-class="tui-badge-class">2</tui-badge>&ndash;&gt;-->
+<!--        </view>-->
+<!--      </view>-->
+<!--      <view class="tui-operation-right tui-right-flex tui-col-7">-->
+
+<!--        <van-button type="danger" tui-button-class="tui-btn-equals" round size="mini" class="tui-flex-1"-->
+<!--                    bindtap="showPopup">加入购物车-->
+<!--        </van-button>-->
+<!--        <van-button type="warning" tui-button-class="tui-btn-equals" round size="mini" class="tui-flex-1"-->
+<!--                    bindtap="submit">立即购买-->
+<!--        </van-button>-->
+<!--      </view>-->
+<!--    </view>-->
+      <van-goods-action>
+        <van-goods-action-icon
+          icon="chat-o"
+          text="客服"
+          bindtap="onClickIcon"
+        />
+        <van-goods-action-icon
+          icon="cart-o"
+          text="购物车"
+          bindtap="go('/pages/shopping/cart/main')"
+        />
+        <van-goods-action-icon
+          icon="cart-o"
+          text="店铺"
+          bindtap="onClickIcon"
+        />
+        <van-goods-action-button
+          text="加入购物车"
+          type="warning"
+          bindtap="showPopup"
+        />
+        <van-goods-action-button
+          text="立即购买"
+          bindtap="buyNow"
+        />
+      </van-goods-action>
+    <!--底部操作栏--->
+
+    <!--顶部下拉菜单-->
+    <!---顶部下拉菜单-->
+
+    <!--底部选择层-->
+    <van-popup show="{{popupShow}}"  position="bottom" bind:close="hidePopup">
+
+      <view class="tui-popup-box">
+        <view class="tui-product-box tui-padding">
+          <image src="https://www.thorui.cn/img/product/11.jpg" class="tui-popup-img"></image>
+          <view class="tui-popup-price">
+            <view class="tui-amount tui-bold">￥49.00</view>
+            <view class="tui-number">编号:4373299399393</view>
+          </view>
+        </view>
+        <scroll-view scroll-y class="tui-popup-scroll">
+          <view class="tui-scrollview-box">
+            <view class="tui-bold tui-attr-title">颜色</view>
+            <view class="tui-attr-box">
+              <view class="tui-attr-item">
+                五角星钻耳线
+              </view>
+              <view class="tui-attr-item">
+                米子珍珠耳线
+              </view>
+              <view class="tui-attr-item">
+                花朵镶钻耳线
+              </view>
+              <view class="tui-attr-item">
+                扇子珍珠流苏耳线
+              </view>
+              <view class="tui-attr-item tui-attr-active">
+                扇子珍珠流苏耳线耳线
+              </view>
+            </view>
+
+            <view class="tui-number-box tui-bold tui-attr-title">
+              <view class="tui-attr-title">数量</view>
+              <tui-numberbox max="{{99}}" min="{{1}}" value="{{value}}" bindchange="change"></tui-numberbox>
+            </view>
+            <view class="tui-bold tui-attr-title">尺寸</view>
+            <view class="tui-attr-box">
+              <view class="tui-attr-item">
+                5cm
+              </view>
+              <view class="tui-attr-item">
+                8cm
+              </view>
+              <view class="tui-attr-item">
+                12cm
+              </view>
+              <view class="tui-attr-item">
+                16cm
+              </view>
+              <view class="tui-attr-item tui-attr-active">
+                18cm
+              </view>
+            </view>
+
+<!--            <view class="tui-bold tui-attr-title">-->
+<!--              保障服务-->
+<!--            </view>-->
+<!--            <view class="tui-attr-box">-->
+<!--              <view class="tui-attr-item">-->
+<!--                半年掉钻保 ￥4.0-->
+<!--              </view>-->
+<!--            </view>-->
+
+<!--            <view class="tui-bold tui-attr-title">-->
+<!--              只换不修-->
+<!--            </view>-->
+<!--            <view class="tui-attr-box">-->
+<!--              <view class="tui-attr-item">-->
+<!--                三月意外换￥2.0-->
+<!--              </view>-->
+<!--              <view class="tui-attr-item">-->
+<!--                半年意外换￥2.0-->
+<!--              </view>-->
+<!--            </view>-->
+          </view>
+        </scroll-view>
+        <view class="tui-operation tui-operation-right tui-right-flex tui-popup-btn">
+          <van-button type="danger"  round class="tui-col-4"
+                      bindtap="hidePopup">加入购物车
+          </van-button>
+          <van-button type="warning"    round   class="tui-col-4"
+                      bindtap="buyNow">立即购买
+          </van-button>
+        </view>
+
+        <van-icon name="close-fill" color="#999" class="tui-icon-close" size="20" bindtap="hidePopup"></van-icon>
+      </view>
+    </van-popup>
+    <!--底部选择层-->
+
+  </view>
+  </view>

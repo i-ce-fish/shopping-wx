@@ -1,0 +1,108 @@
+<view class="container">
+  <view class="title tui-center y-font-xl">会员内购</view>
+  <view class="swiper-box">
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
+      <block wx:for="{{imgs}}" wx:key="index">
+        <swiper-item>
+          <van-image width="750rpx" height="375rpx" fit="fill" src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="address">丽水中山街店522号（百货大楼旁）</view>
+  </view>
+  <view class="content-box">
+    <view class="userinfo-box   tui-flex ">
+      <view class="avatar tui-col-2 tui-flex tui-vertical-center">
+        <van-image round width="120rpx" height="120rpx" fit="fill" src="{{imgs[0]}}" bindtap="test" />
+      </view>
+      <view class="tui-col-10 tui-flex tui-align-between">
+        <view class="info-box   tui-col-10">
+          <view class="line1">杨晴文-上海</view>
+          <view class="line2 tui-flex tui-align-between">
+            <view class="">二级会员</view>
+            <view class="">积分 152</view>
+          </view>
+          <view class="line3 tui-flex tui-align-between  ">
+            <view class="">账户余额 ￥1788</view>
+            <view class="">优惠券 3张</view>
+          </view>
+        </view>
+        <view class="right-box tui-col-2">
+          <view class="">
+            <van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/main" size="32px" />
+          </view>
+          <view class="detail tui-flex" bindtap="go" data-url="/pages/my/qrcode/main">
+            <view class="tui-vertical-center">详情</view>
+            <van-icon class="" name="arrow" size="15px" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="userinfo-detail-box ">
+      <view class="">1、店铺新品对您 8.8 折</view>
+      <view class="">2、您生日当月享受一件 7.5 折，另三件 8.5 折</view>
+      <view class="">3、享受新品 8.8 折</view>
+    </view>
+    <view class="activity-box">
+      <!-- 以空标题作为间隔 -->
+      <tui-list-view title="">
+        <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
+          <view class="y-font-l y-color-white">今日店铺活动</view>
+        </tui-list-cell>
+        <view class="item-box y-padding y-bgc-white y-font-l ">
+          <view class="">20春部分货品：2件8.8折</view>
+          <view class="y-color-red">全场满500元立减100元</view>
+          <view class="">女装：2件8折 （女装首次打折）</view>
+        </view>
+      </tui-list-view>
+    </view>
+    <view class="wear-box">
+      <!-- 以空标题作为间隔 -->
+      <tui-list-view title="">
+        <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
+          <view class="y-font-l y-color-white">近日新穿法 (新品)</view>
+        </tui-list-cell>
+        <view class="item-box tui-flex tui-align-between y-padding y-bgc-white">
+          <view class="">
+            <view class="">卫衣新品 3款</view>
+            <view class="">衬衫新品 2款</view>
+            <view class="">板鞋 1款</view>
+          </view>
+          <view class="">
+            <view class="">范冰冰逛街穿搭</view>
+            <view class="">上海潮男休闲套装</view>
+            <view class="">韩国明星居家装</view>
+          </view>
+        </view>
+      </tui-list-view>
+    </view>
+    <view class="explore-box">
+      <!-- 以空标题作为间隔 -->
+      <tui-list-view title="">
+        <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
+          <view class="y-font-l y-color-white">导购帮我找货</view>
+        </tui-list-cell>
+        <view class="item-box  y-padding y-bgc-white ">
+          <view class="">1、请告诉店铺--是谁穿：</view>
+          <view class="tui-flex tui-align-right">男女，年龄，身高，身材，肤色，职业</view>
+          <view class="">2、请告诉店铺--要什么：</view>
+          <view class="tui-flex tui-align-right">上衣，裤子，鞋子；春秋装、夏装、冬装</view>
+        </view>
+      </tui-list-view>
+    </view>
+    <view class="friend-box">
+      <!-- 以空标题作为间隔 -->
+      <tui-list-view title="">
+        <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
+          <view class="y-font-l y-color-white">我的好友圈</view>
+        </tui-list-cell>
+        <view class="item-box  y-padding y-bgc-white ">
+          <view class="">衷心感谢您介绍亲友照顾店铺生意！</view>
+          <view class="y-color-red">您的亲友可以享受您的待遇</view>
+          <view class="">另送您一点薄礼以示谢意！</view>
+        </view>
+      </tui-list-view>
+    </view>
+  </view>
+  <van-divider contentPosition="center">到底了</van-divider>
+</view>

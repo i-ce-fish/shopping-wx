@@ -1,0 +1,33 @@
+<!--pages/my/qrcode/main.wxml-->
+<view class="container    tui-center">
+	<view class="">
+		永康美特斯邦威店
+	</view>
+	<view class="">
+		会员码
+	</view>
+	<view class="avatar-box">
+		<view class="avatar">
+			<van-image round width="120rpx" height="120rpx" fit="fill" src="{{testImg}}" />
+		</view>
+		<view class="">
+			请向收银员出示，以便累计会员积分
+		</view>
+	</view>
+	<view class="barcode-box">
+		<view class="barcode">
+			<van-icon name="photo-o" size="200rpx" />
+		</view>
+		<view class="barcode-no">
+			ID：WX20200212999
+		</view>
+	</view>
+	<view class="qrcode-box">
+		<view class="qrcode">
+			<van-icon name="qr" size="200rpx" />
+		</view>
+		<view class="">
+			发送分享会员码，让亲友享受你的权益
+		</view>
+	</view>
+</view>

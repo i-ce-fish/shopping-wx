@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tui-list-cell": "/components/list-cell/list-cell",
+    "tui-list-view": "/components/list-view/list-view",
+    "van-divider": "@vant/weapp/divider",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group"
+  }
+}

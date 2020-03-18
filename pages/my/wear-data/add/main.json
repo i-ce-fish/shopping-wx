@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "新增穿衣数据",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tui-list-cell": "/components/list-cell/list-cell",
+    "tui-list-view": "/components/list-view/list-view",
+    "van-button": "@vant/weapp/button"
+  }
+}

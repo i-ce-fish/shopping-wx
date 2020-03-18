@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tuiNumberbox": "/components/numberbox/numberbox",
+    "van-divider": "@vant/weapp/divider",
+    "van-checkbox": "@vant/weapp/checkbox",
+    "van-button": "@vant/weapp/button",
+    "van-submit-bar": "@vant/weapp/submit-bar",
+    "van-swipe-cell": "@vant/weapp/swipe-cell"
+  }
+}

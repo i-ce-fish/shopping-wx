@@ -1,0 +1,53 @@
+<view class="container">
+    <view class="tui-edit-goods">
+      <view>购物车共
+        <text class="tui-goods-num">2</text>件商品</view>
+      <view >
+        <van-button  plain round custom-style="width: 160rpx;heigth:60rpx"  size="small" bind:click="editGoods">{{isEdit?"完成":"编辑商品"}}</van-button>
+      </view>
+    </view>
+      <view class="tui-cart-cell  tui-mtop"  wx:for="{{dataList}}" wx:key="index" >
+<!--        <view class="tui-activity" wx:if="index%2==0">-->
+<!--          <view class="tui-bold">满3件享受优惠</view>-->
+<!--          <view class="tui-buy">去凑单-->
+<!--            <van-icon name="arrow-right" size="18" color="#333"></van-icon>-->
+<!--          </view>-->
+<!--        </view>-->
+        <van-swipe-cell right-width="65" async-close  bind:close="onCloseSwipe"   >
+          <view  >
+            <view class="tui-goods-item">
+              <label class="tui-checkbox">
+                <checkbox color="#fff"></checkbox>
+              </label>
+              <image src="{{testImg}}" class="tui-goods-img" />
+              <view class="tui-goods-info">
+                <view class="tui-goods-title">
+
+                  {{index%2==0?"欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜":"百雀羚套装女补水保湿护肤品"}}
+                </view>
+                <view class="tui-goods-model">
+                  <view class="tui-model-text">{{index%2==0?"440ml;10件;套装":"500ml;2支"}}</view>
+                  <tui-icon name="arrowdown" size="{{16}}" color="#333"></tui-icon>
+                </view>
+                <view class="tui-price-box">
+                  <view class="tui-goods-price">￥500</view>
+                  <view class="tui-scale">
+                    <tui-numberbox value="{{item.buyNum}}" height="{{40}}" width="{{74}}" min="{{1}}" index="{{index}}" bindchange="changeNum"></tui-numberbox>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="tui-flex tui-vertical-center" style="height:100%;background-color:#ee0a24;"  slot="right" >
+           <view >
+             <van-button  type="danger">删除</van-button>
+           </view>
+          </view>
+        </van-swipe-cell>
+      </view>
+    <van-submit-bar
+      price="{{3050}}"
+      button-text="去结算"
+      bind:submit="go" data-url="/pages/shopping/order/submit-order/main"
+    />
+  </view>

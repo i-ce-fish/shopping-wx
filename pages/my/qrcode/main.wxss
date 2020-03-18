@@ -1,0 +1,4 @@
+/* pages/my/qrcode/main.wxss */
+.container > view {
+    padding: 30rpx;
+}

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tui-list-cell": "/components/list-cell/list-cell",
+    "tui-list-view": "/components/list-view/list-view",
+    "van-divider": "@vant/weapp/divider",
+    "van-button": "@vant/weapp/button",
+    "van-image": "@vant/weapp/image",
+    "van-icon": "@vant/weapp/icon"
+  }
+}

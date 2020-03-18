@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider",
+    "van-tag": "@vant/weapp/tag",
+    "van-icon": "@vant/weapp/icon",
+    "van-button": "@vant/weapp/button",
+    "van-popup": "@vant/weapp/popup",
+    "van-goods-action": "@vant/weapp/goods-action",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon",
+    "van-goods-action-button": "@vant/weapp/goods-action-button"
+  }
+}

@@ -1,0 +1,29 @@
+<!--pages/my/wear-data/list/main.wxml-->
+<view class="tui-safe-area">
+    <view class="tui-address">
+      <block wx:for="{{3}}" wx:key="index">
+      <tui-list-cell padding="0">
+          <view class="tui-address-flex">
+            <view class="tui-address-left">
+              <view class="tui-address-main">
+                <view class="tui-address-name tui-ellipsis">{{["姓名","王大大"][index]}}</view>
+                <view class="tui-address-tel">138****7708</view>
+              </view>
+              <view class="tui-address-detail">
+                <view class="tui-address-label" wx:if="index===0">默认</view>
+<!--                <view class="tui-address-label" wx:if="index!=2">{{["公司","住宅","其它"][index]}}</view>-->
+                <text>描述信息</text>
+              </view>
+            </view>
+            <view class="tui-address-imgbox">
+              <van-icon name="edit"  size="40rpx" />
+            </view>
+          </view>
+        </tui-list-cell>
+      </block>
+    </view>
+    <!-- 新增地址 -->
+    <view class="tui-address-new">
+      <van-button type="danger" custom-style="height:88rpx;width:100%;"   bindtap="go" data-url="/pages/my/wear-data/add/main">+ 新增穿衣数据</van-button>
+    </view>
+  </view>
