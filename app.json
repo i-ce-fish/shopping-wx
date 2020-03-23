@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/my/user/main",
-
     "pages/home/index/main",
+
+    "pages/my/user/main",
 
     "pages/catagory/index/main",
     "pages/catagory/search/main",
@@ -27,7 +27,7 @@
 
     "pages/rule/integral/main",
     "pages/info/info-list/main",
-    
+
     "pages/test/main",
     "pages/test/edit",
     "pages/test/add/main"
