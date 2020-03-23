@@ -1,17 +1,21 @@
 {
   "pages": [
+    "pages/my/user/main",
+
     "pages/home/index/main",
+
     "pages/catagory/index/main",
     "pages/catagory/search/main",
-    "pages/catagory/product-detail/main",
     "pages/catagory/product-list/main",
+    "pages/catagory/product-detail/main",
+
     "pages/shopping/cart/main",
     "pages/shopping/address/list/main",
     "pages/shopping/address/add/main",
     "pages/shopping/order/submit-order/main",
     "pages/shopping/order/paid-order/main",
     "pages/shopping/order/order-detail/main",
-    "pages/my/user/main",
+
     "pages/my/qrcode/main",
     "pages/my/copon/main",
     "pages/my/money/main",
@@ -20,8 +24,10 @@
     "pages/my/integral/main",
     "pages/my/wear-data/list/main",
     "pages/my/wear-data/add/main",
+
     "pages/rule/integral/main",
     "pages/info/info-list/main",
+    
     "pages/test/main",
     "pages/test/edit",
     "pages/test/add/main"

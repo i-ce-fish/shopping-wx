@@ -4,6 +4,7 @@
     "tui-list-cell": "/components/list-cell/list-cell",
     "tui-list-view": "/components/list-view/list-view",
     "van-image": "@vant/weapp/image",
-    "van-divider": "@vant/weapp/divider"
+    "van-divider": "@vant/weapp/divider",
+    "van-icon": "@vant/weapp/icon"
   }
 }

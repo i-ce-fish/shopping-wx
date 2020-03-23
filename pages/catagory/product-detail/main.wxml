@@ -5,7 +5,7 @@
     <!--banner-->
     <view class="tui-banner-swiper">
       <swiper autoplay="{{true}}" interval="{{5000}}" indicator-dots  duration="{{150}}" circular="{{true}}"  style="height:{{scrollH}}px" bindchange="bannerChange">
-      <block wx:for="{{banner}}" wx:key="{{index}}">
+      <block wx:for="{{banner}}" wx:key="index">
         <swiper-item data-index="{{index}}" catchtap="previewImage">
           <image src="{{item}}" class="tui-slide-image" style="height:{{scrollH}}px" />
           </swiper-item>
@@ -141,7 +141,7 @@
 
         <view class="tui-cmt-content tui-padding">
           <view class="tui-cmt-user">
-            <image src="../../../static/images/news/avatar_2.jpg" class="tui-acatar"></image>
+            <image src="{{testImg}}" class="tui-acatar"></image>
             <view>z***9</view>
           </view>
           <view class="tui-cmt">物流很快，很适合我的风格❤</view>
@@ -157,7 +157,7 @@
       <van-divider contentPosition="center" >宝贝详情</van-divider>
       </view>
       <view class="tui-product-img tui-radius-all">
-        <image src="https://www.thorui.cn/img/detail/{{index+1}}.jpg" wx:for="{{20}}" wx:key="{{index}}" mode="widthFix">
+        <image src="https://www.thorui.cn/img/detail/{{index+1}}.jpg" wx:for="{{20}}" wx:key="index" mode="widthFix">
       </image>
       <van-divider contentPosition="center">已经到最底了</van-divider>
 
@@ -200,7 +200,8 @@
         <van-goods-action-icon
           icon="cart-o"
           text="购物车"
-          bindtap="go('/pages/shopping/cart/main')"
+          bindtap="goTabbar"
+          
         />
         <van-goods-action-icon
           icon="cart-o"

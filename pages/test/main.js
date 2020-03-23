@@ -2,13 +2,20 @@
 
 
 let blog = require('../../api/blog')
+let user = require('../../api/user')
+let globalData = getApp().globalData;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    item: {
+      email: "maxazure@gmail.com",
+      password: "11111111"
+    }
   },
 
   /**
@@ -27,7 +34,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getlist()
+    // this.getlist()
   },
 
   /**
@@ -65,7 +72,19 @@ Page({
 
   },
 
-  get() {
+  get() {},
+  login() {
+    user.login(this.data.item).then(res => {
+      wx.setStorageSync('token', res.data.token),
+        globalData.userinfo = "test info"
+    })
+  },
+  getToken() {
+    wx.$toast(wx.getStorageSync('token'));
+    setTimeout((() => {
+        wx.$toast(globalData.userinfo)
+      }),
+      2000)
   },
   getlist() {
     blog.getList().then(res => {

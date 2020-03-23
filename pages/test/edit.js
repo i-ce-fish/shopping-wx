@@ -93,7 +93,7 @@ Page({
     )
   },
   del() {
-    const res = blog.del(this.data.id).then(
+    const res = blog.del(this.data.item.id).then(
       res => {
         wx.$go("/pages/test/main")
       }

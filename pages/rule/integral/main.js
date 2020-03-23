@@ -80,18 +80,26 @@ Page({
 
   onChange(event) {
     console.log(event)
-    this.setData({activeNames:event.detail})
+    this.setData({
+      activeNames: event.detail
+    })
   },
 
   /**
    * 通过递归，【同步】执行自动打开折叠面板
    */
   init() {
+
     //结束递归的条件
     if (this.data.activeNames.length < this.data.collapseSize) {
       setTimeout(() => {
         //业务代码
-        this.data.activeNames.push((this.data.activeNames.length + 1).toString())
+        let list = this.data.activeNames
+        list.push((list.length + 1).toString())
+        this.setData({
+          activeNames: list
+        })
+
         //递归
         this.init()
       }, 600)

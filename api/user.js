@@ -1,17 +1,12 @@
-import request from '@/utils/request.js'
+let rq = require('../utils/request')
 
-export function login(data) {
-	return request({
+function login(data) {
+	return rq.request({
 		url: '/api/auth/login',
 		method: 'POST',
-		data:data
+		data: data
 	})
 }
-
-export function getColor() {
-	return request({
-    url:'/api/siteconfig/pcolors',
-    method:'GET'
-	})
+module.exports = {
+	login
 }
-

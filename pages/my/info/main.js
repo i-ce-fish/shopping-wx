@@ -95,36 +95,51 @@ Page({
 
     onChange(e) {
         this.setData({
-            radio:this.data.radio === e.detail?null:e.detail
+            radio: this.data.radio === e.detail ? null : e.detail
         })
-       
+
     },
     onCheckbox(e) {
-                
+
         let str = "checkbox"
         this.setData({
-            [str]:e.detail
+            [str]: e.detail
         })
     },
     onDate(e) {
-        this.currentDate = e.detail
+        this.setData({
+            currentDate: e.detail
+        })
+    },
+    onShowDate() {
+        this.setData({
+            showDatetime: false
+        })
     },
     onConfirmDatetime(e) {
-        this.dateTime = e.detail
-        this.showDatetime = false
+        this.setData({
+            dateTime: e.detail,
+            showDatetime: false
+        })
     },
     onConfirmArea(e) {
         console.log(e.detail)
-        this.areaValue = e.detail.values[2].name
-        this.showArea = false
+        this.setData({
+            areaValue: e.detail.values[2].name,
+            showArea: false
+        })
     },
     onChangeStepper(e) {
-        this.stepper = e.detail
+        this.setData({
+            stepper: e.detail
+        })
 
     },
     onChangePicker(e) {
         console.log(e)
-        this.pickerValue = e.detail.value
+        this.setData({
+            pickerValue: e.detail.value
+        })
     }
 
 })

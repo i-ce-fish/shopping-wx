@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    testImg: "https://source.unsplash.com/random",
     height: 64, //header高度
     top: 0, //标题图标距离顶部距离
     scrollH: 0, //滚动总高度
@@ -196,17 +196,20 @@ Page({
       url: '../mall-extend/submitOrder/submitOrder'
     })
   },
-  coupon(){
+  coupon() {
     wx.navigateTo({
       url: '../mall-extend/coupon/coupon'
     })
   },
   buyNow() {
-     wx.$go('/pages/shopping/order/submit-order/main')
-  }
-
-  ,
-  go:function(e){
+    wx.$go('/pages/shopping/order/submit-order/main')
+  },
+  goTabbar() {
+    wx.switchTab({
+      url: "/pages/shopping/cart/main",
+    })
+  },
+  go: function (e) {
     wx.$go(e.currentTarget.dataset.url)
   }
 })

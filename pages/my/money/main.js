@@ -75,7 +75,9 @@ Page({
   go: function (e) {
     wx.$go(e.currentTarget.dataset.url)
   },
-  change(e) {
+  onChange(e) {
+    console.log(e);
+    
     this.currentTab = e.index
   },
   detail() {

@@ -35,9 +35,11 @@ function request(req) {
   // 去除前缀“/api”
   // req.url = req.url.replace('/api','')
 
-  // const ServerIP = 'http://cdb99/com'
-  // const ServerIP = 'http://123.207.179.135:9529'
-  const ServerIP = 'http://www.cdb99.com:3000'
+  // 另一个服务器
+  const ServerIP = 'http://123.207.179.135:9529'
+
+  // 端口号也要小程序服务端需要设置一致
+  // const ServerIP = 'http://www.cdb99.com:3000'
 
   return new Promise(function (resolve, reject) {
     wx.request({

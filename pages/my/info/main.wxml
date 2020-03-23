@@ -32,7 +32,7 @@
       <tui-list-cell hover="{{false}}" padding="0">
         <view class="tui-line-cell">
           <view class="tui-title">日期选择</view>
-          <view bindtap="showDatetime=true" placeholder-class="tui-phcolor" class="tui-input">
+          <view bindtap="onShowDate" placeholder-class="tui-phcolor" class="tui-input">
             {{dateTime}}
           </view>
         </view>
