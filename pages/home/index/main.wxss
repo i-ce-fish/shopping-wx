@@ -50,7 +50,7 @@
       padding: 10rpx 0 ;
     }
 
-  .activity-box,.wear-box,.friend-box,.explore-box, .item-box>view{
+  .activity-box,.wear-box,.friend-box,.explore-box, .item-box view{
         padding: 10rpx 0 ;
   }
 
