@@ -1,4 +1,6 @@
 // pages/home/index/main.js
+
+let articles = require("../../../api/articles")
 Page({
 
   /**
@@ -8,7 +10,10 @@ Page({
     imgs: [
       "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582049975121&di=09124e52fb2d9c56f849f4fa5fa2a2a1&imgtype=0&src=http%3A%2F%2Fimg.hkwb.net%2Fatt%2Fsite2%2F20171228%2Fe6805aee9afd115c2b948f9b12528964.jpg",
       "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582049975121&di=09124e52fb2d9c56f849f4fa5fa2a2a1&imgtype=0&src=http%3A%2F%2Fimg.hkwb.net%2Fatt%2Fsite2%2F20171228%2Fe6805aee9afd115c2b948f9b12528964.jpg",
-      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582049975121&di=09124e52fb2d9c56f849f4fa5fa2a2a1&imgtype=0&src=http%3A%2F%2Fimg.hkwb.net%2Fatt%2Fsite2%2F20171228%2Fe6805aee9afd115c2b948f9b12528964.jpg"]
+      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582049975121&di=09124e52fb2d9c56f849f4fa5fa2a2a1&imgtype=0&src=http%3A%2F%2Fimg.hkwb.net%2Fatt%2Fsite2%2F20171228%2Fe6805aee9afd115c2b948f9b12528964.jpg"
+    ],
+    activity: {},
+    wear: {}
   },
 
   /**
@@ -24,19 +29,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getWear()
+    this.getAct()
   },
 
   /**
    * 生命周期函数--监听页面显示
+   * 
    */
   onShow: function () {
+
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
+
   onHide: function () {
 
   },
@@ -68,10 +77,28 @@ Page({
   onShareAppMessage: function () {
 
   },
-  test: function (e) {
-
-  }  ,
-  go:function(e){
+  go: function (e) {
     wx.$go(e.currentTarget.dataset.url)
+  },
+  getWear() {
+    articles.getList({
+      catalog_id: "2"
+    }).then(res => {
+      this.setData({
+        wear: res.list
+      })
+    })
+  },
+  getAct() {
+    articles.getList({
+      catalog_id: "1"
+    }).then(res => {
+      this.setData({
+        activity: res.list
+      })
+    })
+  },
+  onTapDetail(e){
+    wx.$go('/pages/home/detail/main',e.currentTarget.dataset)
   }
 })

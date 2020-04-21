@@ -32,8 +32,8 @@
 						<van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/main" size="32px" />
 					</view>
 					<view class="detail tui-flex tui-center tui-vertical-center" bindtap="go" data-url="/pages/my/qrcode/main">
-          <view>详情</view>
-						<van-icon class=""  name="arrow" size="15px" />
+						<view>详情</view>
+						<van-icon class="" name="arrow" size="15px" />
 					</view>
 				</view>
 			</view>
@@ -50,9 +50,7 @@
 					<view class="y-font-l y-color-white">今日店铺活动</view>
 				</tui-list-cell>
 				<view class="item-box y-padding y-bgc-white y-font-l ">
-					<view class="">20春部分货品：2件8.8折</view>
-					<view class="y-color-red">全场满500元立减100元</view>
-					<view class="">女装：2件8折 （女装首次打折）</view>
+					<view wx:for="{{activity}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}" >{{item.title}}</view>
 				</view>
 			</tui-list-view>
 		</view>
@@ -62,17 +60,8 @@
 				<tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
 					<view class="y-font-l y-color-white">近日新穿法 (新品)</view>
 				</tui-list-cell>
-				<view class="item-box tui-flex tui-align-between y-padding y-bgc-white">
-					<view class="">
-						<view class="">卫衣新品 3款</view>
-						<view class="">衬衫新品 2款</view>
-						<view class="">板鞋 1款</view>
-					</view>
-					<view class="">
-						<view class="">范冰冰逛街穿搭</view>
-						<view class="">上海潮男休闲套装</view>
-						<view class="">韩国明星居家装</view>
-					</view>
+				<view class="item-box tui-flex tui-align-between y-padding y-bgc-white tui-line-feed">
+					<view class="tui-col-6" wx:for="{{wear}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}" >{{item.title}}</view>
 				</view>
 			</tui-list-view>
 		</view>
