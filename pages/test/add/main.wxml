@@ -3,13 +3,13 @@
 </view>
 <tui-list-view title="添加">
 	<tui-list-cell hover="{{false}}">
-		<view class="y-pr">
+		<view class="y-padding-r">
 			标题
 		</view>
 		<input value="{{item.title}}" placeholder="请输入" bindblur="set" data-prop="title"></input>
 	</tui-list-cell>
 	<tui-list-cell hover="{{false}}">
-		<view class="y-pr">
+		<view class="y-padding-r">
 			内容
 		</view>
 		<input value="{{item.body}}" placeholder="请输入" bindblur="set" data-prop="body"></input>

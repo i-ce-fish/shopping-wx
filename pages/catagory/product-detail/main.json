@@ -1,13 +1,26 @@
 {
   "navigationBarTitleText": "商品列表",
   "usingComponents": {
-    "van-divider": "@vant/weapp/divider",
-    "van-tag": "@vant/weapp/tag",
     "van-icon": "@vant/weapp/icon",
     "van-button": "@vant/weapp/button",
-    "van-popup": "@vant/weapp/popup",
-    "van-goods-action": "@vant/weapp/goods-action",
-    "van-goods-action-icon": "@vant/weapp/goods-action-icon",
-    "van-goods-action-button": "@vant/weapp/goods-action-button"
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-image": "@vant/weapp/image/index",
+    "tui-list-cell": "/components/list-cell/list-cell",
+    "tui-list-view": "/components/list-view/list-view",
+    "tui-card": "/components/card/card",
+    "van-collapse": "@vant/weapp/collapse",
+    "van-collapse-item": "@vant/weapp/collapse-item",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-divider": "@vant/weapp/divider",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "tui-scroll-top":"/components/scroll-top/scroll-top",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+
+
   }
 }

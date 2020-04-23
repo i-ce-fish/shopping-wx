@@ -2,6 +2,6 @@
   "navigationBarTitleText": "商品列表",
   "usingComponents": {
     "van-icon": "@vant/weapp/icon",
-    "van-image": "@vant/weapp/image"
+    "van-image": "@vant/weapp/image/index"
   }
 }

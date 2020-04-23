@@ -9,7 +9,7 @@
 
       <scroll-view scroll-y scroll-with-animation class="tab-view" scroll-top="{{scrollTop}}"  style="height:{{menuHeight}}px">
         <view wx:for="{{tabbar}}" wx:key="index" class="tab-bar-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" catchtap="swichNav">
-        <text>{{item}}</text>`
+        <text>{{item}}</text>
         </view>
       </scroll-view>
       <view class="right-box">

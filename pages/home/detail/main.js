@@ -1,7 +1,8 @@
 // pages/home/detail/main.js
 
 let articles = require("../../../api/articles")
-
+//在使用的View中引入WxParse模块
+var WxParse = require('../../../components/wxParse/wxParse');
 
 Page({
 
@@ -11,6 +12,7 @@ Page({
   data: {
     title: "",
     body: "",
+    scrollTop: 0
   },
 
   /**
@@ -21,6 +23,8 @@ Page({
       this.setData({
         ...res
       })
+      // todo  15px => 30rpx
+      WxParse.wxParse('article', 'html', res.body, this, wx.$px(30));
 
     })
 
@@ -73,5 +77,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //页面滚动执行方式
+  onPageScroll(e) {
+    this.setData({
+      scrollTop: e.scrollTop
+    })
   }
 })

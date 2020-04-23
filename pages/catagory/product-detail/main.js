@@ -1,63 +1,111 @@
-// pages/catagory/product-detail/main.js
+// pages/rule/integral/main.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    testImg: "https://source.unsplash.com/random",
-    height: 64, //header高度
-    top: 0, //标题图标距离顶部距离
-    scrollH: 0, //滚动总高度
-    opcity: 0,
-    iconOpcity: 0.5,
-    banner: [
-      "https://www.thorui.cn/img/product/11.jpg",
-      "https://www.thorui.cn/img/product/6.png",
-      "https://www.thorui.cn/img/product/7.jpg",
-      "https://www.thorui.cn/img/product/8.jpg"
-    ],
-    bannerIndex: 0,
-    topMenu: [{
-      icon: "message",
-      text: "消息",
-      size: 26,
-      badge: 3
-    }, {
-      icon: "home",
-      text: "首页",
-      size: 23,
-      badge: 0
-    }, {
-      icon: "people",
-      text: "我的",
-      size: 26,
-      badge: 0
-    }, {
-      icon: "cart",
-      text: "购物车",
-      size: 23,
-      badge: 2
-    }, {
-      icon: "kefu",
-      text: "客服小蜜",
-      size: 26,
-      badge: 0
-    }, {
-      icon: "feedback",
-      text: "我要反馈",
-      size: 23,
-      badge: 0
-    }, {
-      icon: "share",
-      text: "分享",
-      size: 26,
-      badge: 0
-    }],
-    menuShow: false,
-    popupShow: false,
-    value: 1,
-    collected: false
+    checkedSize: "",
+    checkedColor: "",
+    product: {
+      img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+      name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+      code: "424932",
+      category: "女装",
+      price: "499.00",
+      colors: [{
+          color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg",
+          product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+          name: "黄色",
+          code: "10"
+        },
+        {
+          color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg",
+          product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016502/main/first/561/1.jpg",
+          name: "黄色",
+          code: "11",
+        },
+        {
+          color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg",
+          product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000013572/main/first/561/1.jpg",
+          name: "黄色",
+          code: "12"
+        },
+      ],
+      sizes: [{
+          name: "S",
+          all_name: "150/76A"
+        },
+        {
+          name: "M",
+          all_name: "150/76A"
+        },
+        {
+          name: "L",
+          all_name: "150/76A"
+        },
+        {
+          name: 'XL',
+          all_name: "150/76A"
+        }
+      ],
+
+      carousels: [{
+          url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/first/1000/1.jpg"
+        },
+        {
+          url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other1/1000/2.jpg"
+        },
+        {
+          url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other2/1000/3.jpg"
+        },
+        {
+          url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other3/1000/4.jpg"
+        }
+
+      ],
+
+      code: "427516000",
+      year: "2020",
+      season: "春季",
+      fabric: "棉50% 聚酯纤维50%",
+      explan: "http://shop.cdb99.com/uploads/20200423/080919352649.png",
+      details: [{
+        url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/1.jpg"
+      }, {
+        url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/2.jpg"
+      }, {
+        url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/3.jpg"
+      }, {
+        url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/4.jpg"
+      }, ]
+
+    },
+
+
+    // card
+    card: {
+      text: "衣服有弹性吗?"
+    },
+    // 回到顶部
+    scrollTop: 0,
+    // 弹出层
+    showPopup: false,
+
+    // 标签页
+    activeTap: 1,
+    // 配送方式
+    delivery: "1",
+    // 折叠面板
+    collapseSize: 5,
+    activeNames: [],
+    integralWay: [
+      "1、购物1元，赠送1分。",
+      "2、促销时，购物1元，可能获得双倍积分。",
+      "3、给店铺帮忙（介绍顾客、提建议等等），也能获得积分赠送。",
+      "4、本店积分能兑换现金。",
+      "5、详情请关注店铺公告。"
+    ]
 
   },
 
@@ -65,20 +113,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let obj = wx.getMenuButtonBoundingClientRect();
-    this.setData({
-      width: obj.left,
-      height: obj.top + obj.height + 8,
-      top: obj.top + (obj.height - 32) / 2
-    }, () => {
-      wx.getSystemInfo({
-        success: (res) => {
-          this.setData({
-            scrollH: res.windowWidth
-          })
-        }
-      })
-    });
+
   },
 
   /**
@@ -92,6 +127,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.init()
 
   },
 
@@ -129,87 +165,54 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  bannerChange: function (e) {
-    this.setData({
-      bannerIndex: e.detail.current
-    })
-  },
-  previewImage: function (e) {
-    let index = e.currentTarget.dataset.index;
-    wx.previewImage({
-      current: this.data.banner[index],
-      urls: this.data.banner
-    })
-  },
-  //页面滚动执行方式
-  onPageScroll(e) {
-    let scroll = e.scrollTop <= 0 ? 0 : e.scrollTop;
-    let opcity = scroll / this.data.scrollH;
-    if (this.data.opcity >= 1 && opcity >= 1) {
-      return;
-    }
-    this.setData({
-      opcity: opcity,
-      iconOpcity: 0.5 * (1 - opcity < 0 ? 0 : 1 - opcity)
-    })
-  },
-  back: function () {
-    wx.navigateBack()
-  },
-  openMenu: function () {
-    this.setData({
-      menuShow: true
-    })
-  },
-  closeMenu: function () {
-    this.setData({
-      menuShow: false
-    })
-  },
-  showPopup: function () {
-    this.setData({
-      popupShow: true
-    })
-  },
-  hidePopup: function () {
-    this.setData({
-      popupShow: false
-    })
-  },
-  change: function (e) {
-    this.setData({
-      value: e.detail.value
-    })
-  },
-  collecting: function () {
-    this.setData({
-      collected: !this.data.collected
-    })
-  },
-  common: function () {
-    util.toast("功能开发中~")
-  },
-  submit() {
-    this.hidePopup()
-    wx.navigateTo({
-      url: '../mall-extend/submitOrder/submitOrder'
-    })
-  },
-  coupon() {
-    wx.navigateTo({
-      url: '../mall-extend/coupon/coupon'
-    })
-  },
-  buyNow() {
-    wx.$go('/pages/shopping/order/submit-order/main')
-  },
-  goTabbar() {
-    wx.switchTab({
-      url: "/pages/shopping/cart/main",
-    })
-  },
   go: function (e) {
     wx.$go(e.currentTarget.dataset.url)
-  }
+  },
+
+  onChange(event) {
+    this.setData({
+      activeNames: event.detail
+    })
+  },
+
+  /**
+   * 通过递归，【同步】执行自动打开折叠面板
+   */
+  init() {
+
+    //结束递归的条件
+    if (this.data.activeNames.length < this.data.collapseSize) {
+      setTimeout(() => {
+        //业务代码
+        let list = this.data.activeNames
+        list.push((list.length + 1).toString())
+        this.setData({
+          activeNames: list
+        })
+
+        //递归
+        this.init()
+      }, 600)
+    }
+  },
+
+
+  // 弹出层
+  onShowPopup() {
+    this.setData({
+      showPopup: true
+    })
+  },
+  onClosePopup() {
+    this.setData({
+      showPopup: false
+    })
+  },
+  // 导航栏
+  onAddCart() {
+    this.onShowPopup()
+  },
+  onBuyNow() {},
+
+
 })

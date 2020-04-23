@@ -1,7 +1,7 @@
 /*全局样式*/
 page {
   background: #fafafa;
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #282828;
 }
 
@@ -12,14 +12,41 @@ page {
   box-sizing: border-box;
 }
 
+/*无边距*/
+.y-padding-none{
+  padding:0!important;
+}
+/*全部边距*/
+.y-padding-all{
+  padding:30rpx;
+}
+/*上下半句*/
+.y-padding-tb{
+  padding:30rpx 0;
+}
 /*左右边距*/
-.y-padding {
+.y-padding-lr {
   padding: 0 30rpx;
 }
 /*右边距*/
-.y-pr{
+.y-padding-r{
   padding-right: 30rpx;
 }
+/*left*/
+.y-padding-l{
+  padding-left: 30rpx;
+}
+
+/*top*/
+.y-padding-t{
+  padding-top: 30rpx;
+}
+/*bottom*/
+.y-padding-b{
+  padding-bottom: 30rpx;
+}
+
+
 /* 颜色统一 */
 
 /*主动设置背景色*/
@@ -37,6 +64,10 @@ page {
 }
 /*次要文字颜色*/
 /*颜色*/
+.y-color-black{
+  color: #282828;
+
+}
 .y-color-gray {
   color: #999999;
 }
@@ -55,7 +86,6 @@ page {
   color: #ffffff;
 }
 /*字体大小 默认为30rpx（15px）*/
-
 .y-font-xs{
   font-size: 26rpx;
 }
@@ -71,7 +101,17 @@ page {
 .y-font-xl{
   font-size: 34rpx;
 }
+.y-font-xxl{
+  font-size: 36rpx;
+}
+.y-font-blod{
+  font-weight: bold;
+}
 /*行高*/
+.y-line-height-200{
+  line-height: 200%;
+
+}
 .y-line-height-full{
   line-height: 100%;
 }
@@ -88,6 +128,10 @@ page {
 
 
 /*thor ui 部分样式*/
+.tui-flex-wrap {
+  flex-wrap: wrap;
+}
+
 
 /* flex start*/
 

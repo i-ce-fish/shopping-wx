@@ -1,102 +1,27 @@
-<!--pages/catagory/product-list/main.wxml-->
-<view class="container">
-	<!--header-->
-	<view class="tui-header-box">
-		<!-- <view class="tui-header" style="height:{{height}}px"> -->
-		<view class="tui-header">
-			<!--        <tui-icon name="arrowleft" color="#000" tui-icon-class="tui-back" :style="{ margin-top : arrowTop px}" bindtap="back"></tui-icon>-->
-			<!--        <van-icon name="delete" size='14' color='#333' bindtap="openActionSheet" class="tui-icon-delete"></van-icon>-->
-
-			<view class="tui-searchbox" style="marginTop:{{inputTop}} px" bindtap="search">
-				<icon type="search" size='13' color='#999'></icon>
-				<text class="tui-search-text" wx:if="!searchKey">商品</text>
-				<view class="tui-search-key" wx:if="searchKey">
-					<view class="tui-key-text">{{searchKey}}</view>
-					<van-icon name="cross" size='12' color='#fff'></van-icon>
-
-				</view>
-			</view>
-		</view>
+<view class="container ">
+	<view class="y-padding-all y-font-xxl y-font-blod">
+		外套
 	</view>
-	<!--header-->
-	<!--screen-->
-	<!-- <view class="tui-header-screen" style="top:{{height}}px"> -->
-	<view class="tui-header-screen" style="top:50px">
+	<view class="pro-list  tui-flex  tui-flex-wrap">
+		<view class="tui-col-6" wx:for="{{list}}" bindtap="go" data-url="/pages/catagory/product-detail/main" data-id="{{item.id}}">
+			<van-image src="{{item.img}}" width="375rpx" height="375rpx" fit="fill" class="" />
 
-		<view class="tui-screen-top">
-			<view class="tui-top-item {{tabIndex==0?'tui-active tui-bold':''}}" data-index="0" bindtap="screen">
-				<view>{{selectedName}}</view>
-				<van-icon name="{{selectH>0?'arrow-up':'arrow-down'}}" size="14" color="{{tabIndex==0?'#e41f19':'#444'}}" tui-icon-class="tui-ml"></van-icon>
-			</view>
-			<view class="tui-top-item {{tabIndex==1?'tui-active tui-bold':''}}" bindtap="screen" data-index="1">销量</view>
-			<view class="tui-top-item" bindtap="screen" data-index="2">
-				<van-icon name="{{isList?'manage':'listview'}}" size="{{isList ?22:18}}" bold="{{isList?false:true}}" color="#333"></van-icon>
-			</view>
-			<view class="tui-top-item" bindtap="screen" data-index="3">
-				<text>筛选</text>
-				<van-icon name="screen" size="12" color="#333" custom-style="tui-ml"></van-icon>
-			</view>
-
-			<!--下拉选择列表--综合-->
-			<view class="tui-dropdownlist {{selectH>0?'tui-dropdownlist-show':''}}" style="height:{{selectH}}rpx">
-				<view class="tui-dropdownlist-item {{item.selected?'tui-bold':''}}" wx:for="{{dropdownList}}" wx:key="index" catchtap="dropdownItem" data-index="{{index}}">
-					<text class="tui-ml tui-middle">{{item.name}}</text>
-					<van-icon name="check" size="16" color="#e41f19" wx:if="item.selected" custom-style="tui-middle"></van-icon>
-				</view>
-
-			</view>
-			<view class="tui-dropdownlist-mask {{selectH>0?'tui-mask-show':''}}" catchtap="hideDropdownList"></view>
-			<!--下拉选择列表--综合-->
-
-		</view>
-		<!--       筛选菜单 -->
-		<!--              <view class="tui-screen-bottom">-->
-		<!--                <block v-for="(item,index) of attrArr" :key=index  >-->
-		<!--                  <view class="tui-bottom-item"  :class="[item.isActive?'tui-btmItem-active':'',attrIndex==index?'tui-btmItem-tap':'']" :data-index="index" bindtap="btnDropChange">-->
-		<!--                    <view class="tui-bottom-text " :class="attrIndex==index?'tui-active':''"> {{item.isActive?item.selectedName:item.name}}</view>-->
-		<!--                    <van-icon :name="attrIndex==index?'arrow-up':'arrow-down'" size="14" :color="attrIndex==index || item.isActive?'#e41f19':'#444'" custom-style="tui-ml" wx:if="item.list.length>0"></van-icon>-->
-		<!--                  </view>-->
-		<!--                </block>-->
-		<!--              </view>-->
-		<!--       筛选菜单 -->
-	</view>
-	<!--screen-->
-
-	<!--list-->
-	<view class="tui-product-list">
-
-		<view class="tui-product-container">
-			<block wx:for="{{productList}}" wx:key="index" wx:if="(index+1)%2!=0 || isList">
-				<template is="productItem" data="{{item,index:index,isList:isList}}" />
-			</block>
-		</view>
-		<view class="tui-product-container" wx:if="!isList">
-			<block wx:for="{{productList}}" wx:key="index" wx:if="(index+1)%2==0">
-				<template is="productItem" data="{{item,index:index}}" />
-			</block>
-		</view>
-	</view>
-
-	<!--list-->
-
-	<!--模板-->
-	<template name="productItem" wx:for="{{productList}}" wx:key="index">
-		<!--商品列表-->
-		<view class="tui-pro-item {{isList?'tui-flex-list':''}}" hover-class="hover" hover-start-time="150" bindtap="detail">
-			<van-image style="display: inline" src="{{testImg}}" width="260rpx" radius="12rpx" height="260rpx" class="tui-pro-img " class="{{isList?'tui-proimg-list':''}}" fit="cover" />
-			<view class="tui-pro-content">
-				<view class="tui-pro-tit">{{item.name}}</view>
-				<view>
-					<view class="tui-pro-price">
-						<text class="tui-sale-price">￥{{item.sale}}</text>
-						<text class="tui-factory-price">￥{{item.factory}}</text>
+			<view class="pro-item y-padding-all">
+				<van-image wx:for="{{item.colors}}" src="{{item.url}}" width="40rpx" height="40rpx" fit="fill" class="" />
+				<view class="tui-flex tui-align-between">
+					<view>
+						{{item.category}}
 					</view>
-					<view class="tui-pro-pay">{{item.payNum}}人付款</view>
+					<view>
+						{{item.min_size}}-{{item.max_size}}
+					</view>
 				</view>
+				<view>
+					{{item.name}}{{item.code}}
+				</view>
+				<view class="price y-font-xxl y-font-blod">
+					￥{{item.price}}</view>
 			</view>
 		</view>
-		<!--商品列表-->
-	</template>
-
-
+	</view>
 </view>
