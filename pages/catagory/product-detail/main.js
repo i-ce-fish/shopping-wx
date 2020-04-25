@@ -8,11 +8,26 @@ Page({
     checkedSize: "",
     checkedColor: "",
     product: {
-      img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
       name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
       code: "424932",
       category: "女装",
-      price: "499.00",
+      origin_price: "499.00",
+      inner_price: "299.00",
+      vip_price: "199.00",
+      inner_activities: [{
+          title: "已打6折，共优惠 ¥160"
+        },
+        {
+          title: "38女神节活动：会员春装新款6折"
+        }
+      ],
+      vip_activities: [{
+          title: "已打5折，共优惠¥199"
+        }, {
+          title: "三级及以上会员专享"
+        }
+
+      ],
       colors: [{
           color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg",
           product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
@@ -93,20 +108,12 @@ Page({
     showPopup: false,
 
     // 标签页
-    activeTap: 1,
+    activeTap: 0,
     // 配送方式
     delivery: "1",
     // 折叠面板
     collapseSize: 5,
-    activeNames: [],
-    integralWay: [
-      "1、购物1元，赠送1分。",
-      "2、促销时，购物1元，可能获得双倍积分。",
-      "3、给店铺帮忙（介绍顾客、提建议等等），也能获得积分赠送。",
-      "4、本店积分能兑换现金。",
-      "5、详情请关注店铺公告。"
-    ]
-
+    activeColl: ['1', '2', '3', '4']
   },
 
   /**
@@ -127,7 +134,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.init()
+    // this.init()
 
   },
 
@@ -169,32 +176,31 @@ Page({
     wx.$go(e.currentTarget.dataset.url)
   },
 
-  onChange(event) {
-    this.setData({
-      activeNames: event.detail
-    })
-  },
+  // onChange(event) {
+  //   this.setData({
+  //     activeNames: event.detail
+  //   })
+  // },
 
   /**
    * 通过递归，【同步】执行自动打开折叠面板
    */
-  init() {
+  // init() {
+  //   //结束递归的条件
+  //   if (this.data.activeNames.length < this.data.collapseSize) {
+  //     setTimeout(() => {
+  //       //业务代码
+  //       let list = this.data.activeNames
+  //       list.push((list.length + 1).toString())
+  //       this.setData({
+  //         activeNames: list
+  //       })
 
-    //结束递归的条件
-    if (this.data.activeNames.length < this.data.collapseSize) {
-      setTimeout(() => {
-        //业务代码
-        let list = this.data.activeNames
-        list.push((list.length + 1).toString())
-        this.setData({
-          activeNames: list
-        })
-
-        //递归
-        this.init()
-      }, 600)
-    }
-  },
+  //       //递归
+  //       this.init()
+  //     }, 600)
+  //   }
+  // },
 
 
   // 弹出层
@@ -210,9 +216,22 @@ Page({
   },
   // 导航栏
   onAddCart() {
-    this.onShowPopup()
+    this.setData({
+      showPopup: !this.data.showPopup
+    })
   },
   onBuyNow() {},
-
+  onTabs() {},
+  onCollapse(e) {
+    this.setData({
+      activeColl: e.detail
+    })
+  },
+  onRdioDelivery(e) {
+    this.setData({
+      delivery: e.detail
+    })
+  },
+  onStepper() {}
 
 })

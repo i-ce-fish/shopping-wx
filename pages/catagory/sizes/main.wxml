@@ -1,0 +1,67 @@
+<view class="container ">
+
+	<view class=" y-bgc-white y-padding-all">
+		<view class="popup-box-title y-padding-tb">
+			女装 麻混纺宽腿裤 (附腰带)(老爹裤)427516000
+		</view>
+		<view class="popup-box-top tui-flex tui-align-between">
+			<view class="tui-col-4 y-padding-r">
+				<van-image src="https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg" width="100%" fit="widthFix">
+				</van-image>
+			</view>
+			<!-- todo  文本过长会允许横向滑动 -->
+			<view class="tui-col-8">
+				<view class="y-font-xl y-color-red">内购价 ￥{{product.price}}</view>
+				<view class="y-padding-tb tui-flex">
+
+					<view>
+						已选:
+					</view>
+					<view>
+						<view>
+							{{checkedSize}}150/80A/M
+						</view>
+						<view>
+							{{checkedColor}}01黄色
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<van-divider />
+	</view>
+
+	<tui-list-view title="达人选码">
+		<tui-list-cell hover="{{false}}">
+			<view>
+				本款为修身版本
+				<view wx:for="{{5}}">
+					{{index+1}}
+				</view>
+			</view>
+
+		</tui-list-cell>
+	</tui-list-view>
+
+	<tui-list-view title="店长提示">
+		<tui-list-cell hover="{{false}}">
+			<view>
+				<view wx:for="{{5}}">
+					{{index+1}}
+				</view>
+			</view>
+		</tui-list-cell>
+	</tui-list-view>
+
+
+	<tui-list-view title="产品尺寸及丈量方法说明">
+		<tui-list-cell hover="{{false}}">
+		</tui-list-cell>
+	</tui-list-view>
+	<van-image src="https://www.uniqlo.cn/public/image/L3/special/hemup/dang/3.jpg" fit="widthFix" width="100%">
+	</van-image>
+	<van-image src="https://www.uniqlo.cn/public/image/L3/special/hemup/dang/4.jpg" fit="widthFix" width="100%">
+	</van-image>
+
+</view>

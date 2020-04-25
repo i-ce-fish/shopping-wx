@@ -2,6 +2,7 @@
   "pages": [
 
 
+    "pages/catagory/product-detail/main",
 
 
     "pages/home/index/main",
@@ -12,7 +13,8 @@
     "pages/catagory/index/main",
     "pages/catagory/search/main",
     "pages/catagory/product-list/main",
-    "pages/catagory/product-detail/main",
+    "pages/catagory/sizes/main",
+    
 
     "pages/shopping/cart/main",
     "pages/shopping/address/list/main",
@@ -44,6 +46,8 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "custom": true,
+
     "selectedColor": "#ff4444",
     "list": [{
         "pagePath": "pages/home/index/main",
@@ -53,7 +57,7 @@
       },
       {
         "pagePath": "pages/catagory/index/main",
-        "text": "我要找货",
+        "text": "分类",
         "iconPath": "static/img/contribute-off.png",
         "selectedIconPath": "static/img/contribute-on.png"
       },
@@ -71,5 +75,6 @@
       }
     ]
   },
+  "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }

@@ -38,8 +38,10 @@ Page({
    * 
    */
   onShow: function () {
-
-
+    // 设置tabbar状态
+    this.getTabBar().setData({
+      activeTab: 0
+    });
   },
 
   /**
@@ -98,7 +100,7 @@ Page({
       })
     })
   },
-  onTapDetail(e){
-    wx.$go('/pages/home/detail/main',e.currentTarget.dataset)
+  onTapDetail(e) {
+    wx.$go('/pages/home/detail/main', e.currentTarget.dataset)
   }
 })

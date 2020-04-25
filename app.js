@@ -74,6 +74,7 @@ App({
 
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    activeTab:0
   }
 })
