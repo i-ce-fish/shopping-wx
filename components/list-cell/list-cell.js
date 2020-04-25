@@ -31,7 +31,7 @@ Component({
     },
     size:{
       type: Number,
-      value: 32//字体大小
+      value: 30//字体大小
     },
     color: {
       type: String,

@@ -112,7 +112,7 @@ page {
   line-height: 200%;
 
 }
-.y-line-height-full{
+.y-line-height-100{
   line-height: 100%;
 }
 

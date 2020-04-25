@@ -1,19 +1,17 @@
 {
   "pages": [
 
+    "pages/catagory/product-list/main",
 
 
 
     "pages/home/index/main",
     "pages/home/detail/main",
 
-    "pages/my/user/main",
-
     "pages/catagory/index/main",
     "pages/catagory/search/main",
-    "pages/catagory/product-list/main",
     "pages/catagory/sizes/main",
-
+    "pages/catagory/colors/main",
     "pages/catagory/product-detail/main",
 
     "pages/shopping/cart/main",
@@ -23,6 +21,7 @@
     "pages/shopping/order/paid-order/main",
     "pages/shopping/order/order-detail/main",
 
+    "pages/my/user/main",
     "pages/my/qrcode/main",
     "pages/my/copon/main",
     "pages/my/money/main",

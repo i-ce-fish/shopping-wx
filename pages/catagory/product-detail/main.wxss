@@ -25,3 +25,7 @@
 .popup-box {
   /* width: 750rpx; */
 }
+
+.advisory-box .textarea{
+  height:150rpx;
+}
