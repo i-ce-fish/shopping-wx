@@ -218,7 +218,10 @@ test1
 					</view>
 				</view>
 				<view class=" tui-flex tui-align-right tui-vertical-center" bindtap="go" data-url="/pages/catagory/sizes/main">
+
+
 					尺码表
+					
 					<van-icon slot="icon" name="coupon-o" />
 				</view>
 
@@ -263,7 +266,7 @@ test1
 
 	<!-- 底部栏 -->
 	<van-goods-action>
-		<van-goods-action-icon icon="shop-o" text="店铺" bind:click='go' data-url="/pages/home/index/main.js" />
+		<van-goods-action-icon icon="shop-o" text="店铺" bind:click='go' data-url="/pages/home/index/main" />
 		<van-goods-action-icon icon="chat-o" text="客服" bind:click="go" />
 		<van-goods-action-icon icon="cart-o" text="购物车" bind:click="go" />
 		<van-goods-action-button text="加入购物车" type="warning" bind:click="onAddCart" />

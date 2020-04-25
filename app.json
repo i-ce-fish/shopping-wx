@@ -2,7 +2,6 @@
   "pages": [
 
 
-    "pages/catagory/product-detail/main",
 
 
     "pages/home/index/main",
@@ -14,7 +13,8 @@
     "pages/catagory/search/main",
     "pages/catagory/product-list/main",
     "pages/catagory/sizes/main",
-    
+
+    "pages/catagory/product-detail/main",
 
     "pages/shopping/cart/main",
     "pages/shopping/address/list/main",
