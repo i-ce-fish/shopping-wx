@@ -28,7 +28,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
 	"appid": "wx6a29670bc2ea4a30",
-	"projectname": "shopping",
+	"projectname": "shopping-wx",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
