@@ -24,7 +24,7 @@ wx.$go = function (url, data) {
   // px转rpx
   wx.$rpx = function (px) {
     const width = wx.getSystemInfoSync().windowWidth
-    return width * (750 / width)
+    return px * (750 / width)
   },
 
   // rpx  转px

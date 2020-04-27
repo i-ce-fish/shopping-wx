@@ -1,26 +1,51 @@
-<view class="box">
-    <view class="sb-box">
-        <input placeholder="请输入" bindtap="onTap"/>
-    </view>
-</view>
+<view class="search-bar-box">
 
-<van-overlay show="{{ show }}" bind:click="onTap" z-index="10">
-
-
-    <view class="overlay-box">
-
-
-<!--        <view class="box">-->
-<!--            <view class="sb-box">-->
-<!--                <input placeholder="请输入" bindtap="onTap"/>-->
-<!--            </view>-->
-<!--        </view>-->
-
-        <view class="dropdown-box">
-            <view wx:for="{{7}}">搜索建议</view>
+    <view class="box">
+        <view class="sb-box">
+            <van-field
+                    value="{{ keyword }}"
+                    placeholder="请输入"
+                    border="{{ false }}"
+                    clearable="{{true}}"
+                    right-icon="search"
+                    bindtap="onTap"
+                    custom-style="padding:10rpx"
+            />
         </view>
     </view>
 
+    <van-overlay show="{{ show }}" bind:click="onTap" z-index="10">
 
-</van-overlay>
+        <view class="overlay-box">
 
+            <view class="dropdown-box">
+
+                <view class="recent-box">
+                    <view class="title-box">
+                        <view class="title">最近搜索</view>
+                        <view>删除全部</view>
+                    </view>
+                    <view class="content-box">
+                        <view wx:for="{{hot_search}}" wx:key="index" class="item">{{item}}</view>
+                    </view>
+                </view>
+
+                <van-divider custom-style="padding:0;margin:0"/>
+
+                <view class="hot-box">
+                    <view class="title">热门搜索</view>
+
+                    <view class="content-box">
+                        <view wx:for="{{recent_search}}" wx:key="index" class="item">{{item}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+
+    </van-overlay>
+
+
+
+
+</view>

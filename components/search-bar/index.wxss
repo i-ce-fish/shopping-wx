@@ -1,4 +1,10 @@
 
+.search-bar-box{
+    /*box-sizing: border-box;*/
+    /*height: 100rpx;*/
+}
+
+
 
 .box{
     /*background-color: #fafafa;*/
@@ -6,11 +12,11 @@
     position: relative;
     z-index: 11;
 }
+
 .sb-box{
-    padding: 0rpx;
     margin:20rpx 30rpx;
     border:  1px solid #8b8b8b;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 
@@ -24,10 +30,30 @@
 .dropdown-box{
     position: relative;
     top: 90rpx;
-
     padding:20rpx 30rpx;
     background-color: white;
 
-
+    font-size: 28rpx;
 
 }
+
+.recent-box .title-box{
+    display: flex;
+    justify-content: space-between;
+}
+.recent-box, .hot-box{
+    margin: 20rpx 0rpx;
+}
+
+.dropdown-box .content-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-box .item{
+    padding:7rpx 20rpx;
+    margin: 20rpx 20rpx 0 0;
+    border:  1px solid #8b8b8b;
+}
+
+

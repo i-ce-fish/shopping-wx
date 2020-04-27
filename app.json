@@ -1,18 +1,18 @@
 {
   "pages": [
+    "pages/catagory/index/main",
 
-    "pages/catagory/product-list/main",
 
 
 
     "pages/home/index/main",
     "pages/home/detail/main",
 
-    "pages/catagory/index/main",
     "pages/catagory/search/main",
     "pages/catagory/sizes/main",
     "pages/catagory/colors/main",
     "pages/catagory/product-detail/main",
+    "pages/catagory/product-list/main",
 
     "pages/shopping/cart/main",
     "pages/shopping/address/list/main",
