@@ -1,4 +1,3 @@
-let app = getApp() // 引入app
 Component({
   properties: {
     // 属性值可以在组件使用时指定

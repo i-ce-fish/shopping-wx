@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="head-box y-bgc-white y-padding tui-flex">
+  <view class="head-box y-bgc-white y-padding-lr tui-flex">
     <view class="avatar  tui-col-4 tui-flex tui-vertical-center">
       <van-image class="" round width="120rpx" height="120rpx" fit="fill" src="{{imgs[1]}}" />
     </view>

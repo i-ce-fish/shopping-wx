@@ -49,7 +49,7 @@
 				<tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
 					<view class="y-font-l y-color-white">今日店铺活动</view>
 				</tui-list-cell>
-				<view class="item-box y-padding y-bgc-white y-font-l ">
+				<view class="item-box y-padding-lr y-bgc-white y-font-l ">
 					<view wx:for="{{activity}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}" >{{item.title}}</view>
 				</view>
 			</tui-list-view>
@@ -60,7 +60,7 @@
 				<tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
 					<view class="y-font-l y-color-white">近日新穿法 (新品)</view>
 				</tui-list-cell>
-				<view class="item-box tui-flex tui-align-between y-padding y-bgc-white tui-line-feed">
+				<view class="item-box tui-flex tui-align-between y-padding-lr y-bgc-white tui-line-feed">
 					<view class="tui-col-6" wx:for="{{wear}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}" >{{item.title}}</view>
 				</view>
 			</tui-list-view>
@@ -71,7 +71,7 @@
 				<tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
 					<view class="y-font-l y-color-white">导购帮我找货</view>
 				</tui-list-cell>
-				<view class="item-box  y-padding y-bgc-white ">
+				<view class="item-box  y-padding-lr y-bgc-white ">
 					<view class="">1、请告诉店铺--是谁穿：</view>
 					<view class="tui-flex tui-align-right">男女，年龄，身高，身材，肤色，职业</view>
 					<view class="">2、请告诉店铺--要什么：</view>
@@ -85,7 +85,7 @@
 				<tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">
 					<view class="y-font-l y-color-white">我的好友圈</view>
 				</tui-list-cell>
-				<view class="item-box  y-padding y-bgc-white ">
+				<view class="item-box  y-padding-lr y-bgc-white ">
 					<view class="">衷心感谢您介绍亲友照顾店铺生意！</view>
 					<view class="y-color-red">您的亲友可以享受您的待遇</view>
 					<view class="">另送您一点薄礼以示谢意！</view>

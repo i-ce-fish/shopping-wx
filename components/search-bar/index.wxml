@@ -1,0 +1,26 @@
+<view class="box">
+    <view class="sb-box">
+        <input placeholder="请输入" bindtap="onTap"/>
+    </view>
+</view>
+
+<van-overlay show="{{ show }}" bind:click="onTap" z-index="10">
+
+
+    <view class="overlay-box">
+
+
+<!--        <view class="box">-->
+<!--            <view class="sb-box">-->
+<!--                <input placeholder="请输入" bindtap="onTap"/>-->
+<!--            </view>-->
+<!--        </view>-->
+
+        <view class="dropdown-box">
+            <view wx:for="{{7}}">搜索建议</view>
+        </view>
+    </view>
+
+
+</van-overlay>
+
