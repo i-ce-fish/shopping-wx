@@ -16,7 +16,6 @@ Component({
         }
         ,
         onTap() {
-            console.log(this.data.show)
             this.setData({
                 show: !this.data.show
             })

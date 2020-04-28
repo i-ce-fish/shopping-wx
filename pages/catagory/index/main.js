@@ -64,7 +64,6 @@ Page({
                     //菜单高度计算公式：（窗口高度px - 底部栏50px）rpx  -  搜索栏 112 rpx
                     menuHeight: wx.$rpx(res.windowHeight - 50) - 112 + 'rpx'
                 });
-
             }
         });
     },

@@ -9,7 +9,7 @@
             <van-image src="{{item.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>
 
             <view class="pro-item y-padding-all">
-                <van-image wx:for="{{item.colors}}" src="{{item.url}}" width="40rpx" height="40rpx" fit="fill"
+                <van-image wx:for="{{item.colors}}" wx:key="index" src="{{item.url}}" width="40rpx" height="40rpx" fit="fill"
                            class=""/>
                 <view class="tui-flex tui-align-between">
                     <view>

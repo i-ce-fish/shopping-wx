@@ -17,6 +17,7 @@
                     title="{{item.name}}"
                     thumb="{{ testImg }}"
                     wx:for="{{products}}"
+                    wx:key="index"
                     bindtap="go"
                     data-url="/pages/catagory/product-list/main"
 
