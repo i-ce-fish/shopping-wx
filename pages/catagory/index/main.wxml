@@ -20,6 +20,7 @@
                     wx:key="index"
                     bindtap="go"
                     data-url="/pages/catagory/product-list/main"
+                    thumb-class="thumb-class"
 
             >
             </van-card>

@@ -1,8 +1,6 @@
 {
   "pages": [
-    "pages/catagory/index/main",
-
-
+    "pages/shopping/cart/main",
 
 
     "pages/home/index/main",
@@ -13,8 +11,8 @@
     "pages/catagory/colors/main",
     "pages/catagory/product-detail/main",
     "pages/catagory/product-list/main",
+    "pages/catagory/index/main",
 
-    "pages/shopping/cart/main",
     "pages/shopping/address/list/main",
     "pages/shopping/address/add/main",
     "pages/shopping/order/submit-order/main",
@@ -34,9 +32,12 @@
     "pages/rule/integral/main",
     "pages/info/info-list/main",
 
+
+    "pages/test/style/main",
     "pages/test/main",
     "pages/test/edit",
     "pages/test/add/main"
+
   ],
   "window": {
     "backgroundTextStyle": "dark",

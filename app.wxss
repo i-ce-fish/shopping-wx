@@ -1,9 +1,42 @@
 /*全局样式*/
 page {
   background: #fafafa;
-  font-size: 30rpx;
+  font-size: 28rpx;
   color: #282828;
 }
+
+
+/*字体大小 默认为28rpx（14px）*/
+.y-font-xs{
+  font-size: 24rpx;
+}
+.y-font-s{
+  font-size: 26rpx;
+}
+.y-font-m{
+  font-size: 28rpx;
+}
+.y-font-l{
+  font-size: 30rpx;
+}
+.y-font-xl{
+  font-size: 32rpx;
+}
+.y-font-xxl{
+  font-size: 34rpx;
+}
+.y-font-blod{
+  font-weight: bold;
+}
+/*行高*/
+.y-line-height-200{
+  line-height: 200%;
+
+}
+.y-line-height-100{
+  line-height: 100%;
+}
+
 
 /*布局*/
 .container {
@@ -85,36 +118,7 @@ page {
 .y-color-white{
   color: #ffffff;
 }
-/*字体大小 默认为30rpx（15px）*/
-.y-font-xs{
-  font-size: 26rpx;
-}
-.y-font-s{
-  font-size: 28rpx;
-}
-.y-font-m{
-  font-size: 30rpx;
-}
-.y-font-l{
-  font-size: 32rpx;
-}
-.y-font-xl{
-  font-size: 34rpx;
-}
-.y-font-xxl{
-  font-size: 36rpx;
-}
-.y-font-blod{
-  font-weight: bold;
-}
-/*行高*/
-.y-line-height-200{
-  line-height: 200%;
 
-}
-.y-line-height-100{
-  line-height: 100%;
-}
 
 /*表单样式*/
 .y-form-item{

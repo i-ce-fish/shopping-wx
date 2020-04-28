@@ -1,53 +1,76 @@
 <view class="container">
-    <view class="tui-edit-goods">
-      <view>购物车共
-        <text class="tui-goods-num">2</text>件商品</view>
-      <view >
-        <van-button  plain round custom-style="width: 160rpx;heigth:60rpx"  size="small" bind:click="editGoods">{{isEdit?"完成":"编辑商品"}}</van-button>
-      </view>
-    </view>
-      <view class="tui-cart-cell  tui-mtop"  wx:for="{{dataList}}" wx:key="index" >
-<!--        <view class="tui-activity" wx:if="index%2==0">-->
-<!--          <view class="tui-bold">满3件享受优惠</view>-->
-<!--          <view class="tui-buy">去凑单-->
-<!--            <van-icon name="arrow-right" size="18" color="#333"></van-icon>-->
-<!--          </view>-->
-<!--        </view>-->
-        <van-swipe-cell right-width="65" async-close  bind:close="onCloseSwipe"   >
-          <view  >
-            <view class="tui-goods-item">
-              <label class="tui-checkbox">
-                <checkbox color="#fff"></checkbox>
-              </label>
-              <image src="{{testImg}}" class="tui-goods-img" />
-              <view class="tui-goods-info">
-                <view class="tui-goods-title">
+	<view class="top-bar-box">
+		<van-nav-bar safe-area-inset-top="{{false}}" placeholder="{{true}} " fixed="{{true}}" bind:click-left="onClickLeft" bind:click-right="onClickRight">
+			<view slot="left" class="tui-flex tui-vertical-center">
+				<van-radio-group value="{{ radio }}" bind:change="onChange">
+					<van-radio name="1" shape="square" icon-class="select-all"></van-radio>
+				</van-radio-group>
+				<view>全选</view>
+			</view>
+			<view slot="right">编辑商品</view>
+		</van-nav-bar>
+	</view>
+	<view class="main-box">
+		<tui-list-view title=" " class="order-box" wx:for="{{orders}}" wx:key="index">
+			<tui-list-cell hover="{{false}}" class="y-font-blod">
 
-                  {{index%2==0?"欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜":"百雀羚套装女补水保湿护肤品"}}
-                </view>
-                <view class="tui-goods-model">
-                  <view class="tui-model-text">{{index%2==0?"440ml;10件;套装":"500ml;2支"}}</view>
-                  <tui-icon name="arrowdown" size="{{16}}" color="#333"></tui-icon>
-                </view>
-                <view class="tui-price-box">
-                  <view class="tui-goods-price">￥500</view>
-                  <view class="tui-scale">
-                    <tui-numberbox value="{{item.buyNum}}" height="{{40}}" width="{{74}}" min="{{1}}" index="{{index}}" bindchange="changeNum"></tui-numberbox>
-                  </view>
-                </view>
-              </view>
-            </view>
-          </view>
-          <view class="tui-flex tui-vertical-center" style="height:100%;background-color:#ee0a24;"  slot="right" >
-           <view >
-             <van-button  type="danger">删除</van-button>
-           </view>
-          </view>
-        </van-swipe-cell>
-      </view>
-    <van-submit-bar
-      price="{{3050}}"
-      button-text="去结算"
-      bind:submit="go" data-url="/pages/shopping/order/submit-order/main"
-    />
-  </view>
+				<van-checkbox value="{{ checked }}" bind:change="onChange" shape="square"></van-checkbox>
+
+
+				{{item.order.delivery_type.name}}
+			</tui-list-cell>
+			<tui-list-cell hover="{{false}}" wx:for="{{item.order.products}}" wx:key="index">
+				<view class="tui-col-12">
+					<view class="tui-flex tui-align-between">
+						<view>
+							<van-checkbox value="{{ checked }}" bind:change="onChange" shape="square"></van-checkbox>
+						</view>
+						<view>
+							配送方式
+						</view>
+					</view>
+					<view class="product-item-box tui-flex">
+						<van-image width="240rpx" height="240rpx" src="{{item.product.img}}" fit="fill">
+						</van-image>
+
+						<view>
+							<view>
+								{{item.product.name}}
+
+							</view>
+							<view>
+								颜色: {{item.product.color.code}} {{item.product.color.name}}
+							</view>
+							<view>
+								尺码: {{item.product.size.all_name}}/ {{item.product.size.name}}
+							</view>
+
+							<view>{{item.product.remark}}</view>
+							<view>{{item.product.price}}</view>
+
+							<view class="tui-flex tui-align-between">
+								<view>
+									<van-stepper value="{{ 1 }}" bind:change="onChange" />
+								</view>
+								<view>删除</view>
+							</view>
+
+
+						</view>
+					</view>
+				</view>
+			</tui-list-cell>
+		</tui-list-view>
+	</view>
+	<view class="bottom-bar-box">
+		<van-submit-bar button-text="结算" bind:submit="onSubmit" custom-class="submit-bar" button-class="button-class" bar-class="bar-class">
+				<span>
+					合计:
+					<span class="y-color-red y-font-xl">￥9.99</span>
+					<span class="y-color-gray">
+						不含运费
+					</span>
+				</span>
+		</van-submit-bar>
+	</view>
+</view>
