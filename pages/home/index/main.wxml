@@ -1,5 +1,4 @@
 <view class="container">
-	<view class="title tui-center y-font-xl">会员内购</view>
 	<view class="swiper-box">
 		<swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
 			<block wx:for="{{imgs}}" wx:key="index">

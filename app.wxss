@@ -1,8 +1,8 @@
 /*全局样式*/
 page {
-  background: #fafafa;
+  background: #eee;
   font-size: 28rpx;
-  color: #282828;
+  color: #1b1b1b;
 }
 
 
@@ -28,6 +28,9 @@ page {
 .y-font-blod{
   font-weight: bold;
 }
+
+
+
 /*行高*/
 .y-line-height-200{
   line-height: 200%;
@@ -78,13 +81,26 @@ page {
 .y-padding-b{
   padding-bottom: 30rpx;
 }
+.y-pr-20{
+  padding-right: 20rpx;
+}
 
+.y-pb-20{
+  padding-bottom: 20rpx;
+}
+
+.y-pt-18{
+  padding-top: 18rpx;
+}
+.y-pt-24{
+  padding-top: 24rpx;
+}
 
 /* 颜色统一 */
 
 /*主动设置背景色*/
 .y-bgc{
-  background-color: #fafafa;
+  background-color: #eee;
 }
 .y-bgc-white{
   background-color: white;
@@ -102,12 +118,13 @@ page {
 
 }
 .y-color-gray {
-  color: #999999;
+  color: #7d7d7d;
+
 }
 
 /* 用于未付款金额等的显示 */
 .y-color-red {
-  color: #f10000;
+  color: #ff0000;
 }
 
 /* 用于已付款金额等的显示 */
@@ -131,6 +148,12 @@ page {
 }
 
 
+/*其他字体效果*/
+/*下划线*/
+.y-underline{
+  text-decoration: underline;
+
+}
 /*thor ui 部分样式*/
 .tui-flex-wrap {
   flex-wrap: wrap;

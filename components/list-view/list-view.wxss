@@ -6,6 +6,9 @@
   line-height: 30rpx;
   color: #666;
 }
+.nullTitle{
+  padding:10rpx;
+}
 .tui-list-content{
   width: 100%;
   position: relative;

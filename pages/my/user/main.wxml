@@ -1,18 +1,18 @@
 <view class="container">
   <view class="head-box y-bgc-white y-padding-lr tui-flex">
     <view class="avatar  tui-col-4 tui-flex tui-vertical-center">
-      <van-image class="" round width="120rpx" height="120rpx" fit="fill" src="{{imgs[1]}}" />
+      <van-image class="" round width="150rpx" height="150rpx" fit="fill" src="{{imgs[1]}}" />
     </view>
     <view class="info-box tui-col-8 y-color-white">
       <view class="">杨晴文-上海</view>
-      <view class="y-font-l">二级会员</view>
-      <view class="y-font-l">新品88折</view>
+      <view class="">二级会员</view>
+      <view class="">新品88折</view>
     </view>
   </view>
   <view class="grid-box">
     <view class="my-box">
       <van-grid column-num="3">
-        <van-grid-item icon="cash-on-deliver" bindtap="go" data-url="/pages/my/copon/main" text="红包5张/卡券520" />
+        <van-grid-item icon="cash-on-deliver" bindtap="go" data-url="/pages/my/copon/main" text="卡券520" />
         <!-- <van-grid-item icon="cash-on-deliver" bindtap="go('http://cdb99/com')" text="红包5张/卡券520"/> -->
         <van-grid-item icon="balance-o" bindtap="go" data-url="/pages/my/money/main" text="余额 1788.00" />
         <van-grid-item icon="gift-o" bindtap="go" data-url="/pages/my/integral/main" text="积分 500" />

@@ -75,7 +75,7 @@
   z-index: 999;
   padding: 20rpx 25rpx 30rpx;
   box-sizing: border-box;
-  background: #fafafa;
+  background: #eee;
 }
 
 .tui-safe-area {

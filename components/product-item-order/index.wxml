@@ -1,0 +1,26 @@
+<view class="product-item-box tui-flex">
+    <view class="img-box y-padding-r">
+        <van-image width="240rpx" height="240rpx" src="{{product.img}}" fit="fill">
+        </van-image>
+    </view>
+
+    <view class="info-box tui-col-12">
+        <view class="title  y-font-blod">
+            {{product.name}} {{product.code}}
+        </view>
+        <view class="color y-pt-18 ">
+            颜色: {{product.color.code}} {{product.color.name}}
+        </view>
+        <view class="size y-pt-18">
+            尺码: {{product.size.all_name}}/ {{product.size.name}}
+        </view>
+
+        <view class="remark y-pt-18 y-color-gray">{{product.remark}}</view>
+        <view class="price y-pt-24 y-font-xl y-font-blod">￥{{product.price}}</view>
+
+
+        <slot></slot>
+
+
+    </view>
+</view>

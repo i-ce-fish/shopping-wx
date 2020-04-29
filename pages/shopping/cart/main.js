@@ -12,7 +12,7 @@ Page({
                             product: {
                                 img:"https://www.uniqlo.cn/hmall/test/u0000000014067/main/first/1000/1.jpg",
                                 category: "男装/女装/亲子装",
-                                name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼) 1",
+                                name: " (UT) ULTRAMAN 印花T恤",
                                 code: "428160",
                                 price: "79.00",
                                 remark:"支持30天无理由退换货",

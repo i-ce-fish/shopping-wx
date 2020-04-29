@@ -14,7 +14,7 @@
 .tui-list-cell::after {
   content: '';
   position: absolute;
-  border-bottom: 1rpx solid #eaeef1;
+  border-bottom: 1px solid #dadada;
   -webkit-transform: scaleY(0.5);
   transform: scaleY(0.5);
   bottom: 0;
@@ -24,7 +24,7 @@
 .tui-line-left::after{
 		left: 30rpx !important;
 	}
-	
+
 	.tui-line-right::after{
 		right: 30rpx !important;
 	}
