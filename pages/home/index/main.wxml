@@ -92,5 +92,8 @@
 			</tui-list-view>
 		</view>
 	</view>
+
+	<button open-type="contact">客服聊天测试</button>
+
 	<van-divider contentPosition="center">到底了</van-divider>
 </view>

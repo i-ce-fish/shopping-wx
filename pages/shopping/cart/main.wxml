@@ -25,10 +25,10 @@
                 </view>
 
                 <view class=" y-font-blod y-font-l">
-                    {{item.order.delivery_type.name}}
+                    {{item.delivery_type.name}}
                 </view>
             </tui-list-cell>
-            <tui-list-cell hover="{{false}}" wx:for="{{item.order.products}}" wx:key="index"
+            <tui-list-cell hover="{{false}}" wx:for="{{item.products}}" wx:key="index"
                            padding="30rpx 30rpx 60rpx 30rpx">
                 <view class="tui-col-12">
                     <view class="tui-flex tui-align-between y-pb-20">
@@ -41,7 +41,7 @@
                     </view>
 
                     <!--                    component-->
-                    <product-item-order product="{{item.product}}">
+                    <product-item-order product="{{item}}">
                         <view class="tui-flex tui-align-between tui-vertical-center">
                             <view>
                                 <van-stepper value="{{ 1 }}" bind:change="onChange" button-size="62rpx"
@@ -55,7 +55,7 @@
         </tui-list-view>
     </view>
     <view class="bottom-bar-box">
-        <van-submit-bar button-text="结算" bind:submit="go" data-url="/pages/shopping/order/submit-order/main" custom-class="submit-bar" button-class="button-class"
+        <van-submit-bar button-text="结算" bind:submit="go" data-url="/pages/shopping/order/item/main" custom-class="submit-bar" button-class="button-class"
                         bar-class="bar-class">
 				<span>
 					合计:

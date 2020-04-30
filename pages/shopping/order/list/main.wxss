@@ -1,0 +1,6 @@
+/* pages/shopping/order/list/main.wxss */
+
+
+.main-box{
+    margin-bottom: 50px;
+}

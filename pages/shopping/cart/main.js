@@ -7,9 +7,7 @@ Page({
     data: {
         radio: '0',
         orders: [{
-                order: {
                     products: [{
-                            product: {
                                 img:"https://www.uniqlo.cn/hmall/test/u0000000014067/main/first/1000/1.jpg",
                                 category: "男装/女装/亲子装",
                                 name: " (UT) ULTRAMAN 印花T恤",
@@ -25,10 +23,8 @@ Page({
                                     all_name: "150/76A"
                                 },
                                 num: "1",
-                            }
                         },
                         {
-                            product: {
                                 img:"https://www.uniqlo.cn/hmall/test/u0000000014067/main/first/1000/1.jpg",
                                 category: "男装/女装/亲子装",
                                 name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼)2 ",
@@ -45,7 +41,6 @@ Page({
                                     all_name: "150/76A"
                                 },
                                 num: "1",
-                            },
                         }
                     ],
                     delivery_type: {
@@ -61,12 +56,9 @@ Page({
                         }
                     },
                     copon: "满300-100"
-                }
             },
             {
-                order: {
                     products: [{
-                            product: {
                                 img:"https://www.uniqlo.cn/hmall/test/u0000000014067/main/first/1000/1.jpg",
                                 category: "男装/女装/亲子装",
                                 name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼) 3",
@@ -81,10 +73,8 @@ Page({
                                     all_name: "150/76A"
                                 },
                                 num: "1",
-                            }
                         },
                         {
-                            product: {
                                 img:"https://www.uniqlo.cn/hmall/test/u0000000014067/main/first/1000/1.jpg",
                                 category: "男装/女装/亲子装",
                                 name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼)4",
@@ -101,7 +91,6 @@ Page({
                                     all_name: "150/76A"
                                 },
                                 num: "1",
-                            },
                         }
                     ],
                     delivery_type: {
@@ -117,7 +106,6 @@ Page({
                         }
                     },
                     copon: "满300-100"
-                }
             }
         ]
     },
