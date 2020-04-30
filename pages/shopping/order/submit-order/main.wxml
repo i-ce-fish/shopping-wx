@@ -29,8 +29,8 @@
             <view class="tui-goods-item">
               <image src="{{testImg}}" class="tui-goods-img"></image>
               <view class="tui-goods-center">
-                <view class="tui-goods-name">欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）</view>
-                <view class="tui-goods-attr">黑色，50ml</view>
+                <view class="tui-goods-name">T恤</view>
+                <view class="tui-goods-attr">黑色，L</view>
               </view>
               <view class="tui-price-right">
                 <view>￥298.00</view>

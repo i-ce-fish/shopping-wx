@@ -55,7 +55,7 @@
         </tui-list-view>
     </view>
     <view class="bottom-bar-box">
-        <van-submit-bar button-text="结算" bind:submit="onSubmit" custom-class="submit-bar" button-class="button-class"
+        <van-submit-bar button-text="结算" bind:submit="go" data-url="/pages/shopping/order/submit-order/main" custom-class="submit-bar" button-class="button-class"
                         bar-class="bar-class">
 				<span>
 					合计:
