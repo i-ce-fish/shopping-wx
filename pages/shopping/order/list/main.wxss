@@ -4,3 +4,7 @@
 .main-box{
     margin-bottom: 50px;
 }
+
+.button-class {
+    border-radius: 0 !important;
+}

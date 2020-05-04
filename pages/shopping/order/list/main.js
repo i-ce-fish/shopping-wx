@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        activeNames: ['1','2'],
+        activeNames: [0,1],
         orders: [
             {
                 delivery: {
@@ -210,5 +210,8 @@ Page({
         this.setData({
             activeNames: event.detail
         })
+    },
+    go(e) {
+        wx.$go(e.currentTarget.dataset.url)
     }
 })

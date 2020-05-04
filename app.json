@@ -1,8 +1,6 @@
 {
   "pages": [
 
-    "pages/shopping/order/list/main",
-    "pages/shopping/order/item/main",
 
 
     "pages/home/index/main",
@@ -23,6 +21,8 @@
 
 
     "pages/shopping/cart/main",
+    "pages/shopping/order/list/main",
+    "pages/shopping/order/item/main",
 
 
 
