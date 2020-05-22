@@ -24,6 +24,10 @@
   transform: scaleY(0.5);
 
 }
+.nullTitle::before{
+  border-top: 5rpx solid #eaeef1;
+
+}
 .tui-list-content::after {
   content: '';
   position: absolute;

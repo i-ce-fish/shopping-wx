@@ -29,3 +29,10 @@
 .advisory-box .textarea{
   height:150rpx;
 }
+
+.color-checked{
+  border: black 2px solid;
+  padding:5rpx;
+  width: 62rpx;
+  height: 62rpx;
+}

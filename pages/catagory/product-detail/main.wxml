@@ -3,10 +3,10 @@
     <!-- <view class="top-bar y-font-xs">
         订单满200免运费
     </view> -->
-
     <view class="pro-box">
         <view class="pro-box-top y-padding-all">
-            <view class="y-font-l y-font-blod">{{product.category}} {{product.name}} {{product.code}}</view>
+            <view class="y-font-l y-font-blod">{{product.category}} {{product.product_name}} {{product.product_sn}}
+            </view>
             <!-- <view class="y-color-red">初上市尺码范围: XS-XXL</view> -->
 
         </view>
@@ -20,12 +20,12 @@
             </swiper>
         </view>
         <view class="pro-box-bottom y-padding-all y-bgc-white y-line-height-200">
-            <view class="tui-right y-font-s y-color-gray">初上市价格(吊牌价)：￥199.00</view>
+            <view class="tui-right y-font-s y-color-gray">初上市价格(吊牌价)：￥{{product.original_price}}</view>
             <van-divider custom-style="padding:0"/>
 
             <view class="inner-price-box ">
                 <view class="y-font-xl y-color-red">
-                    内购价:￥{{product.inner_price}}
+                    内购价:￥{{product.onsale_price}}
                 </view>
                 <view wx:for="{{product.inner_activities}}" wx:key="index">
                     {{item.title}}
@@ -38,7 +38,7 @@
 
             <view class="vip-price-box ">
                 <view class="y-font-xl y-color-red">
-                    尊享价:￥{{product.inner_price}}
+                    尊享价:￥{{product.vip_price}}
                 </view>
                 <view wx:for="{{product.vip_activities}}" wx:key="index">
                     {{item.title}}
@@ -238,18 +238,16 @@
         </van-tab>
         <van-tab title="咨询">
 
-
-
-
             <view class="y-padding-tb advisory-box">
-                <tui-card class="y-padding-tb" title="{{advisory}}" >
+                <tui-card class="y-padding-tb" title="{{advisory}}">
                     <view slot="body" class="y-padding-all">
                         <view class="">
-                            <textarea class="textarea" name="desc" placeholder="请输入你要咨询的内容"   auto-focus/>
+                            <textarea class="textarea" name="desc" placeholder="请输入你要咨询的内容" auto-focus/>
                         </view>
                         <van-divider custom-style="padding:0"/>
                         <view class="tui-center">
-                            <van-button type="danger" size="normal" plain round custom-style="width:70%;">发布</van-button>
+                            <van-button type="danger" size="normal" plain round custom-style="width:70%;">发布
+                            </van-button>
                         </view>
                     </view>
                 </tui-card>
@@ -279,7 +277,7 @@
         <view class="popup-box y-padding-all">
 
             <view class="popup-box-title y-padding-tb">
-                {{product.category}} {{product.name}}{{product.code}}
+                {{product.category}} {{product.product_name}}{{product.code}}
             </view>
             <view class="popup-box-top tui-flex tui-align-between">
                 <view class="tui-col-4 y-padding-r">
@@ -311,14 +309,20 @@
 
             <view class="popup-box-colors">
 
-                <view class="y-font-blod">
+                <view class="y-font-blod ">
                     颜色:{{checkedColor}}01黄色
                 </view>
                 <view class="tui-flex">
                     <view wx:for="{{product.colors}}" wx:key="index"
-                          class="y-padding-t y-padding-r tui-flex-col tui-center">
-                        <van-image src=" {{item.color_thumbnail}}" width="50rpx" fit="widthFix"></van-image>
-                        {{item.code}}{{item.name}}
+                          class="y-padding-t y-padding-r tui-flex-col  ">
+                        <view class="color-checked">
+                            <view class="y-h-w-100 tui-flex tui-align-center tui-vertical-center  ">
+                                <van-image  src=" {{item.color_thumbnail}}" width="55rpx"
+                                            fit="widthFix" ></van-image>
+
+                            </view>
+                        </view>
+                        <!--                        {{item.code}}{{item.name}}-->
                     </view>
                 </view>
                 <view class=" tui-flex tui-align-right tui-vertical-center"
@@ -336,7 +340,7 @@
                 <view class="y-padding-t tui-flex tui-flex-wrap">
                     <view wx:for="{{product.sizes}}" wx:key="index" class="y-padding-b y-padding-r">
                         <van-button size="small" type="default" plain="{{false}}">
-                            {{item.all_name}}/{{item.name}}
+                            {{item.show_name}}
                         </van-button>
                     </view>
                 </view>
@@ -380,7 +384,7 @@
 
             <view class="tui-flex tui-align-between y-padding-t">
                 <van-button type="danger" bind:click="onAddCart" round>加入购物车</van-button>
-                <van-button  type="danger" plain round>立即购买</van-button>
+                <van-button type="danger" plain round>立即购买</van-button>
 
             </view>
         </view>

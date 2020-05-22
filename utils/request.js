@@ -1,13 +1,15 @@
 function request(req) {
 
+
   // 去除前缀“/api”
   // req.url = req.url.replace('/api','')
 
   // 另一个服务器
-  // const ServerIP = 'http://123.207.179.135:9529'
+  // 斜杠在此处添加，api文件不加斜杠
+  const ServerIP = 'https://shop.cdb99.com/api/'
 
   // 端口号也要与小程序域名设置一致
-  const ServerIP = 'https://shop.cdb99.com/api/v1'
+  // const ServerIP = 'https://shop.cdb99.com/api/v1'
 
   return new Promise(function (resolve, reject) {
     wx.request({
@@ -15,10 +17,15 @@ function request(req) {
       data: req.data,
       method: req.method,
       timeout: 10000,
+      //这几项必须设置
       header: {
         'Accept': 'application/json',
-        'Authorization': wx.getStorageSync('token').token,
-        'Content-Type': 'json'
+        'Authorization': 'Bearer '+wx.getStorageSync('token'),
+        //登录接口
+        'Content-Type': 'application/json',
+        //普通接口
+        // 'Content-Type': 'json'
+
       },
       success: function (res) {
         console.warn('请求结果', res);

@@ -1,7 +1,8 @@
 {
   "pages": [
+    "pages/catagory/product-detail/main",
 
-
+    "pages/user/login/main",
 
     "pages/home/index/main",
     "pages/home/detail/main",
@@ -9,7 +10,6 @@
     "pages/catagory/search/main",
     "pages/catagory/sizes/main",
     "pages/catagory/colors/main",
-    "pages/catagory/product-detail/main",
     "pages/catagory/product-list/main",
     "pages/catagory/index/main",
 
@@ -18,10 +18,10 @@
     "pages/shopping/order/submit-order/main",
     "pages/shopping/order/paid-order/main",
     "pages/shopping/order/order-detail/main",
+    "pages/shopping/order/list/main",
 
 
     "pages/shopping/cart/main",
-    "pages/shopping/order/list/main",
     "pages/shopping/order/item/main",
 
 

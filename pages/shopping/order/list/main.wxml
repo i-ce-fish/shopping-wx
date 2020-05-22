@@ -23,7 +23,7 @@
                         <view class="store-box">
 
                             <!--门店信息-->
-                            <tui-list-view nullTitle="{{true}}">
+                            <tui-list-view nullTitle="{{true}}" unlined="all">
                                 <tui-list-cell hover="{{false}}" padding="0 30rpx 36rpx">
                                     <view>
                                         <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
@@ -48,7 +48,7 @@
                                 </tui-list-cell>
                             </tui-list-view>
                             <!--            提货信息-->
-                            <tui-list-view nullTitle="{{true}}">
+                            <tui-list-view nullTitle="{{true}}" unlined="all">
                                 <tui-list-cell hover="{{false}}" padding="0 30rpx 36rpx">
                                     <view class="tui-col-12">
                                         <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
@@ -88,10 +88,11 @@
                     <view class="products-box">
 
                         <!--            商品信息-->
-                        <tui-list-view nullTitle="{{true}}">
-                            <view class="y-bgc-white y-font-l y-font-blod y-padding-lr y-pt-18 y-pb-18">
+                        <tui-list-view nullTitle="{{true}}" unlined="all" >
+                            <view class="y-font-l y-font-blod y-padding-lr y-pt-18 y-pb-18 y-color-black">
                                 商品信息
                             </view>
+
 
                             <tui-list-cell hover="{{false}}" wx:for="{{item.products}}" wx:key="index">
 
@@ -109,7 +110,7 @@
 
 
                     <view class="info-box"><!--    促销信息-->
-                        <tui-list-view nullTitle="{{true}}">
+                        <tui-list-view nullTitle="{{true}}" unlined="all">
 
                             <tui-list-cell hover="{{false}}">
 
@@ -134,7 +135,7 @@
                         </tui-list-view>
 
                         <!--    优惠券-->
-                        <tui-list-view nullTitle="{{true}}">
+                        <tui-list-view nullTitle="{{true}}" unlined="all">
 
                             <tui-list-cell hover="{{false}}">
 
@@ -159,7 +160,7 @@
 
 
                         <!--    金额-->
-                        <tui-list-view nullTitle="{{true}}">
+                        <tui-list-view nullTitle="{{true}}" unlined="all">
 
                             <tui-list-cell hover="{{false}}">
 

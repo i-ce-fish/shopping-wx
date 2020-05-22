@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="40ad1c79-c407-41b4-83ac-31663cc7a812" name="cdb" url="http://129.204.19.95">
+        <fileTransfer host="129.204.19.95" port="22" privateKey="D:\Users\binyu\Desktop\云想\129.204.19.95服务器私钥" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,6 +1,6 @@
 // pages/home/detail/main.js
 
-let articles = require("../../../api/articles")
+let articles = require("../../../api/article")
 //在使用的View中引入WxParse模块
 var WxParse = require('../../../components/wxParse/wxParse');
 

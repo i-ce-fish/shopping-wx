@@ -7,7 +7,7 @@ Component({
     },
     hover: {
       type: Boolean,
-      value: true //是否有点击效果
+      value: false //是否有点击效果
     },
     last: {
       type: Boolean,

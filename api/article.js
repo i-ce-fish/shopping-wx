@@ -2,7 +2,7 @@ let rq = require('../utils/request')
 
 function getList(data) {
 	return rq.request({
-		url: '/articles',
+		url: 'articles',
 		method: 'GET',
 		data
 	})
@@ -10,14 +10,14 @@ function getList(data) {
 
 function get(id) {
 	return rq.request({
-		url: "/articles/" + id,
+		url: "articles/" + id,
 		method: "GET"
 	})
 }
 
 function add(data) {
 	return rq.request({
-		url: "/articles",
+		url: "articles",
 		method: "POST",
 		data
 	})
@@ -25,7 +25,7 @@ function add(data) {
 
 function put(id, data) {
 	return rq.request({
-		url: "/articles/" + id,
+		url: "articles/" + id,
 		method: "PUT",
 		data
 	})
@@ -33,7 +33,7 @@ function put(id, data) {
 
 function del(id) {
 	return rq.request({
-		url: "/articles/" + id,
+		url: "articles/" + id,
 		method: "DELETE"
 	})
 }

@@ -1,12 +1,12 @@
 let rq = require('../utils/request')
 
-function login(data) {
+function getList(data) {
 	return rq.request({
-		url: 'auth/login',
-		method: 'POST',
+		url: 'catalogs',
+		method: 'get',
 		data: data
 	})
 }
 module.exports = {
-	login
+	getList
 }
