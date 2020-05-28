@@ -1,32 +1,27 @@
 {
   "pages": [
-    "pages/catagory/product-detail/main",
-
-    "pages/user/login/main",
 
     "pages/home/index/main",
-    "pages/home/detail/main",
 
+    "pages/catagory/product-detail/main",
+    "pages/user/login/phone/main",
+
+    "pages/user/login/index/main",
+
+    "pages/home/detail/main",
     "pages/catagory/search/main",
     "pages/catagory/sizes/main",
     "pages/catagory/colors/main",
     "pages/catagory/product-list/main",
     "pages/catagory/index/main",
-
     "pages/shopping/address/list/main",
     "pages/shopping/address/add/main",
     "pages/shopping/order/submit-order/main",
     "pages/shopping/order/paid-order/main",
     "pages/shopping/order/order-detail/main",
     "pages/shopping/order/list/main",
-
-
     "pages/shopping/cart/main",
     "pages/shopping/order/item/main",
-
-
-
-
     "pages/my/user/main",
     "pages/my/qrcode/main",
     "pages/my/copon/main",
@@ -36,16 +31,12 @@
     "pages/my/integral/main",
     "pages/my/wear-data/list/main",
     "pages/my/wear-data/add/main",
-
     "pages/rule/integral/main",
     "pages/info/info-list/main",
-
-
     "pages/test/style/main",
     "pages/test/main",
     "pages/test/edit",
     "pages/test/add/main"
-
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -55,9 +46,9 @@
   },
   "tabBar": {
     "custom": true,
-
     "selectedColor": "#ff4444",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/index/main",
         "text": "首页",
         "iconPath": "static/img/home-off.png",
@@ -85,4 +76,5 @@
   },
   "usingComponents": {},
   "sitemapLocation": "sitemap.json"
+
 }

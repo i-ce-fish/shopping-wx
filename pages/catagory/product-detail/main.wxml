@@ -287,7 +287,7 @@
                 </view>
                 <!-- todo  文本过长会允许横向滑动 -->
                 <view class="tui-col-8">
-                    <view class="y-font-xl y-color-red">内购价 ￥{{product.price}}</view>
+                    <view class="y-font-xl y-color-red">内购价 ￥{{product.onsale_price}}</view>
                     <view class="y-padding-tb tui-flex">
 
                         <view>
@@ -295,10 +295,10 @@
                         </view>
                         <view>
                             <view>
-                                {{checkedSize}}150/80A/M
+                                {{checkedProduct.size}}
                             </view>
                             <view>
-                                {{checkedColor}}01黄色
+                                {{checkedProduct.color}}
                             </view>
                         </view>
                     </view>
@@ -310,19 +310,22 @@
             <view class="popup-box-colors">
 
                 <view class="y-font-blod ">
-                    颜色:{{checkedColor}}01黄色
+                    颜色: {{checkedProduct.color}}
                 </view>
                 <view class="tui-flex">
                     <view wx:for="{{product.colors}}" wx:key="index"
-                          class="y-padding-t y-padding-r tui-flex-col  ">
-                        <view class="color-checked">
-                            <view class="y-h-w-100 tui-flex tui-align-center tui-vertical-center  ">
-                                <van-image  src=" {{item.color_thumbnail}}" width="55rpx"
-                                            fit="widthFix" ></van-image>
-
+                          class="y-pt-20 y-pl-20 tui-flex-col  ">
+                        <view class="color-box {{item.checked&&!item.disabled?'color-checked':''}}">
+                            <view class="y-h-w-100 tui-flex tui-align-center tui-vertical-center  tui-center">
+                                <image style="height: 55rpx;width: 55rpx;{{item.disabled?'opacity:0.2;':''}};"
+                                       mode="scaleToFill"
+                                       src=" {{item.color_thumbnail}}"
+                                       data-item="{{item}}" data-index="{{index}}" bindtap="onColor"/>
                             </view>
+                            <!--                            <view class="y-pt-20">-->
+                            <!--                                {{item.name}}-->
+                            <!--                            </view>-->
                         </view>
-                        <!--                        {{item.code}}{{item.name}}-->
                     </view>
                 </view>
                 <view class=" tui-flex tui-align-right tui-vertical-center"
@@ -335,13 +338,36 @@
             <van-divider/>
             <view class="popup-box-sizes">
                 <view class="y-font-blod">
-                    尺码:{{checkedSize}}150/80A/M
+                    尺码:{{checkedProduct.size}}
                 </view>
-                <view class="y-padding-t tui-flex tui-flex-wrap">
-                    <view wx:for="{{product.sizes}}" wx:key="index" class="y-padding-b y-padding-r">
-                        <van-button size="small" type="default" plain="{{false}}">
-                            {{item.show_name}}
-                        </van-button>
+                <view class="  tui-flex tui-flex-wrap">
+                    <view class="tui-flex tui-flex-wrap     ">
+                        <view class="sizes-button-box {{item.checked&&!item.disabled?'size-checked':''}}" wx:for="{{product.sizes}}"
+                              wx:key="index">
+                            <van-button size="small" type="default"
+                                        custom-style="font-weight:bolder"
+                                        disabled="{{item.disabled}}"
+                                        color="{{item.checked?'#000':''}}"
+                                        data-item="{{item}}" data-index="{{index}}"
+                                        bindtap="onSize">
+                                {{item.display_name}}
+                            </van-button>
+                        </view>
+<!--                        color="{{item.disabled?'#000':''}}"-->
+                        <!--                        <view class="sizes-button-box ">-->
+                        <!--                            <van-button size="small" disabled custom-style="font-weight:bolder">禁用180/65A/M</van-button>-->
+                        <!--                        </view>-->
+                        <!--                        <view class="sizes-button-box size-checked">-->
+                        <!--                            <van-button size="small" color="#000"-->
+                        <!--                                        custom-style="font-weight:bolder;">选中180/65A/M-->
+                        <!--                            </van-button>-->
+                        <!--                        </view>-->
+                        <!--                        <view class="sizes-button-box">-->
+                        <!--                            <van-button size="small"-->
+                        <!--                                        custom-style="font-weight:bolder;">正常180/65A/M-->
+                        <!--                            </van-button>-->
+                        <!--                        </view>-->
+
                     </view>
                 </view>
                 <view class=" tui-flex tui-align-right tui-vertical-center"
@@ -362,11 +388,11 @@
                 <view class="y-padding-tb ">
                     <van-radio-group value="{{ delivery }}" bind:change="onRdioDelivery">
                         <view>
-                            <van-radio custom-class="y-padding-b" name="1">快递配送
+                            <van-radio custom-class="y-padding-b" name="1" checked-color="#1b1b1b">快递配送
                                 <view>快递配送至丽水市云和县 7.00元</view>
                             </van-radio>
-                            <van-radio custom-class="y-padding-b" name="2">门店自提</van-radio>
-                            <van-radio custom-class="y-padding-b" name="3">门店急送</van-radio>
+                            <van-radio custom-class="y-padding-b" name="2" checked-color="#1b1b1b">门店自提</van-radio>
+                            <van-radio custom-class="y-padding-b" name="3" checked-color="#1b1b1b">门店急送</van-radio>
 
                         </view>
                     </van-radio-group>

@@ -1,0 +1,95 @@
+{
+  "colors": [
+    {
+      "color_name": "白色",
+      "color_thumbnail": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg",
+      "good_thumbnail": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg"
+    },
+    {
+      "color_name": "黑色",
+      "color_thumbnail": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg",
+      "good_thumbnail": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg"
+    }
+  ],
+  "sizes": [
+    {
+      "size_name": "S",
+      "display_name": "160/80A/S",
+      "description": "小码"
+    },
+    {
+      "size_name": "M",
+      "display_name": "170/80A/M",
+      "description": "中码"
+    },
+    {
+      "size_name": "L",
+      "display_name": "180/90A/L",
+      "description": "大码"
+    }
+  ],
+  "carousels": [
+    {
+      "url": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg",
+      "uid": 1590546307597,
+      "status": "success"
+    },
+    {
+      "url": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg",
+      "uid": 1590546313369,
+      "status": "success"
+    },
+    {
+      "url": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg",
+      "uid": 1590546316421,
+      "status": "success"
+    },
+    {
+      "url": "https://www.uniqlo.cn/hmall/test/u0000000005575/chip/22/COL00.jpg",
+      "uid": 1590546322574,
+      "status": "success"
+    }
+  ],
+  "material": [
+    {
+      "key": "一级属性",
+      "value": [
+        {
+          "key": "title1",
+          "value": "value1"
+        },
+        {
+          "key": "title2",
+          "value": "value2"
+        }
+      ]
+    },
+    {
+      "key": "一级属性2",
+      "value": [
+        {
+          "key": "title1",
+          "value": "value1"
+        },
+        {
+          "key": "title2",
+          "value": "value2"
+        }
+      ]
+    }
+  ],
+  "product_parameter": [
+    {
+      "key": "prop1",
+      "value": "value1"
+    },
+    {
+      "key": "prop2",
+      "value": "value2"
+    },
+    {
+      "key": "prop3",
+      "value": "value3"
+    }
+  ]
+}

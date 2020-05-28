@@ -1,30 +1,35 @@
 // pages/rule/integral/main.js
 let goods = require("../../../api/goods")
+let goodsize = require("../../../api/goodsize")
 
-Page({
+const filter = require('../../../utils/filter');
+
+Page(filter.loginCheck({
 
     /**
      * 页面的初始数据
      */
     data: {
-        colorChecked:"color-checked",
-        checkedSize: "",
-        checkedColor: "",
+        //fade
+        id: "29",
+        //当前选中的商品
+        checkedProduct:{
+            size:"",
+            color:""
+        },
         //    data
 
         product: {
-            id:"",
-            product_name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
-            product_sn: "424932",
-            type_sn:"",
+            // product_name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            // product_sn: "424932",
+            // type_sn: "",
             category: "女装",
-            origin_price: "499.00",
-            onsale_price: "299.00",
-            vip_price: "199.00",
-            main_pic:'',
+            // origin_price: "499.00",
+            // onsale_price: "299.00",
+            // vip_price: "199.00",
+            // main_pic: '',
 
-            produt_parameter:[],
-
+            produt_parameter: [],
 
 
             detail: [{
@@ -37,59 +42,59 @@ Page({
                 url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/4.jpg"
             },],
 
-
-            colors: [{
-                color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg",
-                product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
-                name: "黄色",
-                code: "10"
-            },
-                {
-                    color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg",
-                    product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016502/main/first/561/1.jpg",
-                    name: "黄色",
-                    code: "11",
-                },
-                {
-                    color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg",
-                    product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000013572/main/first/561/1.jpg",
-                    name: "黄色",
-                    code: "12"
-                },
-            ],
-            sizes: [{
-                name: "S",
-                all_name: "150/76A"
-            },
-                {
-                    name: "M",
-                    all_name: "150/76A"
-                },
-                {
-                    name: "L",
-                    all_name: "150/76A"
-                },
-                {
-                    name: 'XL',
-                    all_name: "150/76A"
-                }
-            ],
-
-            carousels: [{
-                url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/first/1000/1.jpg"
-            },
-                {
-                    url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other1/1000/2.jpg"
-                },
-                {
-                    url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other2/1000/3.jpg"
-                },
-                {
-                    url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other3/1000/4.jpg"
-                }
-
-            ],
-
+            // colors: [{
+            //     color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg",
+            //     product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            //     name: "黄色",
+            //     code: "10",
+            //     showType:"color-checked"
+            // },
+            //     {
+            //         color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg",
+            //         product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016502/main/first/561/1.jpg",
+            //         name: "黄色",
+            //         code: "11",
+            //     },
+            //     {
+            //         color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg",
+            //         product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000013572/main/first/561/1.jpg",
+            //         name: "黄色",
+            //         code: "12",
+            //         showType:"color-checked"
+            //
+            //     },
+            // ],
+            // sizes: [{
+            //     name: "S",
+            //     show_name: "150/76A"
+            // },
+            //     {
+            //         name: "M",
+            //         show_name: "150/76A/M"
+            //     },
+            //     {
+            //         name: "L",
+            //         show_name: "150/76A/M"
+            //     },
+            //     {
+            //         name: 'XL',
+            //         show_name: "150/76A/M"
+            //     }
+            // ],
+            // carousels: [{
+            //     url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/first/1000/1.jpg"
+            // },
+            //     {
+            //         url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other1/1000/2.jpg"
+            //     },
+            //     {
+            //         url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other2/1000/3.jpg"
+            //     },
+            //     {
+            //         url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other3/1000/4.jpg"
+            //     }
+            //
+            // ],
             // code: "427516000",
             // year: "2020",
             // season: "春季",
@@ -349,18 +354,87 @@ Page({
     }
     ,
 //    initdata
-    getProduct(){
-        goods.get(29).then(res=>{
+    getProduct() {
+        goods.get(this.data.id).then(res => {
             //res 反序列化部分字段
             let props = ["material", "colors", "carousels", "produt_parameter", "sizes"]
-            props.forEach(item=>{
-                res[item] =JSON.parse(res[item])
+            props.forEach(item => {
+                res[item] = JSON.parse(res[item])
             })
 
             this.setData({
-                // product :res
+                product: res
             })
+        })
+    },
+//   点击颜色
+    onColor(e) {
+        let index = e.target.dataset.index;
+        let item = e.target.dataset.item;
+        this.setCheckedList(this.data.product.colors, index)
+
+        this.setData({
+            [`product.colors`]: this.data.product.colors,
+            // checkedColor:item.id+item.name
+            ['checkedProduct.color']:item.name
+        })
+
+
+        console.log(this.data.product.colors)
+
+        // goodsize.getList({good_id: this.data.id, color_id: e.target.dataset.item.id}).then(res => {
+        //     res.list.map(item => {
+        //         if (item.inventory
+        //             <= 0) {
+        //             item.disabled = true
+        //         }
+        //     })
+        //     this.setData({
+        //         ['product.sizes']: res.list
+        //     })
+        // })
+
+    },
+//    点击尺码
+    onSize(e) {
+        let index = e.target.dataset.index;
+        let item = e.target.dataset.item;
+        this.setCheckedList(this.data.product.sizes, index)
+        this.setData({
+            [`product.sizes`]: this.data.product.sizes,
+            // checkedSize:item.id+item.display_name
+            ['checkedProduct.size']: item.display_name
+        })
+
+        goodsize.getList({good_id: this.data.id, size_id: item.id}).then(res => {
+            //todo 需要测试
+            this.data.product.colors.forEach(color => {
+                res.list.forEach(item => {
+                    //设置库存不足的item
+                    item.disabled = item.inventory <= 0
+                    //sizes与colors根据id联合
+                    if (color.id === item.color_id) {
+                        item = {...color}
+                        color = item
+                    }
+
+                })
+            })
+            this.setData({
+                ['product.colors']:this.data.product.colors
+            })
+
+        })
+    },
+    //点击颜色、尺码后的，该项设置为点击，其余设置为点击
+    setCheckedList(list, index) {
+        list.forEach(item => {
+            if (item.id === index) {
+                item.checked = !item.checked;
+            } else {
+                item.checked = false;
+            }
         })
     }
 
-})
+}))

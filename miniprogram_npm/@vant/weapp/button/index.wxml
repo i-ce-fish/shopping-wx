@@ -1,12 +1,14 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
 
+<!--binyu 修改hover-class，因为disabled仍有点击效果-->
 <button
   id="{{ id }}"
+  data-detail="{{ dataset }}"
   class="custom-class {{ utils.bem('button', [type, size, { block, round, plain, square, loading, disabled, hairline, unclickable: disabled || loading }]) }} {{ hairline ? 'van-hairline--surround' : '' }}"
-  hover-class="van-button--active hover-class"
+  hover-class="{{ !disabled ? 'van-button--active hover-class' : 'noop' }} "
   lang="{{ lang }}"
   style="{{ baseStyle }} {{ customStyle }}"
-  open-type="{{ openType }}"
+  open-type="{{ disabled ? '' : openType }}"
   business-id="{{ businessId }}"
   session-from="{{ sessionFrom }}"
   send-message-title="{{ sendMessageTitle }}"
@@ -16,12 +18,12 @@
   app-parameter="{{ appParameter }}"
   aria-label="{{ ariaLabel }}"
   bindtap="{{ !disabled ? 'onClick' : 'noop' }}"
-  bindgetuserinfo="{{ !disabled ? 'bindGetUserInfo' : 'noop' }}"
-  bindcontact="{{ !disabled ? 'bindContact' : 'noop' }}"
-  bindgetphonenumber="{{ !disabled ? 'bindGetPhoneNumber' : 'noop' }}"
-  binderror="{{ !disabled ? 'bindError' : 'noop' }}"
-  bindlaunchapp="{{ !disabled ? 'bindLaunchApp' : 'noop' }}"
-  bindopensetting="{{ !disabled ? 'bindOpenSetting' : 'noop' }}"
+  bindgetuserinfo="bindGetUserInfo"
+  bindcontact="bindContact"
+  bindgetphonenumber="bindGetPhoneNumber"
+  binderror="bindError"
+  bindlaunchapp="bindLaunchApp"
+  bindopensetting="bindOpenSetting"
 >
   <block wx:if="{{ loading }}">
     <van-loading

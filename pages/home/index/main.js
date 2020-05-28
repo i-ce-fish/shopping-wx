@@ -3,7 +3,11 @@
 let article = require("../../../api/article")
 let customer = require("../../../api/customer")
 let catalog = require("../../../api/catalog")
-Page({
+
+const filter = require('../../../utils/filter');
+
+
+Page(filter.loginCheck({
 
     /**
      * 页面的初始数据
@@ -84,26 +88,7 @@ Page({
     go: function (e) {
         wx.$go(e.currentTarget.dataset.url)
     },
-    // getWear() {
-    //   article.getList({
-    //     catalog_id: "0"
-    //   }).then(res => {
-    //     console.log(res);
-    //
-    //     this.setData({
-    //       wear: res.list
-    //     })
-    //   })
-    // },
-    // getAct() {
-    //   article.getList({
-    //     catalog_id: "1"
-    //   }).then(res => {
-    //     this.setData({
-    //       activity: res.list
-    //     })
-    //   })
-    // },
+
     onTapDetail(e) {
         wx.$go('/pages/home/detail/main', e.currentTarget.dataset)
     },
@@ -153,4 +138,4 @@ Page({
         })
     }
 
-})
+}))
