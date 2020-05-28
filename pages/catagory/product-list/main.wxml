@@ -4,7 +4,7 @@
         外套
     </view>
     <view class="pro-list  tui-flex  tui-flex-wrap">
-        <view class="tui-col-6" wx:for="{{list}}" bindtap="go" data-url="/pages/catagory/product-detail/main"
+        <view class="tui-col-6" wx:for="{{list}}" wx:key="index" bindtap="go" data-url="/pages/catagory/product-detail/main"
               data-id="{{item.id}}">
             <van-image src="{{item.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>
 

@@ -107,22 +107,20 @@ Page({
         wx.login({
             success(res) {
                 console.log(res)
-                //发起网络请求
-                wx.request({
-                    url: 'https://test.com/onLogin',
-                    data: {
-                        code: res.code
+                user.wxLogin({code:res.code}).then(
+                    res=>{
+                        wx.$toast(res)
                     }
-                })
+                )
             }
         })
     },
-    getPhoneNumber (e) {
+    getPhoneNumber(e) {
         console.log(e.detail.errMsg)
         console.log(e.detail.iv)
         console.log(e.detail.encryptedData)
     },
-    phoneLogin(){
+    phoneLogin() {
         wx.$go('/pages/user/login/phone/main')
     }
 
