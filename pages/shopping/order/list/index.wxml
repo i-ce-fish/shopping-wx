@@ -1,0 +1,207 @@
+<!--pages/shopping/order/list/main.wxml-->
+<view class="container">
+    <view class="main-box">
+        <van-collapse value="{{activeNames}}" bind:change="onChange">
+
+            <view wx:for="{{orders}}" wx:key="index">
+
+                <van-collapse-item name="{{index}}">
+
+                    <view slot="title" class="tui-flex tui-align-between ">
+                        <view class="  y-font-blod">
+                            订单{{index+1}}-{{item.delivery.type}}
+                        </view>
+                        <view class="y-underline y-font-s" bindtap="go" data-url="/pages/shopping/order/item/index">
+                            详情
+                        </view>
+                    </view>
+
+                    <view class="y-font-m ">
+
+                        <!--            交货方式-->
+                        <!--    门店自提  -->
+                        <view class="store-box">
+
+                            <!--门店信息-->
+                            <tui-list-view nullTitle="{{true}}" unlined="all">
+                                <tui-list-cell hover="{{false}}" padding="0 30rpx 36rpx">
+                                    <view>
+                                        <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
+                                            {{item.delivery.type}}
+                                        </view>
+
+                                        <view class="y-line-height-150">
+                                            <view>
+                                                {{item.delivery.store.name}}
+                                            </view>
+                                            <view>
+                                                门店地址：{{item.delivery.store.address}}
+                                            </view>
+                                            <view>
+                                                营业时间：{{item.delivery.store.work_time}}
+                                            </view>
+                                            <view>
+                                                联系电话：{{item.delivery.store.tel}}
+                                            </view>
+                                        </view>
+                                    </view>
+                                </tui-list-cell>
+                            </tui-list-view>
+                            <!--            提货信息-->
+                            <tui-list-view nullTitle="{{true}}" unlined="all">
+                                <tui-list-cell hover="{{false}}" padding="0 30rpx 36rpx">
+                                    <view class="tui-col-12">
+                                        <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
+                                            提货信息
+                                        </view>
+
+                                        <view class="y-line-height-150">
+                                            <view class="y-color-gray">
+                                                提货人
+                                            </view>
+                                            <view>
+                                                <van-field custom-style="padding:10rpx 0;"></van-field>
+                                            </view>
+                                            <view class="y-color-gray">
+                                                联系方式
+                                            </view>
+                                            <view>
+                                                <van-field custom-style="padding:10rpx 0;"></van-field>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </tui-list-cell>
+                            </tui-list-view>
+
+
+                        </view>
+                        <!--    快递-->
+                        <view class="express-box">
+                            <!--快递信息-->
+                        </view>
+                        <!--    门店急送-->
+                        <view class="store-express-box">
+
+                        </view>
+                    </view>
+
+                    <view class="products-box">
+
+                        <!--            商品信息-->
+                        <tui-list-view nullTitle="{{true}}" unlined="all" >
+                            <view class="y-font-l y-font-blod y-padding-lr y-pt-18 y-pb-18 y-color-black">
+                                商品信息
+                            </view>
+
+
+                            <tui-list-cell hover="{{false}}" wx:for="{{item.products}}" wx:key="index">
+
+                                <view class="tui-col-12">
+
+                                    <product-item-order product="{{item}}">
+                                        <view class="y-font-xl">x{{item.num}}</view>
+                                    </product-item-order>
+                                </view>
+
+                            </tui-list-cell>
+                        </tui-list-view>
+
+                    </view>
+
+
+                    <view class="info-box"><!--    促销信息-->
+                        <tui-list-view nullTitle="{{true}}" unlined="all">
+
+                            <tui-list-cell hover="{{false}}">
+
+                                <view>
+                                    <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+                                        促销信息
+                                    </view>
+
+
+                                    <van-radio-group value="{{ radio }}" bind:change="onChange">
+                                        <view class="y-pt-18 y-pb-18" wx:for="{{item.promotion}}" wx:key="index">
+                                            <van-radio
+                                                    shape="square"
+                                                    name="{{item.name}}">
+                                                {{item.name}}
+                                            </van-radio>
+                                        </view>
+                                    </van-radio-group>
+                                </view>
+
+                            </tui-list-cell>
+                        </tui-list-view>
+
+                        <!--    优惠券-->
+                        <tui-list-view nullTitle="{{true}}" unlined="all">
+
+                            <tui-list-cell hover="{{false}}">
+
+                                <view class="tui-col-12 ">
+                                    <view class="tui-flex tui-align-between tui-vertical-center">
+
+                                        <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+                                            优惠券
+                                        </view>
+                                        <view class="y-underline">
+                                            兑换
+                                        </view>
+                                    </view>
+
+                                    <view>
+                                        无可用优惠券
+                                    </view>
+                                </view>
+
+                            </tui-list-cell>
+                        </tui-list-view>
+
+
+                        <!--    金额-->
+                        <tui-list-view nullTitle="{{true}}" unlined="all">
+
+                            <tui-list-cell hover="{{false}}">
+
+                                <view class="tui-flex tui-align-between tui-col-12">
+
+                                    <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+                                        订单金额
+                                    </view>
+                                    <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18 y-color-red">
+                                        ￥1232.00
+                                    </view>
+                                </view>
+
+                            </tui-list-cell>
+                        </tui-list-view>
+                    </view>
+
+
+                </van-collapse-item>
+
+
+                <!--            分隔线-->
+                <view class="y-mb-20"></view>
+
+            </view>
+
+
+        </van-collapse>
+
+
+    </view>
+    <view class="bottom-bar-box">
+        <van-submit-bar button-text="提交订单" bind:submit="go" data-url="/pages/shopping/order/item/index"
+                        button-class="button-class"
+        >
+				<span>
+					应付总额:
+					<span class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</span>
+				</span>
+        </van-submit-bar>
+    </view>
+
+
+</view>

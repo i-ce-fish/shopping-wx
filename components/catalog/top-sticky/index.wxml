@@ -1,0 +1,13 @@
+<van-sticky >
+    <view class="top-sticky">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+            <view class="scroll-view-item_H " wx:for="{{catalogs}}" wx:key="index" bindtap="onTap"  data-index="{{index}}">
+                <van-image class="y-padding-lr" height="80rpx" width="80rpx" fit="fill" round
+                           src="{{item.img}}"></van-image>
+                <view>
+                    {{item.title}}
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</van-sticky>

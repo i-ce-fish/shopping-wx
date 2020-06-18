@@ -11,8 +11,8 @@ function login(data) {
 
 function wxLogin(data) {
     return rq.request({
-        url: "auth/todo",
-        method:'GET',
+        url: "auth/signin",
+        method:'POST',
         data
     })
 }

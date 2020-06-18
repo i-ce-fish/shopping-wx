@@ -35,6 +35,9 @@ page {
 .y-line-height-200{
   line-height: 200%;
 }
+.y-line-height-180{
+  line-height: 180%;
+}
 .y-line-height-150{
 
   line-height: 150%;
@@ -149,7 +152,7 @@ page {
 
 /* 用于未付款金额等的显示 */
 .y-color-red {
-  color: #ff0000;
+  color: #ff0101;
 }
 
 /* 用于已付款金额等的显示 */

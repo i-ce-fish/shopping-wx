@@ -16,8 +16,8 @@ active-color="#ff4444">
 	</van-tabbar-item>
 
 	<van-tabbar-item>购物车
-		<van-icon slot="icon" name="cart-o" info="{{activeTab}}" />
-		<van-icon slot="icon-active" name="cart" info="{{activeTab}}" />
+		<van-icon slot="icon" name="cart-o" info="{{$state.cart.totalNum}}" />
+		<van-icon slot="icon-active" name="cart" info="{{$state.cart.totalNum}}" />
 	</van-tabbar-item>
 
 	<van-tabbar-item>我的

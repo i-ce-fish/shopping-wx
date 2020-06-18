@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "永康美特斯邦威店 会员内购",
+  "usingComponents": {
+    "tui-list-cell": "/components/list-cell/list-cell",
+    "tui-list-view": "/components/list-view/list-view",
+    "carousel": "/components/carousel/index",
+    "van-image": "@vant/weapp/image",
+    "van-divider": "@vant/weapp/divider",
+    "van-icon": "@vant/weapp/icon"
+  }
+}

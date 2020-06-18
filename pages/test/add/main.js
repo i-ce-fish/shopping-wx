@@ -79,9 +79,9 @@ Page({
       this.data.item
     ).then(
       (res) => {
-        wx.$go("/pages/test/main")
+        wx.$go("/pages/test/index")
       }
     )
   },
- 
+
 })

@@ -1,5 +1,8 @@
 // utils/filter.js
 function loginCheck(pageObj) {
+    //for dev
+    // return pageObj;
+
     if (pageObj.onLoad) {
         let _onLoad = pageObj.onLoad;
         // 使用onLoad的话需要传递options
@@ -12,7 +15,7 @@ function loginCheck(pageObj) {
             } else {
                 //跳转到登录页
                 wx.redirectTo({
-                    url: "/pages/user/login/index/main"
+                    url: "/pages/user/login/index/index"
                 });
             }
         }

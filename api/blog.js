@@ -1,10 +1,10 @@
 let rq = require('../utils/request')
 
-function getList(params) {
+function getList(data) {
   return rq.request({
     url: 'blogs',
     method: 'get',
-    params
+    data
   })
 }
 

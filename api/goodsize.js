@@ -8,6 +8,14 @@ function getList(data) {
     })
 }
 
+function get(id) {
+    return rq.request({
+        url: 'goodsizes/' + id,
+        method: 'GET'
+    })
+}
+
 module.exports = {
-    getList
+    getList,
+    get
 }

@@ -9,7 +9,7 @@
 			</view>
 		</tui-list-cell>
 	</tui-list-view>
-	<button bindtap="go" data-url="/pages/test/add/main">增加</button>
+	<button bindtap="go" data-url="/pages/test/add/index">增加</button>
 	<tui-list-view title="登录测试">
 		<tui-list-cell hover="{{false}}">
 			<view class="y-padding-r">

@@ -1,0 +1,15 @@
+<view class=" title-box tui-flex tui-align-between tui-vertical-center">
+    <view class=" y-font-xxl y-font-blod">
+        {{title}}
+    </view>
+    <view class="y-underline y-font-blod"
+          wx:if="{{showMore}}" bindtap="getMore" data-id="categoryId">
+        查看更多
+    </view>
+</view>
+
+
+<view class="pro-list  tui-flex  tui-flex-wrap">
+    <product-list-item class="tui-col-6" wx:for="{{products}}" wx:key="index" product="{{item}}"></product-list-item>
+
+</view>

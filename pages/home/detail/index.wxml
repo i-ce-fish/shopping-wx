@@ -1,0 +1,16 @@
+<!--pages/home/detail/main.wxml-->
+<view class="container">
+	<van-panel >
+		<!-- // 引入模板 -->
+		<view class="tui-flex tui-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>
+
+		<view class="body">
+			<import src="/components/wxParse/wxParse.wxml" />
+			<!-- //这里data中article为bindName -->
+			<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+		</view>
+	</van-panel>
+	<van-divider contentPosition="center">到底了</van-divider>
+	<tui-scroll-top scrollTop="{{scrollTop}}"></tui-scroll-top>
+
+</view>

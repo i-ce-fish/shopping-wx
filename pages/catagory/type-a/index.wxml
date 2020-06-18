@@ -1,0 +1,27 @@
+<view class="container y-bgc-white">
+    <!--    <search-bar></search-bar>-->
+<van-sticky>
+    <search-bar></search-bar>
+
+</van-sticky>
+    <view class="">
+        <catalog-tab bindclick="onTab"></catalog-tab>
+    </view>
+    <view class="y-padding-t"></view>
+    <carousel imgs="{{carousels}}" height="750rpx"  ></carousel>
+
+
+    <view>
+        <van-grid column-num="2">
+            <van-grid-item wx:for="{{catalogs}}" wx:key="index"
+                           bindtap="onGrid" data-index="{{index}}"
+                           use-slot>
+                <view class="y-font-xl y-line-height-200">{{item.title}}</view>
+            </van-grid-item>
+        </van-grid>
+    </view>
+    <product-list class="product-item-{{index}}" wx:for="{{catalogs}}" wx:key="index" title="{{item.title}}"
+                  products="{{item.products}}" showMore="ture"></product-list>
+    <scroll-top scrollTop="{{scrollTop}}"></scroll-top>
+
+</view>

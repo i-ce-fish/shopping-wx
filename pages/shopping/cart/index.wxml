@@ -1,0 +1,82 @@
+<view class="container">
+    <view class="main-box">
+        <tui-list-view nullTitle="{{true}}">
+            <tui-list-cell hover="{{false}}" padding="36rpx 30rpx">
+
+                <!--                <view class="y-pr-20">-->
+                <!--                    <van-checkbox value="{{ checked }}" bind:change="onChange" shape="square"></van-checkbox>-->
+                <!--                </view>-->
+                <view class="tui-flex tui-align-between tui-col-12">
+                    <view class=" y-font-blod y-font-xxl">
+                        购物车({{selectedList.length}})
+                    </view>
+                    <view class="y-underline" bindtap="activeEdit">
+                        <span wx:if="{{!activeEdit}}">编辑全部</span>
+                        <span wx:else>完成</span>
+                    </view>
+                </view>
+            </tui-list-cell>
+            <van-checkbox-group value="{{ selectedList }}" bind:change="onSelect">
+
+                <tui-list-cell hover="{{false}}" wx:for="{{products}}" wx:key="index"
+                               padding="30rpx 30rpx 60rpx 30rpx">
+                    <view class="tui-col-12">
+                        <view class="tui-flex tui-align-between y-pb-20">
+                            <view>
+
+                                <van-checkbox shape="square" name="{{index}}"></van-checkbox>
+                            </view>
+                            <view>
+                            </view>
+                        </view>
+
+                        <!--                    component-->
+                        <product-item-order product="{{item}}">
+                            <view class="tui-flex tui-align-between tui-vertical-center">
+                                <view>
+                                    <van-stepper value="{{ item.num }}" bind:change="onAddNum" data-index="{{index}}"
+                                                 button-size="62rpx"
+                                                 input-width="120rpx"/>
+                                </view>
+                                <view class="y-underline" bindtap="onDel" data-index="{{index}}">删除</view>
+                            </view>
+                        </product-item-order>
+                    </view>
+                </tui-list-cell>
+                <view wx:if="{{products.length==0}}" class="tui-flex tui-center">
+                    <view class="tui-col-12">购物车没有商品</view>
+                </view>
+            </van-checkbox-group>
+        </tui-list-view>
+    </view>
+    <view class="bottom-bar-box">
+        <!--       已勾选商品为0或编辑状态，结算按钮不可用-->
+        <van-submit-bar button-text="结算" bind:submit="postOrder"
+                        custom-class="submit-bar"
+                        button-class="button-class"
+                        disabled="{{selectedList.length==0||activeEdit}}"
+        >
+
+            <view class="tui-flex tui-align-between tui-vertical-center tui-col-12 y-padding-lr">
+                <view>
+                    <van-radio-group value="{{ selectedList.length === products.length&& products.length>0?'1':'0' }}">
+
+                        <van-radio name="1" shape="square" bindtap="onSelectAll"><span class="y-font-blod ">全选</span>
+                        </van-radio>
+                    </van-radio-group>
+                </view>
+                <view wx:if="{{!activeEdit}}">
+                    <span class="y-font-s">合计:</span>
+                    <span class="total-price y-color-red  y-font-blod">￥{{totalAmount}}</span>
+                    <span class="y-color-gray y-font-s">
+						不含运费
+					</span>
+                </view>
+                <view wx:else class="y-underline" bindtap="onDelAll">
+                    删除
+                </view>
+            </view>
+
+        </van-submit-bar>
+    </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="container y-bgc-white">
+    <search-bar></search-bar>
+
+    <van-tree-select
+            items="{{ categories }}"
+            main-active-index="{{ mainActiveIndex }}"
+            active-id="{{ activeId }}"
+            bind:click-nav="onClickNav"
+            bind:click-item="onClickItem"
+            height="{{menuHeight}}"
+    >
+
+        <view slot="content"  >
+            <van-card
+                    price="{{item.price}}"
+                    desc="{{item.name}}描述信息"
+                    title="{{item.name}}"
+                    thumb="{{ testImg }}"
+                    wx:for="{{products}}"
+                    wx:key="index"
+                    bindtap="go"
+                    data-url="/pages/catagory/product-list/index"
+                    thumb-class="thumb-class"
+
+            >
+            </van-card>
+        </view>
+    </van-tree-select>
+
+</view>

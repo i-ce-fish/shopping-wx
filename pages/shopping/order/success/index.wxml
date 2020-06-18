@@ -1,0 +1,23 @@
+<!--pages/shopping/order/success/index.wxml-->
+<big-card title="下单成功">
+    <view class="tui-flex tui-align-between tui-vertical-center">
+        <view class="y-pr-20">
+            <van-image round width="120rpx" height="120rpx" fit="fill" src="{{imgs[0]}}" bindtap="test"/>
+        </view>
+        <view class="tui-flex-1">
+
+        <view>订单号:{{orderId}}</view>
+        <view class="tui-flex tui-align-between">
+            <view>老板微信: {{bossWxId}}</view>
+            <view class="y-underline " bindtap="onCopy">一键复制</view>
+        </view>
+        </view>
+
+    </view>
+<!--    <van-button bindtap="confirm" size="large" color="#1b1b1b">返回</van-button>-->
+   <view class="y-padding-t">
+
+    <van-button  size="large" type="danger" bind:click="onConfirm"  >确定</van-button>
+   </view>
+
+</big-card>

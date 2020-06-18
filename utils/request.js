@@ -9,7 +9,7 @@ function request(req) {
     const ServerIP = 'https://shop.cdb99.com/api/'
 
     // 端口号也要与小程序域名设置一致
-    // const ServerIP = 'https://shop.cdb99.com/api/v1'
+    // const ServerIP = 'https://shop.cdb99.com/api/v1/'
 
     return new Promise(function (resolve, reject) {
         wx.request({
@@ -35,7 +35,6 @@ function request(req) {
 
             },
             success: function (res) {
-                console.log('token', wx.getStorageSync('token'))
                 console.warn('请求结果', res);
                 if (res.statusCode === 200 && res.data.code === 200) {
                     resolve(res.data.data);

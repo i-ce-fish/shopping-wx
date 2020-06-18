@@ -1,0 +1,20 @@
+
+
+.top-sticky{
+    padding: 10rpx;
+    background-color: white;
+    box-shadow: 0 3rpx 0 1rpx #f1f1f1
+}
+.scroll-view_H{
+    white-space: nowrap;
+}
+.scroll-view-item{
+    height: 135rpx;
+
+}
+.scroll-view-item_H{
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+}
+

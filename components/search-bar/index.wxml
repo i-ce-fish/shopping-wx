@@ -1,6 +1,6 @@
 <view class="search-bar-box">
 
-    <view class="box">
+    <view class="box {{show?'':'shadow'}}">
         <view class="sb-box">
             <van-field
                     value="{{ keyword }}"
@@ -41,7 +41,6 @@
                 </view>
             </view>
         </view>
-
 
     </van-overlay>
 

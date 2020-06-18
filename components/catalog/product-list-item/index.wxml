@@ -1,0 +1,26 @@
+<view bindtap="go" data-url="/pages/catagory/product-detail/index"
+      data-id="{{product.id}}">
+    <van-image src="{{product.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>
+
+    <view class="pro-item y-padding-all">
+        <van-image style="padding-right: 10rpx"
+                   wx:for="{{product.colors}}" wx:key="index"
+                   src="{{item.url}}"
+                   width="40rpx" height="40rpx" fit="fill"
+                   lazy-load/>
+        <view class="tui-flex tui-align-between y-font-s">
+            <view>
+                {{product.category}}
+            </view>
+            <view>
+                {{product.min_size}}-{{product.max_size}}
+            </view>
+        </view>
+        <view>
+            {{product.name}}{{product.code}}
+        </view>
+        <view class="price y-font-xxl y-font-blod">
+            ￥{{product.price}}
+        </view>
+    </view>
+</view>

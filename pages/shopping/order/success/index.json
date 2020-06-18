@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "big-card": "/components/big-card/index",
+    "van-image": "@vant/weapp/image",
+    "van-button": "@vant/weapp/button"
+  }
+}

@@ -1,4 +1,4 @@
-.tui-scroll-top {
+.scroll-top {
 		width: 76rpx;
 		height: 76rpx;
 		background: rgba(255, 255, 255, .98);
@@ -6,16 +6,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 50%;
+		/*border-radius: 50%;*/
 		position: fixed;
 		z-index: 999999;
+        opacity: 0.9;
+        box-shadow: 0 0 4rpx 0 #ccc;
 		/* -webkit-transform: translateZ(0);
 		transform: translateZ(0); */
 		/* -webkit-overflow-scroll: touch; */
 	}
 
-	.tui-scroll-top-img {
-		width: 48rpx;
-		height: 48rpx;
-		display: block;
-	}
+.button-box{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+	 .text{
+		 font-size: 24rpx;
+		 color: #999999;
+	 }
