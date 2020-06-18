@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "搜索商品",
-  "usingComponents": {
-    "van-tag": "@vant/weapp/tag",
-    "van-icon": "@vant/weapp/icon",
-    "van-action-sheet": "@vant/weapp/action-sheet"
-  }
-}

@@ -89,7 +89,7 @@ Component({
             }
         ],
 
-        //    促销信息
+        //    促销信息  todo get from api
         promotion: [
             {name: "五一包邮五一包邮五一包邮五一包邮五一包邮五一包邮五一包邮五一包邮五一包邮五一包邮五一包邮五一包邮"},
             {name: "六一包邮"},
@@ -154,11 +154,8 @@ Component({
         confirmAddAddress(e) {
             this.closeAddAddress()
             this.getAddresses()
-
-
         },
         confirmEditAddress(e) {
-
             this.closeEditAddress()
             this.getAddresses()
         },
@@ -210,12 +207,22 @@ Component({
                 showEditAddress: false
             })
         },
-        //通用的setdata
+        //通用的setdata, 不需要额外处理的setdata,
         set(e) {
             let prop = e.currentTarget.dataset.prop
             let value = e.currentTarget.dataset.value
+            console.log(`setData:{${prop}:${value}`)
             this.setData({
-                [prop]: [value]
+                [prop]: value
+            })
+        },
+        //通用的setdetail, 不需要额外处理的setdata,
+        setDetail(e) {
+            let prop = e.currentTarget.dataset.prop
+            let value = e.detail
+            console.log(`setData:{${prop}:${value}`)
+            this.setData({
+                [prop]: value
             })
         },
         postOrder() {
@@ -223,6 +230,12 @@ Component({
             order.add({id: new Date().getTime()}).then((res) => {
                 //todo remove wxstorage
                 wx.$go("/pages/shopping/order/success/index", {id: res.data.id});
+            })
+        },
+        tapDelivery(e) {
+            console.log(e)
+            this.setData({
+                ['orderForm.delivery']: e.detail
             })
         }
     }

@@ -5,7 +5,7 @@
     <view class="button-box">
         <van-icon name="arrow-up" size="30rpx"  color="#999999"/>
         <view class="text">
-            TOP
+            {{text}}
         </view>
     </view>
 </view>

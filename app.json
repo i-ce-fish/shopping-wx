@@ -1,12 +1,14 @@
 {
   "pages": [
-    "pages/shopping/order/item/index",
-    "pages/shopping/order/success/index",
-    "pages/catagory/product-detail/index",
-    "pages/shopping/cart/index",
-
     "pages/home/index/index",
     "pages/catagory/type-a/index",
+    "pages/catagory/product-detail/index",
+    "pages/catagory/sizes/index",
+    "pages/catagory/colors/index",
+    "pages/shopping/order/item/index",
+    "pages/shopping/order/success/index",
+    "pages/shopping/cart/index",
+
     "pages/catagory/type-b/index",
     "pages/user/login/index/index",
     "pages/shopping/order/list/index",
@@ -15,10 +17,6 @@
     "pages/shopping/order/submit-order/index",
     "pages/user/login/phone/index",
     "pages/home/detail/index",
-    "pages/catagory/search/index",
-    "pages/catagory/sizes/index",
-    "pages/catagory/colors/index",
-    "pages/catagory/index/index",
     "pages/my/user/index",
     "pages/my/qrcode/index",
     "pages/my/copon/index",

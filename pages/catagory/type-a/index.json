@@ -7,7 +7,7 @@
     "van-grid-item": "@vant/weapp/grid-item/index",
     "carousel": "/components/carousel/index",
 
-    "scroll-top":"/components/scroll-top/scroll-top",
+    "scroll-top":"/components/scroll-top/index",
     "search-bar": "/components/search-bar/index",
     "van-sticky": "@vant/weapp/sticky/index",
 

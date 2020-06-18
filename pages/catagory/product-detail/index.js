@@ -1,4 +1,6 @@
 // pages/rule/integral/main.js
+import {LOGIN_URL} from "../../../utils/api";
+
 let goods = require("../../../api/goods")
 let goodsize = require("../../../api/goodsize")
 
@@ -6,7 +8,7 @@ const filter = require('../../../utils/filter');
 const app = getApp()
 
 App.Page(filter.loginCheck({
-
+    useStore: true,
     /**
      * 页面的初始数据
      */
@@ -242,7 +244,11 @@ App.Page(filter.loginCheck({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        console.log(options.id);
+        this.setData({
+            // test: options.id
+        })
+        //    todo get data from api
     },
 
     /**
@@ -256,7 +262,8 @@ App.Page(filter.loginCheck({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function (options) {
+
         // this.init()
 
     },
@@ -288,13 +295,24 @@ App.Page(filter.loginCheck({
     onReachBottom: function () {
 
     },
-
+    //页面滚动执行方式
+    onPageScroll(e) {
+        this.setData({
+            scrollTop: e.scrollTop
+        })
+    },
     /**
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        //todo set id
+        return {
+            title: 'TEST',
+            imageUrl: 'https://www.uniqlo.cn/hmall/test/u0000000016285/main/first/1000/1.jpg',// 图片 URL
+            path: '/pages/catagory/product-detail/index?id=' + 123
+        };
     },
+
     go: function (e) {
         wx.$go(e.currentTarget.dataset.url)
     },
@@ -386,15 +404,12 @@ App.Page(filter.loginCheck({
 
         if (!isContain) {
             cart_.push(this.data.checkedProduct);
-            //设置tabbar徽标提示 与全局num  todo 清缓存后首次执行耗时5s+ 需要优化
-            console.time('num')
+            //设置tabbar徽标提示 与全局num
             let {cart} = app.store.getState()
             cart.totalNum = cart.totalNum + 1
             app.store.setState({
                 cart
             });
-            console.timeEnd("num")
-
         } else {
             cart_[currentProductIndex].num += this.data.checkedProduct.num
         }

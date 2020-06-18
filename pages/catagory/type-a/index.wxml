@@ -22,6 +22,6 @@
     </view>
     <product-list class="product-item-{{index}}" wx:for="{{catalogs}}" wx:key="index" title="{{item.title}}"
                   products="{{item.products}}" showMore="ture"></product-list>
-    <scroll-top scrollTop="{{scrollTop}}"></scroll-top>
+    <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
 
 </view>

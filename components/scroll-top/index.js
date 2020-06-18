@@ -5,7 +5,7 @@ Component({
         //回顶部按钮距离底部距离 rpx
         bottom: {
             type: Number,
-            value: 120
+            value: 150
             //  160
         },
         //回顶部按钮距离右侧距离 rpx
@@ -22,6 +22,10 @@ Component({
         scrollTop: {
             type: Number,
             value: 0
+        },
+        text:{
+            type:String,
+            value:"TOP"
         }
     },
     observers: {

@@ -11,6 +11,6 @@
 		</view>
 	</van-panel>
 	<van-divider contentPosition="center">到底了</van-divider>
-	<tui-scroll-top scrollTop="{{scrollTop}}"></tui-scroll-top>
+	<scroll-top scrollTop="{{scrollTop}}"text="TOP"></scroll-top>
 
 </view>

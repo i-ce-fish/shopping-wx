@@ -8,7 +8,7 @@
 
     </view>
 
-    <scroll-top scrollTop="{{scrollTop}}"></scroll-top>
+    <scroll-top scrollTop="{{scrollTop}}"text="TOP"></scroll-top>
 
     <view>
 

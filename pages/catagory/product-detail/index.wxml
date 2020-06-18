@@ -21,7 +21,9 @@
             </swiper>
         </view>
         <view class="pro-box-bottom y-padding-all y-bgc-white y-line-height-200">
-            <view class="tui-right y-font-s y-color-gray">初上市价格(吊牌价)：￥{{product.original_price}}</view>
+            <view class="tui-right y-font-s y-color-gray">
+                初上市价格(吊牌价)：￥{{product.original_price}}
+            </view>
             <van-divider custom-style="padding:0"/>
 
             <view class="inner-price-box ">
@@ -274,7 +276,6 @@
     </van-tabs>
 
     <van-divider contentPosition="center">到底了</van-divider>
-    <tui-scroll-top scrollTop="{{scrollTop}}"></tui-scroll-top>
 
     <!-- 弹出层 -->
     <van-popup show="{{ showPopup }}" position="bottom" closeable custom-style="height: 100%;"
@@ -419,5 +420,7 @@
         </van-goods-action-button>
 
     </van-goods-action>
+    <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
+    <share ></share>
 
 </view>

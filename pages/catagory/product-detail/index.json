@@ -18,10 +18,9 @@
     "van-divider": "@vant/weapp/divider",
     "van-stepper": "@vant/weapp/stepper/index",
     "van-popup": "@vant/weapp/popup/index",
-    "tui-scroll-top":"/components/scroll-top/scroll-top",
     "van-tab": "@vant/weapp/tab/index",
-    "van-tabs": "@vant/weapp/tabs/index"
-
-
+    "van-tabs": "@vant/weapp/tabs/index",
+    "scroll-top":"/components/scroll-top/index",
+    "share":"/components/share/index"
   }
 }

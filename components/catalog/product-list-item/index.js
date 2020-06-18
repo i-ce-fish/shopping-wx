@@ -27,6 +27,7 @@ Component({
    */
   methods: {
     go: function (e) {
+      //todo set product code
       wx.$go(e.currentTarget.dataset.url)
     },
   }

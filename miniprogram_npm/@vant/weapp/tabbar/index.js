@@ -37,7 +37,7 @@ component_1.VantComponent({
     },
     zIndex: {
       type: Number,
-      value: 1,
+      value: 98,
     },
     safeAreaInsetBottom: {
       type: Boolean,

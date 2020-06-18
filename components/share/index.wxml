@@ -1,0 +1,12 @@
+<view class="scroll-top"
+      style="bottom:{{bottom}}rpx;right:{{right}}rpx"
+      >
+    <view class="button-box">
+        <button size="mini" open-type="share" hover-class="none" class="text-btn">
+            <view>
+                <van-icon name="share" size="30rpx" color="#999999"/>
+            </view>
+            <view>{{text}}</view>
+        </button>
+    </view>
+</view>

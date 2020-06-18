@@ -6,11 +6,11 @@
         <view class="y-font-blod">
             配送方式
         </view>
-        <view class="y-padding-tf ">
-            <van-radio-group value="{{ delivery }}" bind:change="onRdioDelivery">
+        <view >
+            <van-radio-group value="{{ orderForm.delivery }}" data-prop="orderForm.delivery" bind:change="setDetail">
                 <view>
                     <van-radio custom-class="y-padding-t" name="1" checked-color="#1b1b1b">快递配送
-                        <!--                        <view>快递配送至丽水市云和县 7.00元</view>-->
+                     <!--                        <view>快递配送至丽水市云和县 7.00元</view>-->
                     </van-radio>
                     <van-radio custom-class="y-padding-t" name="2" checked-color="#1b1b1b">门店自提</van-radio>
                     <!--                    <van-radio name="3" checked-color="#1b1b1b">门店急送</van-radio>-->
@@ -20,19 +20,15 @@
         </view>
     </y-card>
     <view>
-
-
         <!--    门店自提  -->
         <view class="store-box">
 
             <!--门店信息-->
             <y-card>
-
                 <view>
                     <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
                         {{delivery.type}}
                     </view>
-
                     <view class="y-line-height-180">
                         <view>
                             {{delivery.store.name}}
@@ -59,15 +55,15 @@
                 <view class="y-line-height-150">
                     <y-input id="yInput" label="提货人"
                              value="{{orderForm.receipt.recipient}}"
-                             data-value="orderForm.receipt.recipient"
-                             bindblur="set">
+                             data-prop="orderForm.receipt.recipient"
+                             bindblur="setDetail">
                     </y-input>
 
                     <view class="y-padding-t">
                         <y-input id="yInput" label="手机号码"
-                                 value="{{orderForm.receipt.recipient}}"
-                                 data-value="orderForm.receipt.recipient"
-                                 bindblur="set">
+                                 value="{{orderForm.receipt.mobile}}"
+                                 data-prop="orderForm.receipt.mobile"
+                                 bindblur="setDetail">
                         </y-input>
                     </view>
                 </view>
@@ -107,7 +103,7 @@
                                 </van-button>
                             </view>
                             <view class="tui-flex-1">
-                                <van-button bindtap="editAnAddress" data-id="{{item.id}}"  hairline>编辑</van-button>
+                                <van-button bindtap="editAnAddress" data-id="{{item.id}}" hairline>编辑</van-button>
                             </view>
                             <view class="tui-flex-1">
                                 <van-button bindtap="delAddress" data-id="{{item.id}}" hairline>删除</van-button>
@@ -171,25 +167,21 @@
             <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
                 促销信息
             </view>
-
-
-            <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <van-radio-group value="{{ orderForm.promotion }}" data-prop="orderForm.promotion" bind:change="setDetail">
                 <view class="y-pt-18 y-pb-18" wx:for="{{promotion}}" wx:key="index">
                     <van-radio
-                            shape="square"
-                            name="{{item.name}}">
+                            name="{{item.name}}"
+                            checked-color="#1b1b1b"
+                    >
                         {{item.name}}
                     </van-radio>
                 </view>
             </van-radio-group>
         </y-card>
 
-
         <!--    优惠券-->
-
         <y-card>
             <view class="tui-flex tui-align-between tui-vertical-center">
-
                 <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
                     优惠券
                 </view>

@@ -8,7 +8,9 @@
 		justify-content: center;
 		/*border-radius: 50%;*/
 		position: fixed;
-		z-index: 999999;
+	/*在popup弹窗（100）之下*/
+	/*搜索框遮罩99*/
+		z-index: 98;
         opacity: 0.9;
         box-shadow: 0 0 4rpx 0 #ccc;
 		/* -webkit-transform: translateZ(0);
@@ -19,7 +21,7 @@
 .button-box{
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+	flex-direction:column;
 }
 	 .text{
 		 font-size: 24rpx;

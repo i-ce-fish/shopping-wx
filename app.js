@@ -8,7 +8,6 @@ wx.$go = function (url, data) {
         str += `${i}=${data[i]}&`
     }
     str = str.slice(0, str.length - 1)
-
     wx.navigateTo({
         url: url + "?" + str
     })
@@ -33,11 +32,13 @@ wx.$go = function (url, data) {
         return rpx / 750 * width
     }
 
-//  全局状态管理 todo 可能存在性能问题
+//  全局状态管理
+//  存在性能问题=>开启局部模式，极大提高性能；减少数据大小，提高性能
 let store = new Store({
     state: {
         cart: {totalNum: ""}
-    }
+    },
+    openPart: true
 })
 
 App({

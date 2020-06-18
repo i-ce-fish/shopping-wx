@@ -2,7 +2,7 @@
 const app = getApp()
 
 Component({
-
+    useStore: true,
     /**
      * 页面的初始数据
      */
@@ -35,13 +35,13 @@ Component({
                 });
             }
         },
-        //    单独监听商品种数变化，修改tabbar
+        //    单独监听商品种数变化，修改tabbar,
         'products': function () {
             //不显示0
             let num = this.data.products.length > 0 ? this.data.products.length : ''
             let {cart} = app.store.getState();
             cart.totalNum = num;
-            cart.products = this.data.products
+            // cart.products = this.data.products
             app.store.setState({
                 cart
             });
