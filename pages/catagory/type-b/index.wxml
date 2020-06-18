@@ -1,0 +1,23 @@
+<view class="container y-bgc-white">
+    <view>
+
+        <van-image src="https://www.uniqlo.cn/cms/189b5d7652594d3cb1d87a8c4a81c273.jpg" width="750rpx" height="550rpx"
+                   fit="fill"></van-image>
+
+        <top-sticky catalogs="{{catalogs}}" bindclick="onTopSticky"></top-sticky>
+
+    </view>
+
+    <scroll-top scrollTop="{{scrollTop}}"></scroll-top>
+
+    <view>
+
+        <product-list class="product-item-{{index}}"
+                      wx:for="{{catalogs}}" wx:key="index"
+                      title="{{item.title}}"
+                      products="{{item.products}}">
+        </product-list>
+
+    </view>
+
+</view>
