@@ -6,14 +6,14 @@ Page({
      */
     data: {
         scrollTop: 0,
-
         catalogs: [
             {
                 img: "https://www.uniqlo.cn/cms/3c41a70bccd3b1e95192da637796b463.jpg",
                 title: "T恤1",
                 products: [{
                     img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
-                    name: "麻混",
+                    name: "麻混"
+                    ,
                     code: "424932",
                     category: "女装",
                     min_size: "S",
@@ -545,7 +545,7 @@ Page({
     },
     onTopSticky(e) {
         wx.pageScrollTo({selector: ".product-item-" + e.detail.index})
-    },
+    }
 
 
 })

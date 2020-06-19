@@ -1,0 +1,168 @@
+<!--<button bindtap="tapListView" >视图</button>-->
+<view class="y-bgc-white">
+
+    <search-bar></search-bar>
+    <view class=" y-border-b tui-flex tui-align-between" value="active">
+        <view class="y-padding-all y-color-gray {{active==='0'?'active-title':''}}" bindtap="tapTab" data-id="0">综合
+        </view>
+        <view class="y-padding-all y-color-gray {{active==='1'?'active-title':''}}" bindtap="tapTab" data-id="1">上架时间
+        </view>
+        <view class="y-padding-all y-color-gray {{active==='2'?'active-title':''}}" bindtap="tapTab" data-id="2">销量
+        </view>
+        <view class="y-padding-all y-color-gray {{active==='3'?'active-title':''}}" bindtap="tapTab" data-id="3">
+            价格
+            <van-icon wx:if="{{active==='3'}}" name="{{priceArrow?'arrow-up':'arrow-down'}}" color="#378694"/>
+        </view>
+    </view>
+    <view class="tui-flex tui-align-between  ">
+        <view class="y-padding-all   tui-col-8 tui-flex tui-vertical-center">
+            <view class="y-font-blod">1234件</view>
+        </view>
+        <view class="y-padding-all  y-border-lr tui-center tui-col-2 tui-flex-col " bindtap="tapListView">
+
+            <view class="">
+                <!--                todo 换一个icon-->
+                <van-icon name="{{listView?'ascending':'descending'}}" size="40rpx"></van-icon>
+            </view>
+            <view>
+                视图
+            </view>
+        </view>
+        <view class="y-padding-all   tui-center tui-col-2 tui-flex-col " bindtap="tapFilter">
+
+            <view class="">
+                <van-icon name="apps-o" size="40rpx"></van-icon>
+            </view>
+            <view>
+                筛选
+            </view>
+        </view>
+    </view>
+    <view class=""></view>
+    <product-list products="{{products}}" listView="{{listView}}"></product-list>
+    <!--    筛选条件弹窗-->
+    <van-popup show="{{ showFilter }}" position="bottom"
+               custom-style="height: 100%;background-color:#fff"
+               bind:close="closeFilter">
+        <!--        顶部重新写一个tab表头，覆盖原有的vantab，以实现van-sticky粘性布局-->
+        <view>
+            <van-sticky>
+                <!--width100%挡住关闭按钮-->
+                <view class="y-padding-all y-bgc-white tui-flex tui-align-between">
+                    <view>
+                        <span class="y-font-blod y-font-xxl y-line-height-200 y-padding-r">查询条件</span>
+                        <span>查询结果：1234件</span>
+                    </view>
+                    <view>
+                        <van-icon name="cross" bindtap="closeFilter" size="50rpx"/>
+                    </view>
+                </view>
+                <view class="filter-tab-box tui-flex tui-vertical-center tui-align-around y-bgc-white">
+                    <view class="tui-flex-col tui-flex-1  tui-center {{filterActive===index?'active-title':''}}"
+                          wx:for="{{filterTabs}}"
+                          wx:key="index"
+                          bindtap="tapFilterTab"
+                          data-id="{{index}}">
+                        <view>
+                            <van-icon name="{{item.icon}}" size="50rpx"></van-icon>
+                        </view>
+                        <view>
+                            {{item.title}}
+                        </view>
+                    </view>
+                </view>
+            </van-sticky>
+
+            <view style="padding-top: 170rpx;padding-bottom: 100rpx">
+                <!--            van popup + van tab 下划线不显示，加上if也不行-->
+                <van-tabs active="{{ filterActive }}" wx:if="{{showFilter}}" bind:change="onChange">
+                    <van-tab>
+                        <van-radio-group value="{{item.checked}}" data-prop="filter.style[{{index}}].checked"
+                                         bind:change="selectStyle"
+                                         wx:for="{{filter.style}}" wx:key="index">
+                            <view class="y-padding-all">
+                                <view class="y-font-blod y-font-xxl y-line-height-200 y-padding-tb">{{item.name}}
+                                </view>
+                                <view class="tui-flex tui-flex-wrap">
+                                    <van-radio name="{{index}}" class="tui-col-6 y-padding-tb" checked-color="#378694"
+                                               wx:for="{{item.item}}" wx:key="index">
+                                        <span class="y-color-gray">
+                                            {{item}}
+                                        </span>
+                                    </van-radio>
+                                </view>
+                            </view>
+                        </van-radio-group>
+                    </van-tab>
+                    <van-tab>
+                        <view class="size-box tui-flex tui-flex-wrap  y-padding-tb">
+                            <view class="size-item-box tui-col-3  tui-align-center tui-flex tui-vertical-center y-color-gray y-border-all y-box {{item.checked?'size-active':''}}"
+                                  wx:for="{{filter.size.item}}" wx:key="index" data-index="{{index}}"
+                                  bindtap="selectSize"
+                            >
+                                {{item.sizeValue}}
+                            </view>
+                        </view>
+                    </van-tab>
+                    <van-tab>
+                        <view class="size-box tui-flex tui-flex-wrap  y-padding-tb">
+                            <view class="color-item-box tui-col-3  tui-align-center tui-flex tui-vertical-center y-color-gray y-border-all y-box "
+                                  wx:for="{{filter.color.item}}" wx:key="index" data-index="{{index}}"
+                                  style="background-color:{{item.background}};color: {{item.fontColor}};"
+                                  bindtap="selectColor"
+                            >
+                                <view wx:if="{{item.checked}}">
+                                    <van-icon name="success" size="50rpx"/>
+                                </view>
+                                <view wx:else>
+                                    {{item.colorName}}
+                                </view>
+                            </view>
+                        </view>
+                    </van-tab>
+                    <van-tab>
+                        <view class="y-padding-all">
+                            <view class="y-font-blod y-font-xxl y-line-height-200 y-padding-tb">价格区间
+                            </view>
+                            <view class="tui-flex tui-vertical-center ">
+                                <y-input label="最低价"></y-input>
+                                <view class="y-padding-lr y-color-gray">-</view>
+                                <y-input label="最高价"></y-input>
+                            </view>
+
+                            <view class="y-padding-tb">
+                                <van-radio-group value="{{filter.price.checked}}" data-prop="filter.price.checked"
+                                                 bind:change="selectPrice"
+                                >
+                                    <view class="y-padding-all">
+                                        <view class="y-font-blod y-font-xxl y-line-height-200 y-padding-tb">
+                                            {{item.name}}
+                                        </view>
+                                        <view class="tui-flex tui-flex-wrap">
+                                            <van-radio name="{{index}}" class="tui-col-6 y-padding-tb"
+                                                       checked-color="#378694"
+                                                       wx:for="{{filter.price.item}}" wx:key="index">
+                                                <span class="y-color-gray">
+                                                    {{item.title}}
+                                                </span>
+                                            </van-radio>
+                                        </view>
+                                    </view>
+                                </van-radio-group>
+                            </view>
+
+                        </view>
+                    </van-tab>
+                </van-tabs>
+            </view>
+            <view style="position: fixed;bottom: 0;height: 100rpx" class="tui-flex tui-col-12 ">
+                <view class="tui-col-6">
+                    <van-button size="large">重置</van-button>
+                </view>
+                <view class="tui-col-6">
+                    <van-button size="large" color="#1b1b1b">完成</van-button>
+                </view>
+            </view>
+        </view>
+    </van-popup>
+</view>

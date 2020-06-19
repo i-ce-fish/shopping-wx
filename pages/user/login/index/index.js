@@ -2,7 +2,7 @@
 
 
 let user = require('../../../../api/user')
-
+let utils = require('../../../../utils/index')
 Page({
 
     /**
@@ -97,7 +97,8 @@ Page({
         console.log(wx.getSystemInfoSync().windowHeight)
         console.log(wx.getSystemInfoSync().windowWidth)
 
-        let cardHeight = wx.$rpx(wx.getSystemInfoSync().windowHeight) - 150
+        // let cardHeight = wx.$rpx(wx.getSystemInfoSync().windowHeight) - 150
+        let cardHeight = utils.px2rpx(wx.getSystemInfoSync().windowHeight) - 150
         console.log(cardHeight)
         this.setData({
             cardHeight: cardHeight + 'rpx'

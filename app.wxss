@@ -57,7 +57,10 @@ page {
   flex-direction: column;
   box-sizing: border-box;
 }
-
+/*怪异盒子模型*/
+.y-box{
+  box-sizing: border-box;
+}
 /*无边距*/
 .y-padding-none{
   padding:0!important;
@@ -149,10 +152,23 @@ page {
   color: #7d7d7d;
 
 }
+/*边框*/
+.y-border-b{
+  border-bottom:1rpx solid #dadada;
+}
+.y-border-lr{
+  border-right:1rpx solid #dadada;
+  border-left:1rpx solid #dadada;
+
+}
+.y-border-all{
+  border:1rpx solid #dadada;
+}
+
 
 /* 用于未付款金额等的显示 */
 .y-color-red {
-  color: #ff0101;
+  color: #ff0000;
 }
 
 /* 用于已付款金额等的显示 */

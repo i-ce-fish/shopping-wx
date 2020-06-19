@@ -1,13 +1,19 @@
-<view bindtap="go" data-url="/pages/catagory/product-detail/index"
+<view class="pro-box {{listView?'tui-flex':''}}"
+      bindtap="go" data-url="/pages/catagory/product-detail/index"
       data-id="{{product.id}}">
-    <van-image src="{{product.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>
+    <view class=" y-padding-b">
+        <van-image src="{{product.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>
 
-    <view class="pro-item y-padding-all">
-        <van-image style="padding-right: 10rpx"
-                   wx:for="{{product.colors}}" wx:key="index"
-                   src="{{item.url}}"
-                   width="40rpx" height="40rpx" fit="fill"
-                   lazy-load/>
+    </view>
+
+    <view class="info-box y-box  y-padding-lr y-padding-b  y-line-height-180 {{listView?'list-box':''}}">
+        <view>
+            <van-image style="padding-right: 10rpx"
+                       wx:for="{{product.colors}}" wx:key="index"
+                       src="{{item.url}}"
+                       width="40rpx" height="40rpx" fit="fill"
+                       lazy-load/>
+        </view>
         <view class="tui-flex tui-align-between y-font-s">
             <view>
                 {{product.category}}
@@ -16,10 +22,10 @@
                 {{product.min_size}}-{{product.max_size}}
             </view>
         </view>
-        <view>
+        <view class="y-font-l">
             {{product.name}}{{product.code}}
         </view>
-        <view class="price y-font-xxl y-font-blod">
+        <view class="price y-font-xxl y-font-blod y-color-red">
             ￥{{product.price}}
         </view>
     </view>

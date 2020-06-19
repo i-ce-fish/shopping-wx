@@ -8,8 +8,6 @@
 
     </view>
 
-    <scroll-top scrollTop="{{scrollTop}}"text="TOP"></scroll-top>
-
     <view>
 
         <product-list class="product-item-{{index}}"
@@ -20,4 +18,5 @@
 
     </view>
 
+    <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
 </view>

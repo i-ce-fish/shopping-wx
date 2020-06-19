@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/home/index/index",
+    "pages/shopping/search/index",
+    "pages/catagory/type-b/index",
     "pages/catagory/type-a/index",
+    "pages/home/index/index",
     "pages/catagory/product-detail/index",
     "pages/catagory/sizes/index",
     "pages/catagory/colors/index",
@@ -9,7 +11,6 @@
     "pages/shopping/order/success/index",
     "pages/shopping/cart/index",
 
-    "pages/catagory/type-b/index",
     "pages/user/login/index/index",
     "pages/shopping/order/list/index",
     "pages/shopping/order/order-detail/index",

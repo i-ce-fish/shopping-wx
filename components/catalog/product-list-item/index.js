@@ -12,6 +12,10 @@ Component({
     product:{
       type:Object,
       value: {}
+    },
+    listView:{
+      type:Boolean,
+      value: false
     }
   },
 

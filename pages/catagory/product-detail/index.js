@@ -1,5 +1,4 @@
 // pages/rule/integral/main.js
-import {LOGIN_URL} from "../../../utils/api";
 
 let goods = require("../../../api/goods")
 let goodsize = require("../../../api/goodsize")
@@ -306,6 +305,7 @@ App.Page(filter.loginCheck({
      */
     onShareAppMessage: function () {
         //todo set id
+        //todo add  color and size parameter
         return {
             title: 'TEST',
             imageUrl: 'https://www.uniqlo.cn/hmall/test/u0000000016285/main/first/1000/1.jpg',// 图片 URL

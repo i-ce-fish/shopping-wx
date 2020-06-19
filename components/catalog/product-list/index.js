@@ -25,6 +25,10 @@ Component({
         categoryId: {
             type: String,
             value: ""
+        },
+        listView:{
+            type:Boolean,
+            value:true
         }
     },
 

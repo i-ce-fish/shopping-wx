@@ -3,7 +3,7 @@
 let articles = require("../../../api/article")
 //在使用的View中引入WxParse模块
 var WxParse = require('../../../components/wxParse/wxParse');
-
+let util = require('../../../utils/index')
 Page({
 
   /**
@@ -24,7 +24,8 @@ Page({
         ...res
       })
       // todo  15px => 30rpx
-      WxParse.wxParse('article', 'html', res.body, this, wx.$px(30));
+      // WxParse.wxParse('article', 'html', res.body, this, wx.$px(30));
+      WxParse.wxParse('article', 'html', res.body, this, util.rpx2px(30));
 
     })
 

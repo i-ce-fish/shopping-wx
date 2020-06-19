@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index",
+    "product-list": "/components/catalog/product-list/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-button": "@vant/weapp/button/index",
+    "y-input": "/components/y-input/index"
+  }
+}

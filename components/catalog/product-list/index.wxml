@@ -1,4 +1,4 @@
-<view class=" title-box tui-flex tui-align-between tui-vertical-center">
+<view  wx:if="{{title}}" class=" title-box tui-flex tui-align-between tui-vertical-center">
     <view class=" y-font-xxl y-font-blod">
         {{title}}
     </view>
@@ -10,6 +10,7 @@
 
 
 <view class="pro-list  tui-flex  tui-flex-wrap">
-    <product-list-item class="tui-col-6" wx:for="{{products}}" wx:key="index" product="{{item}}"></product-list-item>
+    <product-list-item class="{{listView?'tui-col-12':'tui-col-6'}}" listView="{{listView}}" wx:for="{{products}}" wx:key="index" product="{{item}}"></product-list-item>
+<!--    <product-list-item class="tui-flex-1" wx:for="{{products}}" wx:key="index" product="{{item}}"></product-list-item>-->
 
 </view>

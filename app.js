@@ -18,18 +18,6 @@ wx.$go = function (url, data) {
             icon: success ? 'success' : 'none',
             duration: duration || 2000
         })
-    },
-
-    // px转rpx
-    wx.$rpx = function (px) {
-        const width = wx.getSystemInfoSync().windowWidth
-        return px * (750 / width)
-    },
-
-    // rpx  转px
-    wx.$px = function (rpx) {
-        const width = wx.getSystemInfoSync().windowWidth
-        return rpx / 750 * width
     }
 
 //  全局状态管理

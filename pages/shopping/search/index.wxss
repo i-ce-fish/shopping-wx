@@ -1,0 +1,23 @@
+.active-title {
+    color: #378694;
+}
+
+.filter-tab-box {
+    width: 100%;
+    height: 110rpx;
+}
+
+.size-item-box {
+    height: 180rpx;
+    font-size: 44rpx;
+}
+.color-item-box{
+    height: 180rpx;
+
+}
+.size-active {
+    border: 5rpx #378694 solid;
+}
+.color-active{
+
+}
