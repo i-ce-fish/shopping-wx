@@ -19,6 +19,10 @@ Component({
             this.setData({
                 show: !this.data.show
             })
+        },
+        search(){
+            //todo add data
+            wx.$go('/pages/shopping/search/index')
         }
     }
 })

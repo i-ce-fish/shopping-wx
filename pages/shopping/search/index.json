@@ -10,6 +10,7 @@
     "van-radio": "@vant/weapp/radio/index",
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-button": "@vant/weapp/button/index",
-    "y-input": "/components/y-input/index"
+    "y-input": "/components/y-input/index",
+    "scroll-top":"/components/scroll-top/index"
   }
 }

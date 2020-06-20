@@ -1,22 +1,29 @@
 <!--<button bindtap="tapListView" >视图</button>-->
 <view class="y-bgc-white">
 
-    <search-bar></search-bar>
+    <search-bar ></search-bar>
+    <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
+
     <view class=" y-border-b tui-flex tui-align-between" value="active">
-        <view class="y-padding-all y-color-gray {{active==='0'?'active-title':''}}" bindtap="tapTab" data-id="0">综合
+        <view class="y-padding-all y-color-gray tui-col-12 {{active==='0'?'active-title':''}}" bindtap="tapTab"
+              data-id="0">综合
         </view>
-        <view class="y-padding-all y-color-gray {{active==='1'?'active-title':''}}" bindtap="tapTab" data-id="1">上架时间
+        <view class="y-padding-all y-color-gray tui-col-12 {{active==='1'?'active-title':''}}" bindtap="tapTab"
+              data-id="1">上架时间
         </view>
-        <view class="y-padding-all y-color-gray {{active==='2'?'active-title':''}}" bindtap="tapTab" data-id="2">销量
+        <view class="y-padding-all y-color-gray tui-col-12 {{active==='2'?'active-title':''}}" bindtap="tapTab"
+              data-id="2">销量
         </view>
-        <view class="y-padding-all y-color-gray {{active==='3'?'active-title':''}}" bindtap="tapTab" data-id="3">
+<!--        价格有升降序，不能用循环，-->
+        <view class="y-padding-all y-color-gray tui-col-12 {{active==='3'?'active-title':''}}" bindtap="tapTab"
+              data-id="3">
             价格
             <van-icon wx:if="{{active==='3'}}" name="{{priceArrow?'arrow-up':'arrow-down'}}" color="#378694"/>
         </view>
     </view>
     <view class="tui-flex tui-align-between  ">
         <view class="y-padding-all   tui-col-8 tui-flex tui-vertical-center">
-            <view class="y-font-blod">1234件</view>
+            <view class="y-font-blod" >1234件</view>
         </view>
         <view class="y-padding-all  y-border-lr tui-center tui-col-2 tui-flex-col " bindtap="tapListView">
 
@@ -58,13 +65,17 @@
                     </view>
                 </view>
                 <view class="filter-tab-box tui-flex tui-vertical-center tui-align-around y-bgc-white">
-                    <view class="tui-flex-col tui-flex-1  tui-center {{filterActive===index?'active-title':''}}"
+                    <view class="tui-flex-col tui-flex-1  tui-center {{filterActive===index?'filter-active-tab':''}}"
                           wx:for="{{filterTabs}}"
                           wx:key="index"
                           bindtap="tapFilterTab"
                           data-id="{{index}}">
-                        <view>
+                        <view style="position:relative;">
                             <van-icon name="{{item.icon}}" size="50rpx"></van-icon>
+                            <view wx:if="{{item.sum>0}}"
+                                  class="tips-icon">
+                                {{item.sum}}
+                            </view>
                         </view>
                         <view>
                             {{item.title}}
@@ -77,9 +88,10 @@
                 <!--            van popup + van tab 下划线不显示，加上if也不行-->
                 <van-tabs active="{{ filterActive }}" wx:if="{{showFilter}}" bind:change="onChange">
                     <van-tab>
-                        <van-radio-group value="{{item.checked}}" data-prop="filter.style[{{index}}].checked"
+                        <van-radio-group value="{{item.checked}}" data-prop="filter.style.item[{{index}}].checked"
+                                         data-index="{{index}}"
                                          bind:change="selectStyle"
-                                         wx:for="{{filter.style}}" wx:key="index">
+                                         wx:for="{{filter.style.item}}" wx:key="index">
                             <view class="y-padding-all">
                                 <view class="y-font-blod y-font-xxl y-line-height-200 y-padding-tb">{{item.name}}
                                 </view>
@@ -155,12 +167,12 @@
                     </van-tab>
                 </van-tabs>
             </view>
-            <view style="position: fixed;bottom: 0;height: 100rpx" class="tui-flex tui-col-12 ">
+            <view style="position: fixed;bottom: 0;height: 100rpx" class="tui-flex tui-col-12 y-bgc-white">
                 <view class="tui-col-6">
-                    <van-button size="large">重置</van-button>
+                    <van-button size="large" bindtap="resetFilter">重置</van-button>
                 </view>
                 <view class="tui-col-6">
-                    <van-button size="large" color="#1b1b1b">完成</van-button>
+                    <van-button size="large" color="#1b1b1b" bindtap="closeFilter">完成</van-button>
                 </view>
             </view>
         </view>

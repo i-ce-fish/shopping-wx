@@ -1,5 +1,6 @@
-Page({
+Component({
     data: {
+        scrollTop:0,
         //当前点击的tab
         active: '0',
         //价格排序方向
@@ -10,7 +11,7 @@ Page({
         filterActive: 0,
         //显示条件筛选弹窗
         showFilter: false,
-        //条件筛选tab标签页
+        //条件筛选tab标签页，api获取的数据和用来显示的tab分开
         filterTabs: [
             {icon: 'apps-o', title: '风格'},
             {icon: 'apps-o', title: '尺码'},
@@ -19,45 +20,49 @@ Page({
         ],
         //todo get 可筛选条件from api ， 每次点击都重新请求可筛选条件和总件数，和商品
         //todo 分类加入筛选条件
+        // 几个tab的数据格式保持一致，方便监听、重置等操作的遍历
         filter: {
-            style: [
-                {
-                    item: ["二级分类1", '二级分类2', '二级分类3'],
-                    name: "二级分类"
-                },
-                {
-                    item: [
-                        "锦纶",
-                        "氨纶",
-                        "棉",
-                        "聚酯纤维"
-                    ],
-                    name: "材质"
-                }, {
-                    item: [
-                        "2020年春季",
-                        "2019年春季",
-                        "2019年秋季",
-                        "2020年夏季",
-                        "2019年夏季"
-                    ],
-                    name: "上市季节"
-                },
-                {
-                    item: [
-                        "促销活动",
-                        "限时特优",
-                        "支持门店自提",
-                    ],
-                    name: "其他条件"
-                },
-                {
-                    item: [
-                        "男装",
-                        "女装"
-                    ],
-                    name: "适用性别"
-                }],
+            style: {
+                item: [
+                    {
+                        item: ["二级分类1", '二级分类2', '二级分类3'],
+                        name: "二级分类"
+                    },
+                    {
+                        item: [
+                            "锦纶",
+                            "氨纶",
+                            "棉",
+                            "聚酯纤维"
+                        ],
+                        name: "材质"
+                    }, {
+                        item: [
+                            "2020年春季",
+                            "2019年春季",
+                            "2019年秋季",
+                            "2020年夏季",
+                            "2019年夏季"
+                        ],
+                        name: "上市季节"
+                    },
+                    {
+                        item: [
+                            "促销活动",
+                            "限时特优",
+                            "支持门店自提",
+                        ],
+                        name: "其他条件"
+                    },
+                    {
+                        item: [
+                            "男装",
+                            "女装"
+                        ],
+                        name: "适用性别"
+                    }],
+                name: '风格'
+            },
             size: {
                 item: [
                     {
@@ -187,7 +192,10 @@ Page({
                     {title: "￥100以下", value: "<100"}, {title: "￥100-￥200", value: "<=100"},
                     {title: "￥200-￥300", value: "200-300"},
                     {title: "￥300以上", value: ">=300"}
-                ], name: "价格"
+                ], name: "价格",
+                //todo 设置价格区间
+                max: '',
+                min: ''
             },
         },
 
@@ -233,80 +241,151 @@ Page({
         },
         ]
     },
-    onLoad: function (options) {
-        // todo 接受参数
-        console.log(options)
-    },
-    tapListView() {
-        this.setData({
-            listView: !this.data.listView
-        })
-    },
-    setDetail(e) {
-        this.setData({
-            [e.currentTarget.dataset.prop]: e.detail
-        })
-    },
-    tapTab(e) {
-        //todo  set product from api
-        this.setData({
-            active: e.currentTarget.dataset.id
-        })
-        if (e.currentTarget.dataset.id === '3') {
+    observers: {
+        //**监听所有子字段，显示已经勾选的条件数量
+        'filter.**': function () {
+            let index = 0
+            for (const prop in this.data.filter) {
+                //价格需要单独监听，不然数据会错乱
+                if (prop === 'price') {
+                    continue
+                }
+                //计算数量总和
+                let sum = 0;
+                this.data.filter[prop].item.forEach(item => {
+                    // 数字0时会自动转型
+                    if (item.checked || item.checked === 0) {
+                        sum++
+                    }
+                })
+                this.setData({
+                    [`filterTabs[${index}].sum`]: sum
+                })
+                //遍历用的索引
+                index++
+            }
+        },
+        //    单独监听价格，数据格式不一样，勾选价格也显示sum的数字，因为wxml是遍历的，不能设置checked
+        'filter.price.**': function () {
+            let checked = 0
+            let price = this.data.filter.price.checked;
+            // 数字0时会自动转型
+            if (price || price === 0) {
+                checked = '1'
+            }
             this.setData({
-                priceArrow: !this.data.priceArrow
+                [`filterTabs[3].sum`]: checked
             })
+
         }
     },
-    tapListView() {
-        this.setData({
-            listView: !this.data.listView
-        })
+    methods: {
+        onLoad: function (options) {
+            // todo 接受参数
+            console.log(options)
+        },
+        //页面滚动执行方式
+        onPageScroll(e) {
+            this.setData({
+                scrollTop: e.scrollTop
+            })
+        },
+        tapListView() {
+            this.setData({
+                listView: !this.data.listView
+            })
+        },
+        setDetail(e) {
+            this.setData({
+                [e.currentTarget.dataset.prop]: e.detail
+            })
+        },
+        tapTab(e) {
+            //todo  set product from api
+            this.setData({
+                active: e.currentTarget.dataset.id
+            })
+            if (e.currentTarget.dataset.id === '3') {
+                this.setData({
+                    priceArrow: !this.data.priceArrow
+                })
+            }
+        },
+        tapListView() {
+            this.setData({
+                listView: !this.data.listView
+            })
+        },
+        tapFilter() {
+            this.setData({
+                showFilter: true
+            })
+        },
+        closeFilter() {
+            this.setData({
+                showFilter: false
+            })
+        },
+        tapFilterTab(e) {
+            this.setData({
+                filterActive: e.currentTarget.dataset.id
+            })
+        }
+        ,
+        setDetail(e) {
+            this.setData({
+                [e.currentTarget.dataset.prop]: e.detail
+            })
+        },
+        selectStyle(e) {
+            const index = e.currentTarget.dataset.index
+            //取消重复勾选
+            if (e.detail === this.data.filter.style.item[index].checked) {
+                e.detail = "";
+            }
+
+            this.setDetail(e);
+            //    todo get data from api  and update filter condition
+        },
+        selectSize(e) {
+            let index = e.currentTarget.dataset.index
+            this.setData({
+                [`filter.size.item[${index}].checked`]: !this.data.filter.size.item[index].checked
+            })
+            //    todo  update
+        },
+        selectColor(e) {
+            let index = e.currentTarget.dataset.index
+            this.setData({
+                [`filter.color.item[${index}].checked`]: !this.data.filter.color.item[index].checked
+            })
+            //    todo update
+        },
+        selectPrice(e) {
+            //取消重复勾选
+            if (e.detail === this.data.filter.price.checked) {
+                e.detail = ""
+            }
+
+            this.setData({
+                'filter.price.checked': e.detail
+            })
+            //    todo update
+        },
+        resetFilter() {
+            for (const prop in this.data.filter) {
+                this.data.filter[prop].item.map(item => {
+                    item.checked = ""
+                })
+            }
+            this.data.filter.price.checked = ""
+            //todo 重置价格区间
+            this.setData({
+                filter: this.data.filter,
+            })
+        },
+
     },
-    tapFilter() {
-        this.setData({
-            showFilter: true
-        })
-    },
-    closeFilter() {
-        this.setData({
-            showFilter: false
-        })
-    },
-    tapFilterTab(e) {
-        this.setData({
-            filterActive: e.currentTarget.dataset.id
-        })
-    }
-    ,
-    setDetail(e) {
-        this.setData({
-            [e.currentTarget.dataset.prop]: e.detail
-        })
-    },
-    selectStyle(e) {
-        this.setDetail(e)
-        //    todo get data from api  and update filter condition
-    },
-    selectSize(e) {
-        let index = e.currentTarget.dataset.index
-        this.setData({
-            [`filter.size.item[${index}].checked`]: !this.data.filter.size.item[index].checked
-        })
-        //    todo  update
-    },
-    selectColor(e) {
-        let index = e.currentTarget.dataset.index
-        this.setData({
-            [`filter.color.item[${index}].checked`]: !this.data.filter.color.item[index].checked
-        })
-        //    todo update
-    },
-    selectPrice(e) {
-        this.setData({
-            'filter.price.checked': e.detail
-        })
-        //    todo update
-    }
+
 
 });

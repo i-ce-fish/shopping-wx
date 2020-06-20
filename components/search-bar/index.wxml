@@ -26,7 +26,7 @@
                         <view>删除全部</view>
                     </view>
                     <view class="content-box">
-                        <view wx:for="{{hot_search}}" wx:key="index" class="item">{{item}}</view>
+                        <view wx:for="{{hot_search}}" wx:key="index" class="item" bindtap="search">{{item}}</view>
                     </view>
                 </view>
 

@@ -1,6 +1,4 @@
 function request(req) {
-
-
     // 去除前缀“/api”
     // req.url = req.url.replace('/api','')
 
@@ -12,6 +10,12 @@ function request(req) {
     // const ServerIP = 'https://shop.cdb99.com/api/v1/'
 
     return new Promise(function (resolve, reject) {
+        wx.showLoading({
+            title: '加载中',
+            mask: true
+        })
+
+
         wx.request({
             url: ServerIP + req.url,
             data: req.data,
@@ -35,6 +39,8 @@ function request(req) {
 
             },
             success: function (res) {
+
+
                 console.warn('请求结果', res);
                 if (res.statusCode === 200 && res.data.code === 200) {
                     resolve(res.data.data);
@@ -50,10 +56,14 @@ function request(req) {
                 });
                 console.warn("请求失败", err)
                 reject(err);
+            },
+            complete(res) {
+                wx.hideLoading()
             }
         })
     });
 
 }
+
 
 exports.request = request
