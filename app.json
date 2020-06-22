@@ -2,16 +2,15 @@
   "pages": [
     "pages/home/index/index",
     "pages/user/login/index/index",
+    "pages/catagory/type-a/index",
     "pages/shopping/search/index",
     "pages/catagory/type-b/index",
-    "pages/catagory/type-a/index",
     "pages/catagory/product-detail/index",
     "pages/catagory/sizes/index",
     "pages/catagory/colors/index",
     "pages/shopping/order/item/index",
     "pages/shopping/order/success/index",
     "pages/shopping/cart/index",
-
     "pages/shopping/order/list/index",
     "pages/shopping/order/order-detail/index",
     "pages/shopping/order/paid-order/index",
@@ -34,12 +33,6 @@
     "pages/test/edit",
     "pages/test/add/index"
   ],
-  "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#ff4444",
-    "navigationBarTitleText": "商城",
-    "navigationBarTextStyle": "white"
-  },
   "tabBar": {
     "custom": true,
     "selectedColor": "#ff4444",
@@ -71,6 +64,11 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
-
+  "sitemapLocation": "sitemap.json",
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff4444",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle": "white"
+  }
 }

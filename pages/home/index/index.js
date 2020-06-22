@@ -6,13 +6,13 @@ let catalog = require("../../../api/catalog")
 
 const filter = require('../../../utils/filter');
 
-
 Page(filter.loginCheck({
 
     /**
      * 页面的初始数据
      */
     data: {
+
         imgs: [
             {url: "https://www.uniqlo.cn/hmall/test/u0000000009932/detail/393/10.jpg"},
             {url: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582049975121&di=09124e52fb2d9c56f849f4fa5fa2a2a1&imgtype=0&src=http%3A%2F%2Fimg.hkwb.net%2Fatt%2Fsite2%2F20171228%2Fe6805aee9afd115c2b948f9b12528964.jpg"},
@@ -21,7 +21,13 @@ Page(filter.loginCheck({
         allArticle: [],
         headerLines: [],
         user: {},
-        catalogs: []
+        catalogs: [],
+        activity: [
+            {title: '满500元立减100元', subtitle: '全场货品'},
+            {title: '低至 1 折起', subtitle: '三楼女装，SALE'},
+            {title: '特价速秒  售完即止', subtitle: '今日必入'},
+            {title: '无印良品工厂直供', subtitle: '拼团直播'}
+        ]
     },
 
     /**

@@ -62,12 +62,12 @@
     </view>
     <view class="select-box">
         <tui-list-cell arrow bindtap="onSelect">
-            <span wx:if="{{checkedProduct.color&&checkedProduct.size}}">
+            <text wx:if="{{checkedProduct.color&&checkedProduct.size}}">
                 已选: {{checkedProduct.color}}  {{checkedProduct.size}}  数量: {{checkedProduct.num}}
-            </span>
-            <span wx:else>
+            </text>
+            <text wx:else>
                             请选择配送方式，颜色，尺码，数量
-            </span>
+            </text>
         </tui-list-cell>
     </view>
 
@@ -208,9 +208,9 @@
                             <view class="y-font-blod">
                                 颜色
                             </view>
-                            <span wx:for="{{product.colors}}" wx:key="index">
+                            <text wx:for="{{product.colors}}" wx:key="index">
 								{{item.name}}{{item.code}}
-							</span>
+							</text>
                         </view>
 
                         <view>

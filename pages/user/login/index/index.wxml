@@ -1,6 +1,7 @@
 <!--pages/user/login/main.wxml-->
 <view class="container">
-    <view class="card-box  " >
+    <view class="card-box  ">
+        <view class="y-font-blod y-font-xl y-line-height-200">登录</view>
         <view class="button-box tui-flex tui-vertical-center tui-flex-wrap" style="height: {{cardHeight}}">
 
             <view class="tui-col-12">
@@ -10,16 +11,11 @@
                 <view class="button-item tui-col-12">
                     <van-button type="default" plain block bindtap="phoneLogin">手机登录</van-button>
                 </view>
-                <view class="button-item tui-col-12">
-                    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取用户手机号码</button>
-                </view>
+                <!--                <view class="button-item tui-col-12">-->
+                <!--                    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取用户手机号码</button>-->
+                <!--                </view>-->
 
             </view>
-<!--            <view>-->
-<!--                <van-button type="default" plain block bindtap="onPopupImage">弹出老板微信</van-button>-->
-<!--                <van-button type="default" plain block bindtap="onSetClip">复制</van-button>-->
-<!--                <van-button type="default" plain block bindtap="onGetClip">粘贴</van-button>-->
-<!--            </view>-->
         </view>
     </view>
 </view>

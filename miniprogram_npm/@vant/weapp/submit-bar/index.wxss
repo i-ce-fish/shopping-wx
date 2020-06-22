@@ -11,8 +11,8 @@
     z-index: var(--submit-bar-z-index, 100);
     background-color: #fff;
     background-color: var(--submit-bar-background-color, #fff);
-/*    添加影音*/
-    box-shadow: 0 -2rpx 2rpx 0 rgba(0, 0, 0, 0.16);
+/*    添加阴影*/
+    box-shadow: 0 -2rpx 4rpx 0 rgba(0, 0, 0, 0.16);
 }
 
 .van-submit-bar__tip {

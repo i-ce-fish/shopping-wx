@@ -31,7 +31,8 @@ let store = new Store({
 
 App({
     store: store,
-    onLaunch: function () {
+    onLaunch: function (options) {
+        //todo remove
         // 展示本地存储能力
         var logs = wx.getStorageSync('logs') || []
         logs.unshift(Date.now())
@@ -74,6 +75,8 @@ App({
     globalData: {
         //set
         userInfo: {id: 0},
-        activeTab: 0
+        //当前选中的tabbar
+        activeTab: 0,
+        shopName: '永康美斯特邦威'
     }
 })

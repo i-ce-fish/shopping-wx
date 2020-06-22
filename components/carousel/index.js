@@ -22,7 +22,7 @@ Component({
         },
         interval: {
             type: [String, Number],
-            value: 2000
+            value: 3000
         },
         duration: {
             type: [String, Number],

@@ -1,11 +1,14 @@
 {
-  "navigationBarTitleText": "永康美特斯邦威店 会员内购",
+  "navigationBarTitleText": "永康美特斯邦威店",
   "usingComponents": {
     "tui-list-cell": "/components/list-cell/list-cell",
     "tui-list-view": "/components/list-view/list-view",
     "carousel": "/components/carousel/index",
     "van-image": "@vant/weapp/image",
     "van-divider": "@vant/weapp/divider",
-    "van-icon": "@vant/weapp/icon"
-  }
-}
+    "van-icon": "@vant/weapp/icon",
+    "van-sticky": "@vant/weapp/sticky",
+    "card": "/components/card/index",
+    "shop-title": "/components/shop-title/index",
+    "van-cell": "@vant/weapp/cell/index"
+  }}

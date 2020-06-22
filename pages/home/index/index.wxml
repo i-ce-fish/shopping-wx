@@ -1,58 +1,156 @@
-<view class="container">
-
+<view class="container ">
+    <shop-title title="会员内购"></shop-title>
     <view class="swiper-box">
-        <carousel imgs="{{imgs}}" height="375rpx" fit="fill"></carousel>
+        <carousel imgs="{{imgs}}" interval="4000" height="375rpx" fit="fill"></carousel>
         <view class="address">丽水中山街店522号（百货大楼旁）</view>
     </view>
     <view>
     </view>
     <view class="content-box">
-        <view class="userinfo-box   tui-flex ">
-            <view class="avatar tui-col-2 tui-flex tui-vertical-center">
-                <van-image round width="120rpx" height="120rpx" fit="fill" src="{{imgs[0]}}" bindtap="test"/>
-            </view>
-            <view class="tui-col-10 tui-flex tui-align-between">
-                <view class="info-box   tui-col-10">
-                    <view class="line1">{{user.name}}</view>
-                    <view class="line2 tui-flex tui-align-between">
-                        <view class="">{{user.vip_level}}级会员</view>
-                        <view class="">积分 {{user.credits}}</view>
+        <!--        <view class="userinfo-box   tui-flex ">-->
+        <card>
+            <view class="tui-flex tui-align-between">
+                <view class="avatar tui-col-2 tui-flex tui-vertical-center y-padding-r">
+                    <van-image round width="120rpx" height="120rpx" fit="fill" src="{{imgs[0]}}" bindtap="test"/>
+                </view>
+                <view class="tui-col-10 tui-flex tui-align-between">
+                    <view class="info-box   tui-col-10">
+                        <view class="line1">{{user.name}}</view>
+                        <view class="line2 tui-flex tui-align-between">
+                            <view class="">{{user.vip_level}}级会员</view>
+                            <view class="">积分 {{user.credits}}</view>
+                        </view>
+                        <view class="line3 tui-flex tui-align-between  ">
+                            <view class="">账户余额 ￥1788</view>
+                            <view class="">优惠券 3张</view>
+                        </view>
                     </view>
-                    <view class="line3 tui-flex tui-align-between  ">
-                        <view class="">账户余额 ￥1788</view>
-                        <view class="">优惠券 3张</view>
+                    <view class="right-box tui-col-2 tui-flex-col tui-align-between">
+                        <view class="">
+                            <van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/index" size="32px"/>
+                        </view>
+                        <view class="detail tui-flex tui-center tui-vertical-center" bindtap="go"
+                              data-url="/pages/my/qrcode/index">
+                            <view>详情</view>
+                            <van-icon class="" name="arrow" size="15px"/>
+                        </view>
                     </view>
                 </view>
-                <view class="right-box tui-col-2 tui-flex-col tui-align-between">
-                    <view class="">
-                        <van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/index" size="32px"/>
-                    </view>
-                    <view class="detail tui-flex tui-center tui-vertical-center" bindtap="go"
-                          data-url="/pages/my/qrcode/index">
-                        <view>详情</view>
-                        <van-icon class="" name="arrow" size="15px"/>
-                    </view>
+            </view>
+            <view class="userinfo-detail-box ">
+                <view wx:for="{{headerLines}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}">
+                    {{item.title}}
                 </view>
             </view>
+        </card>
+
+
+        <view class="y-mt-20">
+            <van-sticky>
+                <view class="top-box tui-flex  tui-align-around y-bgc-white y-shadow-b ">
+                    <view class="tui-flex-col tui-align-center tui-center">
+                        <view>
+                            <van-icon name="bag-o" size="40rpx"/>
+                        </view>
+                        <view>今日特惠</view>
+                    </view>
+                    <view class="tui-flex-col tui-align-center tui-center">
+                        <view>
+                            <van-icon name="bag-o" size="40rpx"/>
+                        </view>
+                        <view>今日上新</view>
+                    </view>
+                    <view class="tui-flex-col tui-align-center tui-center">
+                        <view>
+                            <van-icon name="bag-o" size="40rpx"/>
+                        </view>
+                        <view>最新穿法</view>
+                    </view>
+                    <view class="tui-flex-col tui-align-center tui-center">
+                        <view>
+                            <van-icon name="bag-o" size="40rpx"/>
+                        </view>
+                        <view>老板娘说</view>
+                    </view>
+                </view>
+            </van-sticky>
         </view>
-        <view class="userinfo-detail-box ">
-            <view wx:for="{{headerLines}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}">
-                {{item.title}}
-            </view>
+
+
+        <view>
+            <card>
+                <van-cell title="今日门店会员优惠" is-link
+                          link-type="navigateTo"
+                          url="/pages/shopping/search/index?keyword=keyword"
+                          title-class="cell-title"
+                          custom-class="cell-title-box"
+                >
+                    <view slot="icon">
+                        <van-icon name="home-o" size="40rpx"></van-icon>
+                    </view>
+                </van-cell>
+                <tui-list-cell wx:for="{{activity}}" wx:key="index">
+                    <view class="tui-col-12">
+                        <view>{{item.subtitle}}</view>
+                        <view class="tui-flex tui-align-center y-font-blod y-font-xxl y-line-height-200 y-color-red">
+                            <view>{{item.title}}</view>
+                        </view>
+                        <view class="tui-flex tui-align-right  tui-vertical-center y-line-height-100">
+                            <view>
+                                详情
+                            </view>
+                            <van-icon name="arrow"/>
+                        </view>
+                    </view>
+                </tui-list-cell>
+            </card>
+        </view>
+
+        <view>
+            <card>
+                <van-cell title="今日上新" is-link
+                          link-type="navigateTo"
+                          url="/pages/shopping/search/index?keyword=keyword"
+                          title-class="cell-title"
+                          custom-class="cell-title-box"
+                >
+                    <view slot="icon">
+                        <van-icon name="home-o" size="40rpx"></van-icon>
+                    </view>
+                </van-cell>
+                <view>
+                    123
+                </view>
+            </card>
         </view>
 
         <!--		todo -->
         <view class="activity-box" wx:for="{{catalogs}}" wx:key="index">
-            <tui-list-view nullTitle="{{true}}">
-                <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{false}}">
-                    <view class="y-color-white">{{item.catalog_name}}</view>
-                </tui-list-cell>
+            <card>
+                <!--               <tui-list-view nullTitle="{{true}}">-->
+                <!--                   <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{false}}">-->
+                <!--                       <view class="y-color-white">{{item.catalog_name}}</view>-->
+                <!--                   </tui-list-cell>-->
+                <!--                   <view class="item-box y-padding-lr y-bgc-white   ">-->
+                <!--                       <view wx:for="{{item.childList}}" wx:key="index"-->
+                <!--                             bindtap="onTapDetail" data-id="{{item.id}}">{{item.title}}-->
+                <!--                       </view>-->
+                <!--                   </view>-->
+                <!--               </tui-list-view>-->
+                <van-cell icon="home-o" title="{{item.catalog_name}}" is-link
+                          link-type="navigateTo"
+                          url="/pages/shopping/search/index?keyword={{item.catalog_name}}"
+                          title-class="cell-title-box"
+                          custom-class="test"
+                >
+                </van-cell>
                 <view class="item-box y-padding-lr y-bgc-white   ">
                     <view wx:for="{{item.childList}}" wx:key="index"
-                          bindtap="onTapDetail" data-id="{{item.id}}">{{item.title}}
+                          bindtap="onTapDetail" data-id="{{item.id}}">
+                        {{item.title}}
                     </view>
                 </view>
-            </tui-list-view>
+            </card>
         </view>
 
         <view class="explore-box">

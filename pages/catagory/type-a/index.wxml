@@ -1,14 +1,14 @@
 <view class="container y-bgc-white">
     <!--    <search-bar></search-bar>-->
-<van-sticky>
-    <search-bar></search-bar>
-
-</van-sticky>
+    <van-sticky>
+        <search-bar scanable></search-bar>
+    </van-sticky>
+    <shop-title></shop-title>
     <view class="">
         <catalog-tab bindclick="onTab"></catalog-tab>
     </view>
     <view class="y-padding-t"></view>
-    <carousel imgs="{{carousels}}" height="750rpx"  ></carousel>
+    <carousel imgs="{{carousels}}" height="750rpx"></carousel>
 
 
     <view>

@@ -1,6 +1,6 @@
 Component({
     data: {
-        scrollTop:0,
+        scrollTop: 0,
         //当前点击的tab
         active: '0',
         //价格排序方向
@@ -281,8 +281,8 @@ Component({
     },
     methods: {
         onLoad: function (options) {
-            // todo 接受参数
-            console.log(options)
+            // todo 接受参数  get api
+            console.log(options.keyword)
         },
         //页面滚动执行方式
         onPageScroll(e) {

@@ -5,6 +5,8 @@
     "scroll-top":"/components/scroll-top/index",
     "van-image": "@vant/weapp/image/index",
 
-    "top-sticky": "/components/catalog/top-sticky/index"
+    "top-sticky": "/components/catalog/top-sticky/index",
+    "shop-title": "/components/shop-title/index"
+
   }
 }

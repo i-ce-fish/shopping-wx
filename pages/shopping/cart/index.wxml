@@ -11,8 +11,8 @@
                         购物车({{selectedList.length}})
                     </view>
                     <view class="y-underline" bindtap="activeEdit">
-                        <span wx:if="{{!activeEdit}}">编辑全部</span>
-                        <span wx:else>完成</span>
+                        <text wx:if="{{!activeEdit}}">编辑全部</text>
+                        <text wx:else>完成</text>
                     </view>
                 </view>
             </tui-list-cell>
@@ -61,16 +61,16 @@
                 <view>
                     <van-radio-group value="{{ selectedList.length === products.length&& products.length>0?'1':'0' }}">
 
-                        <van-radio name="1" shape="square" bindtap="onSelectAll"><span class="y-font-blod ">全选</span>
+                        <van-radio name="1" shape="square" bindtap="onSelectAll"><text class="y-font-blod ">全选</text>
                         </van-radio>
                     </van-radio-group>
                 </view>
                 <view wx:if="{{!activeEdit}}">
-                    <span class="y-font-s">合计:</span>
-                    <span class="total-price y-color-red  y-font-blod">￥{{totalAmount}}</span>
-                    <span class="y-color-gray y-font-s">
+                    <text class="y-font-s">合计:</text>
+                    <text class="total-price y-color-red  y-font-blod">￥{{totalAmount}}</text>
+                    <text class="y-color-gray y-font-s">
 						不含运费
-					</span>
+					</text>
                 </view>
                 <view wx:else class="y-underline" bindtap="onDelAll">
                     删除

@@ -94,12 +94,8 @@ Page({
         })
     },
     init() {
-        console.log(wx.getSystemInfoSync().windowHeight)
-        console.log(wx.getSystemInfoSync().windowWidth)
-
-        // let cardHeight = wx.$rpx(wx.getSystemInfoSync().windowHeight) - 150
-        let cardHeight = utils.px2rpx(wx.getSystemInfoSync().windowHeight) - 150
-        console.log(cardHeight)
+        // card高度为整个视口
+        let cardHeight = utils.px2rpx(wx.getSystemInfoSync().windowHeight) - 200
         this.setData({
             cardHeight: cardHeight + 'rpx'
         })

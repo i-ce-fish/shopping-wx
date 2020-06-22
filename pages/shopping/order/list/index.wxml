@@ -196,10 +196,10 @@
         <van-submit-bar button-text="提交订单" bind:submit="go" data-url="/pages/shopping/order/item/index"
                         button-class="button-class"
         >
-				<span>
+				<text>
 					应付总额:
-					<span class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</span>
-				</span>
+					<text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text>
+				</text>
         </van-submit-bar>
     </view>
 

@@ -8,12 +8,12 @@
         <view class="y-padding-all y-color-gray tui-col-12 {{active==='0'?'active-title':''}}" bindtap="tapTab"
               data-id="0">综合
         </view>
-        <view class="y-padding-all y-color-gray tui-col-12 {{active==='1'?'active-title':''}}" bindtap="tapTab"
-              data-id="1">上架时间
-        </view>
-        <view class="y-padding-all y-color-gray tui-col-12 {{active==='2'?'active-title':''}}" bindtap="tapTab"
-              data-id="2">销量
-        </view>
+<!--        <view class="y-padding-all y-color-gray tui-col-12 {{active==='1'?'active-title':''}}" bindtap="tapTab"-->
+<!--              data-id="1">上架时间-->
+<!--        </view>-->
+<!--        <view class="y-padding-all y-color-gray tui-col-12 {{active==='2'?'active-title':''}}" bindtap="tapTab"-->
+<!--              data-id="2">销量-->
+<!--        </view>-->
 <!--        价格有升降序，不能用循环，-->
         <view class="y-padding-all y-color-gray tui-col-12 {{active==='3'?'active-title':''}}" bindtap="tapTab"
               data-id="3">
@@ -22,10 +22,21 @@
         </view>
     </view>
     <view class="tui-flex tui-align-between  ">
-        <view class="y-padding-all   tui-col-8 tui-flex tui-vertical-center">
+        <view class="y-padding-all   tui-col-6 tui-flex tui-vertical-center">
             <view class="y-font-blod" >1234件</view>
         </view>
-        <view class="y-padding-all  y-border-lr tui-center tui-col-2 tui-flex-col " bindtap="tapListView">
+
+        <view class="y-border-lr y-padding-all   tui-center tui-col-4 tui-flex-col " bindtap="tapFilter">
+
+            <view class="">
+                <van-icon name="apps-o" size="40rpx"></van-icon>
+            </view>
+            <view>
+                筛选
+            </view>
+        </view>
+
+        <view class="y-padding-all   tui-center tui-col-2 tui-flex-col " bindtap="tapListView">
 
             <view class="">
                 <!--                todo 换一个icon-->
@@ -33,15 +44,6 @@
             </view>
             <view>
                 视图
-            </view>
-        </view>
-        <view class="y-padding-all   tui-center tui-col-2 tui-flex-col " bindtap="tapFilter">
-
-            <view class="">
-                <van-icon name="apps-o" size="40rpx"></van-icon>
-            </view>
-            <view>
-                筛选
             </view>
         </view>
     </view>
@@ -57,8 +59,8 @@
                 <!--width100%挡住关闭按钮-->
                 <view class="y-padding-all y-bgc-white tui-flex tui-align-between">
                     <view>
-                        <span class="y-font-blod y-font-xxl y-line-height-200 y-padding-r">查询条件</span>
-                        <span>查询结果：1234件</span>
+                        <text class="y-font-blod y-font-xxl y-line-height-200 y-padding-r">查询条件</text>
+                        <text>查询结果：1234件</text>
                     </view>
                     <view>
                         <van-icon name="cross" bindtap="closeFilter" size="50rpx"/>
@@ -98,9 +100,9 @@
                                 <view class="tui-flex tui-flex-wrap">
                                     <van-radio name="{{index}}" class="tui-col-6 y-padding-tb" checked-color="#378694"
                                                wx:for="{{item.item}}" wx:key="index">
-                                        <span class="y-color-gray">
+                                        <text class="y-color-gray">
                                             {{item}}
-                                        </span>
+                                        </text>
                                     </van-radio>
                                 </view>
                             </view>
@@ -154,9 +156,9 @@
                                             <van-radio name="{{index}}" class="tui-col-6 y-padding-tb"
                                                        checked-color="#378694"
                                                        wx:for="{{filter.price.item}}" wx:key="index">
-                                                <span class="y-color-gray">
+                                                <text class="y-color-gray">
                                                     {{item.title}}
-                                                </span>
+                                                </text>
                                             </van-radio>
                                         </view>
                                     </view>

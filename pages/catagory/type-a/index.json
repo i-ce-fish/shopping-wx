@@ -11,6 +11,8 @@
     "search-bar": "/components/search-bar/index",
     "van-sticky": "@vant/weapp/sticky/index",
 
-    "catalog-tab":"/components/catalog/tab/index"
+    "catalog-tab":"/components/catalog/tab/index",
+    "shop-title": "/components/shop-title/index"
+
   }
 }

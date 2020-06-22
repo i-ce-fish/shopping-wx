@@ -97,8 +97,8 @@
                             <view class="tui-flex-1">
                                 <van-button bindtap="selectAddress" data-item="{{item}}" hairline>
                                     <view class="tui-flex tui-align-center tui-vertical-center">
-                                        <span wx:if="{{item.is_default}}"><van-icon name="success" color="#28788c"
-                                                                                    size="32rpx"/>已</span>选择
+                                        <text wx:if="{{item.is_default}}"><van-icon name="success" color="#28788c"
+                                                                                    size="32rpx"/>已</text>选择
                                     </view>
                                 </van-button>
                             </view>
@@ -212,10 +212,10 @@
                         custom-class="submit-bar"
                         bind:submit="postOrder"
         >
-				<span>
+				<text>
 					应付总额:
-					<span class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</span>
-				</span>
+					<text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text>
+				</text>
         </van-submit-bar>
     </view>
 
