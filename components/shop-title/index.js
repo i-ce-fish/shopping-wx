@@ -6,7 +6,7 @@ Component({
     properties: {
         title: {
             type: String,
-            value: app.globalData.shopName
+            value: app.globalData.shopTitle
         }
     },
     data: {},

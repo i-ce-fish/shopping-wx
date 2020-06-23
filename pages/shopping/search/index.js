@@ -7,10 +7,7 @@ Component({
         priceArrow: false,
         //列表视图切换
         listView: false,
-        //当前选中的筛选条件tabs
-        filterActive: 0,
-        //显示条件筛选弹窗
-        showFilter: false,
+
         //条件筛选tab标签页，api获取的数据和用来显示的tab分开
         filterTabs: [
             {icon: 'apps-o', title: '风格'},
@@ -242,48 +239,11 @@ Component({
         },
         ]
     },
-    observers: {
-        //**监听所有子字段，显示已经勾选的条件数量
-        'filter.**': function () {
-            let index = 0
-            for (const prop in this.data.filter) {
-                //价格需要单独监听，不然数据会错乱
-                if (prop === 'price') {
-                    continue
-                }
-                //计算数量总和
-                let sum = 0;
-                this.data.filter[prop].item.forEach(item => {
-                    // 数字0时会自动转型
-                    if (item.checked || item.checked === 0) {
-                        sum++
-                    }
-                })
-                this.setData({
-                    [`filterTabs[${index}].sum`]: sum
-                })
-                //遍历用的索引
-                index++
-            }
-        },
-        //    单独监听价格，数据格式不一样，勾选价格也显示sum的数字，因为wxml是遍历的，不能设置checked
-        'filter.price.**': function () {
-            let checked = 0
-            let price = this.data.filter.price.checked;
-            // 数字0时会自动转型
-            if (price || price === 0) {
-                checked = '1'
-            }
-            this.setData({
-                [`filterTabs[3].sum`]: checked
-            })
-
-        }
-    },
     methods: {
         onLoad: function (options) {
             // todo 接受参数  get api
             console.log(options.keyword)
+
         },
         //页面滚动执行方式
         onPageScroll(e) {
@@ -317,74 +277,7 @@ Component({
                 listView: !this.data.listView
             })
         },
-        tapFilter() {
-            this.setData({
-                showFilter: true
-            })
-        },
-        closeFilter() {
-            this.setData({
-                showFilter: false
-            })
-        },
-        tapFilterTab(e) {
-            this.setData({
-                filterActive: e.currentTarget.dataset.id
-            })
-        }
-        ,
-        setDetail(e) {
-            this.setData({
-                [e.currentTarget.dataset.prop]: e.detail
-            })
-        },
-        selectStyle(e) {
-            const index = e.currentTarget.dataset.index
-            //取消重复勾选
-            if (e.detail === this.data.filter.style.item[index].checked) {
-                e.detail = "";
-            }
 
-            this.setDetail(e);
-            //    todo get data from api  and update filter condition
-        },
-        selectSize(e) {
-            let index = e.currentTarget.dataset.index
-            this.setData({
-                [`filter.size.item[${index}].checked`]: !this.data.filter.size.item[index].checked
-            })
-            //    todo  update
-        },
-        selectColor(e) {
-            let index = e.currentTarget.dataset.index
-            this.setData({
-                [`filter.color.item[${index}].checked`]: !this.data.filter.color.item[index].checked
-            })
-            //    todo update
-        },
-        selectPrice(e) {
-            //取消重复勾选
-            if (e.detail === this.data.filter.price.checked) {
-                e.detail = ""
-            }
-
-            this.setData({
-                'filter.price.checked': e.detail
-            })
-            //    todo update
-        },
-        resetFilter() {
-            for (const prop in this.data.filter) {
-                this.data.filter[prop].item.map(item => {
-                    item.checked = ""
-                })
-            }
-            this.data.filter.price.checked = ""
-            //todo 重置价格区间
-            this.setData({
-                filter: this.data.filter,
-            })
-        },
 
     },
 

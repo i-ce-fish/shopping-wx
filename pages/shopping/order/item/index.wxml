@@ -212,10 +212,7 @@
                         custom-class="submit-bar"
                         bind:submit="postOrder"
         >
-				<text>
-					应付总额:
-					<text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text>
-				</text>
+				<text>应付总额:<text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text></text>
         </van-submit-bar>
     </view>
 

@@ -3,7 +3,8 @@
 <van-tabbar
 active="{{ activeTab }}"
 bind:change="onChange"
-active-color="#ff4444">
+active-color="#ff4444"
+>
 
 	<van-tabbar-item>首页
 		<van-icon slot="icon" name="wap-home-o" />

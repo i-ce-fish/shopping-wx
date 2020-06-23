@@ -68,9 +68,7 @@
                 <view wx:if="{{!activeEdit}}">
                     <text class="y-font-s">合计:</text>
                     <text class="total-price y-color-red  y-font-blod">￥{{totalAmount}}</text>
-                    <text class="y-color-gray y-font-s">
-						不含运费
-					</text>
+                    <text class="y-color-gray y-font-s">不含运费</text>
                 </view>
                 <view wx:else class="y-underline" bindtap="onDelAll">
                     删除

@@ -15,7 +15,6 @@
   height: 750rpx;
 }
 
-.pro-info-box {}
 
 .pro-info-box>view {
   padding: 20rpx

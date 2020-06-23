@@ -12,6 +12,12 @@ App.Page(filter.loginCheck({
      * 页面的初始数据
      */
     data: {
+        topSticky: [
+            {title: "商品细节", icon: 'apps-o', url: '1'},
+            {title: "穿法搭配", icon: 'apps-o', url: '2'},
+            {title: "我能穿吗", icon: 'apps-o', url: '2'},
+            {title: "我想还价", icon: 'apps-o', url: '2'}
+        ],
         //fade
         id: "123",
         //当前选中的商品

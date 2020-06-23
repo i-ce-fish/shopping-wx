@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/home/index/index",
+    "pages/catagory/product-detail/index",
+    "pages/shopping/search/index",
     "pages/user/login/index/index",
     "pages/catagory/type-a/index",
-    "pages/shopping/search/index",
     "pages/catagory/type-b/index",
-    "pages/catagory/product-detail/index",
     "pages/catagory/sizes/index",
     "pages/catagory/colors/index",
     "pages/shopping/order/item/index",

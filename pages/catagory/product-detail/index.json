@@ -1,7 +1,6 @@
 {
-  "navigationBarTitleText": "商品列表",
+  "navigationBarTitleText": "商品详情",
   "usingComponents": {
-
     "van-icon": "@vant/weapp/icon",
     "van-button": "@vant/weapp/button",
     "van-radio": "@vant/weapp/radio/index",
@@ -20,7 +19,10 @@
     "van-popup": "@vant/weapp/popup/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
-    "scroll-top":"/components/scroll-top/index",
-    "share":"/components/share/index"
+    "scroll-top": "/components/scroll-top/index",
+    "share": "/components/share/index",
+    "shop-title": "/components/shop-title/index",
+    "top-sticky": "/components/product-detail/top-sticky/index",
+    "card": "/components/card/index"
   }
 }

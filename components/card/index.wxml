@@ -1,5 +1,5 @@
 
-<view class="card-box">
+<view class="card-box custom-class">
     <slot>
 
     </slot>

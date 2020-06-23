@@ -12,7 +12,191 @@ Page(filter.loginCheck({
      * 页面的初始数据
      */
     data: {
+        newProductsFilter: {
+            style: {
+                item: [
+                    {
+                        item: ["二级分类1", '二级分类2', '二级分类3'],
+                        name: "二级分类"
+                    },
+                    {
+                        item: [
+                            "锦纶",
+                            "氨纶",
+                            "棉",
+                            "聚酯纤维"
+                        ],
+                        name: "材质"
+                    }, {
+                        item: [
+                            "2020年春季",
+                            "2019年春季",
+                            "2019年秋季",
+                            "2020年夏季",
+                            "2019年夏季"
+                        ],
+                        name: "上市季节"
+                    },
+                    {
+                        item: [
+                            "促销活动",
+                            "限时特优",
+                            "支持门店自提",
+                        ],
+                        name: "其他条件"
+                    },
+                    {
+                        item: [
+                            "男装",
+                            "女装"
+                        ],
+                        name: "适用性别"
+                    }],
+                name: '风格'
+            },
+            size: {
+                item: [
+                    {
+                        "sizeValue": "XS",
+                        "sizeCode": "SMA002",
+                    },
+                    {
+                        "sizeValue": "S",
+                        "sizeCode": "SMA003",
+                    },
+                    {
+                        "sizeValue": "M",
+                        "sizeCode": "SMA004",
+                    },
+                    {
+                        "sizeValue": "L",
+                        "sizeCode": "SMA005",
+                    },
+                    {
+                        "sizeValue": "XL",
+                        "sizeCode": "SMA006",
+                    },
+                    {
+                        "sizeValue": "XXL",
+                        "sizeCode": "SMA007",
+                    },
+                    {
+                        "sizeValue": "3XL",
+                        "sizeCode": "SMA008",
+                    },
+                    {
+                        "sizeValue": "4XL",
+                        "sizeCode": "SMA009",
+                    }
+                ],
+                name: "尺码"
+            },
+            color: {
+                item: [
+                    {
+                        "colorName": "白色系",
+                        "background": "#FFFFFF",
+                        "colorNo": "COL00",
+                        "fontColor": "#000000"
+                    },
+                    {
+                        "colorName": "灰色系",
 
+                        "background": "#D4D4D4",
+                        "colorNo": "COL06",
+                        "fontColor": "#000000"
+                    },
+                    {
+                        "colorName": "黑色系",
+
+                        "background": "#262626",
+                        "colorNo": "COL09",
+                        "fontColor": "#FFFFFF"
+                    },
+                    {
+                        "colorName": "粉色系",
+
+                        "background": "#F5BCC1",
+                        "colorNo": "COL11",
+                        "fontColor": "#000000"
+                    },
+                    {
+                        "colorName": "红色系",
+
+                        "background": "#E82525",
+                        "colorNo": "COL14",
+                        "fontColor": "#000000"
+                    },
+                    {
+                        "colorName": "橙色系",
+
+                        "background": "#F2A427",
+                        "colorNo": "COL28",
+                        "fontColor": "#000000"
+                    },
+                    {
+                        "colorName": "米色系",
+
+                        "background": "#E6E2CC",
+                        "colorNo": "COL32",
+                        "fontColor": "#000000"
+                    },
+                    {
+                        "colorName": "棕色系",
+
+                        "background": "#714E38",
+                        "colorNo": "COL38",
+                        "fontColor": "#FFFFFF"
+                    },
+                    {
+                        "colorName": "黄色系",
+
+                        "background": "#FFFD53",
+                        "colorNo": "COL43",
+                        "fontColor": "#000000"
+                    },
+                    {
+                        "colorName": "绿色系",
+
+                        "background": "#2F8C2A",
+                        "colorNo": "COL50",
+                        "fontColor": "#FFFFFF"
+                    },
+                    {
+                        "colorName": "蓝色系",
+
+                        "background": "#2D58CF",
+                        "colorNo": "COL69",
+                        "fontColor": "#FFFFFF"
+                    },
+                    {
+                        "colorName": "紫色系",
+                        "background": "#6D2B7A",
+                        "colorNo": "COL77",
+                        "fontColor": "#FFFFFF"
+                    }
+                ],
+                name: "颜色"
+            },
+            price: {
+                item: [
+                    {title: "￥100以下", value: "<100"}, {title: "￥100-￥200", value: "<=100"},
+                    {title: "￥200-￥300", value: "200-300"},
+                    {title: "￥300以上", value: ">=300"}
+                ],
+                name: "价格",
+                //todo 设置价格区间
+                max: '',
+                min: ''
+            },
+
+        },
+        newProductsTabs: [
+            {icon: 'apps-o', title: '风格'},
+            {icon: 'apps-o', title: '尺码'},
+            {icon: 'apps-o', title: '颜色'},
+            {icon: 'apps-o', title: '价格'}
+        ],
         imgs: [
             {url: "https://www.uniqlo.cn/hmall/test/u0000000009932/detail/393/10.jpg"},
             {url: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582049975121&di=09124e52fb2d9c56f849f4fa5fa2a2a1&imgtype=0&src=http%3A%2F%2Fimg.hkwb.net%2Fatt%2Fsite2%2F20171228%2Fe6805aee9afd115c2b948f9b12528964.jpg"},
@@ -27,7 +211,112 @@ Page(filter.loginCheck({
             {title: '低至 1 折起', subtitle: '三楼女装，SALE'},
             {title: '特价速秒  售完即止', subtitle: '今日必入'},
             {title: '无印良品工厂直供', subtitle: '拼团直播'}
-        ]
+        ],
+        newProducts: [{
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }
+        ],
+        wears: [{
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            title: "夏日穿搭",
+            subtitle: "开启夏日穿搭新灵感"
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            title: "夏日穿搭",
+            subtitle: "开启夏日穿搭新灵感"
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            title: "夏日穿搭",
+            subtitle: "开启夏日穿搭新灵感"
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            title: "夏日穿搭",
+            subtitle: "开启夏日穿搭新灵感"
+        }],
+        //穿法分类的一级筛选
+        wearFilter: [
+            {name: '男装'},
+            {name: '女装'},
+            {name: '童装'},
+            {name: '家居'},
+            {name: '家居'}
+        ],
     },
 
     /**
@@ -142,6 +431,7 @@ Page(filter.loginCheck({
                 })
             })
         })
-    }
+    },
+
 
 }))

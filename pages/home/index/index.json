@@ -10,5 +10,10 @@
     "van-sticky": "@vant/weapp/sticky",
     "card": "/components/card/index",
     "shop-title": "/components/shop-title/index",
-    "van-cell": "@vant/weapp/cell/index"
+    "van-cell": "@vant/weapp/cell/index",
+    "product-list": "/components/catalog/product-list/index",
+    "product-filter": "/components/product-filter/index",
+
+    "wear-item": "/components/wear/wear-item/index",
+    "catalog-filter": "/components/catalog/catalog-filter/index"
   }}

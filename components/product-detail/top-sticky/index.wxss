@@ -1,0 +1,7 @@
+.top-box {
+    height: 120rpx;
+}
+
+.active {
+    color: #c1bcbc;
+}

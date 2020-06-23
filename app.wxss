@@ -85,12 +85,14 @@ page {
 
 /*上下边距*/
 .y-padding-tb {
-    padding: 30rpx 0;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
 }
 
 /*左右边距*/
 .y-padding-lr {
-    padding: 0 30rpx;
+    padding-left:30rpx;
+    padding-right:30rpx;
 }
 
 /*右边距*/

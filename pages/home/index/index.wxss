@@ -5,7 +5,6 @@
 
 .top-box {
     height: 120rpx;
-
 }
 
 .swiper-box {
@@ -71,5 +70,10 @@
     /*background-color: #424816!important;*/
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+.y-padding-lr-none {
+    padding-right: 0!important;
+    padding-left: 0!important;
 }
 

@@ -7,6 +7,8 @@ Component({
   /**
    * 组件的属性列表
    */
+  externalClasses: ['custom-class'], //自定义样式
+
   properties: {
 
   },

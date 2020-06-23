@@ -1,6 +1,7 @@
 //app.js
 import Store from './utils/store.js';
 // 路由跳转并传参
+//ps url已经带有参数的情况未处理
 wx.$go = function (url, data) {
     // 拼接参数
     let str = ""
@@ -77,6 +78,6 @@ App({
         userInfo: {id: 0},
         //当前选中的tabbar
         activeTab: 0,
-        shopName: '永康美斯特邦威'
+        shopTitle: '永康美斯特邦威 会员内购'
     }
 })
