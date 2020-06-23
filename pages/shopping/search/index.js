@@ -192,7 +192,8 @@ Component({
                     {title: "￥100以下", value: "<100"}, {title: "￥100-￥200", value: "<=100"},
                     {title: "￥200-￥300", value: "200-300"},
                     {title: "￥300以上", value: ">=300"}
-                ], name: "价格",
+                ],
+                name: "价格",
                 //todo 设置价格区间
                 max: '',
                 min: ''
