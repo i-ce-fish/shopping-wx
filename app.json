@@ -1,8 +1,13 @@
 {
   "pages": [
     "pages/home/index/index",
-    "pages/catagory/product-detail/index",
+    "pages/home/wear/index",
+    "pages/home/new-product/index",
+
     "pages/shopping/search/index",
+    "pages/test/index",
+
+    "pages/catagory/product-detail/index",
     "pages/user/login/index/index",
     "pages/catagory/type-a/index",
     "pages/catagory/type-b/index",
@@ -28,10 +33,7 @@
     "pages/my/wear-data/add/index",
     "pages/rule/integral/index",
     "pages/info/info-list/index",
-    "pages/test/style/index",
-    "pages/test/index",
-    "pages/test/edit",
-    "pages/test/add/index"
+    "pages/test/style/index"
   ],
   "tabBar": {
     "custom": true,

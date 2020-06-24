@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "今日上新",
+  "usingComponents": {
+    "shop-title": "/components/shop-title/index",
+    "catalog-filter": "/components/catalog/catalog-filter/index",
+    "product-filter": "/components/product-filter/index",
+    "product-list": "/components/catalog/product-list/index",
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

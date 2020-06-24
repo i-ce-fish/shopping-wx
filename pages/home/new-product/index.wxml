@@ -1,0 +1,27 @@
+<view class="container">
+    <shop-title></shop-title>
+    <view class=" y-bgc-white y-shadow-b">
+        <view class="tui-col-12">
+            <catalog-filter list="{{catalogs}}" bindclick="tapWearFilter"></catalog-filter>
+        </view>
+
+        <view class="tui-align-right tui-col-12 tui-flex tui-vertical-center tui-center y-underline y-color-gray "
+              bindtap="tapMoreWear">
+            <product-filter useSlot tabs="{{tabs}}" filterData="{{filterData}}" >
+
+                <view class="y-pb-20 y-padding-lr tui-flex tui-vertical-center">
+                    <view class="y-underline">
+                        更多精准筛选
+                    </view>
+                    <van-icon name="apps-o" size="40rpx"></van-icon>
+                </view>
+            </product-filter>
+        </view>
+    </view>
+
+    <view class="y-bgc-white">
+
+        <product-list products="{{newProducts}}"></product-list>
+
+    </view>
+</view>

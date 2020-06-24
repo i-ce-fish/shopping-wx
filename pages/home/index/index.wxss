@@ -73,7 +73,17 @@
 }
 
 .y-padding-lr-none {
-    padding-right: 0!important;
-    padding-left: 0!important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
+/*滚动用*/
+.position-rel {
+    position: relative;
+}
+/*解决滚动到目标位置会被顶部导航栏覆盖的bug*/
+.scroll-item {
+    position: absolute;
+    /*导航栏高度120*/
+    top: -130rpx
+}

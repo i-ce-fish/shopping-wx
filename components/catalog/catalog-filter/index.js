@@ -14,7 +14,7 @@ Component({
             this.setData({
                 active: e.currentTarget.dataset.index
             })
-            this.triggerEvent('todo')
+            this.triggerEvent('click', e.currentTarget.dataset.index)
         }
     }
 });

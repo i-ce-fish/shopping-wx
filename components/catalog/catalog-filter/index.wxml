@@ -1,5 +1,5 @@
 <view class="tui-flex tui-align-around y-pt-20 y-pb-20">
-    <van-tag plain round size="large" type="{{index === active?'primary':'default'}}"
+    <van-tag plain  size="large" type="{{index === active?'primary':'default'}}"
              wx:for="{{list}}" wx:key="index"
              data-index="{{index}}" bindtap="tap">
         <view class="">
@@ -8,3 +8,4 @@
         </view>
     </van-tag>
 </view>
+
