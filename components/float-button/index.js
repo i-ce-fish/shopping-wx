@@ -18,18 +18,21 @@ Component({
             type: Number,
             value: -100
         },
-        text:{
-            type:String,
-            value:"分享"
+        text: {
+            type: String,
+            value: ""
+        },
+        icon: {
+            type: String,
+            value: '',
+        },
+        openType: {
+            type: String,
+            value: ''
         }
-    },
-    observers: {
 
     },
-    data: {
-
-    },
-    methods: {
-
-    }
+    observers: {},
+    data: {},
+    methods: {}
 })

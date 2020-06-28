@@ -400,6 +400,6 @@
 
     </van-goods-action>
     <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
-    <share></share>
+    <float-button text="分享" icon="share" open-type="share"></float-button>
 
 </view>

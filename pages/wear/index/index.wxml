@@ -1,0 +1,50 @@
+<view class="container">
+    <shop-title></shop-title>
+    <float-button text="筛选" icon="share" bindtap="tapFilter"></float-button>
+    <view class=" y-bgc-white y-shadow-b">
+        <view class="tui-col-12">
+            <catalog-filter list="{{catalogs}}" bindclick="tapWearFilter"></catalog-filter>
+        </view>
+
+        <view class=" tui-align-right tui-col-12 tui-flex tui-vertical-center tui-center y-underline y-color-gray "
+              bindtap="tapFilter">
+            <view class="y-pb-20 y-padding-lr tui-flex tui-vertical-center">
+                <view class="y-underline">
+                    更多精准筛选
+                </view>
+                <van-icon name="apps-o" size="40rpx"></van-icon>
+            </view>
+        </view>
+    </view>
+
+    <view class="y-bgc-white">
+
+        <view wx:for="{{wearList}}" wx:key="index" class="tui-flex y-pt-20" style="height: 600rpx;">
+
+            <view class="tui-col-6 tui-flex tui-center tui-align-center" bindtap="tapImg" data-img="{{item.img}}"
+            >
+
+                <!--                通过两张图片叠加，实现毛玻璃效果，前景图片绝对定位-->
+                <view style="filter: blur(4px); opacity: 0.5;height: 100% ;width:100%">
+                    <van-image height="100%" width="100%" fit="fill"
+                               src="{{item.img}}"></van-image>
+                </view>
+                <view style="position:absolute;">
+
+                    <van-image height="600rpx" width="375rpx" fit="contain"
+                               src="{{item.img}}"></van-image>
+                </view>
+            </view>
+            <view class="tui-col-6 y-padding-lr y-box">
+                <view class="y-line-height-180">
+                    {{item.code}}
+                </view>
+                <view class="y-line-height-200 y-font-blod y-font-xl">
+                    {{item.title}}
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <filter-single-page id="filter-single-page" filterData="{{filterData}}"></filter-single-page>
+</view>

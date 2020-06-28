@@ -441,7 +441,7 @@ Page(filter.loginCheck({
         //    todo  update date
     },
     tapMoreWear() {
-        wx.$go('/pages/home/wear/index')
+        wx.$go('/pages/wear/index/index')
     }
 
 

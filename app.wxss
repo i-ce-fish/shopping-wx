@@ -169,13 +169,13 @@ page {
     color: #5677fc;
 }
 
-/*次要文字颜色*/
 /*颜色*/
 .y-color-black {
     color: #1b1b1b;
 
 }
 
+/*次要文字颜色*/
 .y-color-gray {
     color: #7d7d7d;
 

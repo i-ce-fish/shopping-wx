@@ -47,9 +47,15 @@
     border-radius: 50%;
 }
 
-
 .button-box {
     position: sticky;
     bottom: 0;
     height: 100rpx
+}
+
+.bottom-fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
 }

@@ -1,11 +1,10 @@
 {
   "pages": [
+    "pages/wear/detail/index",
     "pages/home/index/index",
-    "pages/home/wear/index",
-    "pages/home/new-product/index",
-
+    "pages/wear/index/index",
     "pages/shopping/search/index",
-    "pages/test/index",
+    "pages/home/new-product/index",
 
     "pages/catagory/product-detail/index",
     "pages/user/login/index/index",
@@ -33,6 +32,7 @@
     "pages/my/wear-data/add/index",
     "pages/rule/integral/index",
     "pages/info/info-list/index",
+    "pages/test/index",
     "pages/test/style/index"
   ],
   "tabBar": {

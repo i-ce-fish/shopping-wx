@@ -2,9 +2,9 @@
       style="bottom:{{bottom}}rpx;right:{{right}}rpx"
       >
     <view class="button-box">
-        <button size="mini" open-type="share" hover-class="none" class="text-btn">
+        <button size="mini" open-type="{{openType}}" hover-class="none" class="text-btn">
             <view>
-                <van-icon name="share" size="30rpx" color="#999999"/>
+                <van-icon name="{{icon}}" size="30rpx" color="#999999"/>
             </view>
             <view>{{text}}</view>
         </button>

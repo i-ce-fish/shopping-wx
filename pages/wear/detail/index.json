@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "穿法详情",
+  "usingComponents": {
+    "shop-title": "/components/shop-title/index",
+    "carousel": "/components/carousel/index",
+    "float-button": "/components/float-button/index",
+    "van-collapse": "@vant/weapp/collapse",
+    "van-collapse-item": "@vant/weapp/collapse-item",
+    "card": "/components/card/index",
+    "van-image": "@vant/weapp/image"
+
+  }
+}

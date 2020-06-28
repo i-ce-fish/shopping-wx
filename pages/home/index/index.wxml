@@ -113,7 +113,7 @@
                             <catalog-filter list="{{wearFilter}}" bindclick="tapWearFilter"></catalog-filter>
                         </view>
                         <view class="tui-col-2 tui-flex tui-vertical-center tui-center y-underline y-color-gray "
-                              bindtap="go" data-url="/pages/home/wear/index">更多穿法
+                              bindtap="go" data-url="/pages/wear/index/index">更多穿法
                         </view>
                     </view>
                     <view slot="content">

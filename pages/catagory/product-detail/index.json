@@ -20,7 +20,7 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "scroll-top": "/components/scroll-top/index",
-    "share": "/components/share/index",
+    "float-button": "/components/float-button/index",
     "shop-title": "/components/shop-title/index",
     "top-sticky": "/components/product-detail/top-sticky/index",
     "card": "/components/card/index"

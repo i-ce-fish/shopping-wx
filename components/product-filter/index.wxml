@@ -9,8 +9,7 @@
 <view wx:else bindtap="tapFilter">
     <slot></slot>
 </view>
-
-
+        <!--todo 右侧弹出的产生的bug1. sticky失效、底部按钮错位、tabs的scroll错位-->
         <!--    筛选条件弹窗-->
 <van-popup show="{{ showFilter }}" position="bottom"
            custom-style="height: 100%;background-color:#fff;"
