@@ -31,6 +31,11 @@ Component({
         fit:{
             type:String,
             value:'fill'
+        },
+        autoplay:{
+            type:Boolean,
+            value:false
+
         }
     },
 

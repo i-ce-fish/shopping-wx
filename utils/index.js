@@ -22,6 +22,9 @@
 //   formatNumber,
 //   formatTime
 // }
+
+
+
 const formatTime = date => {
     const year = date.getFullYear()
     const month = date.getMonth() + 1
@@ -50,6 +53,9 @@ function rpx2px(rpx) {
     const width = wx.getSystemInfoSync().windowWidth
     return rpx / 750 * width
 }
+
+
+
 
 module.exports = {
     formatTime,

@@ -23,7 +23,6 @@
 
             <view class="tui-col-6 tui-flex tui-center tui-align-center" bindtap="tapImg" data-img="{{item.img}}"
             >
-
                 <!--                通过两张图片叠加，实现毛玻璃效果，前景图片绝对定位-->
                 <view style="filter: blur(4px); opacity: 0.5;height: 100% ;width:100%">
                     <van-image height="100%" width="100%" fit="fill"

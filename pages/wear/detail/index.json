@@ -7,7 +7,7 @@
     "van-collapse": "@vant/weapp/collapse",
     "van-collapse-item": "@vant/weapp/collapse-item",
     "card": "/components/card/index",
-    "van-image": "@vant/weapp/image"
-
+    "van-image": "@vant/weapp/image",
+    "van-sticky": "@vant/weapp/sticky/index"
   }
 }

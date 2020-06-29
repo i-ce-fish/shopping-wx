@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/wear/detail/index",
+    "pages/catagory/product-detail/index",
     "pages/home/index/index",
     "pages/wear/index/index",
     "pages/shopping/search/index",
     "pages/home/new-product/index",
 
-    "pages/catagory/product-detail/index",
     "pages/user/login/index/index",
     "pages/catagory/type-a/index",
     "pages/catagory/type-b/index",

@@ -1,6 +1,10 @@
 .scroll-view{
     white-space: nowrap;
+
 }
 .scroll-view-item{
+    white-space: normal;
+    /*overflow: hidden;*/
     display: inline-block;
+    width: 375rpx;
 }

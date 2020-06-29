@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "@vant/weapp": "^1.0.7"
+    "@vant/weapp": "^1.0.7",
+    "lodash.get": "^4.4.2"
   },
   "devDependencies": {},
   "scripts": {

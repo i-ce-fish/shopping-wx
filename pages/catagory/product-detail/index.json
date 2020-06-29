@@ -22,7 +22,9 @@
     "scroll-top": "/components/scroll-top/index",
     "float-button": "/components/float-button/index",
     "shop-title": "/components/shop-title/index",
-    "top-sticky": "/components/product-detail/top-sticky/index",
-    "card": "/components/card/index"
+    "van-sticky": "@vant/weapp/sticky/index",
+    "card": "/components/card/index",
+
+    "product-list-scroll": "/components/catalog/product-list-scroll/index"
   }
 }

@@ -1,0 +1,6 @@
+<scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll">
+    <view class="scroll-view-item " wx:for="{{list}}" wx:key="index" wx:for-item="product" bindtap="onTap"
+          data-index="{{index}}">
+        <product-list-item product="{{product}}"></product-list-item>
+    </view>
+</scroll-view>

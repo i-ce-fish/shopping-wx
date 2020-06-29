@@ -59,81 +59,113 @@ App.Page(filter.loginCheck({
                 url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/4.jpg"
             },],
 
-            // colors: [{
-            //     color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg",
-            //     product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
-            //     name: "黄色",
-            //     code: "10",
-            //     showType:"color-checked"
-            // },
-            //     {
-            //         color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg",
-            //         product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016502/main/first/561/1.jpg",
-            //         name: "黄色",
-            //         code: "11",
-            //     },
-            //     {
-            //         color_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg",
-            //         product_thumbnail: "https://www.uniqlo.cn/hmall/test/u0000000013572/main/first/561/1.jpg",
-            //         name: "黄色",
-            //         code: "12",
-            //         showType:"color-checked"
-            //
-            //     },
-            // ],
-            // sizes: [{
-            //     name: "S",
-            //     show_name: "150/76A"
-            // },
-            //     {
-            //         name: "M",
-            //         show_name: "150/76A/M"
-            //     },
-            //     {
-            //         name: "L",
-            //         show_name: "150/76A/M"
-            //     },
-            //     {
-            //         name: 'XL',
-            //         show_name: "150/76A/M"
-            //     }
-            // ],
-            // carousels: [{
-            //     url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/first/1000/1.jpg"
-            // },
-            //     {
-            //         url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other1/1000/2.jpg"
-            //     },
-            //     {
-            //         url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other2/1000/3.jpg"
-            //     },
-            //     {
-            //         url: "https://www.uniqlo.cn/hmall/test/u0000000015484/main/other3/1000/4.jpg"
-            //     }
-            //
-            // ],
-            // code: "427516000",
-            // year: "2020",
-            // season: "春季",
-            // fabric: "棉50% 聚酯纤维50%",
-            // explan: "http://shop.cdb99.com/uploads/20200423/080919352649.png",
-            // inner_activities: [{
-            //     title: "已打6折，共优惠 ¥160"
-            // },
-            //     {
-            //         title: "38女神节活动：会员春装新款6折"
-            //     }
-            // ],
-            // vip_activities: [{
-            //     title: "已打5折，共优惠¥199"
-            // }, {
-            //     title: "三级及以上会员专享"
-            // }
-            //
-            // ],
 
         },
+        //近似商品
+        similarProducts: [{
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }, {
+            img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
+            name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
+            code: "424932",
+            category: "女装",
+            min_size: "S",
+            max_size: "XL",
+            price: "499.00",
+            colors: [
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
+                {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL09.jpg"},
+            ]
+        }
+        ],
 
+        //穿法推荐
+        wearList: [
+
+            {
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000015482/model/rank1/first/591-822/1.jpg',
+                code: 'CFA216541',
+                title: '夏日都市养眼大气清纯气质财运商务通勤装',
+                subtitle: ''
+            },
+            {
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000013827/model/rank1/first/765-1065/1.jpg',
+                code: 'CFA216541',
+                title: '夏日都市养眼大气清纯气质财运商务通勤装',
+                subtitle: ''
+            },
+            {
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000015482/main/other3/1000/4.jpg',
+                code: 'CFA216541',
+                title: '夏日都市养眼大气清纯气质财运商务通勤装',
+                subtitle: ''
+            }
+        ]
+        ,
 
         // 还价
         collect_order: {
@@ -461,15 +493,23 @@ App.Page(filter.loginCheck({
 //    initdata
     getProduct() {
         goods.get(this.data.id).then(res => {
-            //res 反序列化部分字段
-            let props = ["material", "colors", "carousels", "produt_parameter", "sizes"]
-            props.forEach(item => {
-                res[item] = JSON.parse(res[item])
-            })
             this.setData({
-                product: res
+                product: this.preProduct(res)
             })
         })
+    },
+    /**
+     * 商品数据预处理
+     * 反序列化部分字段
+     * @param pro
+     * @returns {*}
+     */
+    preProduct(pro) {
+        let props = ["material", "colors", "carousels", "produt_parameter", "sizes"]
+        props.forEach(item => {
+            pro[item] = JSON.parse(pro[item])
+        })
+        return pro
     },
     getInventory() {
         let inventoryMap = new Map()
@@ -623,9 +663,7 @@ App.Page(filter.loginCheck({
             ['checkedProduct.color']: checkedColor,
             ['checkedProduct.colorCode']: colorCode
         })
-
-    }
-    ,
+    },
 //    点击尺码
     onSize(e) {
         if (e.target.dataset.item.disabled) {
@@ -640,9 +678,7 @@ App.Page(filter.loginCheck({
             ['checkedProduct.size']: checkedSize,
             ['checkedProduct.sizeCode']: sizeCode
         })
-
-    }
-    ,
+    },
     /**
      *点击颜色、尺码后的，该项设置为点击，其余设置为点击
      *
@@ -667,6 +703,13 @@ App.Page(filter.loginCheck({
         this.setData({
             [`checkedProduct.num`]: e.detail
         })
+    },
+//    点击顶部的导航条，滚到指定位置
+    tapTopSticky(e) {
+        if (e.currentTarget.dataset.index === 1) {
+            wx.pageScrollTo({selector: "#wear-recommend"})
+        }
+
     }
 
 
