@@ -8,6 +8,7 @@
     "van-collapse-item": "@vant/weapp/collapse-item",
     "card": "/components/card/index",
     "van-image": "@vant/weapp/image",
-    "van-sticky": "@vant/weapp/sticky/index"
+    "van-sticky": "@vant/weapp/sticky/index",
+    "top-sticky": "/components/catalog/top-sticky/index"
   }
 }

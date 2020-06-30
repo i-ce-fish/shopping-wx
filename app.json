@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/wear/detail/index",
-    "pages/catagory/product-detail/index",
     "pages/home/index/index",
     "pages/wear/index/index",
+    "pages/wear/detail/index",
+    "pages/catagory/product-detail/index",
     "pages/shopping/search/index",
     "pages/home/new-product/index",
 

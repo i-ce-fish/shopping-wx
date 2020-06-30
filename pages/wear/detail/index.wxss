@@ -1,6 +1,12 @@
-.scroll-view{
+.scroll-view {
     white-space: nowrap;
 }
-.scroll-view-item{
+
+.scroll-view-item {
     display: inline-block;
+}
+
+/*合并空白，保留换行符*/
+.text-wrap {
+    white-space: pre-line
 }

@@ -3,15 +3,16 @@
 
     <van-sticky>
 
-        <view class="y-bgc-white">
+        <view class="y-bgc-white y-shadow-b">
 
             <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
-                <view class="scroll-view-item " wx:for="{{carousels}}" wx:key="index" bindtap="onTap"
+                <view class="scroll-view-item " wx:for="{{carousels}}" wx:key="index" bindtap="tapImgs"
                       data-index="{{index}}">
                     <van-image class="" height="{{height+'rpx'}}" width="100%" fit="heightFix"
                                src="{{item.url}}"></van-image>
                 </view>
             </scroll-view>
+            <top-sticky list="{{products}}" title="title" img="miniImg" bindclick="tapSticky"></top-sticky>
 
         </view>
     </van-sticky>
@@ -19,43 +20,47 @@
     <card custom-class="y-padding-none">
         <van-collapse value="{{activeColl}}" bindchange="setDetail" data-prop="activeColl">
             <van-collapse-item title="{{wear.title}}" name="1">
-                <view class="y-color-black" wx:for="{{wear.content}}" wx:key="index">{{item}}</view>
+                <view class="y-color-black text-wrap">{{wear.content}}</view>
             </van-collapse-item>
         </van-collapse>
     </card>
 
-    <card wx:for="{{products}}" wx:key="index" custom-class="y-padding-none">
-        <view class=" y-pb-20 y-pt-20"
-        >
+    <view wx:for="{{products}}" wx:key="index" class="y-shadow-b y-bgc-white y-mt-20 ">
+        <!--        只是用来滚动定位的节点，因为顶部固定导航栏所以需要偏移 -->
+        <view class="product-item-{{index}}" style="position:relative;top:-{{virtualPostion}}rpx"/>
+        <view class=" y-pb-20 y-pt-20 y-pl-20 tui-flex">
 
-            <view class="y-font-l y-font-blod y-line-height-200">
-                {{item.title}}
-            </view>
+            <!--            <view class="y-font-l y-font-blod y-line-height-200">-->
+            <!--                {{item.title}}-->
+            <!--            </view>-->
 
-            <view class="tui-flex">
+            <view class="tui-flex tui-col-4">
                 <!--                <view class="tui-col-6">-->
                 <!--                    <van-image src="{{item.img}}" width="100%" height="100%" fit="widthFix"></van-image>-->
                 <!--                </view>-->
                 <!--                <view class="tui-col-6">-->
                 <!--                    <van-image src="{{item.img}}" width="100%" height="100%" fit="widthFix"></van-image>-->
                 <!--                </view>-->
-                <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
-                    <view class="scroll-view-item " wx:for="{{item.imgs}}" wx:key="index" bindtap="onTap"
-                          data-index="{{index}}">
-                        <van-image class="" height="375rpx" width="375rpx" fit="widthFix"
-                                   src="{{item.url}}"></van-image>
-                    </view>
-                </scroll-view>
-
-
+                <!--                <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">-->
+                <!--                    <view class="scroll-view-item " wx:for="{{item.imgs}}" wx:key="index" bindtap="onTap"-->
+                <!--                          data-index="{{index}}">-->
+                <!--                        <van-image class="" height="375rpx" width="375rpx" fit="widthFix"-->
+                <!--                                   src="{{item.url}}"></van-image>-->
+                <!--                    </view>-->
+                <!--                </scroll-view>-->
+                <van-image class="" height="250rpx" width="250rpx" fit="widthFix"
+                           src="{{item.imgs[0].url}}"></van-image>
             </view>
-            <view class=" y-padding-lr y-line-height-180 tui-flex-col tui-align-between">
+            <view class="tui-flex-1 y-padding-lr y-line-height-150 tui-flex-col tui-align-between">
                 <view>
-                    <view>
-                        {{item.intro}}
+                    <!--                    合并空格，保留换行符-->
+                    <view class="text-wrap">上衣的颜色描述+为什么
+                        上衣的风格+为什么
+                        上衣各部位的细节特征和穿法的关联+为什么
                     </view>
                     <view class="y-color-red y-font-blod y-font-xl">
-                        ￥{{item.price}}
+                        <!--                        ￥{{item.price}}-->
+                        ￥99.00 - ￥299.00
                     </view>
                 </view>
                 <view class="tui-flex tui-align-right y-underline "
@@ -64,7 +69,7 @@
                 </view>
             </view>
         </view>
-    </card>
+    </view>
     <float-button text="分享" icon="share" open-type="share"></float-button>
     <view class="y-padding-t"></view>
 </view>

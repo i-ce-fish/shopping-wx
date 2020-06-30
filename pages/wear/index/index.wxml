@@ -17,32 +17,8 @@
         </view>
     </view>
 
-    <view class="y-bgc-white">
-
-        <view wx:for="{{wearList}}" wx:key="index" class="tui-flex y-pt-20" style="height: 600rpx;">
-
-            <view class="tui-col-6 tui-flex tui-center tui-align-center" bindtap="tapImg" data-img="{{item.img}}"
-            >
-                <!--                通过两张图片叠加，实现毛玻璃效果，前景图片绝对定位-->
-                <view style="filter: blur(4px); opacity: 0.5;height: 100% ;width:100%">
-                    <van-image height="100%" width="100%" fit="fill"
-                               src="{{item.img}}"></van-image>
-                </view>
-                <view style="position:absolute;">
-
-                    <van-image height="600rpx" width="375rpx" fit="contain"
-                               src="{{item.img}}"></van-image>
-                </view>
-            </view>
-            <view class="tui-col-6 y-padding-lr y-box">
-                <view class="y-line-height-180">
-                    {{item.code}}
-                </view>
-                <view class="y-line-height-200 y-font-blod y-font-xl">
-                    {{item.title}}
-                </view>
-            </view>
-        </view>
+    <view class="">
+        <wear-list list="{{wearList}}"></wear-list>
     </view>
 
     <filter-single-page id="filter-single-page" filterData="{{filterData}}"></filter-single-page>

@@ -8,10 +8,18 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        catalogs: {
+        list: {
             type: Array,
             value: []
+        },
+        //图片属性名
+        img: {
+            type: String,
+            value: ''
         }
+        ,
+        //标题属性名
+        title: {type: String, value: ''}
     },
 
     /**

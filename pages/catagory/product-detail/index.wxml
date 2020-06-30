@@ -5,12 +5,13 @@
     </view> -->
     <shop-title></shop-title>
     <view>
-<!--        <top-sticky list="{{topSticky}}" activeIndex="0" ></top-sticky>-->
+        <!--        <top-sticky list="{{topSticky}}" activeIndex="0" ></top-sticky>-->
 
         <view class="y-mt-20">
             <van-sticky>
 
-                <view class=" tui-flex  tui-align-around tui-vertical-center y-bgc-white y-shadow-b " style="height: 120rpx">
+                <view class=" tui-flex  tui-align-around tui-vertical-center y-bgc-white y-shadow-b "
+                      style="height: 120rpx">
                     <view wx:for="{{topSticky}}" wx:key="index"
                     >
                         <view class="tui-flex-col tui-align-center tui-center "
@@ -24,7 +25,6 @@
                 </view>
             </van-sticky>
         </view>
-
 
 
     </view>
@@ -225,11 +225,11 @@
                 <van-image src="{{product.explan}}" width="100%" fit="widthFix"></van-image>
             </van-collapse-item>
 
-<!--            <van-collapse-item title=" 搭配推荐" name="3" content-class="y-padding-none">-->
-<!--                <view class="tui-center y-font-xxl  y-padding-all">搭配推荐</view>-->
-<!--                <van-image src="https://www.uniqlo.cn/hmall/test/u0000000015484/model/rank1/first/591-822/1.jpg"-->
-<!--                           width="100%" fit="widthFix"></van-image>-->
-<!--            </van-collapse-item>-->
+            <!--            <van-collapse-item title=" 搭配推荐" name="3" content-class="y-padding-none">-->
+            <!--                <view class="tui-center y-font-xxl  y-padding-all">搭配推荐</view>-->
+            <!--                <van-image src="https://www.uniqlo.cn/hmall/test/u0000000015484/model/rank1/first/591-822/1.jpg"-->
+            <!--                           width="100%" fit="widthFix"></van-image>-->
+            <!--            </van-collapse-item>-->
 
             <van-collapse-item title="商品细节" name="4" content-class="y-padding-none">
                 <view class="tui-center y-font-xxl  y-padding-all">商品细节</view>
@@ -275,48 +275,23 @@
     <!--    </van-tabs>-->
 
 
-<!--    搭配推荐-->
+    <!--    搭配推荐-->
 
-    <card custom-class="y-padding-none " id="wear-recommend">
+    <view custom-class="y-padding-none "  class="y-bgc-white y-mt-20" id="wear-recommend">
         <view class="">
             <view class="y-font-l  y-font-blod y-padding-all">搭配推荐</view>
             <view>
-
-<!--                todo coponent-->
-                <view wx:for="{{wearList}}" wx:key="index" class="tui-flex y-pt-20" style="height: 600rpx;">
-
-                    <view class="tui-col-6 tui-flex tui-center tui-align-center" bindtap="tapImg" data-img="{{item.img}}"
-                    >
-                        <!--                通过两张图片叠加，实现毛玻璃效果，前景图片绝对定位-->
-                        <view style="filter: blur(4px); opacity: 0.5;height: 100% ;width:100%">
-                            <van-image height="100%" width="100%" fit="fill"
-                                       src="{{item.img}}"></van-image>
-                        </view>
-                        <view style="position:absolute;">
-
-                            <van-image height="600rpx" width="375rpx" fit="contain"
-                                       src="{{item.img}}"></van-image>
-                        </view>
-                    </view>
-                    <view class="tui-col-6 y-padding-lr y-box">
-                        <view class="y-line-height-180">
-                            {{item.code}}
-                        </view>
-                        <view class="y-line-height-200 y-font-blod y-font-xl">
-                            {{item.title}}
-                        </view>
-                    </view>
-                </view>
+                <wear-list list="{{wearList}}"></wear-list>
             </view>
         </view>
-    </card>
+    </view>
 
 
-<!--近似推荐-->
+    <!--近似推荐-->
     <card custom-class="y-padding-none ">
         <view class="">
             <view class="y-font-l  y-font-blod y-padding-all">近似推荐</view>
-            <product-list-scroll list="{{similarProducts}}"></product-list-scroll>
+            <product-list products="{{similarProducts}}"></product-list>
         </view>
     </card>
 

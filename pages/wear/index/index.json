@@ -7,6 +7,7 @@
     "van-icon": "@vant/weapp/icon/index",
     "product-filter": "/components/product-filter/index",
     "float-button": "/components/float-button/index",
-    "filter-single-page": "/components/filter-single-page/index"
+    "filter-single-page": "/components/filter-single-page/index",
+    "wear-list": "/components/wear/wear-list/index"
   }
 }

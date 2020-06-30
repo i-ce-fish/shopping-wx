@@ -18,3 +18,8 @@
     text-align: center;
 }
 
+
+.title{
+    text-overflow:ellipsis;
+    overflow: hidden
+}
