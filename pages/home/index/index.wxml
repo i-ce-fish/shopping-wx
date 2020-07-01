@@ -4,30 +4,38 @@
 
     <view class="swiper-box">
         <carousel imgs="{{imgs}}" interval="4000" height="375rpx" fit="fill"></carousel>
-        <view class="address">丽水中山街店522号（百货大楼旁）</view>
+    </view>
+    <view class=" y-padding-lr y-bgc-white tui-flex tui-align-right y-line-height-200 y-underline "
+          bindtap="tapAddress">
+        丽水中山街店522号(百货大楼旁)
     </view>
     <card>
-        <view class="tui-flex tui-align-between">
+        <view class="tui-flex tui-align-between y-line-height-200 ">
             <view class="avatar tui-col-2 tui-flex tui-vertical-center y-padding-r">
                 <van-image round width="120rpx" height="120rpx" fit="fill" src="{{imgs[0]}}" bindtap="test"/>
             </view>
-            <view class="tui-col-10 tui-flex tui-align-between">
-                <view class="info-box   tui-col-10">
-                    <view class="line1">{{user.name}}</view>
-                    <view class="line2 tui-flex tui-align-between">
-                        <view class="">{{user.vip_level}}级会员</view>
-                        <view class="">积分 {{user.credits}}</view>
-                    </view>
-                    <view class="line3 tui-flex tui-align-between  ">
-                        <view class="">账户余额 ￥1788</view>
-                        <view class="">优惠券 3张</view>
+            <view class="tui-col-10 tui-flex ">
+                <view class="  tui-col-10 ">
+                    <view class="">{{user.name}}</view>
+                    <view class=" tui-flex ">
+                        <view class="y-padding-r">
+                            <view class="">{{user.vip_level}}级会员</view>
+                            <view class="">账户余额 ￥1788</view>
+
+                        </view>
+
+                        <view>
+                            <view class="">积分 {{user.credits}}</view>
+                            <view class="">优惠券 3张</view>
+
+                        </view>
                     </view>
                 </view>
                 <view class="right-box tui-col-2 tui-flex-col tui-align-between">
                     <view class="">
                         <van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/index" size="32px"/>
                     </view>
-                    <view class="detail tui-flex tui-center tui-vertical-center" bindtap="go"
+                    <view class="detail tui-flex tui-align-right tui-center tui-vertical-center" bindtap="go"
                           data-url="/pages/my/qrcode/index">
                         <view>详情</view>
                         <van-icon class="" name="arrow" size="15px"/>
@@ -35,7 +43,7 @@
                 </view>
             </view>
         </view>
-        <view class="userinfo-detail-box ">
+        <view class="y-padding-none y-line-height-200">
             <view wx:for="{{headerLines}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}">
                 {{item.title}}
             </view>
@@ -76,21 +84,45 @@
                         <van-icon name="home-o" size="40rpx"></van-icon>
                     </view>
                 </van-cell>
-                <tui-list-cell wx:for="{{activity}}" wx:key="index">
-                    <view class="tui-col-12">
-                        <view>{{item.subtitle}}</view>
-                        <view class="tui-flex tui-align-center y-font-blod y-font-xxl y-line-height-200 y-color-red">
-                            <view>{{item.title}}</view>
-                        </view>
-                        <view class="tui-flex tui-align-right  tui-vertical-center y-line-height-100" bidntap="go"
-                              data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
-                            <view>
-                                详情
+                <view class="tui-flex tui-flex-wrap tui-align-around">
+
+                    <!--                    列表样式-->
+                    <view wx:for="{{activity}}" wx:key="index" style="padding: 20rpx 0"
+                          class="y-border-b tui-col-12">
+                        <view class="tui-col-12">
+                            <view>{{item.subtitle}}</view>
+                            <view class="tui-flex tui-align-center y-font-blod y-font-xxl y-line-height-200 y-color-red"
+                                  style="white-space: pre-wrap"
+                            >
+                                <view>{{item.title}}</view>
                             </view>
-                            <van-icon name="arrow"/>
+                            <view class="tui-flex tui-align-right  tui-vertical-center y-line-height-100"
+                                  bidntap="go"
+                                  data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
+                                <view class=" y-underline">
+                                    详情
+                                </view>
+                                <van-icon name="arrow"/>
+                            </view>
+                        </view>
+
+                    </view>
+
+                    <!--                    卡片样式-->
+                    <view class="tui-col-5  tui-flex-col tui-align-between y-border-all y-box "
+                          style="margin: 30rpx 0 ;padding: 30rpx" wx:for="{{activity}}" wx:key="index">
+                        <view>
+                            {{item.subtitle}}
+                        </view>
+                        <view class="tui-flex tui-align-center y-font-blod y-font-xxl y-padding-tb y-color-red"
+                              style="white-space: pre-wrap">
+                            {{item.title}}
+                        </view>
+                        <view class="y-underline tui-right ">
+                            详情
                         </view>
                     </view>
-                </tui-list-cell>
+                </view>
             </card>
         </view>
 
@@ -107,9 +139,11 @@
                     </view>
                 </van-cell>
 
-                <tui-sticky scrollTop="{{scrollTop}}">
-                    <view slot="header" class="tui-flex y-bgc-white tui-vertical-center y-shadow-b"
-                          style="height: 120rpx;position:relative;top:120rpx;">
+                <!--                <tui-sticky scrollTop="{{scrollTop}}">-->
+                <view scrollTop="{{scrollTop}}">
+                    <view class="tui-flex y-bgc-white tui-vertical-center y-shadow-b"
+                    >
+                        <!--                          style="height: 120rpx;position:relative;top:120rpx;"-->
                         <view class="tui-col-10">
                             <catalog-filter list="{{wearFilter}}" bindclick="tapWearFilter"></catalog-filter>
                         </view>
@@ -117,13 +151,13 @@
                               bindtap="go" data-url="/pages/wear/index/index">更多穿法
                         </view>
                     </view>
-                    <view slot="content">
+                    <view>
                         <!--                        <view wx:for="{{wears}}" wx:key="index">-->
                         <!--                            <wear-item wear="{{item}}"></wear-item>-->
                         <!--                        </view>-->
                         <wear-list list="{{wears}}"></wear-list>
                     </view>
-                </tui-sticky>
+                </view>
             </card>
         </view>
         <view class="position-rel">
@@ -140,9 +174,8 @@
                 </van-cell>
                 <view>
 
-                    <tui-sticky scrollTop="{{scrollTop}}">
-                        <view slot="header" class="tui-flex y-bgc-white tui-vertical-center y-shadow-b"
-                              style="height: 120rpx;position:relative;top:120rpx;">
+                    <view>
+                        <view class="tui-flex y-bgc-white tui-vertical-center y-shadow-b">
                             <view class="tui-col-10">
                                 <catalog-filter list="{{newFilter}}" bindclick="tapWearFilter"></catalog-filter>
                             </view>
@@ -151,10 +184,10 @@
                             </view>
                         </view>
 
-                        <view slot="content">
+                        <view>
                             <product-list products="{{newProducts}}"></product-list>
                         </view>
-                    </tui-sticky>
+                    </view>
                 </view>
             </card>
         </view>

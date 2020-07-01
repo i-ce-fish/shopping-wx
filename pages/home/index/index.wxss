@@ -11,12 +11,12 @@
     position: relative;
 }
 
-.swiper-box .address {
-    position: absolute;
-    color: white;
-    bottom: 10rpx;
-    right: 10rpx;
-}
+/*.address {*/
+    /*position: absolute;*/
+    /*color: white;*/
+    /*bottom: 10rpx;*/
+    /*right: 10rpx;*/
+/*}*/
 
 
 .userinfo-box {

@@ -223,7 +223,7 @@ Page(filter.loginCheck({
             {title: '满500元立减100元', subtitle: '全场货品'},
             {title: '低至 1 折起', subtitle: '三楼女装，SALE'},
             {title: '特价速秒  售完即止', subtitle: '今日必入'},
-            {title: '无印良品工厂直供', subtitle: '拼团直播'}
+            {title: '无印良品工厂直供\n床上四件套\n今晚19:00', subtitle: '拼团直播'}
         ],
         //今日上新的商品
         newProducts: [{
@@ -470,7 +470,47 @@ Page(filter.loginCheck({
     },
     tapMoreWear() {
         wx.$go('/pages/wear/index/index')
-    }
+    },
+    tapAddress() {
+
+        wx.openLocation({        //所以这里会显示你当前的位置
+            //     todo get latitude/longitude from api
+            'latitude': 23.13,
+            'longitude': 113.27,
+            name: "永康美特斯邦威店",
+            address: "浙江省丽水市中山街522号(百货大楼旁)",
+            scale: 28
+        })
+
+        //获取用户位置并导航
+        // wx.getLocation({
+        //     type: 'wgs84',
+        //     success(res) {
+        //         const latitude = res.latitude
+        //         const longitude = res.longitude
+        // let plugin = requirePlugin('routePlan');
+        // let key = 'K4NBZ-6ZZK6-DYYSD-ESJKU-HML4O-5QBON'; //使用在腾讯位置服务申请的key
+        // let referer = '门店导航';  //调用插件的小程序的名称
+        // let startPoint = JSON.stringify({ //起点
+        //     'name':'我的位置',
+        //     'latitude': latitude,
+        //     'longitude': longitude
+        // });
+        // let endPoint = JSON.stringify({ //终点
+        //     // todo get latitude/longitude from api
+        //     'name': '一家门店',
+        //     'latitude': 23.13,
+        //     'longitude': 113.27
+        // });
+        // wx.navigateTo({
+        //     url: 'plugin://routePlan/route-plan?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+        // });
+
+        //     }
+        // })
+
+
+    },
 
 
 }))

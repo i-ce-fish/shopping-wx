@@ -25,6 +25,7 @@
     "van-sticky": "@vant/weapp/sticky/index",
     "card": "/components/card/index",
     "product-list": "/components/catalog/product-list/index",
-    "wear-list": "/components/wear/wear-list/index"
+    "wear-list": "/components/wear/wear-list/index",
+    "carousel": "/components/carousel/index"
   }
 }

@@ -28,13 +28,13 @@ Component({
             type: [String, Number],
             value: 500
         },
-        fit:{
-            type:String,
-            value:'fill'
+        fit: {
+            type: String,
+            value: 'fill'
         },
-        autoplay:{
-            type:Boolean,
-            value:false
+        autoplay: {
+            type: Boolean,
+            value: true
 
         }
     },

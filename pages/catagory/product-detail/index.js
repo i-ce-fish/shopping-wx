@@ -19,7 +19,7 @@ App.Page(filter.loginCheck({
             {title: "我想还价", icon: 'apps-o', url: '2'}
         ],
         //fade
-        id: "123",
+        id: "130",
         //当前选中的商品
         checkedProduct: {
             productCode: "123",
@@ -62,7 +62,7 @@ App.Page(filter.loginCheck({
 
         },
         //近似商品
-        similarProducts: [ {
+        similarProducts: [{
             img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
             name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
             code: "424932",
@@ -467,11 +467,26 @@ App.Page(filter.loginCheck({
 //    initdata
     getProduct() {
         goods.get(this.data.id).then(res => {
+            //todo add fade data
+            let fadeData = {
+                code: '41870900345',
+                marketSeason: '2020夏季',
+                templateType: 'tight',
+                styles: ['少淑', '简约', '北欧', '碎花', '拼接'],
+                details: ['高腰', '彼得潘领', '泡泡袖', 'H型裙', '拼接'],
+                washInfo: "机洗，水温60°C以下",
+                material: '{"type":"edit","key":"材质成分","value":[{"index":0,"type":"add","key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"index":0,"type":"add","key":"填充物","value":"70%白鸭绒"},{"index":0,"type":"add","key":"内衬","value":"10%粘胶纤维"}],"index":0,"index2":{"type":"add","key":"大身","value":[{"index":0,"type":"add","key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"index":0,"type":"add","key":"填充物","value":"70%白鸭绒"},{"index":0,"type":"add","key":"内衬","value":"10%粘胶纤维"}]}}',
+            }
+
+            res = {...res, ...fadeData}
+            res = this.preProduct(res)
             this.setData({
-                product: this.preProduct(res)
+                product: res
             })
         })
     },
+
+
     /**
      * 商品数据预处理
      * 反序列化部分字段

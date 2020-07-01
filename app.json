@@ -1,12 +1,11 @@
 {
   "pages": [
+    "pages/catagory/product-detail/index",
     "pages/home/index/index",
     "pages/wear/index/index",
     "pages/wear/detail/index",
-    "pages/catagory/product-detail/index",
     "pages/shopping/search/index",
     "pages/home/new-product/index",
-
     "pages/user/login/index/index",
     "pages/catagory/type-a/index",
     "pages/catagory/type-b/index",
@@ -35,6 +34,11 @@
     "pages/test/index",
     "pages/test/style/index"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于导航到永康美特斯邦威店"
+    }
+  },
   "tabBar": {
     "custom": true,
     "selectedColor": "#ff4444",
@@ -70,7 +74,14 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ff4444",
-    "navigationBarTitleText": "商城",
+    "navigationBarTitleText": "永康美特斯邦威店",
     "navigationBarTextStyle": "white"
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.6",
+      "provider": "wx50b5593e81dd937a"
+    }
   }
 }
+

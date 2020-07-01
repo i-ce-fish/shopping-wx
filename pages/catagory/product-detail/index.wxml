@@ -42,6 +42,10 @@
                     </swiper-item>
                 </block>
             </swiper>
+
+            <!--            todo img不需要加前缀就改成组件-->
+            <!--            <carousel imgs="{{product.carousels}}" height="750rpx"></carousel>-->
+
         </view>
         <view class="y-padding-all y-bgc-white ">
             <view class="tui-right y-font-s y-color-gray">
@@ -181,41 +185,96 @@
 
     <card custom-class="y-padding-none">
         <van-collapse value="{{activeColl}}" bindchange="setDetail" data-prop="activeColl">
-            <van-collapse-item title="商品信息" name="1">
-                <view class=" y-color-black">
-                    <view>
-                        货号：427516000
+            <van-collapse-item title="商品参数" name="1">
+                <view class=" y-color-black y-line-height-180">
+                    <view class="y-font-blod">
+                        货号/款号: {{product.code}}
                     </view>
                     <view>
-                        <view class="y-font-blod">
+                        <view class="y-font-blod y-pt-20">
                             上市季节
                         </view>
                         <view>
-                            2020春季
+                            {{product.marketSeason}}
                         </view>
                     </view>
                     <view>
-                        <view class="y-font-blod">
-                            材料成分
+                        <view class="y-font-blod y-pt-20">
+                            材质成分
                         </view>
                         <view>
-                            {{product.fabric}}
+                            {{product.material}}
                         </view>
                     </view>
 
                     <view>
-                        <view class="y-font-blod">
-                            颜色
+                        <view class="y-font-blod y-pt-20">
+                            颜色/图案
                         </view>
-                        <text wx:for="{{product.colors}}" wx:key="index">{{item.name}}{{item.code}}</text>
+                        <!--                        <text wx:for="{{product.colors}}" wx:key="index">{{item.name}}{{item.code}}</text>-->
+                        <view class=""
+                              wx:for="{{['30色 (灰色+白条纹)','30色 (灰色+白条纹)','30色 (灰色+白条纹)','30色 (灰色+白条纹)']}}" wx:key="index">
+                            {{item}}
+                        </view>
                     </view>
 
                     <view>
-                        <view class="y-font-blod">
-                            尺码
+                        <view class="y-font-blod y-pt-20">
+                            上市尺码
                         </view>
+                        <view class="tui-flex tui-flex-wrap">
+                            <view class="tui-col-4 "
+                                  wx:for="{{['155/64A/XS','160/64A/XS','165/64A/XS','170/64A/XS','175/64A/XS','180/64A/XS']}}"
+                                  wx:key="index">
+                                <!--                            {{product.sizes}}-->
+                                {{item}}
+
+                            </view>
+                        </view>
+                    </view>
+
+                    <view>
+                        <view class="y-font-blod y-pt-20">
+                            版型
+                        </view>
+                        <view class="tui-flex tui-flex-wrap ">
+                            <!--                            {{product.templateType}}-->
+                            <view class="tui-col-4" wx:for="{{['超级紧身','紧身','修身','合体','宽松']}}" wx:key="index">
+                                {{item}}
+                            </view>
+                        </view>
+                    </view>
+
+                    <view>
+                        <view class="y-font-blod y-pt-20">
+                            风格/元素
+                        </view>
+                        <view class="tui-flex-wrap tui-flex ">
+                            <view class="tui-col-4"
+                                  wx:key="index" wx:for="{{['少淑', '简约', '北欧', '碎花', '拼接']}}">
+                                <!--                            {{product.styles}}-->
+                                {{item}}
+
+                            </view>
+                        </view>
+                    </view>
+
+                    <view>
+                        <view class="y-font-blod y-pt-20">细节特征</view>
+                        <view class="tui-flex-wrap tui-flex">
+                            <view wx:for="{{['高腰', '彼得潘领', '泡泡袖', 'H型裙', '拼接']}}" wx:key="index">
+
+                                <!--                                {{product.details}}-->
+                                {{item}}
+                            </view>
+                        </view>
+                    </view>
+
+                    <view>
+                        <view class="y-font-blod y-pt-20">洗涤信息</view>
                         <view>
-                            {{product.fabric}}
+                            <!--                            {{product.wash}}-->
+                            机洗，水温60°C以下
                         </view>
                     </view>
                 </view>
@@ -223,6 +282,7 @@
             </van-collapse-item>
             <van-collapse-item title=" 商品说明" name="2">
                 <van-image src="{{product.explan}}" width="100%" fit="widthFix"></van-image>
+                <!--                todo -->
             </van-collapse-item>
 
             <!--            <van-collapse-item title=" 搭配推荐" name="3" content-class="y-padding-none">-->
@@ -231,11 +291,11 @@
             <!--                           width="100%" fit="widthFix"></van-image>-->
             <!--            </van-collapse-item>-->
 
-            <van-collapse-item title="商品细节" name="4" content-class="y-padding-none">
-                <view class="tui-center y-font-xxl  y-padding-all">商品细节</view>
-                <van-image wx:for="{{product.details}}" wx:key="index" src="{{item.url}}" width="100%"
-                           fit="widthFix"></van-image>
-            </van-collapse-item>
+            <!--            <van-collapse-item title="商品细节" name="4" content-class="y-padding-none">-->
+            <!--                <view class="tui-center y-font-xxl  y-padding-all">商品细节</view>-->
+            <!--                <van-image wx:for="{{product.details}}" wx:key="index" src="{{item.url}}" width="100%"-->
+            <!--                           fit="widthFix"></van-image>-->
+            <!--            </van-collapse-item>-->
 
         </van-collapse>
 
@@ -277,7 +337,7 @@
 
     <!--    搭配推荐-->
 
-    <view custom-class="y-padding-none "  class="y-bgc-white y-mt-20" id="wear-recommend">
+    <view custom-class="y-padding-none " class="y-bgc-white y-mt-20" id="wear-recommend">
         <view class="">
             <view class="y-font-l  y-font-blod y-padding-all">搭配推荐</view>
             <view>
