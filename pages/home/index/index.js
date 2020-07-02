@@ -21,184 +21,49 @@ Page(filter.loginCheck({
             {title: '今日上新', icon: "bag-o"},
             {title: '老板娘说', icon: "bag-o"}
         ],
-        //今日上新的筛选
-        newProductsFilter: {
-            style: {
-                item: [
-                    {
-                        item: ["二级分类1", '二级分类2', '二级分类3'],
-                        name: "二级分类"
-                    },
-                    {
-                        item: [
-                            "锦纶",
-                            "氨纶",
-                            "棉",
-                            "聚酯纤维"
-                        ],
-                        name: "材质"
-                    }, {
-                        item: [
-                            "2020年春季",
-                            "2019年春季",
-                            "2019年秋季",
-                            "2020年夏季",
-                            "2019年夏季"
-                        ],
-                        name: "上市季节"
-                    },
-                    {
-                        item: [
-                            "促销活动",
-                            "限时特优",
-                            "支持门店自提",
-                        ],
-                        name: "其他条件"
-                    },
-                    {
-                        item: [
-                            "男装",
-                            "女装"
-                        ],
-                        name: "适用性别"
-                    }],
-                name: '风格'
+        //店铺信息
+        shop: {
+            address: "丽水市中山街店522号(百货大楼旁)",
+            qrcode: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593673011872&di=6e98e25a009f7ca0086899e8f015145d&imgtype=0&src=http%3A%2F%2Fefile.kaoyan.com%2Fimg%2F2020%2F05%2F25%2F193612_5ecbadac69b24.png',
+            wxid: 'wxid_sdfkljdsfkl153',
+            introduction: "我是店长王小丽，我做服装行业12年12年时间，\n我做了三件事：\n怎么挑选对的衣服\n怎么穿搭出时尚范\n怎么把店开更长久",
+
+        },
+        //挑衣服
+        chooseClothes: {
+            head: {
+                title: 'T恤，什么价位才是“一般”',
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000016088/main/first/561/1.jpg',
+                introduction: "一个纯棉短袖T恤，一般最少20起，加上印花或者其他工艺，贵的会在60左右，如果是名牌的话还会有品牌溢价，可能就涨到100以上啦。那种9.9包邮的，工艺跟材料很伤心。"
             },
-            size: {
-                item: [
-                    {
-                        "sizeValue": "XS",
-                        "sizeCode": "SMA002",
-                    },
-                    {
-                        "sizeValue": "S",
-                        "sizeCode": "SMA003",
-                    },
-                    {
-                        "sizeValue": "M",
-                        "sizeCode": "SMA004",
-                    },
-                    {
-                        "sizeValue": "L",
-                        "sizeCode": "SMA005",
-                    },
-                    {
-                        "sizeValue": "XL",
-                        "sizeCode": "SMA006",
-                    },
-                    {
-                        "sizeValue": "XXL",
-                        "sizeCode": "SMA007",
-                    },
-                    {
-                        "sizeValue": "3XL",
-                        "sizeCode": "SMA008",
-                    },
-                    {
-                        "sizeValue": "4XL",
-                        "sizeCode": "SMA009",
-                    }
-                ],
-                name: "尺码"
+            list: [{
+                title: 'T恤，什么价位才是“一般”',
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
+            }, {
+                title: 'T恤，什么价位才是“一般”',
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
+            }, {
+                title: 'T恤，什么价位才是“一般”',
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
+            }]
+
+        },
+        fashions: {
+            head: {
+                title: '夏天，胖不是你的错，胖还穿的怎么丑就是你不对了! ',
+                img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=376060755,1821328537&fm=26&gp=0.jpg',
+                introduction: "对胖胖的女生来bai说，夏天显得并不是du那么的友好~，胖胖的女生又想要遮肉，但肉肉总是不听话非要与大家“见面”，所以内心更是一种挣扎啊~"
             },
-            color: {
-                item: [
-                    {
-                        "colorName": "白色系",
-                        "background": "#FFFFFF",
-                        "colorNo": "COL00",
-                        "fontColor": "#000000"
-                    },
-                    {
-                        "colorName": "灰色系",
-
-                        "background": "#D4D4D4",
-                        "colorNo": "COL06",
-                        "fontColor": "#000000"
-                    },
-                    {
-                        "colorName": "黑色系",
-
-                        "background": "#262626",
-                        "colorNo": "COL09",
-                        "fontColor": "#FFFFFF"
-                    },
-                    {
-                        "colorName": "粉色系",
-
-                        "background": "#F5BCC1",
-                        "colorNo": "COL11",
-                        "fontColor": "#000000"
-                    },
-                    {
-                        "colorName": "红色系",
-
-                        "background": "#E82525",
-                        "colorNo": "COL14",
-                        "fontColor": "#000000"
-                    },
-                    {
-                        "colorName": "橙色系",
-
-                        "background": "#F2A427",
-                        "colorNo": "COL28",
-                        "fontColor": "#000000"
-                    },
-                    {
-                        "colorName": "米色系",
-
-                        "background": "#E6E2CC",
-                        "colorNo": "COL32",
-                        "fontColor": "#000000"
-                    },
-                    {
-                        "colorName": "棕色系",
-
-                        "background": "#714E38",
-                        "colorNo": "COL38",
-                        "fontColor": "#FFFFFF"
-                    },
-                    {
-                        "colorName": "黄色系",
-
-                        "background": "#FFFD53",
-                        "colorNo": "COL43",
-                        "fontColor": "#000000"
-                    },
-                    {
-                        "colorName": "绿色系",
-
-                        "background": "#2F8C2A",
-                        "colorNo": "COL50",
-                        "fontColor": "#FFFFFF"
-                    },
-                    {
-                        "colorName": "蓝色系",
-
-                        "background": "#2D58CF",
-                        "colorNo": "COL69",
-                        "fontColor": "#FFFFFF"
-                    },
-                    {
-                        "colorName": "紫色系",
-                        "background": "#6D2B7A",
-                        "colorNo": "COL77",
-                        "fontColor": "#FFFFFF"
-                    }
-                ],
-                name: "颜色"
-            },
-            price: {
-                item: [
-                    {title: "￥100以下", value: "<100"}, {title: "￥100-￥200", value: "<=100"},
-                    {title: "￥200-￥300", value: "200-300"},
-                    {title: "￥300以上", value: ">=300"}
-                ],
-                name: "价格",
-                //todo 设置价格区间
-                max: '',
-                min: ''
-            },
+            list: [{
+                title: 'T恤，什么价位才是“一般”',
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
+            }, {
+                title: 'T恤，什么价位才是“一般”',
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
+            }, {
+                title: 'T恤，什么价位才是“一般”',
+                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
+            }]
 
         },
         //今日上新的筛选tab
@@ -478,7 +343,7 @@ Page(filter.loginCheck({
             'latitude': 23.13,
             'longitude': 113.27,
             name: "永康美特斯邦威店",
-            address: "浙江省丽水市中山街522号(百货大楼旁)",
+            address: this.data.shop.address,
             scale: 28
         })
 
@@ -511,6 +376,20 @@ Page(filter.loginCheck({
 
 
     },
+    tapBossQRCode(e) {
+        wx.previewImage({
+            current: this.data.shop.qrcode,
+            urls: [this.data.shop.qrcode]
+        })
+    },
+    tapWxid(e) {
+        wx.setClipboardData({
+            data: this.data.shop.wxid,
+            success(res) {
+                //    默认提示无法隐藏
+            }
+        })
+    }
 
 
 }))

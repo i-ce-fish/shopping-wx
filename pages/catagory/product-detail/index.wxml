@@ -281,8 +281,56 @@
 
             </van-collapse-item>
             <van-collapse-item title=" 商品说明" name="2">
-                <van-image src="{{product.explan}}" width="100%" fit="widthFix"></van-image>
+                <!--                <van-image src="{{product.explan}}" width="100%" fit="widthFix"></van-image>-->
                 <!--                todo -->
+                <video
+                        style="width: 100%;height:375rpx"
+                        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                        binderror="videoErrorCallback"
+                        show-play-btn="{{true}}"
+                        controls
+                >
+                </video>
+                <view>
+                    <view class="y-font-xxl">关于款式/风格</view>
+                    <view>
+                        <view class="y-font-xl">风格类型</view>
+                        <view>
+                            {{}}
+                        </view>
+                    </view>
+                    <view>
+                        <view class="y-font-xl">时尚度</view>
+                        <view>
+                            {{}}
+                        </view>
+                        <!--                        todo carousels-->
+                    </view>
+                    <view>
+                        <view class="y-font-xl">设计来历</view>
+                        <view>
+                            {{}}
+                        </view>
+                    </view>
+                    <view>
+                        <view class="y-font-xl">创意细节</view>
+                        <view>
+                            {{}}
+                        </view>
+                        <!--                    todo imgs-->
+                    </view>
+                </view>
+                <view>
+                    关于面料/做工
+                </view>
+                <view>
+                    关于适穿人群/场合
+                </view>
+                <view>
+                    关于穿着效果
+                </view>
+
+
             </van-collapse-item>
 
             <!--            <van-collapse-item title=" 搭配推荐" name="3" content-class="y-padding-none">-->

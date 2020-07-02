@@ -87,5 +87,5 @@
     <van-tab title="已使用卡券">内容 2</van-tab>
     <van-tab title="已失效卡券">内容 3</van-tab>
   </van-tabs>
-  <van-divider contentPosition="center">到底了</van-divider>
+  <footer/>
 </view>

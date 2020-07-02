@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "详情",
   "usingComponents": {
-    "van-divider": "@vant/weapp/divider",
+    "footer": "/components/footer/index",
     "van-panel":"@vant/weapp/panel",
     "scroll-top":"/components/scroll-top/index"
   }

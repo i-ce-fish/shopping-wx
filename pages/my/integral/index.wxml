@@ -32,5 +32,6 @@
     </van-tab>
     <van-tab title="使用记录">内容 3</van-tab>
   </van-tabs>
-  <van-divider contentPosition="center">到底了</van-divider>
+
+  <footer></footer>
 </view>

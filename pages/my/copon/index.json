@@ -3,7 +3,8 @@
   "usingComponents": {
     "tui-list-cell": "/components/list-cell/list-cell",
     "tui-list-view": "/components/list-view/list-view",
-    "van-divider": "@vant/weapp/divider",
+    "footer": "/components/footer/index",
+
     "van-button": "@vant/weapp/button",
     "van-tab": "@vant/weapp/tab",
     "van-tabs": "@vant/weapp/tabs"

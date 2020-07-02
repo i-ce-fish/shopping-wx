@@ -249,6 +249,6 @@
     <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
 
 
-    <van-divider contentPosition="center">到底了</van-divider>
+    <footer/>
 
 </view>

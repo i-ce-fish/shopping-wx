@@ -10,7 +10,7 @@
 			<template is="wxParse" data="{{wxParseData:article.nodes}}" />
 		</view>
 	</van-panel>
-	<van-divider contentPosition="center">到底了</van-divider>
+	<footer></footer>
 	<scroll-top scrollTop="{{scrollTop}}"text="TOP"></scroll-top>
 
 </view>

@@ -5,7 +5,7 @@
     "tui-list-view": "/components/list-view/list-view",
     "carousel": "/components/carousel/index",
     "van-image": "@vant/weapp/image",
-    "van-divider": "@vant/weapp/divider",
+    "footer": "/components/footer/index",
     "van-icon": "@vant/weapp/icon",
     "card": "/components/card/index",
     "shop-title": "/components/shop-title/index",

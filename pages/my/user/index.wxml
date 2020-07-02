@@ -55,5 +55,5 @@
       </tui-list-view>
     </view>
   </view>
-  <van-divider contentPosition="center">到底了</van-divider>
+  <footer isTabbar/>
 </view>

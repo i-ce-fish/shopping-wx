@@ -12,7 +12,9 @@
     "van-sticky": "@vant/weapp/sticky/index",
 
     "catalog-tab":"/components/catalog/tab/index",
-    "shop-title": "/components/shop-title/index"
+    "shop-title": "/components/shop-title/index",
+
+    "footer": "/components/footer/index"
 
   }
 }

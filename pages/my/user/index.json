@@ -8,7 +8,8 @@
     "van-cell": "@vant/weapp/cell",
     "van-cell-group": "@vant/weapp/cell-group",
     "van-icon": "@vant/weapp/icon",
-    "van-divider": "@vant/weapp/divider",
+    "footer": "/components/footer/index",
+
     "van-grid": "@vant/weapp/grid",
     "van-grid-item": "@vant/weapp/grid-item"
   }

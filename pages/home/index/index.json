@@ -12,9 +12,9 @@
     "van-cell": "@vant/weapp/cell/index",
     "product-list": "/components/catalog/product-list/index",
     "wear-list": "/components/wear/wear-list/index",
-
     "scroll-top": "/components/scroll-top/index",
     "catalog-filter": "/components/catalog/catalog-filter/index",
-    "tui-sticky": "/components/tui-sticky/tui-sticky"
+    "tui-sticky": "/components/tui-sticky/tui-sticky",
+    "footer": "/components/footer/index"
   }
 }
