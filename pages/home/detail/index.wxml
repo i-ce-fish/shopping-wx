@@ -1,16 +1,30 @@
 <!--pages/home/detail/main.wxml-->
 <view class="container">
-	<van-panel >
-		<!-- // 引入模板 -->
-		<view class="tui-flex tui-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>
 
-		<view class="body">
-			<import src="/components/wxParse/wxParse.wxml" />
-			<!-- //这里data中article为bindName -->
-			<template is="wxParse" data="{{wxParseData:article.nodes}}" />
-		</view>
-	</van-panel>
-	<footer></footer>
-	<scroll-top scrollTop="{{scrollTop}}"text="TOP"></scroll-top>
+    <!--    wxParse解析-->
+    <!--    <van-panel>-->
+    <!--        &lt;!&ndash; // 引入模板 &ndash;&gt;-->
+    <!--        <view class="tui-flex tui-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>-->
+
+    <!--        <view class="body">-->
+    <!--            <import src="/components/wxParse/wxParse.wxml"/>-->
+    <!--            &lt;!&ndash; //这里data中article为bindName &ndash;&gt;-->
+    <!--            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>-->
+    <!--        </view>-->
+    <!--    </van-panel>-->
+
+
+    <!--rich-text解析-->
+    <!--    <van-panel>-->
+    <!-- // 引入模板 -->
+    <view class="y-bgc-white tui-flex tui-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>
+    <!--        <view class="body">-->
+    <rich-text class="y-bgc-white" nodes="{{body}}"></rich-text>
+    <!--        </view>-->
+    <!--    </van-panel>-->
+
+    <footer></footer>
+    <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
+
 
 </view>

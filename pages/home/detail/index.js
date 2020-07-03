@@ -23,10 +23,9 @@ Page({
       this.setData({
         ...res
       })
-      // todo  15px => 30rpx
-      // WxParse.wxParse('article', 'html', res.body, this, wx.$px(30));
-      WxParse.wxParse('article', 'html', res.body, this, util.rpx2px(30));
+      //todo  删除富文本解析工具
 
+      // WxParse.wxParse('article', 'html', res.body, this, util.rpx2px(30));
     })
 
   },

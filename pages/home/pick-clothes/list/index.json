@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index",
+    "article-list": "/components/business/aticle-list/index",
+    "footer": "/components/footer/index"
+  }
+}

@@ -28,7 +28,7 @@ Component({
         },
         listView:{
             type:Boolean,
-            value:false
+            value:true
         }
     },
 

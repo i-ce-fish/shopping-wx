@@ -214,12 +214,10 @@
                             show-play-btn="{{true}}"
                             controls
                     >
-
                     </video>
                 </view>
                 <view class="tui-flex tui-align-around tui-vertical-center y-pt-20">
-                    <view class="tui-col-6 y-line-height-180" style="white-space: pre-line ">
-                        {{shop.introduction}}
+                    <view class="tui-col-6 y-line-height-180 y-wrap">{{shop.introduction}}
                     </view>
                     <view class="tui-center tui-col-6">
                         <van-image
@@ -248,7 +246,7 @@
             <card>
                 <van-cell title="你也会挑衣服" is-link
                           link-type="navigateTo"
-                          url="/pages/shopping/search/index?keyword=keyword"
+                          url="/pages/home/pick-clothes/list/index"
                           title-class="cell-title"
                           custom-class="cell-title-box"
                 >
@@ -258,7 +256,10 @@
                 </van-cell>
 
                 <view>
-                    <view style="height:240rpx; background:url('{{chooseClothes.head.img}}'); position: relative">
+                    <view
+                            bindtap="go"
+                            data-url="/pages/home/detail/index?id=82"
+                            style="height:240rpx; background:url('{{chooseClothes.head.img}}'); position: relative">
                         <view class="title-bg">
 
                             <view class="ellipsis y-color-white y-padding-lr y-font-l "
@@ -274,16 +275,8 @@
                     <van-divider custom-style="padding:0;margin:20rpx 0"/>
 
                 </view>
-                <view class="y-padding-lr tui-flex tui-align-between tui-vertical-center"
-                      wx:for="{{chooseClothes.list}}" wx:key="index">
-                    <view class="tui-col-9 ">
-                        <view class="tui-flex tui-vertical-center y-line-height-180  y-font-l ellipsis">
-                            {{item.title}} {{item.title}} {{item.title}}
-                        </view>
-                        <van-divider custom-style="padding:0;margin:20rpx 0"/>
-                    </view>
-                    <van-image src="{{item.img}}" fit="widthFix" width="120rpx"></van-image>
-                </view>
+                <article-list list="{{chooseClothes.list}}">
+                </article-list>
             </card>
         </view>
 
@@ -291,7 +284,7 @@
             <card>
                 <van-cell title="你也能时尚" is-link
                           link-type="navigateTo"
-                          url="/pages/shopping/search/index?keyword=keyword"
+                          url="/pages/home/pick-clothes/list/index"
                           title-class="cell-title"
                           custom-class="cell-title-box"
                 >
@@ -301,7 +294,10 @@
                 </van-cell>
 
                 <view>
-                    <view style="height:240rpx; background:url('{{fashions.head.img}}'); position: relative; ">
+                    <view
+                            bindtap="go"
+                            data-url="/pages/home/detail/index?id=82"
+                            style="height:240rpx; background:url('{{fashions.head.img}}'); position: relative; ">
                         <view class="title-bg">
                             <view class="ellipsis y-color-white y-padding-lr y-font-l "
                                   style="position: absolute;bottom: 10rpx">
@@ -316,16 +312,10 @@
                     <van-divider custom-style="padding:0;margin:20rpx 0"/>
 
                 </view>
-                <view class="y-padding-lr tui-flex tui-align-between tui-vertical-center" wx:for="{{fashions.list}}"
-                      wx:key="index">
-                    <view class="tui-col-9 ">
-                        <view class="tui-flex tui-vertical-center y-line-height-180  y-font-l ellipsis">
-                            {{item.title}} {{item.title}} {{item.title}}
-                        </view>
-                        <van-divider custom-style="padding:0;margin:20rpx 0"/>
-                    </view>
-                    <van-image src="{{item.img}}" fit="widthFix" width="120rpx"></van-image>
-                </view>
+
+                <article-list list="{{fashions.list}}">
+                </article-list>
+
             </card>
         </view>
 

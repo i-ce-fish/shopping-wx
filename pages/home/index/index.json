@@ -15,6 +15,7 @@
     "scroll-top": "/components/scroll-top/index",
     "catalog-filter": "/components/catalog/catalog-filter/index",
     "tui-sticky": "/components/tui-sticky/tui-sticky",
-    "footer": "/components/footer/index"
+    "footer": "/components/footer/index",
+    "article-list": "/components/business/aticle-list/index"
   }
 }

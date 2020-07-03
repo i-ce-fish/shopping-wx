@@ -288,46 +288,68 @@
                         src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
                         binderror="videoErrorCallback"
                         show-play-btn="{{true}}"
+                        object-fit="contain"
                         controls
                 >
                 </video>
-                <view>
-                    <view class="y-font-xxl">关于款式/风格</view>
+                <view class="y-color-black ">
                     <view>
-                        <view class="y-font-xl">风格类型</view>
+                        <view class="y-font-xxl y-font-blod y-line-height-200">关于款式/风格</view>
                         <view>
-                            {{}}
+                            <view class="y-font-xl y-line-height-200">风格类型</view>
+                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.type}}
+                            </view>
+                        </view>
+                        <view>
+                            <view class="y-font-xl y-line-height-200">时尚度</view>
+                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.fashion}}
+                            </view>
+
+                            <view class="y-pt-20 y-padding-b">
+                                <carousel imgs="{{product.introduction.style.carousels}}" interval="5000"
+                                          width="100%"
+                                          fit="widthFix"></carousel>
+                            </view>
+
+                        </view>
+                        <view>
+                            <view class="y-font-xl y-line-height-200">设计来历</view>
+                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.origin}}
+                            </view>
+                        </view>
+                        <view>
+                            <view class="y-font-xl y-line-height-200">创意细节</view>
+                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.detail}}
+                            </view>
+                            <!--                    todo imgs-->
+                            <view class="y-pt-20 y-padding-b">
+                                <view wx:for="{{product.introduction.style.detailImgs}}" wx:key="index">
+                                    <van-image width="100%" fit="widthFix" src="{{item}}"></van-image>
+                                </view>
+                            </view>
                         </view>
                     </view>
                     <view>
-                        <view class="y-font-xl">时尚度</view>
-                        <view>
-                            {{}}
+                        <view class="y-font-xxl y-font-blod y-line-height-200">
+                            关于面料/做工
                         </view>
-                        <!--                        todo carousels-->
-                    </view>
-                    <view>
-                        <view class="y-font-xl">设计来历</view>
-                        <view>
-                            {{}}
+                        <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.fabric}}
                         </view>
                     </view>
                     <view>
-                        <view class="y-font-xl">创意细节</view>
-                        <view>
-                            {{}}
+                        <view class="y-font-xxl y-font-blod y-line-height-200">
+                            关于适穿人群/场合
                         </view>
-                        <!--                    todo imgs-->
+                        <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.people}}
+                        </view>
                     </view>
-                </view>
-                <view>
-                    关于面料/做工
-                </view>
-                <view>
-                    关于适穿人群/场合
-                </view>
-                <view>
-                    关于穿着效果
+                    <view>
+                        <view class="y-font-xxl y-font-blod y-line-height-200">
+                            关于穿着效果
+                        </view>
+                        <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.wearEffect}}
+                        </view>
+                    </view>
                 </view>
 
 

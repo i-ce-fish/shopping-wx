@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/catagory/product-detail/index",
     "pages/home/index/index",
+    "pages/home/pick-clothes/list/index",
+    "pages/catagory/product-detail/index",
     "pages/wear/index/index",
     "pages/wear/detail/index",
     "pages/shopping/search/index",
@@ -32,7 +33,8 @@
     "pages/rule/integral/index",
     "pages/info/info-list/index",
     "pages/test/index",
-    "pages/test/style/index"
+    "pages/test/style/index",
+    "pages/home/pick-clothes/detail/index"
   ],
   "permission": {
     "scope.userLocation": {

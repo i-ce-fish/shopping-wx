@@ -236,7 +236,7 @@ App.Page(filter.loginCheck({
         delivery: "1",
         // 折叠面板
         collapseSize: 5,
-        activeColl: ['1', '2', '3', '4'],
+        activeColl: ['2'],
 
         // 讨价还价col
         activeColl_bargain: ['1', '2', '3', '4'],
@@ -477,15 +477,20 @@ App.Page(filter.loginCheck({
                 washInfo: "机洗，水温60°C以下",
                 material: '{"type":"edit","key":"材质成分","value":[{"index":0,"type":"add","key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"index":0,"type":"add","key":"填充物","value":"70%白鸭绒"},{"index":0,"type":"add","key":"内衬","value":"10%粘胶纤维"}],"index":0,"index2":{"type":"add","key":"大身","value":[{"index":0,"type":"add","key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"index":0,"type":"add","key":"填充物","value":"70%白鸭绒"},{"index":0,"type":"add","key":"内衬","value":"10%粘胶纤维"}]}}',
                 introduction: {
-                    aboutStyle: {
+                    style: {
                         type: "这款是经典的北欧简约风，线条简单，看起来就清爽，没有多余的口袋和细节",
                         fashion: "这款是今年开始流行的。去年开始在纽约和巴黎街头出现。某某大明星出街同款他非常适合穿这个款，显得很酷，网红某某在最爱。",
                         origin: "这是日本本土工匠亲自制作，亲切亲自亲自亲自其子女，这是日本本土工匠亲自制作，亲切亲自亲自亲自其子女，这是日本本土工匠亲自制作，亲切亲自亲自亲自其子女",
                         detail: "从商品每一个部位特征开始找话题。袖子是什么类型，如何好，显得很酷，裤长如何贴心。",
-                        carousels: ['https://www.uniqlo.cn/hmall/test/u0000000017942/main/first/561/1.jpg', 'https://www.uniqlo.cn/hmall/test/u0000000017945/main/first/561/1.jpg', 'https://www.uniqlo.cn/hmall/test/u0000000017887/main/first/561/1.jpg', 'https://www.uniqlo.cn/hmall/test/u0000000013930/main/first/561/1.jpg', 'https://www.uniqlo.cn/hmall/test/u0000000017562/main/first/561/1.jpg'],
+                        carousels: [{url: 'https://www.uniqlo.cn/hmall/test/u0000000017942/main/first/561/1.jpg'},
+                            {url: 'https://www.uniqlo.cn/hmall/test/u0000000017945/main/first/561/1.jpg'},
+                            {url: 'https://www.uniqlo.cn/hmall/test/u0000000017887/main/first/561/1.jpg'},
+                            {url: 'https://www.uniqlo.cn/hmall/test/u0000000013930/main/first/561/1.jpg'},
+                            {url: 'https://www.uniqlo.cn/hmall/test/u0000000017562/main/first/561/1.jpg'}
+                        ],
                         detailImgs: ['https://www.uniqlo.cn/hmall/test/u0000000013680/main/first/561/1.jpg', 'https://www.uniqlo.cn/hmall/test/u0000000013683/main/first/561/1.jpg']
                     },
-                    fabric: "由阿玛尼同厂加工,中国衬衫十大工厂中的前5名。以做出口外单为主的。工厂有优衣库日本的验厂报告单 ,莱卡面料弹性非常好，\n一般是用在高档衣服上。本商品莱卡是版权授权方,面料独家高科技,特殊的斜纹布，纱线支数为60支，一般为40支。\n" +
+                    fabric: "由阿玛尼同厂加工\n,中国衬衫十大工厂中的前5名。以做出口外单为主的。工厂有优衣库日本的验厂报告单 ,莱卡面料弹性非常好，\n一般是用在高档衣服上。本商品莱卡是版权授权方,面料独家高科技,特殊的斜纹布，纱线支数为60支，一般为40支。\n" +
                         "支数越高，手感越好，穿着越贴身舒适。面料颜色为植物染料，通过植物染色方法。植物染料和植\n物染色，比化学染料及化学染色成本高了10倍，一般用于婴幼儿服装和各种内衣。",
                     people: "中性款，男女都可以穿\n单件适合青少年，也合适中年\n休闲场合，居家、旅游等\n不适宜正装要求场所请慎重。\n合适低调内敛型的角色打造",
                     wearEffect: "整体比较显瘦。视觉上拉伸颈部。\n手臂粗壮的人，特别合适\n有效遮挡腹部赘肉"

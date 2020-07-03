@@ -5,8 +5,9 @@
 }
 
 .body{
-  margin: 30rpx;
-  font-size: 32rpx;
-  line-height: 50rpx;
+  /*margin: 30rpx;*/
+  /*font-size: 32rpx;*/
+  /*line-height: 50rpx;*/
 
 }
+
