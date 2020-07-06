@@ -23,6 +23,31 @@
     <!--        </view>-->
     <!--    </van-panel>-->
 
+    <view class="y-bgc-white y-shadow-b y-padding-all y-mt-20">
+        <view class="y-font-xl y-font-blod y-line-height-200">
+            互动
+        </view>
+        <view class="y-border-all y-p-20  y-color-gray">
+            <textarea height="150rpx" bindblur="bindTextAreaBlur" placeholder="请输入您的问题"/>
+        </view>
+
+        <view class="tui-right y-pt-20">
+            <van-button size="small" type="primary">提交
+            </van-button>
+        </view>
+
+        <view class="y-border-between">
+            <view class=" y-p-20 y-line-height-200" wx:for="{{5}}" wx:key="index">
+                <view class="y-font-l y-font-blod ">用户名</view>
+                <view class="y-line-height-180 y-wrap" style="word-wrap: break-word"
+                >用户评论用户评论用户评论用户评论用户评论用户评论用户评论
+                </view>
+                <view class="y-color-gray">2020-07-06 12:00</view>
+            </view>
+        </view>
+
+    </view>
+
     <footer></footer>
     <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
 

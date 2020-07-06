@@ -54,6 +54,11 @@ page {
     white-space: pre-line
 }
 
+/*边界换行*/
+.y-word-wrap {
+    word-wrap: break-word
+}
+
 /*行高*/
 .y-line-height-200 {
     line-height: 200%;
@@ -137,6 +142,10 @@ page {
     padding-top: 24rpx;
 }
 
+.y-p-20 {
+    padding: 20rpx;
+}
+
 .y-pr-20 {
     padding-right: 20rpx;
 }
@@ -204,6 +213,13 @@ page {
 .y-border-b {
     border-bottom: 1rpx solid #dadada;
 }
+
+
+/*在子view元素之间加上边框，除了最后一个子元素view*/
+.y-border-between > view:not(:last-child) {
+    border-bottom: 1px solid #dadada;
+}
+
 
 .y-border-lr {
     border-right: 1rpx solid #dadada;

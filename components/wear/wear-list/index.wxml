@@ -12,7 +12,9 @@
                        src="{{item.img}}"></van-image>
         </view>
     </view>
-    <view class="tui-col-6 y-padding-lr y-box tui-flex-col tui-align-between">
+    <view class="tui-col-6 y-padding-lr y-box tui-flex-col tui-align-between"
+          bindtap="go" data-url="/pages/wear/detail/index?id={{item.id}}"
+    >
         <view>
             <view class="y-line-height-180">
                 {{item.code}}
@@ -22,8 +24,7 @@
             </view>
 
         </view>
-        <view class="y-underline tui-flex tui-align-right"
-              bindtap="go" data-url="/pages/wear/detail/index?id={{item.id}}">
+        <view class="y-underline tui-flex tui-align-right">
             详情
         </view>
 

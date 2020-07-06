@@ -1,3 +1,5 @@
+<!--高仿优衣库的商品列表展示-->
+        <!--并增加了标题和查看更多-->
 <view class="y-bgc-white">
     <view wx:if="{{title}}" class=" title-box tui-flex tui-align-between tui-vertical-center">
         <view class=" y-font-xxl y-font-blod">
