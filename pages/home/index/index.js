@@ -1,9 +1,11 @@
 // pages/home/index/main.js
 
+import tool from "../../../utils/tool";
+
 let article = require("../../../api/article")
 let customer = require("../../../api/customer")
 let catalog = require("../../../api/catalog")
-
+let app = getApp()
 const filter = require('../../../utils/filter');
 
 Page(filter.loginCheck({
@@ -14,12 +16,16 @@ Page(filter.loginCheck({
     data: {
         //回到顶部
         scrollTop: 0,
+        //最新穿法是否黏住顶部
+        // stickyWear: false,
+        //今日上新是否黏住顶部
+        // stickyNew: false,
         //顶部导航栏
         topList: [
-            {title: '今日特惠', icon: "bag-o"},
-            {title: '最新穿法', icon: "bag-o"},
-            {title: '今日上新', icon: "bag-o"},
-            {title: '老板娘说', icon: "bag-o"}
+            {title: '今日特惠', icon: "bag-o", type: true},
+            {title: '最新穿法', icon: "bag-o", type: false},
+            {title: '今日上新', icon: "bag-o", type: false},
+            {title: '老板娘说', icon: "bag-o", type: false}
         ],
         //店铺信息
         shop: {
@@ -272,6 +278,19 @@ Page(filter.loginCheck({
         })
     },
 
+    // onPageScroll: tool.throttle(async function (e) {
+    //     //顶部导航条
+    //     this.setData({
+    //         scrollTop: e[0].scrollTop
+    //     })
+    //
+    //     //计算当前节点 的位置
+    //     let res = await app.getNodeViewport('#newWear')
+    //     console.log(res[0].top)
+    //
+    // }, 50),
+
+
     go: function (e) {
         wx.$go(e.currentTarget.dataset.url)
     },
@@ -390,6 +409,16 @@ Page(filter.loginCheck({
             }
         })
     }
+    ,
+    bindSticky(e) {
+        let index = e.currentTarget.dataset.index;
+        if (e.detail.isFixed !== this.data.topList[index].type) {
+            this.setData({
+                [`topList[${index}].type`]: e.detail.isFixed
+            });
 
+        }
+
+    }
 
 }))

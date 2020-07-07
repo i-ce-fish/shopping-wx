@@ -6,6 +6,9 @@ Component({
         bottom: {
             type: Number,
             value: 226
+            //悬浮按钮的高度66rpx
+
+            //返回顶部的高度
             //  160
         },
         //回顶部按钮距离右侧距离 rpx

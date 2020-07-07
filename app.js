@@ -1,5 +1,8 @@
 //app.js
 import Store from './utils/store.js';
+
+
+//wx直接调用的全局方法
 // 路由跳转并传参
 //ps url已经带有参数的情况未处理
 wx.$go = function (url, data) {
@@ -79,5 +82,19 @@ App({
         //当前选中的tabbar
         activeTab: 0,
         shopTitle: '永康美斯特邦威 会员内购'
+    },
+
+// 通过app调用的全局方法, 获取某个节点的坐标信息
+    getNodeViewport(selector) {
+
+        const query = wx.createSelectorQuery()
+        query.select(selector).boundingClientRect()
+        //返回一个promise函数
+        return new Promise((resolve, reject) => {
+            query.exec(function (res) {
+                // res[0].top       // #the-id节点的上边界坐标
+                resolve(res)
+            })
+        })
     }
 })

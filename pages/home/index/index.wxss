@@ -86,7 +86,7 @@
 .scroll-item {
     position: absolute;
     /*导航栏高度120*/
-    top: -130rpx
+    top: -200rpx
 }
 
 /*溢出只显示2行*/
