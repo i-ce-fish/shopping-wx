@@ -1,0 +1,38 @@
+<view class="container y-bgc-white">
+
+
+    <!-- todo z-index为-1时，无法切换tap ，为0则有层级问题-->
+        <van-tabs active="{{ 0 }}" bind:change="onTabs" z-index="0">
+<!--            <van-tab title="详情">-->
+<!--            </van-tab>-->
+            <van-tab title="咨询">
+                    <view class="y-padding-tb advisory-box">
+                        <tui-card class="y-padding-tb" title="{{advisory}}">
+                            <view slot="body" class="y-padding-all">
+                                <view class="">
+                                    <textarea class="textarea" name="desc" placeholder="请输入你要咨询的内容" auto-focus/>
+                                </view>
+                                <van-divider custom-style="padding:0"/>
+                                <view class="tui-center">
+                                    <van-button type="danger" size="normal" plain round custom-style="width:70%;">发布
+                                    </van-button>
+                                </view>
+                            </view>
+                        </tui-card>
+
+
+                        <tui-card class="y-padding-tb" title="{{card}}" wx:for="{{3}}" wx:key="index">
+                            <view slot="body" class="y-padding-all">
+                                很有弹性
+                            </view>
+                            <view slot="footer" class="tui-flex tui-align-between y-padding-all">
+                                <view>查看全部回答</view>
+                                <view>2020-04-24 00:00</view>
+                            </view>
+                        </tui-card>
+                    </view>
+            </van-tab>
+        </van-tabs>
+
+
+</view>

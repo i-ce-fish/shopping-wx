@@ -1,0 +1,103 @@
+<van-tabs bind:change="onTabs" z-index="0">
+    <van-tab title="我要还价">
+
+        <van-collapse value="{{activeColl_bargain}}" bindchange="setDetail" data-prop="activeColl_bargain">
+            <van-collapse-item title="{{collect_order.title}}" name="1">
+                <view>
+                    <view wx:for="{{collect_order.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+                    <view class="tui-right" bindtap="goTabBar" data-url="/pages/shopping/cart/index">
+                        查看购物车
+                    </view>
+                </view>
+            </van-collapse-item>
+
+            <van-collapse-item title="{{charge_discount.title}}" name="2">
+                <view>
+                    <view wx:for="{{charge_discount.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+
+                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                        查看活动详情
+                    </view>
+
+                </view>
+            </van-collapse-item>
+
+            <van-collapse-item title="{{redeem.title}}" name="3">
+                <view>
+                    <view wx:for="{{redeem.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                        查看积分规定
+                    </view>
+                </view>
+            </van-collapse-item>
+
+            <van-collapse-item title="{{copon.title}}" name="4">
+                <view>
+                    <view wx:for="{{copon.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                        查看我的优惠券
+                    </view>
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+
+    </van-tab>
+    <van-tab title="我要赚钱">
+        <van-collapse value="{{activeColl_earn}}" bindchange="setDetail" data-prop="activeColl_earn">
+            <van-collapse-item title="{{share.title}}" name="1">
+                <view>
+                    <view wx:for="{{share.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                        分享给亲友
+                    </view>
+                </view>
+            </van-collapse-item>
+
+            <van-collapse-item title="{{forward.title}}" name="2">
+                <view>
+                    <view wx:for="{{forward.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+
+                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                        转发公众号文章
+                    </view>
+
+                </view>
+            </van-collapse-item>
+
+            <van-collapse-item title="{{push.title}}" name="3">
+                <view>
+                    <view wx:for="{{push.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                        查看推手规则
+                    </view>
+                </view>
+            </van-collapse-item>
+
+            <van-collapse-item title="{{groub_by.title}}" name="4">
+                <view>
+                    <view wx:for="{{groub_by.rules}}" wx:key="index">
+                        {{item.title}}
+                    </view>
+                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                        查看
+                    </view>
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+
+    </van-tab>
+</van-tabs>

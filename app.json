@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/home/index/index",
-    "pages/home/pick-clothes/list/index",
     "pages/catagory/product-detail/index",
     "pages/wear/index/index",
+    "pages/home/pick-clothes/list/index",
     "pages/wear/detail/index",
     "pages/shopping/search/index",
     "pages/home/new-product/index",
@@ -34,7 +34,9 @@
     "pages/info/info-list/index",
     "pages/test/index",
     "pages/test/style/index",
-    "pages/home/pick-clothes/detail/index"
+    "pages/home/pick-clothes/detail/index",
+    "pages/catagory/bargain/index",
+    "pages/catagory/can-wear/index"
   ],
   "permission": {
     "scope.userLocation": {

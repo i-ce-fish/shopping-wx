@@ -1,6 +1,14 @@
 Component({
     options: {addGlobalClass: true},
 
+    lifetimes: {
+        ready() {
+            // this.iconAni = wx.createAnimation()
+            this.data.filterData.forEach(item => {
+                item.collapse = true
+            })
+        }
+    },
     properties: {
 
         filterData: {
@@ -15,6 +23,24 @@ Component({
         showFilter: false,
     },
     methods: {
+
+        show: function (e) {
+            //原点是指渲染完成的位置
+            // this.setData({iconRotate: this.iconAni.export(), collapse: false})
+            // this.iconAni.rotate(180).step()
+            this.setData({
+                [`filterData[${e.currentTarget.dataset.index}].collapse`]: true
+            })
+        },
+        hide(e) {
+            // this.iconAni.rotate(0).step()
+            // this.setData({iconRotate: this.iconAni.export(), collapse: true})
+            this.setData({
+                [`filterData[${e.currentTarget.dataset.index}].collapse`]: false
+            })
+
+        },
+
         showFilter() {
             this.setData({
                 showFilter: true

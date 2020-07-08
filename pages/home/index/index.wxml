@@ -424,7 +424,7 @@
 
     <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
 
-
+<button open-type="contact" >客服</button>
     <footer isTabbar></footer>
 
 </view>

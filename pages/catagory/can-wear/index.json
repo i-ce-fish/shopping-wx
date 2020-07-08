@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "tui-list-cell": "/components/list-cell/list-cell",
+    "tui-list-view": "/components/list-view/list-view",
+    "tui-card": "/components/tui-card/card",
+    "van-divider": "@vant/weapp/divider",
+    "van-button": "@vant/weapp/button"
+  }
+}
