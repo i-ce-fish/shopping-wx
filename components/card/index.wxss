@@ -3,9 +3,7 @@
 .card-box{
     background-color: white;
     /*padding: 20rpx 30rpx 36rpx 30rpx;*/
-    padding: 20rpx 30rpx;
     margin-top: 20rpx;
-
     border-bottom:2rpx solid #dadada;
     box-shadow: 0 2rpx 4rpx 0 rgba(0, 0, 0, 0.16);
 }

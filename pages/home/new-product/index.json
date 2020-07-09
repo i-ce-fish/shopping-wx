@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "今日上新",
+  "navigationBarTitleText": "新品上架",
   "usingComponents": {
     "shop-title": "/components/shop-title/index",
     "catalog-filter": "/components/catalog/catalog-filter/index",

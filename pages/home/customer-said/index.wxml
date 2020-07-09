@@ -1,0 +1,68 @@
+<view>
+    <view class="y-font-xl y-color-gray y-line-height-180 y-pt-20 y-padding-all">
+        {{shop.introduction}}
+    </view>
+    <big-card title="有4种方式能找到我">
+        <view class="tui-center">
+            <view class="y-p-20 ">
+                <van-button custom-style="width:80%" type="primary" bindtap="tapCall">拨打电话：13611605568</van-button>
+            </view>
+            <view class="y-p-20 ">
+                <van-button custom-style="width:80%" open-type="contact" type="primary">客服会话</van-button>
+            </view>
+        </view>
+        <view class="tui-flex tui-align-between y-p-20 y-border-all y-mb-20 ">
+
+            <view>
+                <view class="y-font-xl y-line-height-200">
+                    加我微信
+                </view>
+                <view>
+                    <view class="y-color-gray" style="font-size: 22rpx">保存名片到相册并扫一扫</view>
+                    <view class="y-color-gray" style="font-size: 22rpx">或复制微信号加我为好友</view>
+                </view>
+            </view>
+            <view>
+                <van-image
+                        src="{{shop.qrcode}}"
+                        bindtap="tapBossQRCode"
+                        height="200rpx"
+                        width="200rpx"
+                        fit="contain"
+
+                ></van-image>
+                <view class="y-line-height-200" bindtap="tapWxid">
+                    <text class="y-underline">{{shop.wxid}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="y-p-20  y-border-all">
+            <view class="y-font-xl y-line-height-200">
+                最好您能直接到店铺来面谈
+            </view>
+            <view class="tui-center">
+
+                <van-image
+                        src="{{shop.img}}"
+                        bindtap="tapBossQRCode"
+                        height="375rpx"
+                        width="375rpx"
+                        fit="contain"
+
+                ></van-image>
+            </view>
+            <view class="tui-right y-underline" bindtap="tapAddress">
+                {{shop.address}}
+            </view>
+        </view>
+    </big-card>
+
+    <view class="y-padding-all tui-center">
+
+        <van-button type="primary" bindtap="tapCall">对货品有建议和需求，请点击这里</van-button>
+    </view>
+
+
+</view>
+<footer></footer>

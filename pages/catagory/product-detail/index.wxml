@@ -28,7 +28,7 @@
 
 
     </view>
-    <card custom-class="y-padding-none">
+    <card padding="0">
         <view class="pro-box-top y-padding-all y-bgc-white y-mt-20">
             <view class="y-font-l y-font-blod">{{product.category}} {{product.product_name}} {{product.product_sn}}
             </view>
@@ -80,7 +80,7 @@
 
 
 
-    <card custom-class="y-padding-none">
+    <card padding="0">
         <van-collapse value="{{activeColl}}" bindchange="setDetail" data-prop="activeColl">
             <van-collapse-item title="商品参数" name="1">
                 <view class=" y-color-black y-line-height-180">

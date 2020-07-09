@@ -1,6 +1,5 @@
 <view class="container">
     <shop-title></shop-title>
-    <float-button text="筛选" icon="share" bindtap="tapFilter"></float-button>
     <view class=" y-bgc-white y-shadow-b">
         <view class="tui-col-12">
             <catalog-filter list="{{catalogs}}" bindclick="tapWearFilter"></catalog-filter>
@@ -20,6 +19,10 @@
     <view class="">
         <wear-list list="{{wearList}}"></wear-list>
     </view>
+
+    <float-button text="帮我设计" bottom="238" bindtap="tapDesign"></float-button>
+    <float-button text="筛选" bottom="160" icon="share" bindtap="tapFilter"></float-button>
+
 
     <filter-single-page id="filter-single-page" filterData="{{filterData}}"></filter-single-page>
 </view>

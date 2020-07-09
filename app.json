@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/index/index",
+    "pages/home/customer-said/index",
+    "pages/home/boss-said/index",
     "pages/catagory/product-detail/index",
     "pages/wear/index/index",
     "pages/home/pick-clothes/list/index",
@@ -36,7 +38,8 @@
     "pages/test/style/index",
     "pages/home/pick-clothes/detail/index",
     "pages/catagory/bargain/index",
-    "pages/catagory/can-wear/index"
+    "pages/catagory/can-wear/index",
+    "pages/home/design/design-for-me/index"
   ],
   "permission": {
     "scope.userLocation": {
@@ -58,6 +61,10 @@
       {
         "pagePath": "pages/shopping/cart/index",
         "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/user/index",
+        "text": "我的"
       }
     ]
   },

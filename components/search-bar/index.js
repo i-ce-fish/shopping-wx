@@ -8,6 +8,15 @@ Component({
         scanable: {
             type: Boolean,
             value: false
+        },
+        //是否显示最近搜索、热搜及其遮罩，区别于顶部搜索条和普通搜索条
+        mask: {
+            type: Boolean,
+            value: true
+        },
+        placeholder: {
+            type: String,
+            vlaue: "请输入"
         }
     },
     data: {

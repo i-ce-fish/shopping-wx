@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "听老板娘说",
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index",
+    "card": "/components/card/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-divider": "@vant/weapp/divider",
+    "van-icon": "@vant/weapp/icon",
+    "article-list": "/components/business/aticle-list/index",
+    "footer": "/components/footer/index"
+  }
+}

@@ -1,11 +1,11 @@
-<view class="tui-flex tui-align-around y-pt-20 y-pb-20">
-    <van-tag plain  size="large" type="{{index === active?'primary':'default'}}"
-             wx:for="{{list}}" wx:key="index"
-             data-index="{{index}}" bindtap="tap">
-        <view class="">
-
-            {{item.name}}
-        </view>
-    </van-tag>
+<view class="tui-flex tui-flex-wrap  ">
+    <view wx:for="{{list}}" wx:key="index" class=" y-pt-20">
+        <van-tag plain size="large" type="{{index === active?'primary':'default'}}"
+                 data-index="{{index}}" bindtap="tap" style="margin-right:20rpx ;">
+            <view class="">
+                {{item.name}}
+            </view>
+        </van-tag>
+    </view>
 </view>
 

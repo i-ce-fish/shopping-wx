@@ -17,7 +17,7 @@
         </view>
     </van-sticky>
 
-    <card custom-class="y-padding-none">
+    <card padding="0">
         <van-collapse value="{{activeColl}}" bindchange="setDetail" data-prop="activeColl">
             <van-collapse-item title="{{wear.title}}" name="1">
                 <view class="y-color-black text-wrap">{{wear.content}}</view>

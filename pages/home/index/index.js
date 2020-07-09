@@ -18,13 +18,13 @@ Page(filter.loginCheck({
         scrollTop: 0,
         //最新穿法是否黏住顶部
         // stickyWear: false,
-        //今日上新是否黏住顶部
+        //新品上架是否黏住顶部
         // stickyNew: false,
         //顶部导航栏
         topList: [
             {title: '今日特惠', icon: "bag-o", type: true},
             {title: '最新穿法', icon: "bag-o", type: false},
-            {title: '今日上新', icon: "bag-o", type: false},
+            {title: '新品上架', icon: "bag-o", type: false},
             {title: '老板娘说', icon: "bag-o", type: false}
         ],
         //店铺信息
@@ -32,47 +32,12 @@ Page(filter.loginCheck({
             address: "丽水市中山街店522号(百货大楼旁)",
             qrcode: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593673011872&di=6e98e25a009f7ca0086899e8f015145d&imgtype=0&src=http%3A%2F%2Fefile.kaoyan.com%2Fimg%2F2020%2F05%2F25%2F193612_5ecbadac69b24.png',
             wxid: 'wxid_sdfkljdsfkl153',
-            introduction: "我是店长王小丽，我做服装行业12年12年时间，\n我做了三件事：\n怎么挑选对的衣服\n怎么穿搭出时尚范\n怎么把店开更长久",
+            introduction: "我是店长王小丽，我做服装行业12年12年时间，\n我很直爽，开店很累，但我喜欢时尚",
 
         },
-        //挑衣服
-        chooseClothes: {
-            head: {
-                title: 'T恤，什么价位才是“一般”',
-                img: 'https://www.uniqlo.cn/hmall/test/u0000000016088/main/first/561/1.jpg',
-                introduction: "一个纯棉短袖T恤，一般最少20起，加上印花或者其他工艺，贵的会在60左右，如果是名牌的话还会有品牌溢价，可能就涨到100以上啦。那种9.9包邮的，工艺跟材料很伤心。"
-            },
-            list: [{
-                title: 'T恤，什么价位才是“一般”',
-                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
-            }, {
-                title: 'T恤，什么价位才是“一般”',
-                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
-            }, {
-                title: 'T恤，什么价位才是“一般”',
-                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
-            }]
 
-        },
-        fashions: {
-            head: {
-                title: '夏天，胖不是你的错，胖还穿的怎么丑就是你不对了! ',
-                img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=376060755,1821328537&fm=26&gp=0.jpg',
-                introduction: "对胖胖的女生来bai说，夏天显得并不是du那么的友好~，胖胖的女生又想要遮肉，但肉肉总是不听话非要与大家“见面”，所以内心更是一种挣扎啊~"
-            },
-            list: [{
-                title: 'T恤，什么价位才是“一般”',
-                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
-            }, {
-                title: 'T恤，什么价位才是“一般”',
-                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
-            }, {
-                title: 'T恤，什么价位才是“一般”',
-                img: 'https://www.uniqlo.cn/hmall/test/u0000000017222/main/first/1000/1.jpg'
-            }]
 
-        },
-        //今日上新的筛选tab
+        //新品上架的筛选tab
         newProductsTabs: [
             {icon: 'apps-o', title: '风格'},
             {icon: 'apps-o', title: '尺码'},
@@ -91,12 +56,12 @@ Page(filter.loginCheck({
         catalogs: [],
         //店铺活动
         activity: [
-            {title: '满500元立减100元', subtitle: '全场货品'},
-            {title: '低至 1 折起', subtitle: '三楼女装，SALE'},
-            {title: '特价速秒  售完即止', subtitle: '今日必入'},
-            {title: '无印良品工厂直供\n床上四件套\n今晚19:00', subtitle: '拼团直播'}
+            {title: '满500元立减100元', subtitle: '全场货品', bgc: '#f6c4ad'},
+            {title: '低至 1 折起', subtitle: '三楼女装，SALE', bgc: '#fadca7'},
+            {title: '特价速秒  售完即止', subtitle: '今日必入', bgc: '#f8f2b7'},
+            {title: '无印良品工厂直供\n床上四件套\n今晚19:00', subtitle: '拼团直播', bgc: '#ffcf9b'}
         ],
-        //今日上新的商品
+        //新品上架的商品
         newProducts: [{
             img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
             name: "麻混",
@@ -181,19 +146,19 @@ Page(filter.loginCheck({
             {
                 img: 'https://img1.cache.netease.com/catchpic/4/44/447CDD5924DDF235067C7EAC5C25B11D.jpg',
                 code: 'CFA216541',
-                title: '夏日都市养眼大气清纯气质财运商务通勤装',
+                title: '杨幂牛仔外套内搭灰色针织衫+黑色瘦腿裤杨幂牛仔外套内搭灰色针织',
                 subtitle: ''
             },
             {
                 img: 'https://img1.cache.netease.com/catchpic/4/40/401595388FAC4B49D519336E83F5AA11.jpg',
                 code: 'CFA216541',
-                title: '夏日都市养眼大气清纯气质财运商务通勤装',
+                title: '范爷范冰冰小海星牛仔外套童趣',
                 subtitle: ''
             },
             {
                 img: 'https://img1.cache.netease.com/catchpic/E/ED/ED4795F0EBF01DF790275D2FF7979485.jpg',
                 code: 'CFA216541',
-                title: '夏日都市养眼大气清纯气质财运商务通勤装',
+                title: '秒变清纯身材单薄穿出',
                 subtitle: ''
             },
             {
@@ -224,18 +189,25 @@ Page(filter.loginCheck({
         ,
         //穿法分类的一级筛选
         wearFilter: [
-            {name: '全部'},
+            {name: '明星穿法'},
+            {name: '显瘦穿法'},
+            {name: '广州流行'},
+            {name: '欧美校园'},
+            {name: '日韩最新'},
+            {name: '炫酷个性'},
+            {name: '通勤达人'},
+            {name: '轻奢简约'}
+        ],
+        newFilter: [
+            {name: '新品预售'},
+            {name: '新品上架'},
+            {name: '广州流行'},
+            {name: '日韩最新'},
             {name: '男装'},
             {name: '女装'},
             {name: '童装'},
-            {name: '家居'}
-        ],
-        newFilter: [
 
-            {name: '全部'},
-            {name: '上新1'},
-            {name: '上新2'},
-            {name: '上新4'}
+            {name: '家居'}
 
         ]
     },
@@ -389,11 +361,8 @@ Page(filter.loginCheck({
         // wx.navigateTo({
         //     url: 'plugin://routePlan/route-plan?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
         // });
-
         //     }
         // })
-
-
     },
     tapBossQRCode(e) {
         wx.previewImage({
@@ -419,6 +388,7 @@ Page(filter.loginCheck({
 
         }
 
-    }
+    },
+
 
 }))

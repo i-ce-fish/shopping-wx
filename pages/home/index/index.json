@@ -9,6 +9,7 @@
     "van-icon": "@vant/weapp/icon",
     "van-button": "@vant/weapp/button",
     "card": "/components/card/index",
+    "big-card": "/components/big-card/index",
     "shop-title": "/components/shop-title/index",
     "van-cell": "@vant/weapp/cell/index",
     "product-list": "/components/catalog/product-list/index",
@@ -18,7 +19,6 @@
     "catalog-filter": "/components/catalog/catalog-filter/index",
     "tui-sticky": "/components/tui-sticky/tui-sticky",
     "footer": "/components/footer/index",
-    "article-list": "/components/business/aticle-list/index",
     "van-sticky": "@vant/weapp/sticky/index"
   }
 }

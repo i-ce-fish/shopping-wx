@@ -176,6 +176,9 @@ Page({
     },
     tapFilter() {
         this.selectComponent('#filter-single-page').showFilter()
+    },
+    tapDesign(){
+        wx.$go('/pages/')
     }
 
 });

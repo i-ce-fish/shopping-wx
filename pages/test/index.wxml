@@ -134,7 +134,7 @@
         <view class="position-rel">
             <view class="scroll-item-2 scroll-item"></view>
             <card custom-class="y-padding-lr-none">
-                <van-cell title="今日上新" is-link
+                <van-cell title="新品上架" is-link
                           link-type="navigateTo"
                           url="/pages/shopping/search/index?keyword=keyword"
                           title-class="cell-title"

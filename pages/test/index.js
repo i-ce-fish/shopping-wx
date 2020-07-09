@@ -18,10 +18,10 @@ Page({
         topList: [
             {title: '今日特惠', icon: "bag-o"},
             {title: '最新穿法', icon: "bag-o"},
-            {title: '今日上新', icon: "bag-o"},
+            {title: '新品上架', icon: "bag-o"},
             {title: '老板娘说', icon: "bag-o"}
         ],
-        //今日上新的筛选
+        //新品上架的筛选
         newProductsFilter: {
             style: {
                 item: [
@@ -201,7 +201,7 @@ Page({
             },
 
         },
-        //今日上新的筛选tab
+        //新品上架的筛选tab
         newProductsTabs: [
             {icon: 'apps-o', title: '风格'},
             {icon: 'apps-o', title: '尺码'},
@@ -225,7 +225,7 @@ Page({
             {title: '特价速秒  售完即止', subtitle: '今日必入'},
             {title: '无印良品工厂直供', subtitle: '拼团直播'}
         ],
-        //今日上新的商品
+        //新品上架的商品
         newProducts: [{
             img: "https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg",
             name: "麻混",

@@ -1,13 +1,12 @@
 <view class="search-bar-box">
-
     <view class="box {{show?'':'shadow' }} tui-flex tui-vertical-center ">
-        <view class="y-padding-l"  wx:if="{{scanable}}" bindtap="tapScan">
+        <view class="y-padding-l" wx:if="{{scanable}}" bindtap="tapScan">
             <van-icon name="scan" size="40rpx"></van-icon>
         </view>
         <view class="sb-box tui-col-11">
             <van-field
                     value="{{ keyword }}"
-                    placeholder="请输入"
+                    placeholder="{{placeholder}}"
                     border="{{ false }}"
                     clearable="{{true}}"
                     right-icon="search"
@@ -17,7 +16,7 @@
         </view>
     </view>
 
-    <van-overlay show="{{ show }}" bind:click="onTap" z-index="10">
+    <van-overlay wx:if="{{mask}}" show="{{ show }}" bind:click="onTap" z-index="10">
 
         <view class="overlay-box">
 
@@ -46,8 +45,6 @@
         </view>
 
     </van-overlay>
-
-
 
 
 </view>
