@@ -17,6 +17,7 @@ Component({
         },
 
 
+
     },
     data: {
         //显示条件筛选弹窗
@@ -24,22 +25,6 @@ Component({
     },
     methods: {
 
-        show: function (e) {
-            //原点是指渲染完成的位置
-            // this.setData({iconRotate: this.iconAni.export(), collapse: false})
-            // this.iconAni.rotate(180).step()
-            this.setData({
-                [`filterData[${e.currentTarget.dataset.index}].collapse`]: true
-            })
-        },
-        hide(e) {
-            // this.iconAni.rotate(0).step()
-            // this.setData({iconRotate: this.iconAni.export(), collapse: true})
-            this.setData({
-                [`filterData[${e.currentTarget.dataset.index}].collapse`]: false
-            })
-
-        },
 
         showFilter() {
             this.setData({
@@ -69,12 +54,7 @@ Component({
             this.triggerEvent('success', {})
             this.closeFilter()
         },
-        tapCheckbox(e) {
-            this.setData({
-                [e.currentTarget.dataset.prop]: e.detail
-            })
 
-        }
 
     }
 });

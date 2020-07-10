@@ -39,7 +39,8 @@
     "pages/home/pick-clothes/detail/index",
     "pages/catagory/bargain/index",
     "pages/catagory/can-wear/index",
-    "pages/home/design/design-for-me/index"
+    "pages/home/design/design-for-me/index",
+    "pages/home/design/role-list/index"
   ],
   "permission": {
     "scope.userLocation": {

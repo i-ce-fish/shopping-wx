@@ -1,4 +1,8 @@
 {
   "usingComponents": {
+    "shop-title": "/components/shop-title/index",
+    "footer": "/components/footer/index",
+    "checkbox-flod-list": "/components/checkbox-flod-list/index",
+    "van-button": "@vant/weapp/button"
   }
 }

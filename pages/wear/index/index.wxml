@@ -20,7 +20,7 @@
         <wear-list list="{{wearList}}"></wear-list>
     </view>
 
-    <float-button text="帮我设计" bottom="238" bindtap="tapDesign"></float-button>
+    <float-button text="帮我\n设计" bottom="238" bindtap="tapDesign"></float-button>
     <float-button text="筛选" bottom="160" icon="share" bindtap="tapFilter"></float-button>
 
 

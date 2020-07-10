@@ -9,11 +9,10 @@ Component({
         scrollTop: 0,
         activeColl: ['1'],
         carousels: [
-            {url: "https://www.uniqlo.cn/hmall/test/u0000000015853/model/rank1/first/591-822/1.jpg"},
-            {url: 'https://www.uniqlo.cn/hmall/test/u0000000015853/model/rank2/first/591-822/1.jpg'},
-            {url: 'https://www.uniqlo.cn/hmall/test/u0000000015853/model/rank2/first/591-822/1.jpg'},
-            {url: "https://www.uniqlo.cn/hmall/test/u0000000015853/model/rank3/first/591-822/1.jpg"},
-            {url: "https://www.uniqlo.cn/hmall/test/u0000000015853/model/rank3/first/591-822/1.jpg"}
+            {url: "https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/first/591-822/1.jpg"},
+            {url: "https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/first/591-822/1.jpg"},
+            {url: "https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/first/591-822/1.jpg"},
+            {url: "https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/first/591-822/1.jpg"}
         ],
         wear: {
             title: '范爷范冰冰小海星牛仔外套童趣',
@@ -22,13 +21,13 @@ Component({
                 '穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装'
         },
         products: [{
-            title: '高腰紧身喇叭牛仔九分裤(水洗产品)',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000017254/main/other1/1000/2.jpg',
+            title: '麻混纺半开领上衣',
+            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other2/196-273/3.jpg',
             imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017254/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017254/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017254/main/other4/1000/5.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017254/main/other3/1000/4.jpg'}
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other2/196-273/3.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/first/1000/1.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other1/1000/2.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other4/1000/5.jpg'}
             ],
             id: '123',
             intro: '搭配原因：黑色显瘦',
@@ -36,91 +35,30 @@ Component({
 
 
         }, {
-            title: '高腰紧身喇叭牛仔九分裤(水洗产品)',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000014267/main/other1/1000/2.jpg',
+            title: '雪纺打褶裙裤',
+            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other3/196-273/4.jpg',
 
             imgs: [
-
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000014267/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000014267/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000014267/main/other3/1000/4.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000014267/main/other4/1000/5.jpg'}
-            ],
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other3/196-273/4.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/1.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/2.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/4.jpg'}
+            ]
+        }, {
             id: '123',
-            intro: '搭配原因：黑色显瘦',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000017933/main/other1/1000/2.jpg',
+            title: '平底拖鞋',
+            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other1/196-273/2.jpg',
 
             imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017933/sku/561/COL47.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017933/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017933/main/other2/1000/3.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017933/main/other3/1000/4.jpg'}
+
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other3/1000/4.jpg'},
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other3/1000/1.jpg'}
+
             ],
             price: '99.00'
 
-        }, {
-            title: '高腰紧身喇叭牛仔九分裤(水洗产品)',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000017950/main/other1/1000/2.jpg',
-
-            imgs: [
-
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017950/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017950/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017950/main/other2/1000/3.jpg'}
-            ],
-            id: '123',
-            intro: '搭配原因：黑色显瘦',
-            price: '99.00'
-
-        }, {
-            title: '高腰紧身喇叭牛仔九分裤(水洗产品)',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg',
-            imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other2/1000/3.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other3/1000/4.jpg'}
-            ], id: '123',
-            intro: '搭配原因：黑色显瘦',
-            price: '99.00'
-
-        }, {
-            title: '高腰紧身喇叭牛仔九分裤(水洗产品)',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg',
-            imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other2/1000/3.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other3/1000/4.jpg'}
-            ], id: '123',
-            intro: '搭配原因：黑色显瘦',
-            price: '99.00'
-
-        }, {
-            title: '高腰紧身喇叭牛仔九分裤(水洗产品)',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg',
-            imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other2/1000/3.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other3/1000/4.jpg'}
-            ], id: '123',
-            intro: '搭配原因：黑色显瘦',
-            price: '99.00'
-
-        }, {
-            title: '高腰紧身喇叭牛仔九分裤(水洗产品)',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg',
-            imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other2/1000/3.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000017939/main/other3/1000/4.jpg'}
-            ], id: '123',
-            intro: '搭配原因：黑色显瘦',
-            price: '99.00'
-
-        }],
+        }]
 
     },
 

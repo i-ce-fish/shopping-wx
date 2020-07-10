@@ -9,6 +9,7 @@
     "card": "/components/card/index",
     "van-image": "@vant/weapp/image",
     "van-sticky": "@vant/weapp/sticky/index",
-    "top-sticky": "/components/catalog/top-sticky/index"
+    "top-sticky": "/components/catalog/top-sticky/index",
+    "footer": "/components/footer/index"
   }
 }

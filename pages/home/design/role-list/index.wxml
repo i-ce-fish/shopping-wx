@@ -1,0 +1,5 @@
+<view>
+ <card  wx:for="{{roles}}" wx:key="index">
+     {{item.name}}
+ </card>
+</view>

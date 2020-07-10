@@ -71,5 +71,7 @@
         </view>
     </view>
     <float-button text="分享" icon="share" open-type="share"></float-button>
-    <view class="y-padding-t"></view>
+
+<!--    <view class="y-padding-t"></view>-->
+    <footer></footer>
 </view>

@@ -11,6 +11,7 @@
     "card": "/components/card/index",
     "big-card": "/components/big-card/index",
     "shop-title": "/components/shop-title/index",
+    "footer": "/components/footer/index",
     "van-cell": "@vant/weapp/cell/index",
     "product-list": "/components/catalog/product-list/index",
     "product-list-item-b": "/components/catalog/product-list-item-b/index",
@@ -18,7 +19,6 @@
     "scroll-top": "/components/scroll-top/index",
     "catalog-filter": "/components/catalog/catalog-filter/index",
     "tui-sticky": "/components/tui-sticky/tui-sticky",
-    "footer": "/components/footer/index",
     "van-sticky": "@vant/weapp/sticky/index"
   }
 }

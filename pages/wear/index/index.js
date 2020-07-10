@@ -3,7 +3,7 @@ Page({
         filterData: [
             {
                 item: ["全部", '帅哥', '美女', '中性'],
-                name: "适穿性别"
+                title: "适穿性别"
             },
             {
                 item: [
@@ -21,7 +21,7 @@ Page({
                     "自定义"
 
                 ],
-                name: "适穿年龄"
+                title: "适穿年龄"
             }, {
                 item: [
                     "较胖",
@@ -30,7 +30,7 @@ Page({
                     "偏瘦",
                     "较瘦"
                 ],
-                name: "体型轮廓"
+                title: "体型轮廓"
             },
             {
                 item: [
@@ -41,7 +41,7 @@ Page({
                     "脖子短",
                     "自定义"
                 ],
-                name: "特殊修饰"
+                title: "特殊修饰"
             },
             {
                 item: [
@@ -49,7 +49,7 @@ Page({
                     "有点个性",
                     "非常个性"
                 ],
-                name: "个性程度"
+                title: "个性程度"
             },
             {
                 item: [
@@ -58,7 +58,7 @@ Page({
                     "街头达人",
                     "其他来源"
                 ],
-                name: "穿法来源"
+                title: "穿法来源"
             },
             {
                 item: [
@@ -72,7 +72,7 @@ Page({
                     "娱乐圈",
                     "日韩"
                 ],
-                name: "流行地区"
+                title: "流行地区"
             },
             {
                 item: [
@@ -86,7 +86,7 @@ Page({
                     "旅游度假",
                     "其他场合"
                 ],
-                name: "穿着场合"
+                title: "穿着场合"
             },
             {
                 item: [
@@ -103,7 +103,7 @@ Page({
                     "轻奢",
                     "自定义"
                 ],
-                name: "特殊修饰"
+                title: "特殊修饰"
             }],
         catalogs: [
             //穿法分类的一级筛选
@@ -178,7 +178,7 @@ Page({
         this.selectComponent('#filter-single-page').showFilter()
     },
     tapDesign(){
-        wx.$go('/pages/')
+        wx.$go('/pages/home/design/design-for-me/index')
     }
 
 });
