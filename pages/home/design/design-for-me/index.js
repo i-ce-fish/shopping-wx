@@ -176,5 +176,8 @@ Page({
     },
     onLoad: function (options) {
 
+    },
+    go: function (e) {
+        wx.$go(e.currentTarget.dataset.url)
     }
 });

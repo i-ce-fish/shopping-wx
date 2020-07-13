@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/index/index",
+    "pages/home/design/role-list/index",
+    "pages/home/design/role-form/index",
     "pages/home/customer-said/index",
     "pages/home/boss-said/index",
     "pages/catagory/product-detail/index",
@@ -39,8 +41,7 @@
     "pages/home/pick-clothes/detail/index",
     "pages/catagory/bargain/index",
     "pages/catagory/can-wear/index",
-    "pages/home/design/design-for-me/index",
-    "pages/home/design/role-list/index"
+    "pages/home/design/design-for-me/index"
   ],
   "permission": {
     "scope.userLocation": {

@@ -224,6 +224,20 @@ page {
 .y-border-lr {
     border-right: 1rpx solid #dadada;
     border-left: 1rpx solid #dadada;
+}
+
+
+.y-border-tb {
+    border-top: 1rpx solid #dadada;
+    border-bottom: 1rpx solid #dadada;
+}
+
+.y-border-b {
+    border-bottom: 1rpx solid #dadada;
+}
+
+.y-border-t {
+    border-top: 1rpx solid #dadada;
 
 }
 

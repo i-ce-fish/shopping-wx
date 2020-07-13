@@ -1,5 +1,11 @@
 {
+  "navigationBarTitleText": "角色管理",
   "usingComponents": {
-    "card": "/components/card/index"
+    "card": "/components/card/index",
+    "van-button": "@vant/weapp/button",
+    "van-radio": "@vant/weapp/radio",
+    "van-radio-group": "@vant/weapp/radio-group",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-popup": "@vant/weapp/popup/index"
   }
 }
