@@ -76,7 +76,7 @@
             <!--快递信息-->
             <y-card>
 
-                <view class="tui-flex tui-align-between y-pt-18 y-pb-18">
+                <view class="y-flex y-align-between y-pt-18 y-pb-18">
                     <view class="y-font-l y-font-blod ">收货信息</view>
                     <!--                    未添加任何收货地址时，不显示编辑-->
                     <view class="y-underline" wx:if="{{!noAddress}}" bindtap="editAddress">编辑</view>
@@ -93,19 +93,19 @@
                         <view>{{item.province}}{{item.city}}{{item.detail}}</view>
                         <view>{{item.customer}}</view>
                         <view>{{item.mobile}}</view>
-                        <view class="tui-flex tui-align-between tui-center  y-font-blod y-padding-t">
-                            <view class="tui-flex-1">
+                        <view class="y-flex y-align-between y-center  y-font-blod y-padding-t">
+                            <view class="y-flex-1">
                                 <van-button bindtap="selectAddress" data-item="{{item}}" hairline>
-                                    <view class="tui-flex tui-align-center tui-vertical-center">
+                                    <view class="y-flex y-align-center y-vertical-center">
                                         <text wx:if="{{item.is_default}}"><van-icon name="success" color="#28788c"
                                                                                     size="32rpx"/>已</text>选择
                                     </view>
                                 </van-button>
                             </view>
-                            <view class="tui-flex-1">
+                            <view class="y-flex-1">
                                 <van-button bindtap="editAnAddress" data-id="{{item.id}}" hairline>编辑</van-button>
                             </view>
-                            <view class="tui-flex-1">
+                            <view class="y-flex-1">
                                 <van-button bindtap="delAddress" data-id="{{item.id}}" hairline>删除</van-button>
                             </view>
                         </view>
@@ -147,7 +147,7 @@
 
             <tui-list-cell hover="{{false}}" wx:for="{{products}}" wx:key="index">
 
-                <view class="tui-col-12">
+                <view class="y-col-12">
 
                     <product-item-order product="{{item}}">
                         <view class="y-font-xl y-pt-18">x{{item.num}}</view>
@@ -181,7 +181,7 @@
 
         <!--    优惠券-->
         <y-card>
-            <view class="tui-flex tui-align-between tui-vertical-center">
+            <view class="y-flex y-align-between y-vertical-center">
                 <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
                     优惠券
                 </view>

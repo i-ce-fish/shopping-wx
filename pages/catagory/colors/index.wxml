@@ -15,9 +15,9 @@
         </swiper>
     </view>
 
-    <view class="colors-box tui-flex tui-align-center y-bgc-white">
+    <view class="colors-box y-flex y-align-center y-bgc-white">
         <view wx:for="{{product.colors}}" wx:key="index"
-              class="y-padding-t y-padding-r tui-flex-col tui-center">
+              class="y-padding-t y-padding-r y-flex-col y-center">
             <van-image src=" {{item.color_thumbnail}}" width="50rpx" fit="widthFix"></van-image>
             {{item.code}}{{item.name}}
         </view>

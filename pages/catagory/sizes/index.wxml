@@ -4,16 +4,16 @@
         <view class="popup-box-title y-padding-tb">
             女装 麻混纺宽腿裤 (附腰带)(老爹裤)427516000
         </view>
-        <view class="popup-box-top tui-flex tui-align-between">
-            <view class="tui-col-4 y-padding-r">
+        <view class="popup-box-top y-flex y-align-between">
+            <view class="y-col-4 y-padding-r">
                 <van-image src="https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg" width="100%"
                            fit="widthFix">
                 </van-image>
             </view>
             <!-- todo  文本过长会允许横向滑动 -->
-            <view class="tui-col-8">
+            <view class="y-col-8">
                 <view class="y-font-xl y-color-red">内购价 ￥{{product.price}}</view>
-                <view class="y-padding-tb tui-flex">
+                <view class="y-padding-tb y-flex">
 
                     <view>
                         已选:

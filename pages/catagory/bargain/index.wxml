@@ -7,7 +7,7 @@
                     <view wx:for="{{collect_order.rules}}" wx:key="index">
                         {{item.title}}
                     </view>
-                    <view class="tui-right" bindtap="goTabBar" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="goTabBar" data-url="/pages/shopping/cart/index">
                         查看购物车
                     </view>
                 </view>
@@ -19,7 +19,7 @@
                         {{item.title}}
                     </view>
 
-                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="go" data-url="/pages/shopping/cart/index">
                         查看活动详情
                     </view>
 
@@ -31,7 +31,7 @@
                     <view wx:for="{{redeem.rules}}" wx:key="index">
                         {{item.title}}
                     </view>
-                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="go" data-url="/pages/shopping/cart/index">
                         查看积分规定
                     </view>
                 </view>
@@ -42,7 +42,7 @@
                     <view wx:for="{{copon.rules}}" wx:key="index">
                         {{item.title}}
                     </view>
-                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="go" data-url="/pages/shopping/cart/index">
                         查看我的优惠券
                     </view>
                 </view>
@@ -57,7 +57,7 @@
                     <view wx:for="{{share.rules}}" wx:key="index">
                         {{item.title}}
                     </view>
-                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="go" data-url="/pages/shopping/cart/index">
                         分享给亲友
                     </view>
                 </view>
@@ -69,7 +69,7 @@
                         {{item.title}}
                     </view>
 
-                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="go" data-url="/pages/shopping/cart/index">
                         转发公众号文章
                     </view>
 
@@ -81,7 +81,7 @@
                     <view wx:for="{{push.rules}}" wx:key="index">
                         {{item.title}}
                     </view>
-                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="go" data-url="/pages/shopping/cart/index">
                         查看推手规则
                     </view>
                 </view>
@@ -92,7 +92,7 @@
                     <view wx:for="{{groub_by.rules}}" wx:key="index">
                         {{item.title}}
                     </view>
-                    <view class="tui-right" bindtap="go" data-url="/pages/shopping/cart/index">
+                    <view class="y-right" bindtap="go" data-url="/pages/shopping/cart/index">
                         查看
                     </view>
                 </view>

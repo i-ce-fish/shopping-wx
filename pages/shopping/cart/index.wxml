@@ -6,7 +6,7 @@
                 <!--                <view class="y-pr-20">-->
                 <!--                    <van-checkbox value="{{ checked }}" bind:change="onChange" shape="square"></van-checkbox>-->
                 <!--                </view>-->
-                <view class="tui-flex tui-align-between tui-col-12">
+                <view class="y-flex y-align-between y-col-12">
                     <view class=" y-font-blod y-font-xxl">
                         购物车({{selectedList.length}})
                     </view>
@@ -20,8 +20,8 @@
 
                 <tui-list-cell hover="{{false}}" wx:for="{{products}}" wx:key="index"
                                padding="30rpx 30rpx 60rpx 30rpx">
-                    <view class="tui-col-12">
-                        <view class="tui-flex tui-align-between y-pb-20">
+                    <view class="y-col-12">
+                        <view class="y-flex y-align-between y-pb-20">
                             <view>
 
                                 <van-checkbox shape="square" name="{{index}}"></van-checkbox>
@@ -32,7 +32,7 @@
 
                         <!--                    component-->
                         <product-item-order product="{{item}}">
-                            <view class="tui-flex tui-align-between tui-vertical-center">
+                            <view class="y-flex y-align-between y-vertical-center">
                                 <view>
                                     <van-stepper value="{{ item.num }}" bind:change="onAddNum" data-index="{{index}}"
                                                  button-size="62rpx"
@@ -43,8 +43,8 @@
                         </product-item-order>
                     </view>
                 </tui-list-cell>
-                <view wx:if="{{products.length==0}}" class="tui-flex tui-center">
-                    <view class="tui-col-12">购物车没有商品</view>
+                <view wx:if="{{products.length==0}}" class="y-flex y-center">
+                    <view class="y-col-12">购物车没有商品</view>
                 </view>
             </van-checkbox-group>
         </tui-list-view>
@@ -57,7 +57,7 @@
                         disabled="{{selectedList.length==0||activeEdit}}"
         >
 
-            <view class="tui-flex tui-align-between tui-vertical-center tui-col-12 y-padding-lr">
+            <view class="y-flex y-align-between y-vertical-center y-col-12 y-padding-lr">
                 <view>
                     <van-radio-group value="{{ selectedList.length === products.length&& products.length>0?'1':'0' }}">
 

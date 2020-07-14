@@ -1,10 +1,10 @@
 <view class="y-mt-20">
     <van-sticky>
 
-        <view class="top-box tui-flex  tui-align-around tui-vertical-center y-bgc-white y-shadow-b ">
+        <view class="top-box y-flex  y-align-around y-vertical-center y-bgc-white y-shadow-b ">
             <view wx:for="{{list}}" wx:key="index"
             >
-                <view class="tui-flex-col tui-align-center tui-center {{activeIndex ==index?'active':''}}"
+                <view class="y-flex-col y-align-center y-center {{activeIndex ==index?'active':''}}"
                       bindtap="go" data-url="{{item.url}}">
                     <view>
                         <van-icon name="{{item.icon}}" size="40rpx"/>

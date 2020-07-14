@@ -1,5 +1,5 @@
 <!--pages/my/qrcode/main.wxml-->
-<view class="container    tui-center">
+<view class="container    y-center">
 	<view class="">
 		永康美特斯邦威店
 	</view>

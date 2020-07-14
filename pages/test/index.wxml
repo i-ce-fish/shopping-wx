@@ -8,29 +8,29 @@
     <view>
     </view>
     <view class="content-box">
-        <!--        <view class="userinfo-box   tui-flex ">-->
+        <!--        <view class="userinfo-box   y-flex ">-->
         <card>
-            <view class="tui-flex tui-align-between">
-                <view class="avatar tui-col-2 tui-flex tui-vertical-center y-padding-r">
+            <view class="y-flex y-align-between">
+                <view class="avatar y-col-2 y-flex y-vertical-center y-padding-r">
                     <van-image round width="120rpx" height="120rpx" fit="fill" src="{{imgs[0]}}" bindtap="test"/>
                 </view>
-                <view class="tui-col-10 tui-flex tui-align-between">
-                    <view class="info-box   tui-col-10">
+                <view class="y-col-10 y-flex y-align-between">
+                    <view class="info-box   y-col-10">
                         <view class="line1">{{user.name}}</view>
-                        <view class="line2 tui-flex tui-align-between">
+                        <view class="line2 y-flex y-align-between">
                             <view class="">{{user.vip_level}}级会员</view>
                             <view class="">积分 {{user.credits}}</view>
                         </view>
-                        <view class="line3 tui-flex tui-align-between  ">
+                        <view class="line3 y-flex y-align-between  ">
                             <view class="">账户余额 ￥1788</view>
                             <view class="">优惠券 3张</view>
                         </view>
                     </view>
-                    <view class="right-box tui-col-2 tui-flex-col tui-align-between">
+                    <view class="right-box y-col-2 y-flex-col y-align-between">
                         <view class="">
                             <van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/index" size="32px"/>
                         </view>
-                        <view class="detail tui-flex tui-center tui-vertical-center" bindtap="go"
+                        <view class="detail y-flex y-center y-vertical-center" bindtap="go"
                               data-url="/pages/my/qrcode/index">
                             <view>详情</view>
                             <van-icon class="" name="arrow" size="15px"/>
@@ -50,8 +50,8 @@
         <view class="y-mt-20">
             <tui-sticky scrollTop="{{scrollTop}}">
                 <view slot="header">
-                    <view class="top-box tui-flex  tui-align-around y-bgc-white y-shadow-b ">
-                        <view class="tui-flex-col tui-align-center tui-center" wx:for="{{topList}}" wx:key="index"
+                    <view class="top-box y-flex  y-align-around y-bgc-white y-shadow-b ">
+                        <view class="y-flex-col y-align-center y-center" wx:for="{{topList}}" wx:key="index"
                               bindtap="tapTop" data-index="{{index}}">
                             <view>
                                 <van-icon name="{{item.icon}}" size="40rpx"/>
@@ -78,12 +78,12 @@
                     </view>
                 </van-cell>
                 <tui-list-cell wx:for="{{activity}}" wx:key="index">
-                    <view class="tui-col-12">
+                    <view class="y-col-12">
                         <view>{{item.subtitle}}</view>
-                        <view class="tui-flex tui-align-center y-font-blod y-font-xxl y-line-height-200 y-color-red">
+                        <view class="y-flex y-align-center y-font-blod y-font-xxl y-line-height-200 y-color-red">
                             <view>{{item.title}}</view>
                         </view>
-                        <view class="tui-flex tui-align-right  tui-vertical-center y-line-height-100" bidntap="go"
+                        <view class="y-flex y-align-right  y-vertical-center y-line-height-100" bidntap="go"
                               data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
                             <view>
                                 详情
@@ -110,11 +110,11 @@
                 <view>
 
                     <tui-sticky scrollTop="{{scrollTop}}" >
-                        <view  slot="header" class="tui-flex y-bgc-white">
-                            <view class="tui-col-10">
+                        <view  slot="header" class="y-flex y-bgc-white">
+                            <view class="y-col-10">
                                 <catalog-filter list="{{wearFilter}}" bindclick="tapWearFilter"></catalog-filter>
                             </view>
-                            <view class="tui-col-2 tui-flex tui-vertical-center tui-center y-underline y-color-gray "
+                            <view class="y-col-2 y-flex y-vertical-center y-center y-underline y-color-gray "
                                   bindtap="tapMoreWear">更多筛选
                             </view>
                         </view>
@@ -146,8 +146,8 @@
                 <!--                todo  popup 被tabbar 挡住  https://developers.weixin.qq.com/community/develop/doc/000ee4ccd6cfa8a67da76bad251000-->
                 <view>
                     <product-filter tabs="{{newProductsTabs}}" filterData="{{newProductsFilter}}" use-slot>
-                        <view class="tui-flex tui-align-right ">
-                            <view class="tui-col-4 y-border-all   y-padding-all tui-flex tui-vertical-center">
+                        <view class="y-flex y-align-right ">
+                            <view class="y-col-4 y-border-all   y-padding-all y-flex y-vertical-center">
                                 <view class="y-pr-20">
                                     点击筛选商品
                                 </view>
@@ -225,9 +225,9 @@
         <!--                </tui-list-cell>-->
         <!--                <view class="item-box  y-padding-lr y-bgc-white ">-->
         <!--                    <view class="">1、请告诉店铺&#45;&#45;是谁穿：</view>-->
-        <!--                    <view class="tui-flex tui-align-right">男女，年龄，身高，身材，肤色，职业</view>-->
+        <!--                    <view class="y-flex y-align-right">男女，年龄，身高，身材，肤色，职业</view>-->
         <!--                    <view class="">2、请告诉店铺&#45;&#45;要什么：</view>-->
-        <!--                    <view class="tui-flex tui-align-right">上衣，裤子，鞋子；春秋装、夏装、冬装</view>-->
+        <!--                    <view class="y-flex y-align-right">上衣，裤子，鞋子；春秋装、夏装、冬装</view>-->
         <!--                </view>-->
         <!--            </tui-list-view>-->
         <!--        </view>-->

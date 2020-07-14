@@ -1,15 +1,15 @@
 <view class="container">
     <shop-title></shop-title>
     <view class=" y-bgc-white y-shadow-b">
-        <view class="tui-col-12">
+        <view class="y-col-12">
             <catalog-filter list="{{catalogs}}" bindclick="tapWearFilter"></catalog-filter>
         </view>
 
-        <view class="tui-align-right tui-col-12 tui-flex tui-vertical-center tui-center y-underline y-color-gray "
+        <view class="y-align-right y-col-12 y-flex y-vertical-center y-center y-underline y-color-gray "
               bindtap="tapMoreWear">
             <product-filter useSlot tabs="{{tabs}}" filterData="{{filterData}}" >
 
-                <view class="y-pb-20 y-padding-lr tui-flex tui-vertical-center">
+                <view class="y-pb-20 y-padding-lr y-flex y-vertical-center">
                     <view class="y-underline">
                         更多精准筛选
                     </view>

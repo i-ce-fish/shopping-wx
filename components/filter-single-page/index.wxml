@@ -8,7 +8,7 @@
     <view>
         <van-sticky>
             <!--width100%挡住关闭按钮-->
-            <view class="y-padding-all y-bgc-white tui-flex tui-align-between">
+            <view class="y-padding-all y-bgc-white y-flex y-align-between">
                 <view>
                     <text class="y-font-blod y-font-xxl y-line-height-200 y-padding-r">查询条件</text>
                     <text>查询结果：1234件</text>
@@ -28,7 +28,7 @@
 <!--                                bind:change="tapCheckbox"-->
 <!--                                wx:for="{{filterData}}" wx:key="index">-->
 <!--                <view class=" y-padding-lr">-->
-<!--                    <view class="tui-flex tui-align-between tui-vertical-center  y-padding-t">-->
+<!--                    <view class="y-flex y-align-between y-vertical-center  y-padding-t">-->
 <!--                        <view class="y-font-blod y-font-xl y-line-height-200">{{item.name}}-->
 <!--                        </view>-->
 <!--                        &lt;!&ndash;                        折叠的时候只显示前三个&ndash;&gt;-->
@@ -40,8 +40,8 @@
 <!--                                    name="{{item.collapse?'arrow-down':'arrow-up'}}"/>-->
 <!--                        </view>-->
 <!--                    </view>-->
-<!--                    <view class="tui-flex  tui-flex-wrap tui-vertical-center">-->
-<!--                        <van-checkbox name="{{index}}" class="tui-col-4 y-pt-20 "-->
+<!--                    <view class="y-flex  y-flex-wrap y-vertical-center">-->
+<!--                        <van-checkbox name="{{index}}" class="y-col-4 y-pt-20 "-->
 <!--                                      checked-color="#378694" shape="square"-->
 <!--                                      wx:for="{{item.collapse?3:item.item}}"-->
 <!--                                      wx:for-item="innerItem"-->
@@ -54,11 +54,11 @@
 <!--            </van-checkbox-group>-->
 
         </view>
-        <view class="tui-flex tui-col-12 y-bgc-white button-box">
-            <view class="tui-col-6">
+        <view class="y-flex y-col-12 y-bgc-white button-box">
+            <view class="y-col-6">
                 <van-button size="large" bindtap="resetFilter">重置</van-button>
             </view>
-            <view class="tui-col-6">
+            <view class="y-col-6">
                 <van-button size="large" color="#1b1b1b" bindtap="tapConfirm">完成</van-button>
             </view>
         </view>

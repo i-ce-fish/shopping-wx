@@ -5,7 +5,7 @@
                     bind:change="tapCheckbox"
                     wx:for="{{list}}" wx:key="index">
     <view class=" y-padding-lr">
-        <view class="tui-flex tui-align-between tui-vertical-center  y-padding-t">
+        <view class="y-flex y-align-between y-vertical-center  y-padding-t">
             <view class=" y-font-xl y-line-height-200">{{item.title}}
             </view>
             <!--                        折叠的时候只显示前三个-->
@@ -17,8 +17,8 @@
                         name="{{item.collapse?'arrow-down':'arrow-up'}}"/>
             </view>
         </view>
-        <view class="tui-flex  tui-flex-wrap tui-vertical-center">
-            <van-checkbox name="{{index}}" class="tui-col-{{12/num}} y-pt-20 "
+        <view class="y-flex  y-flex-wrap y-vertical-center">
+            <van-checkbox name="{{index}}" class="y-col-{{12/num}} y-pt-20 "
                           checked-color="#378694" shape="square"
                           wx:for="{{item.collapse?num:item.item}}"
                           wx:for-item="innerItem"

@@ -1,5 +1,5 @@
 <!--非列表布局时，增加纵向flex、space-between布局，一遍文本溢出换行时是向下挤，而不是向上-->
-<view class=" {{listView?'tui-flex':'tui-flex-col tui-align-between'}}"
+<view class=" {{listView?'y-flex':'y-flex-col y-align-between'}}"
       bindtap="go" data-url="/pages/catagory/product-detail/index"
       data-id="{{product.id}}">
     <view class=" y-padding-b">
@@ -7,7 +7,7 @@
 
     </view>
 
-    <view class="y-box  y-padding-lr y-padding-b  y-line-height-180 {{listView?'tui-flex-col':''}}">
+    <view class="y-box  y-padding-lr y-padding-b  y-line-height-180 {{listView?'y-flex-col':''}}">
         <view>
             <van-image style="padding-right: 10rpx"
                        wx:for="{{product.colors}}" wx:key="index"
@@ -15,7 +15,7 @@
                        width="40rpx" height="40rpx" fit="fill"
                        lazy-load/>
         </view>
-        <view class="tui-flex tui-align-between y-font-s">
+        <view class="y-flex y-align-between y-font-s">
             <view>
                 {{product.category}}
             </view>

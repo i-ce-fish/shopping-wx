@@ -6,7 +6,7 @@
         <view class="y-pt-20">
             <view class="y-color-gray ">性别</view>
             <van-radio-group value="{{form.sex}}" bind:change="tapSex">
-                <view class="tui-flex tui-align-around">
+                <view class="y-flex y-align-around">
                     <van-radio name="man">男</van-radio>
                     <van-radio name="woman">女</van-radio>
                 </view>
@@ -17,10 +17,10 @@
             <view class="y-padding-lr  y-pt-20 y-pb-20">
                 <van-slider min="50" max="200" value="{{ form.height }}" bind:drag="dragHeight">
                 </van-slider>
-                <!--                <view class="y-pt-20 tui-center y-font-xxl y-font-blod y-line-height-200">-->
+                <!--                <view class="y-pt-20 y-center y-font-xxl y-font-blod y-line-height-200">-->
                 <!--                    {{ form.height }}cm-->
                 <!--                </view>-->
-                <view class="y-pt-20 tui-center y-font-blod y-line-height-200" style="font-size: 36rpx">
+                <view class="y-pt-20 y-center y-font-blod y-line-height-200" style="font-size: 36rpx">
                     {{ form.height }}cm
                 </view>
             </view>
@@ -30,19 +30,19 @@
             <view class="y-padding-lr  y-pt-20 y-pb-20">
                 <van-slider min="30" max="120" value="{{ form.weight }}" bind:drag="dragWeight">
                 </van-slider>
-                <view class="y-pt-20 tui-center y-font-blod y-line-height-200" style="font-size: 36rpx">
+                <view class="y-pt-20 y-center y-font-blod y-line-height-200" style="font-size: 36rpx">
                     {{ form.weight }}kg
                 </view>
             </view>
         </view>
-        <view class="tui-flex tui-align-between">
+        <view class="y-flex y-align-between">
             <view>
                 <van-image src="../../../../static/img/{{form.sex==='man'?'male':'female'}}-figure.png"
                            width="375rpx" height="100%"
                            fit="contain">
                 </van-image>
             </view>
-            <view class="tui-col-4">
+            <view class="y-col-4">
                 <view class="y-padding-t">
                     <y-input label="肩宽(cm)" value="{{form.shoulderWidth}}"
                              data-prop="form.shoulderWidth" bindblur="set"></y-input>
@@ -58,7 +58,7 @@
                 </view>
             </view>
         </view>
-        <view class="tui-flex tui-align-around y-padding-all">
+        <view class="y-flex y-align-around y-padding-all">
             <van-button class="y-pr-20">取消</van-button>
             <van-button type="primary">提交</van-button>
         </view>

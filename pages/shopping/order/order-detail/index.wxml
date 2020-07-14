@@ -12,7 +12,7 @@
     </view>
   </view>
   <tui-list-cell arrow="{{true}}" bgcolor="#fefefe">
-    <view class="tui-flex-box">
+    <view class="y-flex-box">
       <!-- <van-image src="{{testImg}}" class="tui-icon-img"></van-image> -->
       <van-icon name="logistics" size="50rpx"></van-icon>
       <view class="tui-logistics">
@@ -22,7 +22,7 @@
     </view>
   </tui-list-cell>
   <tui-list-cell last="{true}" hover="{{false}}">
-    <view class="tui-flex-box">
+    <view class="y-flex-box">
       <!-- <van-image :src="webURL+'img_order_address3x.png'" class="tui-icon-img"></van-image> -->
       <van-icon name="location-o" size="50rpx"></van-icon>
       <view class="tui-addr">
@@ -67,7 +67,7 @@
         <view>￥0.00</view>
       </view>
       <view class="tui-price-flex tui-size32 tui-pbtm20">
-        <view class="tui-flex-shrink">合计</view>
+        <view class="y-flex-shrink">合计</view>
         <view class="tui-goods-price">
           <view class="tui-size-24">￥</view>
           <view class="tui-price-large">1192</view>
@@ -75,7 +75,7 @@
         </view>
       </view>
       <view class="tui-price-flex tui-size32">
-        <view class="tui-flex-shrink">实付款</view>
+        <view class="y-flex-shrink">实付款</view>
         <view class="tui-goods-price tui-primary-color">
           <view class="tui-size-24">￥</view>
           <view class="tui-price-large">1192</view>

@@ -10,11 +10,11 @@
         <view class="y-mt-20">
             <van-sticky>
 
-                <view class=" tui-flex  tui-align-around tui-vertical-center y-bgc-white y-shadow-b "
+                <view class=" y-flex  y-align-around y-vertical-center y-bgc-white y-shadow-b "
                       style="height: 120rpx">
                     <view wx:for="{{topSticky}}" wx:key="index"
                     >
-                        <view class="tui-flex-col tui-align-center tui-center "
+                        <view class="y-flex-col y-align-center y-center "
                               bindtap="tapTopSticky" data-index="{{index}}">
                             <view>
                                 <van-icon name="{{item.icon}}" size="40rpx"/>
@@ -48,12 +48,12 @@
 
         </view>
         <view class="y-padding-all y-bgc-white ">
-            <view class="tui-right y-font-s y-color-gray">
+            <view class="y-right y-font-s y-color-gray">
                 初上市价格(吊牌价)：￥{{product.original_price}}
             </view>
             <van-divider custom-style="padding:0"/>
 
-            <view class="tui-flex tui-align-around y-font-l y-color-red y-line-height-200">
+            <view class="y-flex y-align-around y-font-l y-color-red y-line-height-200">
                 <view>
                     内购价:￥{{product.onsale_price}}
                 </view>
@@ -119,8 +119,8 @@
                         <view class="y-font-blod y-pt-20">
                             上市尺码
                         </view>
-                        <view class="tui-flex tui-flex-wrap">
-                            <view class="tui-col-4 "
+                        <view class="y-flex y-flex-wrap">
+                            <view class="y-col-4 "
                                   wx:for="{{['155/64A/XS','160/64A/XS','165/64A/XS','170/64A/XS','175/64A/XS','180/64A/XS']}}"
                                   wx:key="index">
                                 <!--                            {{product.sizes}}-->
@@ -134,9 +134,9 @@
                         <view class="y-font-blod y-pt-20">
                             版型
                         </view>
-                        <view class="tui-flex tui-flex-wrap ">
+                        <view class="y-flex y-flex-wrap ">
                             <!--                            {{product.templateType}}-->
-                            <view class="tui-col-4" wx:for="{{['超级紧身','紧身','修身','合体','宽松']}}" wx:key="index">
+                            <view class="y-col-4" wx:for="{{['超级紧身','紧身','修身','合体','宽松']}}" wx:key="index">
                                 {{item}}
                             </view>
                         </view>
@@ -146,8 +146,8 @@
                         <view class="y-font-blod y-pt-20">
                             风格/元素
                         </view>
-                        <view class="tui-flex-wrap tui-flex ">
-                            <view class="tui-col-4"
+                        <view class="y-flex-wrap y-flex ">
+                            <view class="y-col-4"
                                   wx:key="index" wx:for="{{['少淑', '简约', '北欧', '碎花', '拼接']}}">
                                 <!--                            {{product.styles}}-->
                                 {{item}}
@@ -158,7 +158,7 @@
 
                     <view>
                         <view class="y-font-blod y-pt-20">细节特征</view>
-                        <view class="tui-flex-wrap tui-flex">
+                        <view class="y-flex-wrap y-flex">
                             <view wx:for="{{['高腰', '彼得潘领', '泡泡袖', 'H型裙', '拼接']}}" wx:key="index">
 
                                 <!--                                {{product.details}}-->
@@ -253,13 +253,13 @@
             </van-collapse-item>
 
             <!--            <van-collapse-item title=" 搭配推荐" name="3" content-class="y-padding-none">-->
-            <!--                <view class="tui-center y-font-xxl  y-padding-all">搭配推荐</view>-->
+            <!--                <view class="y-center y-font-xxl  y-padding-all">搭配推荐</view>-->
             <!--                <van-image src="https://www.uniqlo.cn/hmall/test/u0000000015484/model/rank1/first/591-822/1.jpg"-->
             <!--                           width="100%" fit="widthFix"></van-image>-->
             <!--            </van-collapse-item>-->
 
             <!--            <van-collapse-item title="商品细节" name="4" content-class="y-padding-none">-->
-            <!--                <view class="tui-center y-font-xxl  y-padding-all">商品细节</view>-->
+            <!--                <view class="y-center y-font-xxl  y-padding-all">商品细节</view>-->
             <!--                <van-image wx:for="{{product.details}}" wx:key="index" src="{{item.url}}" width="100%"-->
             <!--                           fit="widthFix"></van-image>-->
             <!--            </van-collapse-item>-->
@@ -302,16 +302,16 @@
             <view class="popup-box-title y-padding-tb">
                 {{product.category}} {{product.product_name}}{{product.code}}
             </view>
-            <view class="popup-box-top tui-flex tui-align-between">
-                <view class="tui-col-4 y-padding-r">
+            <view class="popup-box-top y-flex y-align-between">
+                <view class="y-col-4 y-padding-r">
                     <van-image src="https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg" width="100%"
                                fit="widthFix">
                     </van-image>
                 </view>
                 <!-- todo  文本过长会允许横向滑动 -->
-                <view class="tui-col-8">
+                <view class="y-col-8">
                     <view class="y-font-xl y-color-red">内购价 ￥{{product.onsale_price}}</view>
-                    <view class="y-padding-tb tui-flex">
+                    <view class="y-padding-tb y-flex">
 
                         <view>
                             已选:
@@ -335,11 +335,11 @@
                 <view class="y-font-blod ">
                     颜色: {{checkedProduct.color}}
                 </view>
-                <view class="tui-flex">
+                <view class="y-flex">
                     <view wx:for="{{colors}}" wx:key="index"
-                          class="y-pt-20 y-pl-20 tui-flex-col  ">
+                          class="y-pt-20 y-pl-20 y-flex-col  ">
                         <view class="color-box {{item.checked&&!item.disabled?'color-checked':''}}">
-                            <view class="y-h-w-100 tui-flex tui-align-center tui-vertical-center  tui-center">
+                            <view class="y-h-w-100 y-flex y-align-center y-vertical-center  y-center">
                                 <image style="height: 55rpx;width: 55rpx;{{item.disabled?'opacity:0.2;':''}};"
                                        mode="scaleToFill"
                                        src=" {{item.color_thumbnail}}"
@@ -351,7 +351,7 @@
                         </view>
                     </view>
                 </view>
-                <view class=" tui-flex tui-align-right tui-vertical-center"
+                <view class=" y-flex y-align-right y-vertical-center"
                       bindtap="go"
                       data-url="/pages/catagory/colors/index">
                     选色攻略
@@ -363,8 +363,8 @@
                 <view class="y-font-blod">
                     尺码:{{checkedProduct.size}}
                 </view>
-                <view class="  tui-flex tui-flex-wrap">
-                    <view class="tui-flex tui-flex-wrap     ">
+                <view class="  y-flex y-flex-wrap">
+                    <view class="y-flex y-flex-wrap     ">
                         <view class="sizes-button-box {{item.checked&&!item.disabled?'size-checked':''}}"
                               wx:for="{{sizes}}"
                               wx:key="index">
@@ -394,7 +394,7 @@
 
                     </view>
                 </view>
-                <view class=" tui-flex tui-align-right tui-vertical-center"
+                <view class=" y-flex y-align-right y-vertical-center"
                       bindtap="go"
                       data-url="/pages/catagory/sizes/index">
                     选码须知
@@ -405,15 +405,15 @@
             <van-divider/>
 
 
-            <view class="popup-box-num tui-flex tui-align-between">
+            <view class="popup-box-num y-flex y-align-between">
                 <view class="y-font-blod">购买数量</view>
-                <view class="tui-flex tui-vertical-center">
+                <view class="y-flex y-vertical-center">
                     <van-stepper button-size="48rpx" input-width="75rpx"
                                  value="{{ 1 }}" min="1" bind:change="onSetNum"/>
                 </view>
             </view>
 
-            <!--            <view class="tui-flex tui-align-between y-padding-t">-->
+            <!--            <view class="y-flex y-align-between y-padding-t">-->
             <view class="y-padding-t">
                 <van-button size="large" type="danger" bind:click="onConfirmCart">确定</van-button>
 

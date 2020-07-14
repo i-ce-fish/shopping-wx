@@ -7,7 +7,7 @@
 
                 <van-collapse-item name="{{index}}">
 
-                    <view slot="title" class="tui-flex tui-align-between ">
+                    <view slot="title" class="y-flex y-align-between ">
                         <view class="  y-font-blod">
                             订单{{index+1}}-{{item.delivery.type}}
                         </view>
@@ -50,7 +50,7 @@
                             <!--            提货信息-->
                             <tui-list-view nullTitle="{{true}}" unlined="all">
                                 <tui-list-cell hover="{{false}}" padding="0 30rpx 36rpx">
-                                    <view class="tui-col-12">
+                                    <view class="y-col-12">
                                         <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
                                             提货信息
                                         </view>
@@ -96,7 +96,7 @@
 
                             <tui-list-cell hover="{{false}}" wx:for="{{item.products}}" wx:key="index">
 
-                                <view class="tui-col-12">
+                                <view class="y-col-12">
 
                                     <product-item-order product="{{item}}">
                                         <view class="y-font-xl">x{{item.num}}</view>
@@ -139,8 +139,8 @@
 
                             <tui-list-cell hover="{{false}}">
 
-                                <view class="tui-col-12 ">
-                                    <view class="tui-flex tui-align-between tui-vertical-center">
+                                <view class="y-col-12 ">
+                                    <view class="y-flex y-align-between y-vertical-center">
 
                                         <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
                                             优惠券
@@ -164,7 +164,7 @@
 
                             <tui-list-cell hover="{{false}}">
 
-                                <view class="tui-flex tui-align-between tui-col-12">
+                                <view class="y-flex y-align-between y-col-12">
 
                                     <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
                                         订单金额

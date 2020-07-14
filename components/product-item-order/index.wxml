@@ -1,10 +1,10 @@
-<view class="product-item-box tui-flex">
+<view class="product-item-box y-flex">
     <view class="img-box y-padding-r">
         <van-image width="240rpx" height="240rpx" src="{{product.img}}" fit="fill">
         </van-image>
     </view>
 
-    <view class="info-box tui-col-12">
+    <view class="info-box y-col-12">
         <view class="title  y-font-blod">
             {{product.name}} {{product.code}}
         </view>

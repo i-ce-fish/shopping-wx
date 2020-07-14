@@ -1,4 +1,4 @@
-<!--<view class="pro-box {{listView?'tui-flex':''}}"-->
+<!--<view class="pro-box {{listView?'y-flex':''}}"-->
 <!--      bindtap="go" data-url="/pages/catagory/wear-detail/index"-->
 <!--      data-id="{{wear.id}}">-->
 <!--    <view class=" y-padding-b">-->
@@ -14,7 +14,7 @@
 <!--        <view class=" y-font-xl">-->
 <!--            {{wear.subtitle}}-->
 <!--        </view>-->
-<!--        <view class="tui-flex tui-align-right y-underline">-->
+<!--        <view class="y-flex y-align-right y-underline">-->
 <!--            立即选购-->
 <!--        </view>-->
 <!--    </view>-->

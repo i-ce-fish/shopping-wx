@@ -11,7 +11,6 @@
     "pages/wear/detail/index",
     "pages/shopping/search/index",
     "pages/home/new-product/index",
-    "pages/user/login/index/index",
     "pages/catagory/type-a/index",
     "pages/catagory/type-b/index",
     "pages/catagory/sizes/index",
@@ -23,6 +22,7 @@
     "pages/shopping/order/order-detail/index",
     "pages/shopping/order/paid-order/index",
     "pages/shopping/order/submit-order/index",
+    "pages/user/login/index/index",
     "pages/user/login/phone/index",
     "pages/home/detail/index",
     "pages/my/user/index",
@@ -36,8 +36,9 @@
     "pages/my/wear-data/add/index",
     "pages/rule/integral/index",
     "pages/info/info-list/index",
+
     "pages/test/index",
-    "pages/test/style/index",
+
     "pages/home/pick-clothes/detail/index",
     "pages/catagory/bargain/index",
     "pages/catagory/can-wear/index",

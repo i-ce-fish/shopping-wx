@@ -1,15 +1,15 @@
 <!--高仿优衣库的商品列表展示   type-b 长条形-->
 
-<view class="tui-flex y-padding-t y-padding-lr"
+<view class="y-flex y-padding-t y-padding-lr"
       bindtap="go" data-url="/pages/catagory/product-detail/index"
       data-id="{{product.id}}">
     <view class="">
         <van-image src="{{product.img}}" width="375rpx" height="460rpx" fit="fill" class=""/>
     </view>
 
-    <view class="tui-flex-col tui-align-between">
-        <view class="tui-flex-1  tui-flex-col tui-align-between y-box  y-padding-lr   y-line-height-200 ">
-            <!--        <view class="tui-flex tui-align-between y-font-s">-->
+    <view class="y-flex-col y-align-between">
+        <view class="y-flex-1  y-flex-col y-align-between y-box  y-padding-lr   y-line-height-200 ">
+            <!--        <view class="y-flex y-align-between y-font-s">-->
             <!--            <view>-->
             <!--                {{product.category}}-->
             <!--            </view>-->
@@ -32,7 +32,7 @@
             </view>
 
         </view>
-        <view class="tui-right">
+        <view class="y-right">
             详情
         </view>
 

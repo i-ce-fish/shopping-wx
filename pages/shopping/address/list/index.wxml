@@ -5,7 +5,7 @@
           <view class="tui-address-flex">
             <view class="tui-address-left">
               <view class="tui-address-main">
-                <view class="tui-address-name tui-ellipsis">{{["echo.","王大大","大长腿"][index]}}</view>
+                <view class="tui-address-name y-ellipsis">{{["echo.","王大大","大长腿"][index]}}</view>
                 <view class="tui-address-tel">138****7708</view>
               </view>
               <view class="tui-address-detail">

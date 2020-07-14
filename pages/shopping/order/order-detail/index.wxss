@@ -52,7 +52,7 @@
   display: block;
 }
 
-.tui-flex-box {
+.y-flex-box {
   width: 100%;
   display: flex;
   align-items: center;
@@ -231,7 +231,7 @@
   padding-bottom: 20rpx;
 }
 
-.tui-flex-shrink {
+.y-flex-shrink {
   flex-shrink: 0;
 }
 

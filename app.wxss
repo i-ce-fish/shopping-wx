@@ -292,66 +292,66 @@ page {
 }
 
 /*thor ui 部分样式*/
-.tui-flex-wrap {
+.y-flex-wrap {
     flex-wrap: wrap;
 }
 
 
 /* flex start*/
 
-.tui-flex {
+.y-flex {
     /*display: -webkit-flex;*/
     display: flex;
 }
 
-.tui-flex-col {
+.y-flex-col {
     display: flex;
     flex-direction: column;
 }
 
-.tui-flex-1 {
+.y-flex-1 {
     flex: 1;
 }
 
-.tui-align-center {
+.y-align-center {
     justify-content: center;
 }
 
-.tui-align-left {
+.y-align-left {
     justify-content: flex-start !important;
 }
 
-.tui-align-right {
+.y-align-right {
     justify-content: flex-end !important;
 }
 
-.tui-align-between {
+.y-align-between {
     justify-content: space-between !important;
 }
 
-.tui-align-around {
+.y-align-around {
     justify-content: space-around !important;
 }
 
-.tui-vertical-center {
+.y-vertical-center {
     align-items: center;
 }
 
-.tui-vertical-top {
+.y-vertical-top {
     align-items: flex-start;
 }
 
-.tui-vertical-bottom {
+.y-vertical-bottom {
     align-items: flex-end;
 }
 
-.tui-line-feed {
+.y-line-feed {
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 /* flex end*/
-.tui-mask {
+.y-mask {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -361,13 +361,13 @@ page {
     z-index: 999;
 }
 
-.tui-ellipsis {
+.y-ellipsis {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.tui-ellipsis-2 {
+.y-ellipsis-2 {
     display: -webkit-box;
     overflow: hidden;
     white-space: normal !important;
@@ -377,92 +377,77 @@ page {
     -webkit-box-orient: vertical;
 }
 
-.tui-center {
+.y-center {
     text-align: center;
 }
 
-.tui-right {
+.y-right {
     text-align: right;
 }
 
-.tui-opcity {
+.y-opcity {
     opacity: 0.5;
 }
 
-.tui-scale-small {
+.y-scale-small {
     transform: scale(0.9);
     transform-origin: center center;
 }
 
-.tui-height-full {
+.y-height-full {
     height: 100%;
 }
 
-.tui-width-full {
+.y-width-full {
     width: 100%;
 }
 
-.tui-ptop-zero {
-    padding-top: 0;
-}
 
-.tui-pbottom-zero {
-    padding-bottom: 0;
-}
-
-.tui-pleft-zero {
-    padding-left: 0;
-}
-
-.tui-pright-zero {
-    padding-right: 0;
-}
-
-.tui-col-12 {
+.y-col-12 {
     width: 100%;
 }
 
-.tui-col-11 {
+.y-col-11 {
     width: 91.66666667%;
 }
 
-.tui-col-10 {
+.y-col-10 {
     width: 83.33333333%;
 }
 
-.tui-col-9 {
+.y-col-9 {
     width: 75%;
 }
 
-.tui-col-8 {
+.y-col-8 {
     width: 66.66666667%;
 }
 
-.tui-col-7 {
+.y-col-7 {
     width: 58.33333333%;
 }
 
-.tui-col-6 {
+.y-col-6 {
     width: 50%;
 }
 
-.tui-col-5 {
+.y-col-5 {
     width: 41.66666667%;
 }
 
-.tui-col-4 {
+.y-col-4 {
     width: 33.33333333%;
 }
 
-.tui-col-3 {
+.y-col-3 {
     width: 25%;
 }
 
-.tui-col-2 {
+.y-col-2 {
     width: 16.66666667%;
 }
 
-.tui-col-1 {
+.y-col-1 {
     width: 8.33333333%;
 }
 

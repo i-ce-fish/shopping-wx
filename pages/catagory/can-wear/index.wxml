@@ -13,7 +13,7 @@
                                     <textarea class="textarea" name="desc" placeholder="请输入你要咨询的内容" auto-focus/>
                                 </view>
                                 <van-divider custom-style="padding:0"/>
-                                <view class="tui-center">
+                                <view class="y-center">
                                     <van-button type="danger" size="normal" plain round custom-style="width:70%;">发布
                                     </van-button>
                                 </view>
@@ -25,7 +25,7 @@
                             <view slot="body" class="y-padding-all">
                                 很有弹性
                             </view>
-                            <view slot="footer" class="tui-flex tui-align-between y-padding-all">
+                            <view slot="footer" class="y-flex y-align-between y-padding-all">
                                 <view>查看全部回答</view>
                                 <view>2020-04-24 00:00</view>
                             </view>

@@ -8,20 +8,20 @@
                 {{item.name}}({{item.height}}cm/{{item.weight}}kg)
             </van-radio>
             <view class="y-pt-20">
-                <view class="tui-flex tui-align-around  y-border-all y-bgc">
+                <view class="y-flex y-align-around  y-border-all y-bgc">
                     <view>肩宽</view>
                     <view>胸围</view>
                     <view>腰围</view>
                     <view>臀围</view>
                 </view>
-                <view class="tui-flex tui-align-around  y-border-lr y-border-b">
+                <view class="y-flex y-align-around  y-border-lr y-border-b">
                     <view>{{item.shoulderWidth}}cm</view>
                     <view>{{item.bust}}cm</view>
                     <view>{{item.waist}}cm</view>
                     <view>{{item.hips}}</view>
                 </view>
             </view>
-            <view class="y-pt-20 tui-right">
+            <view class="y-pt-20 y-right">
                 <van-button class="y-pr-20" bindtap="go" data-url="/pages/home/design/role-form/index?id=1">编辑
                 </van-button>
                 <van-button type="danger" bindtap="tapDel">删除</van-button>
@@ -42,10 +42,10 @@
                position="bottom"
     >
         <view>
-            <view class="tui-center y-font-blod y-font-xl">
+            <view class="y-center y-font-blod y-font-xl">
                 确定删除?
             </view>
-            <view class="tui-flex tui-align-around">
+            <view class="y-flex y-align-around">
                 <van-button>取消</van-button>
                 <van-button type="danger">确定</van-button>
             </view>

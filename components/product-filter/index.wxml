@@ -1,4 +1,4 @@
-<view wx:if="{{!useSlot}}" class="y-border-lr y-padding-all  tui-center tui-flex-col " bindtap="tapFilter">
+<view wx:if="{{!useSlot}}" class="y-border-lr y-padding-all  y-center y-flex-col " bindtap="tapFilter">
     <view class="">
         <van-icon name="apps-o" size="40rpx"></van-icon>
     </view>
@@ -19,7 +19,7 @@
     <view>
         <van-sticky>
             <!--width100%挡住关闭按钮-->
-            <view class="y-padding-all y-bgc-white tui-flex tui-align-between">
+            <view class="y-padding-all y-bgc-white y-flex y-align-between">
                 <view>
                     <text class="y-font-blod y-font-xxl y-line-height-200 y-padding-r">查询条件</text>
                     <text>查询结果：1234件</text>
@@ -28,8 +28,8 @@
                     <van-icon name="cross" bindtap="closeFilter" size="50rpx"/>
                 </view>
             </view>
-            <view class="filter-tab-box tui-flex tui-vertical-center tui-align-around y-bgc-white">
-                <view class="tui-flex-col tui-flex-1  tui-center {{filterActive===index?'filter-active-tab':''}}"
+            <view class="filter-tab-box y-flex y-vertical-center y-align-around y-bgc-white">
+                <view class="y-flex-col y-flex-1  y-center {{filterActive===index?'filter-active-tab':''}}"
                       wx:for="{{tabs}}"
                       wx:key="index"
                       bindtap="tapFilterTab"
@@ -60,8 +60,8 @@
                         <view class="y-padding-all">
                             <view class="y-font-blod y-font-xxl y-line-height-200 y-padding-tb">{{item.name}}
                             </view>
-                            <view class="tui-flex tui-flex-wrap tui-vertical-center">
-                                <van-radio name="{{index}}" class="tui-col-6 y-padding-tb" checked-color="#378694"
+                            <view class="y-flex y-flex-wrap y-vertical-center">
+                                <van-radio name="{{index}}" class="y-col-6 y-padding-tb" checked-color="#378694"
                                            wx:for="{{item.item}}" wx:key="index">
                                     <!--                                    remark 神坑 text 标签不能换行写 否则内容也会换行-->
                                     <text class="y-color-gray">{{item}}</text>
@@ -71,8 +71,8 @@
                     </van-radio-group>
                 </van-tab>
                 <van-tab>
-                    <view class="size-box tui-flex tui-flex-wrap  y-padding-tb">
-                        <view class="size-item-box tui-col-3  tui-align-center tui-flex tui-vertical-center y-color-gray y-border-all y-box {{item.checked?'size-active':''}}"
+                    <view class="size-box y-flex y-flex-wrap  y-padding-tb">
+                        <view class="size-item-box y-col-3  y-align-center y-flex y-vertical-center y-color-gray y-border-all y-box {{item.checked?'size-active':''}}"
                               wx:for="{{filterData.size.item}}" wx:key="index" data-index="{{index}}"
                               bindtap="selectSize"
                         >
@@ -81,8 +81,8 @@
                     </view>
                 </van-tab>
                 <van-tab>
-                    <view class="size-box tui-flex tui-flex-wrap  y-padding-tb">
-                        <view class="color-item-box tui-col-3  tui-align-center tui-flex tui-vertical-center y-color-gray y-border-all y-box "
+                    <view class="size-box y-flex y-flex-wrap  y-padding-tb">
+                        <view class="color-item-box y-col-3  y-align-center y-flex y-vertical-center y-color-gray y-border-all y-box "
                               wx:for="{{filterData.color.item}}" wx:key="index" data-index="{{index}}"
                               style="background-color:{{item.background}};color: {{item.fontColor}};"
                               bindtap="selectColor"
@@ -100,7 +100,7 @@
                     <view class="y-padding-all">
                         <view class="y-font-blod y-font-xxl y-line-height-200 y-padding-tb">价格区间
                         </view>
-                        <view class="tui-flex tui-vertical-center ">
+                        <view class="y-flex y-vertical-center ">
                             <y-input label="最低价"></y-input>
                             <view class="y-padding-lr y-color-gray">-</view>
                             <y-input label="最高价"></y-input>
@@ -114,8 +114,8 @@
                                     <view class="y-font-blod y-font-xxl y-line-height-200 y-padding-tb">
                                         {{item.name}}
                                     </view>
-                                    <view class="tui-flex tui-flex-wrap">
-                                        <van-radio name="{{index}}" class="tui-col-6 y-padding-tb"
+                                    <view class="y-flex y-flex-wrap">
+                                        <van-radio name="{{index}}" class="y-col-6 y-padding-tb"
                                                    checked-color="#378694"
                                                    wx:for="{{filterData.price.item}}" wx:key="index">
                                             <text class="y-color-gray">{{item.title}}</text>
@@ -129,11 +129,11 @@
                 </van-tab>
             </van-tabs>
         </view>
-        <view style="position: fixed;bottom: 0;height: 100rpx" class="tui-flex tui-col-12 y-bgc-white">
-            <view class="tui-col-6">
+        <view style="position: fixed;bottom: 0;height: 100rpx" class="y-flex y-col-12 y-bgc-white">
+            <view class="y-col-6">
                 <van-button size="large" bindtap="resetFilter">重置</van-button>
             </view>
-            <view class="tui-col-6">
+            <view class="y-col-6">
                 <van-button size="large" color="#1b1b1b" bindtap="tapConfirm">完成</van-button>
             </view>
         </view>

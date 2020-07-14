@@ -4,7 +4,7 @@
     <!--    wxParse解析-->
     <!--    <van-panel>-->
     <!--        &lt;!&ndash; // 引入模板 &ndash;&gt;-->
-    <!--        <view class="tui-flex tui-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>-->
+    <!--        <view class="y-flex y-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>-->
 
     <!--        <view class="body">-->
     <!--            <import src="/components/wxParse/wxParse.wxml"/>-->
@@ -17,7 +17,7 @@
     <!--rich-text解析-->
     <!--    <van-panel>-->
     <!-- // 引入模板 -->
-    <view class="y-bgc-white tui-flex tui-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>
+    <view class="y-bgc-white y-flex y-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>
     <!--        <view class="body">-->
     <rich-text class="y-bgc-white" nodes="{{body}}"></rich-text>
     <!--        </view>-->
@@ -31,7 +31,7 @@
             <textarea height="150rpx" bindblur="bindTextAreaBlur" placeholder="请输入您的问题"/>
         </view>
 
-        <view class="tui-right y-pt-20">
+        <view class="y-right y-pt-20">
             <van-button size="small" type="primary">提交
             </van-button>
         </view>

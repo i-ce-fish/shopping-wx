@@ -28,17 +28,17 @@
     <view wx:for="{{products}}" wx:key="index" class="y-shadow-b y-bgc-white y-mt-20 ">
         <!--        只是用来滚动定位的节点，因为顶部固定导航栏所以需要偏移 -->
         <view class="product-item-{{index}}" style="position:relative;top:-{{virtualPostion}}rpx"/>
-        <view class=" y-pb-20 y-pt-20 y-pl-20 tui-flex">
+        <view class=" y-pb-20 y-pt-20 y-pl-20 y-flex">
 
             <!--            <view class="y-font-l y-font-blod y-line-height-200">-->
             <!--                {{item.title}}-->
             <!--            </view>-->
 
-            <view class="tui-flex tui-col-4">
-                <!--                <view class="tui-col-6">-->
+            <view class="y-flex y-col-4">
+                <!--                <view class="y-col-6">-->
                 <!--                    <van-image src="{{item.img}}" width="100%" height="100%" fit="widthFix"></van-image>-->
                 <!--                </view>-->
-                <!--                <view class="tui-col-6">-->
+                <!--                <view class="y-col-6">-->
                 <!--                    <van-image src="{{item.img}}" width="100%" height="100%" fit="widthFix"></van-image>-->
                 <!--                </view>-->
                 <!--                <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">-->
@@ -51,7 +51,7 @@
                 <van-image class="" height="250rpx" width="250rpx" fit="widthFix"
                            src="{{item.imgs[0].url}}"></van-image>
             </view>
-            <view class="tui-flex-1 y-padding-lr y-line-height-150 tui-flex-col tui-align-between">
+            <view class="y-flex-1 y-padding-lr y-line-height-150 y-flex-col y-align-between">
                 <view>
                     <!--                    合并空格，保留换行符-->
                     <view class="text-wrap">上衣的颜色描述+为什么
@@ -63,7 +63,7 @@
                         ￥99.00 - ￥299.00
                     </view>
                 </view>
-                <view class="tui-flex tui-align-right y-underline "
+                <view class="y-flex y-align-right y-underline "
                       bindtap="go" data-url="/pages/catagory/product-detail/index?id={{item.id}}"
                 >详情
                 </view>

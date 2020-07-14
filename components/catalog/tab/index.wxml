@@ -1,5 +1,5 @@
-<view class="tab-box tui-flex tui-align-between ">
-    <view class=" {{item.active?'text-box-active':'text-box'}}  tui-flex tui-vertical-center tui-align-center tui-col-12"
+<view class="tab-box y-flex y-align-between ">
+    <view class=" {{item.active?'text-box-active':'text-box'}}  y-flex y-vertical-center y-align-center y-col-12"
           wx:for="{{catalogs}}" wx:key="index"
           bindtap="ontap" data-index="{{index}}"
     >

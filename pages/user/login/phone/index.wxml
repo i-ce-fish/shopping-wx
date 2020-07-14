@@ -2,7 +2,7 @@
 <view class="container">
     <tui-list-view title="登录">
         <tui-list-cell>
-            <view class="y-line-height-150 tui-col-12">
+            <view class="y-line-height-150 y-col-12">
                 <view class="y-color-gray">
                     账号
                 </view>
@@ -22,7 +22,7 @@
                 </view>
             </view>
         </tui-list-cell>
-        <view class="tui-flex tui-align-center">
+        <view class="y-flex y-align-center">
             <van-button type="primary"  bind:click="login">登录</van-button>
         </view>
     </tui-list-view>

@@ -9,18 +9,18 @@
         </view>
       </tui-list-cell>
       <tui-list-cell hover="{{false}}" padding="0">
-        <view class="tui-line-cell tui-flex">
+        <view class="tui-line-cell y-flex">
           <view class="tui-title">单选</view>
-          <van-radio-group class="tui-flex-1 tui-flex tui-align-between " value="{{radio}}" bindchange="onChange">
+          <van-radio-group class="y-flex-1 y-flex y-align-between " value="{{radio}}" bindchange="onChange">
             <van-radio name="1">单选框 1</van-radio>
             <van-radio name="2">单选框 2</van-radio>
           </van-radio-group>
         </view>
       </tui-list-cell>
       <tui-list-cell hover="{{false}}" padding="0">
-        <view class="tui-line-cell tui-flex">
+        <view class="tui-line-cell y-flex">
           <view class="tui-title">多选</view>
-          <van-checkbox-group class="tui-flex-1 tui-flex tui-align-between"
+          <van-checkbox-group class="y-flex-1 y-flex y-align-between"
                               value="{{checkbox}}"
                               bindchange="onCheckbox">
             <van-checkbox shape="square" name="a">a</van-checkbox>
