@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/index/index",
+    "pages/user/login/index/index",
+
     "pages/home/design/role-list/index",
     "pages/home/design/role-form/index",
     "pages/home/customer-said/index",
@@ -22,7 +24,6 @@
     "pages/shopping/order/order-detail/index",
     "pages/shopping/order/paid-order/index",
     "pages/shopping/order/submit-order/index",
-    "pages/user/login/index/index",
     "pages/user/login/phone/index",
     "pages/home/detail/index",
     "pages/my/user/index",

@@ -42,7 +42,7 @@
                 </view>
             </view>
             <view class="y-padding-none y-line-height-200">
-                <view wx:for="{{headerLines}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}">
+                <view wx:for="{{customerDiscount}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}">
                     {{item.title}}
                 </view>
             </view>

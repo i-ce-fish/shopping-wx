@@ -156,7 +156,8 @@ Page({
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
                 subtitle: ''
             }
-        ]
+        ],
+        total: "1234"
     },
     onLoad: function (options) {
 
@@ -177,7 +178,7 @@ Page({
     tapFilter() {
         this.selectComponent('#filter-single-page').showFilter()
     },
-    tapDesign(){
+    tapDesign() {
         wx.$go('/pages/home/design/design-for-me/index')
     }
 

@@ -37,18 +37,7 @@ App.Page(filter.loginCheck({
         //    data
 
         product: {
-            // product_name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
-            // product_sn: "424932",
-            // type_sn: "",
             category: "女装",
-            // origin_price: "499.00",
-            // onsale_price: "299.00",
-            // vip_price: "199.00",
-            // main_pic: '',
-
-            produt_parameter: [],
-
-
             detail: [{
                 url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/1.jpg"
             }, {
@@ -58,8 +47,6 @@ App.Page(filter.loginCheck({
             }, {
                 url: "https://www.uniqlo.cn/hmall/test/u0000000015484/detail/393/4.jpg"
             },],
-
-
         },
         //近似商品
         similarProducts: [{
@@ -67,8 +54,8 @@ App.Page(filter.loginCheck({
             name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
             code: "424932",
             category: "女装",
-            min_size: "S",
-            max_size: "XL",
+
+
             price: "499.00",
             colors: [
                 {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
@@ -80,8 +67,6 @@ App.Page(filter.loginCheck({
             name: "麻混",
             code: "424932",
             category: "女装",
-            min_size: "S",
-            max_size: "XL",
             price: "499.00",
             colors: [
                 {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
@@ -93,8 +78,6 @@ App.Page(filter.loginCheck({
             name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
             code: "424932",
             category: "女装",
-            min_size: "S",
-            max_size: "XL",
             price: "499.00",
             colors: [
                 {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
@@ -106,8 +89,6 @@ App.Page(filter.loginCheck({
             name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
             code: "424932",
             category: "女装",
-            min_size: "S",
-            max_size: "XL",
             price: "499.00",
             colors: [
                 {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
@@ -138,16 +119,7 @@ App.Page(filter.loginCheck({
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
                 subtitle: ''
             }
-        ]
-        ,
-
-
-
-
-
-
-        // 尺码表
-
+        ],
 
         // card
         card: {
@@ -165,15 +137,6 @@ App.Page(filter.loginCheck({
         // 折叠面板
         collapseSize: 5,
         activeColl: ['2'],
-
-
-        //赚钱
-        activeColl_earn: ['1', '2', '3', '4'],
-
-        //    我要咨询
-        advisory: {
-            text: "我要咨询"
-        },
 
     },
 
@@ -401,7 +364,7 @@ App.Page(filter.loginCheck({
                 styles: ['少淑', '简约', '北欧', '碎花', '拼接'],
                 details: ['高腰', '彼得潘领', '泡泡袖', 'H型裙', '拼接'],
                 washInfo: "机洗，水温60°C以下",
-                material: '{"type":"edit","key":"材质成分","value":[{"index":0,"type":"add","key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"index":0,"type":"add","key":"填充物","value":"70%白鸭绒"},{"index":0,"type":"add","key":"内衬","value":"10%粘胶纤维"}],"index":0,"index2":{"type":"add","key":"大身","value":[{"index":0,"type":"add","key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"index":0,"type":"add","key":"填充物","value":"70%白鸭绒"},{"index":0,"type":"add","key":"内衬","value":"10%粘胶纤维"}]}}',
+                material: '[{"key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"key":"填充物","value":"70%白鸭绒"},{"key":"内衬","value":"10%粘胶纤维"}]',
                 introduction: {
                     style: {
                         type: "这款是经典的北欧简约风，线条简单，看起来就清爽，没有多余的口袋和细节",

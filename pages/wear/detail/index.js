@@ -23,37 +23,80 @@ Component({
         products: [{
             title: '麻混纺半开领上衣',
             miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other2/196-273/3.jpg',
+            intro: '搭配原因：黑色显瘦',
+
+
+            list: [
+                {
+                    id: '1',
+                    price: '99.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/first/1000/1.jpg'
+                },
+                {
+                    id: '2',
+                    price: '199.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other4/1000/5.jpg'
+                },
+                {
+                    id: '3',
+                    price: '299.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other1/1000/2.jpg'
+                }
+            ],
             imgs: [
                 {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other2/196-273/3.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/first/1000/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other1/1000/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other4/1000/5.jpg'}
             ],
-            id: '123',
-            intro: '搭配原因：黑色显瘦',
-            price: '99.00',
-
-
         }, {
             title: '雪纺打褶裙裤',
             miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other3/196-273/4.jpg',
+            intro: '搭配原因：黑色显瘦',
+
+
+            list: [
+                {
+                    id: '1',
+                    price: '99.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/first/1000/1.jpg'
+                },
+                {
+                    id: '2',
+                    price: '199.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/1.jpg'
+                },
+                {
+                    id: '3',
+                    price: '299.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/2.jpg'
+                }
+            ],
 
             imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other3/196-273/4.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/1.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/2.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/4.jpg'}
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other3/196-273/4.jpg'}
             ]
         }, {
             id: '123',
             title: '平底拖鞋',
             miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other1/196-273/2.jpg',
-
+            list: [
+                {
+                    id: '1',
+                    price: '99.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'
+                },
+                {
+                    id: '2',
+                    price: '199.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other3/1000/1.jpg'
+                },
+                {
+                    id: '3',
+                    price: '299.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/2.jpg'
+                }
+            ],
             imgs: [
 
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other3/1000/4.jpg'},
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other3/1000/1.jpg'}
+                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'}
 
             ],
             price: '99.00'
