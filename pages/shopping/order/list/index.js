@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        activeNames: [0,1],
+        activeNames: [0, 1],
         orders: [
             {
                 delivery: {
@@ -36,7 +36,10 @@ Page({
                         category: "男装/女装/亲子装",
                         name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼) 3",
                         code: "428160",
-                        price: "79.00",
+                        original_price: "199.0",
+                        onsale_price: "179.1",
+                        vip_price: "159.2",
+                        intro: "商品简介简介简介简介",
                         color: {
                             code: "09",
                             name: "黑色"
@@ -52,7 +55,10 @@ Page({
                         category: "男装/女装/亲子装",
                         name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼)4",
                         code: "428160",
-                        price: "79.00",
+                        original_price: "199.0",
+                        onsale_price: "179.1",
+                        vip_price: "159.2",
+                        intro: "商品简介简介简介简介",
                         remark: "支持30天无理由退换货",
 
                         color: {
@@ -100,7 +106,10 @@ Page({
                         category: "男装/女装/亲子装",
                         name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼) 3",
                         code: "428160",
-                        price: "79.00",
+                        original_price: "199.0",
+                        onsale_price: "179.1",
+                        vip_price: "159.2",
+                        intro: "商品简介简介简介简介",
                         color: {
                             code: "09",
                             name: "黑色"
@@ -116,7 +125,10 @@ Page({
                         category: "男装/女装/亲子装",
                         name: " (UT) ULTRAMAN 印花T恤(短袖) (奥特曼)4",
                         code: "428160",
-                        price: "79.00",
+                        original_price: "199.0",
+                        onsale_price: "179.1",
+                        vip_price: "159.2",
+                        intro: "商品简介简介简介简介",
                         remark: "支持30天无理由退换货",
 
                         color: {

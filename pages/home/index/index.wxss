@@ -90,7 +90,7 @@
 }
 
 
-.test{
+.test {
     background-color: rgba(255, 72, 0, 0.29) !important;
     padding: 30rpx;
 }

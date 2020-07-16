@@ -1,7 +1,6 @@
 {
-  "navigationBarTitleText": "对老板娘说",
   "usingComponents": {
-    "article-list": "/components/business/aticle-list/index",
+    "van-icon": "@vant/weapp/icon/index",
     "van-button": "@vant/weapp/button/index",
     "van-image": "@vant/weapp/image/index",
     "footer": "/components/footer/index",

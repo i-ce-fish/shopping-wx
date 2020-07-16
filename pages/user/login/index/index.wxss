@@ -1,14 +1,14 @@
 /* pages/user/login/main.wxss */
-.card-box{
+.card-box {
     padding: 30rpx;
 }
 
-.button-box{
+.button-box {
     padding: 20rpx;
     background-color: white;
 
 }
 
-.button-item{
+.button-item {
     padding-bottom: 20rpx;
 }

@@ -60,7 +60,10 @@ Component({
                 category: "男装/女装/亲子装",
                 name: " 1(UT) ULTRAMAN 印花T恤",
                 code: "428160",
-                price: "79.00",
+                original_price: "199.0",
+                onsale_price: "179.1",
+                vip_price: "159.2",
+                intro: "商品简介简介简介简介",
                 remark: "支持30天无理由退换货",
                 color: {
                     code: "09",
@@ -76,7 +79,10 @@ Component({
                 category: "男装/女装/亲子装",
                 name: " 2(UT) ULTRAMAN 印花T恤",
                 code: "428160",
-                price: "79.20",
+                original_price: "199.0",
+                onsale_price: "179.1",
+                vip_price: "159.2",
+                intro: "商品简介简介简介简介",
                 remark: "支持30天无理由退换货",
                 color: {
                     code: "09",
@@ -92,7 +98,10 @@ Component({
                 category: "男装/女装/亲子装",
                 name: " 3(UT) ULTRAMAN 印花T恤",
                 code: "428160",
-                price: "79.00",
+                original_price: "199.0",
+                onsale_price: "179.1",
+                vip_price: "159.2",
+                intro: "商品简介简介简介简介",
                 remark: "支持30天无理由退换货",
                 color: {
                     code: "09",
@@ -111,7 +120,10 @@ Component({
                     code: "428160",
                     remark: "支持30天无理由退换货",
 
-                    price: "79.00",
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     color: {
                         code: "09",
                         name: "黑色"
@@ -200,10 +212,10 @@ Component({
                 url: '/pages/shopping/order/item/index',
                 events: {
                     // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-                    acceptDataFromOpenedPage: function(data) {
+                    acceptDataFromOpenedPage: function (data) {
                         console.log(data)
                     },
-                    someEvent: function(data) {
+                    someEvent: function (data) {
                         console.log(data)
                     }
                 },
@@ -211,7 +223,7 @@ Component({
                     // 通过eventChannel向被打开页面传送数据
                     // 数组格式pro，统一格式
                     // res.eventChannel.emit('orderItems', {data: 'test'})
-                    res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
+                    res.eventChannel.emit('acceptDataFromOpenerPage', {data: 'test'})
                 }
             })
         }

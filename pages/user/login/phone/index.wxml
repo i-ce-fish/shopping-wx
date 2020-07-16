@@ -23,7 +23,7 @@
             </view>
         </tui-list-cell>
         <view class="y-flex y-align-center">
-            <van-button type="primary"  bind:click="login">登录</van-button>
+            <van-button type="primary" bind:click="login">登录</van-button>
         </view>
     </tui-list-view>
 

@@ -16,9 +16,12 @@ Page({
                     ,
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -29,9 +32,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "T恤2",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -42,9 +48,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "T恤13",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -63,9 +72,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "T恤15",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -76,9 +88,12 @@ Page({
                     name: "麻混",
                     code: "424932",
                     category: "T恤15",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -89,9 +104,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -102,9 +120,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -123,9 +144,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -136,9 +160,12 @@ Page({
                     name: "麻混",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -149,9 +176,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -162,9 +192,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -183,9 +216,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -196,9 +232,12 @@ Page({
                     name: "麻混",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -209,9 +248,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -222,9 +264,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -243,9 +288,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -256,9 +304,12 @@ Page({
                     name: "麻混",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -269,9 +320,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -282,9 +336,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -303,9 +360,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -316,9 +376,12 @@ Page({
                     name: "麻混",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -329,9 +392,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -342,9 +408,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -363,9 +432,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -376,9 +448,12 @@ Page({
                     name: "麻混",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -389,9 +464,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -402,9 +480,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -423,9 +504,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -436,9 +520,12 @@ Page({
                     name: "麻混",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -449,9 +536,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},
@@ -462,9 +552,12 @@ Page({
                     name: "麻混纺宽腿裤 (附腰带)(老爹裤)",
                     code: "424932",
                     category: "女装",
-                    min_size: "S",
-                    max_size: "XL",
-                    price: "499.00",
+
+
+                    original_price: "199.0",
+                    onsale_price: "179.1",
+                    vip_price: "159.2",
+                    intro: "商品简介简介简介简介",
                     colors: [
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016501/chip/22/COL31.jpg"},
                         {url: "https://www.uniqlo.cn/hmall/test/u0000000016503/chip/22/COL00.jpg"},

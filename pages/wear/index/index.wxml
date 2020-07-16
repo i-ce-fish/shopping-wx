@@ -1,7 +1,7 @@
 <view class="container">
     <shop-title></shop-title>
     <view class=" y-bgc-white y-shadow-b">
-        <view class="y-col-12">
+        <view class="y-col-12 y-padding-lr">
             <catalog-filter list="{{catalogs}}" bindclick="tapWearFilter"></catalog-filter>
         </view>
 

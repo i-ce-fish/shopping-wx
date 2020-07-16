@@ -1,4 +1,3 @@
-
 <view class="card-box custom-class" style="{{'padding:'+padding}}">
     <slot>
 

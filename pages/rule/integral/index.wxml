@@ -1,74 +1,74 @@
 <view class="container">
     <van-collapse value="{{activeNames}}" bindchange="onChange">
-      <van-collapse-item title="积分-等级-折率规定" name="1">
-        <view class="line-box">
-          <view class="y-flex y-center y-font-m ">
-            <view class="y-flex-1">
-              会员等级
+        <van-collapse-item title="积分-等级-折率规定" name="1">
+            <view class="line-box">
+                <view class="y-flex y-center y-font-m ">
+                    <view class="y-flex-1">
+                        会员等级
+                    </view>
+                    <view class="y-flex-1">
+                        新品折率
+                    </view>
+                    <view class="y-flex-1">
+                        积分
+                    </view>
+                </view>
             </view>
-            <view class="y-flex-1">
-              新品折率
+            <view class="line-box">
+                <view class="y-flex y-center">
+                    <view class="y-flex-1">
+                        一级会员
+                    </view>
+                    <view class="y-flex-1">
+                        95折
+                    </view>
+                    <view class="y-flex-1">
+                        小于1000分
+                    </view>
+                </view>
             </view>
-            <view class="y-flex-1">
-              积分
+            <view class="line-box">
+                <view class="y-flex y-center">
+                    <view class="y-flex-1">
+                        二级会员
+                    </view>
+                    <view class="y-flex-1">
+                        88折
+                    </view>
+                    <view class="y-flex-1">
+                        1000分-1999分
+                    </view>
+                </view>
             </view>
-          </view>
-        </view>
-        <view class="line-box">
-          <view class="y-flex y-center">
-            <view class="y-flex-1">
-              一级会员
+            <view class="line-box">
+                <view class="y-flex y-center">
+                    <view class="y-flex-1">
+                        三级会员
+                    </view>
+                    <view class="y-flex-1">
+                        85折
+                    </view>
+                    <view class="y-flex-1">
+                        2000分及以上
+                    </view>
+                </view>
             </view>
-            <view class="y-flex-1">
-              95折
-            </view>
-            <view class="y-flex-1">
-              小于1000分
-            </view>
-          </view>
-        </view>
-        <view class="line-box">
-          <view class="y-flex y-center">
-            <view class="y-flex-1">
-              二级会员
-            </view>
-            <view class="y-flex-1">
-              88折
-            </view>
-            <view class="y-flex-1">
-              1000分-1999分
-            </view>
-          </view>
-        </view>
-        <view class="line-box">
-          <view class="y-flex y-center">
-            <view class="y-flex-1">
-              三级会员
-            </view>
-            <view class="y-flex-1">
-              85折
-            </view>
-            <view class="y-flex-1">
-              2000分及以上
-            </view>
-          </view>
-        </view>
 
-      </van-collapse-item>
-      <van-collapse-item title="如何获得积分" name="2">
-        <view class="" wx:for="{{integralWay}}" wx:key="index">
-          {{item}}
-        </view>
-      </van-collapse-item>
-      <van-collapse-item title=" 引荐亲友红包" name="3">
-        <view class="" wx:for="{{integralWay}}" wx:key="index">
-          {{item}}
-        </view>
-      </van-collapse-item>
-      <van-collapse-item title="积分兑换规则" name="4">
-        <view class="" wx:for="{{integralWay}}" wx:key="index">
-          {{item}}
-        </view>
-      </van-collapse-item>
+        </van-collapse-item>
+        <van-collapse-item title="如何获得积分" name="2">
+            <view class="" wx:for="{{integralWay}}" wx:key="index">
+                {{item}}
+            </view>
+        </van-collapse-item>
+        <van-collapse-item title=" 引荐亲友红包" name="3">
+            <view class="" wx:for="{{integralWay}}" wx:key="index">
+                {{item}}
+            </view>
+        </van-collapse-item>
+        <van-collapse-item title="积分兑换规则" name="4">
+            <view class="" wx:for="{{integralWay}}" wx:key="index">
+                {{item}}
+            </view>
+        </van-collapse-item>
     </van-collapse>
-  </view>
+</view>

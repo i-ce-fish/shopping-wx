@@ -1,5 +1,6 @@
 {
   "pages": [
+
     "pages/home/index/index",
     "pages/user/login/index/index",
 
@@ -43,6 +44,8 @@
     "pages/home/pick-clothes/detail/index",
     "pages/catagory/bargain/index",
     "pages/catagory/can-wear/index",
+    "pages/home/design/post-success/index",
+
     "pages/home/design/design-for-me/index"
   ],
   "permission": {

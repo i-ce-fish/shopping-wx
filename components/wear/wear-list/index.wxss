@@ -1,9 +1,9 @@
 /*核心代码*/
 .img-box {
-    position:absolute;
+    position: absolute;
 }
 
-.bg-img-box{
+.bg-img-box {
     filter: blur(4px);
     opacity: 0.5;
     height: 100%;

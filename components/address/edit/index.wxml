@@ -20,9 +20,9 @@
 </big-card>
 <van-popup show="{{ showArea }}" position="bottom"
            bind:close="closeArea">
-        <van-area area-list="{{ areaList }}"
-                  bind:confirm="confirmArea"
-                  bind:cancel="closeArea"
-        />
+    <van-area area-list="{{ areaList }}"
+              bind:confirm="confirmArea"
+              bind:cancel="closeArea"
+    />
 </van-popup>
 

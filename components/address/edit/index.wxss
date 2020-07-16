@@ -1,6 +1,6 @@
 /* components/test.wxss */
 
 
-.input-item{
+.input-item {
     margin-top: 72rpx;
 }

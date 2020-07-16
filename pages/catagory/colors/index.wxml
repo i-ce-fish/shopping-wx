@@ -25,8 +25,6 @@
     </view>
 
 
-
-
     <van-collapse value="{{activeColl}}" bindchange="setDetail" data-prop="activeColl">
         <van-collapse-item wx:for="{{color_intro}}" wx:key="index" title="{{item.title}}" name="{{index}}">
             <view wx:for="{{item.contents}}" wx:key="index" class="y-line-height-200">

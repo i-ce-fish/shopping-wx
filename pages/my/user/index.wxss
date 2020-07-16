@@ -1,8 +1,9 @@
 /* pages/my/user/main.wxss */
 .head-box {
-  background-color: #ee6310;
+    background-color: #ee6310;
     padding: 25rpx 30rpx;
 }
-  .info-box view {
-      padding: 10rpx 0 ;
-    }
+
+.info-box view {
+    padding: 10rpx 0;
+}

@@ -6,7 +6,6 @@
     "van-radio-group": "@vant/weapp/radio-group/index",
     "van-button": "@vant/weapp/button/index",
     "van-slider": "@vant/weapp/slider/index",
-
     "van-image": "@vant/weapp/image/index"
   }
 }

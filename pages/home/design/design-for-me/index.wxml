@@ -6,15 +6,9 @@
 
     <view class="y-bgc-white">
         <checkbox-flod-list list="{{questions}}"></checkbox-flod-list>
-        <view class="y-padding-all">
-            尊敬的会员，店铺收到您的需求，
-            我们将通过微信联系您，您也可以打打电话联系我
+        <view class="y-center y-padding-tb">
+            <van-button type="primary" bindtap="go" data-url="/pages/home/design/role-list/index">下一步</van-button>
         </view>
-        <view class="y-center">
-            <van-button type="primary" bindtap="go" data-url="/pages/home/design/role-list/index">确定</van-button>
-
-        </view>
-
     </view>
 
     <footer></footer>

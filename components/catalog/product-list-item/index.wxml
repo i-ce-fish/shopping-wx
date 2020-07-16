@@ -7,7 +7,7 @@
 
     </view>
 
-    <view class="y-box  y-padding-lr y-padding-b  y-line-height-180 {{listView?'y-flex-col':''}}">
+    <view class="y-box  y-padding-lr y-padding-b  y-line-height-200 {{listView?'y-flex-col':''}}">
         <view>
             <van-image style="padding-right: 10rpx"
                        wx:for="{{product.colors}}" wx:key="index"
@@ -15,19 +15,25 @@
                        width="40rpx" height="40rpx" fit="fill"
                        lazy-load/>
         </view>
-        <view class="y-flex y-align-between y-font-s">
+        <view class="y-flex y-align-between y-font-s y-color-gray">
             <view>
                 {{product.category}}
             </view>
             <view>
-                {{product.min_size}}-{{product.max_size}}
+                上市价格: ￥{{product.original_price}}
             </view>
         </view>
         <view class="y-font-l ">
             {{product.name}}{{product.code}}
         </view>
-        <view class="y-font-xxl y-font-blod y-color-red">
-            ￥{{product.price}}
+        <view class="y-color-gray">
+            {{product.intro}}
+        </view>
+        <view class="y-font-l  y-color-red">
+            内购价: ￥{{product.onsale_price}}
+        </view>
+        <view class="y-font-l  y-color-red">
+            尊享价: ￥{{product.vip_price}}
         </view>
     </view>
 </view>

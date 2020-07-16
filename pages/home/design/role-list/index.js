@@ -44,5 +44,8 @@ Page({
         this.setData({
             showDel: false
         })
+    },
+    post() {
+        wx.$go('/pages/home/design/post-success/index')
     }
 });

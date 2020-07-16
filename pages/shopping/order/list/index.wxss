@@ -1,7 +1,7 @@
 /* pages/shopping/order/list/main.wxss */
 
 
-.main-box{
+.main-box {
     margin-bottom: 50px;
 }
 

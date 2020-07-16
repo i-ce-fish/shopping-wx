@@ -6,15 +6,11 @@
     "van-grid": "@vant/weapp/grid/index",
     "van-grid-item": "@vant/weapp/grid-item/index",
     "carousel": "/components/carousel/index",
-
-    "scroll-top":"/components/scroll-top/index",
+    "scroll-top": "/components/scroll-top/index",
     "search-bar": "/components/search-bar/index",
     "van-sticky": "@vant/weapp/sticky/index",
-
-    "catalog-tab":"/components/catalog/tab/index",
+    "catalog-tab": "/components/catalog/tab/index",
     "shop-title": "/components/shop-title/index",
-
     "footer": "/components/footer/index"
-
   }
 }

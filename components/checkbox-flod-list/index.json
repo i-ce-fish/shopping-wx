@@ -3,6 +3,9 @@
   "usingComponents": {
     "van-icon": "@vant/weapp/icon/index",
     "van-checkbox": "@vant/weapp/checkbox/index",
-    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+
+    "van-radio": "@vant/weapp/checkbox/index",
+    "van-radio-group": "@vant/weapp/checkbox-group/index"
   }
 }

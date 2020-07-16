@@ -26,9 +26,9 @@ Component({
             type: String,
             value: ""
         },
-        listView:{
-            type:Boolean,
-            value:true
+        listView: {
+            type: Boolean,
+            value: true
         }
     },
 

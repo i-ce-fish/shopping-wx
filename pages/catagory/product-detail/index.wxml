@@ -78,21 +78,19 @@
     <!--    </view>-->
 
 
-
-
     <card padding="0">
         <van-collapse value="{{activeColl}}" bindchange="setDetail" data-prop="activeColl">
             <van-collapse-item title="商品参数" name="1">
                 <view class=" y-color-black y-line-height-180">
                     <view class="y-font-blod">
-                        货号/款号: {{product.code}}
+                        货号/款号: {{product.parm.code}}
                     </view>
                     <view>
                         <view class="y-font-blod y-pt-20">
                             上市季节
                         </view>
                         <view>
-                            {{product.marketSeason}}
+                            {{product.parm.marketSeason}}
                         </view>
                     </view>
                     <view>
@@ -100,7 +98,9 @@
                             材质成分
                         </view>
                         <view>
-                            {{product.material}}
+                            <view wx:for="{{product.parm.material}}" wx:key="index">
+                                {{item.key}} : {{item.value}}
+                            </view>
                         </view>
                     </view>
 
@@ -108,7 +108,7 @@
                         <view class="y-font-blod y-pt-20">
                             颜色/图案
                         </view>
-                        <!--                        <text wx:for="{{product.colors}}" wx:key="index">{{item.name}}{{item.code}}</text>-->
+                        <!--                        <text wx:for="{{product.parm.colors}}" wx:key="index">{{item.name}}{{item.code}}</text>-->
                         <view class=""
                               wx:for="{{['30色 (灰色+白条纹)','30色 (灰色+白条纹)','30色 (灰色+白条纹)','30色 (灰色+白条纹)']}}" wx:key="index">
                             {{item}}
@@ -123,7 +123,7 @@
                             <view class="y-col-4 "
                                   wx:for="{{['155/64A/XS','160/64A/XS','165/64A/XS','170/64A/XS','175/64A/XS','180/64A/XS']}}"
                                   wx:key="index">
-                                <!--                            {{product.sizes}}-->
+                                <!--                            {{product.parm.sizes}}-->
                                 {{item}}
 
                             </view>
@@ -135,7 +135,7 @@
                             版型
                         </view>
                         <view class="y-flex y-flex-wrap ">
-                            <!--                            {{product.templateType}}-->
+                            <!--                            {{product.parm.templateType}}-->
                             <view class="y-col-4" wx:for="{{['超级紧身','紧身','修身','合体','宽松']}}" wx:key="index">
                                 {{item}}
                             </view>
@@ -149,7 +149,7 @@
                         <view class="y-flex-wrap y-flex ">
                             <view class="y-col-4"
                                   wx:key="index" wx:for="{{['少淑', '简约', '北欧', '碎花', '拼接']}}">
-                                <!--                            {{product.styles}}-->
+                                <!--                            {{product.parm.styles}}-->
                                 {{item}}
 
                             </view>
@@ -161,7 +161,7 @@
                         <view class="y-flex-wrap y-flex">
                             <view wx:for="{{['高腰', '彼得潘领', '泡泡袖', 'H型裙', '拼接']}}" wx:key="index">
 
-                                <!--                                {{product.details}}-->
+                                <!--                                {{product.parm.details}}-->
                                 {{item}}
                             </view>
                         </view>
@@ -170,7 +170,7 @@
                     <view>
                         <view class="y-font-blod y-pt-20">洗涤信息</view>
                         <view>
-                            <!--                            {{product.wash}}-->
+                            <!--                            {{product.parm.wash}}-->
                             机洗，水温60°C以下
                         </view>
                     </view>
@@ -178,76 +178,85 @@
 
             </van-collapse-item>
             <van-collapse-item title=" 商品说明" name="2">
-                <!--                <van-image src="{{product.explan}}" width="100%" fit="widthFix"></van-image>-->
+                <!--                <van-image src="{{product.parm.explan}}" width="100%" fit="widthFix"></van-image>-->
                 <!--                todo -->
-                <video
-                        style="width: 100%;height:375rpx"
-                        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
-                        binderror="videoErrorCallback"
-                        show-play-btn="{{true}}"
-                        object-fit="contain"
-                        controls
-                >
-                </video>
-                <view class="y-color-black ">
-                    <view>
-                        <view class="y-font-xxl y-font-blod y-line-height-200">关于款式/风格</view>
+
+                <van-collapse value="{{activeDetail}}" bindchange="setDetail" data-prop="activeDetail">
+                    <van-collapse-item title="关于款式/风格" name="1">
+
+                        <video
+                                style="width: 100%;height:375rpx"
+                                src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                                binderror="videoErrorCallback"
+                                show-play-btn="{{true}}"
+                                object-fit="contain"
+                                controls
+                        >
+                        </video>
+
+
                         <view>
                             <view class="y-font-xl y-line-height-200">风格类型</view>
                             <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.type}}
                             </view>
-                        </view>
-                        <view>
-                            <view class="y-font-xl y-line-height-200">时尚度</view>
-                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.fashion}}
-                            </view>
-
-                            <view class="y-pt-20 y-padding-b">
-                                <carousel imgs="{{product.introduction.style.carousels}}" interval="5000"
-                                          width="100%"
-                                          fit="widthFix"></carousel>
-                            </view>
-
-                        </view>
-                        <view>
-                            <view class="y-font-xl y-line-height-200">设计来历</view>
-                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.origin}}
-                            </view>
-                        </view>
-                        <view>
-                            <view class="y-font-xl y-line-height-200">创意细节</view>
-                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.style.detail}}
-                            </view>
-                            <!--                    todo imgs-->
-                            <view class="y-pt-20 y-padding-b">
-                                <view wx:for="{{product.introduction.style.detailImgs}}" wx:key="index">
-                                    <van-image width="100%" fit="widthFix" src="{{item}}"></van-image>
+                            <view>
+                                <view class="y-font-xl y-line-height-200">时尚度</view>
+                                <view class="y-color-gray y-line-height-180 y-wrap">
+                                    {{product.introduction.style.fashion}}
+                                </view>
+                                <view class="y-pt-20 y-padding-b">
+                                    <carousel imgs="{{product.introduction.style.carousels}}" interval="5000"
+                                              width="100%"
+                                              fit="widthFix"></carousel>
                                 </view>
                             </view>
+                            <view>
+                                <view class="y-font-xl y-line-height-200">设计来历</view>
+                                <view class="y-color-gray y-line-height-180 y-wrap">
+                                    {{product.introduction.style.origin}}
+                                </view>
+                            </view>
+                            <view>
+                                <view class="y-font-xl y-line-height-200">创意细节</view>
+                                <view class="y-color-gray y-line-height-180 y-wrap">
+                                    {{product.introduction.style.detail}}
+                                </view>
+                                <!--                    todo imgs-->
+                                <view class="y-pt-20 y-padding-b">
+                                    <view wx:for="{{product.introduction.style.detailImgs}}" wx:key="index">
+                                        <van-image width="100%" fit="widthFix" src="{{item}}"></van-image>
+                                    </view>
+                                </view>
+                            </view>
+
+                            <view wx:for="{{product.introduction.style.others}}" wx:key="index">
+                                <view class="y-font-xl y-line-height-200">{{item.title}}</view>
+                                <view class="y-color-gray y-line-height-180 y-wrap">
+                                    {{item.content}}
+                                </view>
+                            </view>
+
                         </view>
-                    </view>
-                    <view>
-                        <view class="y-font-xxl y-font-blod y-line-height-200">
-                            关于面料/做工
+                    </van-collapse-item>
+                    <van-collapse-item title="关于面料/做工">
+                        <view>
+                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.fabric}}
+                            </view>
                         </view>
-                        <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.fabric}}
+                    </van-collapse-item>
+                    <van-collapse-item title="关于适穿人群/场合">
+                        <view>
+                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.people}}
+                            </view>
                         </view>
-                    </view>
-                    <view>
-                        <view class="y-font-xxl y-font-blod y-line-height-200">
-                            关于适穿人群/场合
+                    </van-collapse-item>
+                    <van-collapse-item title="关于穿着效果">
+                        <view>
+                            <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.wearEffect}}
+                            </view>
                         </view>
-                        <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.people}}
-                        </view>
-                    </view>
-                    <view>
-                        <view class="y-font-xxl y-font-blod y-line-height-200">
-                            关于穿着效果
-                        </view>
-                        <view class="y-color-gray y-line-height-180 y-wrap">{{product.introduction.wearEffect}}
-                        </view>
-                    </view>
-                </view>
+                    </van-collapse-item>
+                </van-collapse>
 
 
             </van-collapse-item>
@@ -264,31 +273,44 @@
             <!--                           fit="widthFix"></van-image>-->
             <!--            </van-collapse-item>-->
 
+
+            <van-collapse-item title="搭配推荐" id="wear-recommend">
+                <view>
+                    <wear-list list="{{wearList}}"></wear-list>
+                </view>
+            </van-collapse-item>
+            <van-collapse-item title="近似推荐" content-class="y-padding-none">
+                <view>
+                    <product-list products="{{similarProducts}}"></product-list>
+                </view>
+            </van-collapse-item>
+            <van-collapse-item wx:for="{{product.introduction.others}}" wx:key="index" title="{{item.title}}">
+                {{item.content}}
+            </van-collapse-item>
         </van-collapse>
 
     </card>
 
 
-
     <!--    搭配推荐-->
 
-    <view custom-class="y-padding-none " class="y-bgc-white y-mt-20" id="wear-recommend">
-        <view class="">
-            <view class="y-font-l  y-font-blod y-padding-all">搭配推荐</view>
-            <view>
-                <wear-list list="{{wearList}}"></wear-list>
-            </view>
-        </view>
-    </view>
+    <!--    <view custom-class="y-padding-none " class="y-bgc-white y-mt-20" id="wear-recommend">-->
+    <!--        <view class="">-->
+    <!--            <view class="y-font-l  y-font-blod y-padding-all">搭配推荐</view>-->
+    <!--            <view>-->
+    <!--                <wear-list list="{{wearList}}"></wear-list>-->
+    <!--            </view>-->
+    <!--        </view>-->
+    <!--    </view>-->
 
 
     <!--近似推荐-->
-    <card custom-class="y-padding-none ">
-        <view class="">
-            <view class="y-font-l  y-font-blod y-padding-all">近似推荐</view>
-            <product-list products="{{similarProducts}}"></product-list>
-        </view>
-    </card>
+    <!--    <card custom-class="y-padding-none ">-->
+    <!--        <view class="">-->
+    <!--            <view class="y-font-l  y-font-blod y-padding-all">近似推荐</view>-->
+    <!--            <product-list products="{{similarProducts}}"></product-list>-->
+    <!--        </view>-->
+    <!--    </card>-->
 
 
     <!--    底部-->

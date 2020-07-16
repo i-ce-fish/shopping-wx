@@ -2,7 +2,7 @@
   "navigationBarTitleText": "商品查询",
   "usingComponents": {
     "search-bar": "/components/search-bar/index",
-    "product-filter": "/components/product-filter/index",
+    "filter-single-page": "/components/filter-single-page/index",
     "product-list": "/components/catalog/product-list/index",
     "van-icon": "@vant/weapp/icon/index",
     "scroll-top": "/components/scroll-top/index"

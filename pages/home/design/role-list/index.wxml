@@ -27,12 +27,19 @@
                 <van-button type="danger" bindtap="tapDel">删除</van-button>
             </view>
         </card>
-
-
     </van-radio-group>
 
     <view class="y-pt-20 y-shadow-b">
         <van-cell title="添加其他角色尺码信息" isLink url="/pages/home/design/role-form/index"/>
+    </view>
+
+    <view class="y-padding-all">
+        尊敬的会员，店铺收到您的需求，
+        我们将通过微信联系您，您也可以打打电话联系我
+    </view>
+
+    <view class="y-center">
+        <van-button type="primary" bindtap="post">提交</van-button>
     </view>
 
     <!--    弹出层-->

@@ -1,54 +1,59 @@
 .top-bar {
-  padding: 15rpx 0;
-  color: white;
-  text-align: center;
-  background-color: darkgrey;
+    padding: 15rpx 0;
+    color: white;
+    text-align: center;
+    background-color: darkgrey;
 }
 
-.pro-box-middle {}
-.select-box{
-
-  margin: 20rpx 0;
+.pro-box-middle {
 }
+
+.select-box {
+
+    margin: 20rpx 0;
+}
+
 .swiper {
-  width: 100%;
-  height: 750rpx;
+    width: 100%;
+    height: 750rpx;
 }
 
 
-.pro-info-box>view {
-  padding: 20rpx
+.pro-info-box > view {
+    padding: 20rpx
 }
 
 
 .popup-box {
-  /* width: 750rpx; */
+    /* width: 750rpx; */
 }
 
-.advisory-box .textarea{
-  height:150rpx;
+.advisory-box .textarea {
+    height: 150rpx;
 }
 
-.color-box{
-  padding:4rpx;
-  width: 62rpx;
-  height: 62rpx;
-}
-.color-checked{
-  border: 2px solid #1b1b1b;
+.color-box {
+    padding: 4rpx;
+    width: 62rpx;
+    height: 62rpx;
 }
 
-.sizes-button-box{
-  padding:4rpx;
-  margin-top: 10rpx;
+.color-checked {
+    border: 2px solid #1b1b1b;
 }
+
+.sizes-button-box {
+    padding: 4rpx;
+    margin-top: 10rpx;
+}
+
 .size-checked {
- border: 2px solid #1b1b1b;
+    border: 2px solid #1b1b1b;
 }
 
-.cus-goods-action{
-  color: black!important;
-  box-shadow: 0 0 8rpx 0 rgba(0, 0, 0, 0.4);
+.cus-goods-action {
+    color: black !important;
+    box-shadow: 0 0 8rpx 0 rgba(0, 0, 0, 0.4);
 
 
 }

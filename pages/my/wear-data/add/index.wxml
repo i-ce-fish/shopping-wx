@@ -1,63 +1,66 @@
 <view class="tui-addr-box">
     <form report-submit="true">
-      <tui-list-cell hover="{{false}}" padding="0">
-        <view class="tui-line-cell">
-          <view class="tui-title">姓名</view>
-          <input placeholder-class="tui-phcolor" class="tui-input" name="name" placeholder="请输入穿衣数据所属人" maxlength="15"
-                 type="text"/>
-        </view>
-      </tui-list-cell>
-      <tui-list-cell hover="{{false}}" padding="0">
-        <view class="tui-line-cell">
-          <view class="tui-title">身高</view>
-          <input placeholder-class="tui-phcolor" class="tui-input" name="name" placeholder="请输入收货人姓名" maxlength="15"
-                 type="text"/>
-        </view>
-      </tui-list-cell>
-      <tui-list-cell hover="{{false}}" padding="0">
-        <view class="tui-line-cell">
-          <view class="tui-title">体重</view>
-          <input placeholder-class="tui-phcolor" class="tui-input" name="mobile" placeholder="请输入收货人手机号码" maxlength="11"
-                 type="text"/>
-        </view>
-      </tui-list-cell>
-      <tui-list-cell arrow="{{true}}" padding="0">
-        <view class="tui-line-cell">
-          <view class="tui-title">
-            <text class="tui-title-city-text">所在城市</text>
-          </view>
-          <input placeholder-class="tui-phcolor" class="tui-input" disabled name="city" placeholder="请选择城市"
-                 maxlength="50" type="text"/>
-        </view>
-      </tui-list-cell>
-<!--      <tui-list-cell hover="{{false}}" padding="0">-->
-<!--        <view class="tui-line-cell">-->
-<!--          <view class="tui-title">收货地址</view>-->
-<!--          <input placeholder-class="tui-phcolor" class="tui-input" name="address" placeholder="请输入详细的收货地址"-->
-<!--                 maxlength="50" type="text"/>-->
-<!--        </view>-->
-<!--      </tui-list-cell>-->
-<!--      <tui-list-cell hover="{{false}}" padding="0">-->
-<!--        <view class="tui-line-cell">-->
-<!--          <view class="tui-cell-title">地址类型</view>-->
-<!--          <view class="tui-addr-label">-->
-<!--            <text v-for="(item,index) in lists" :key="index" class="tui-label-item"-->
-<!--                  :class="{'tui-label-active':index==1}">{{item}}</text>-->
-<!--          </view>-->
-<!--        </view>-->
-<!--      </tui-list-cell>-->
+        <tui-list-cell hover="{{false}}" padding="0">
+            <view class="tui-line-cell">
+                <view class="tui-title">姓名</view>
+                <input placeholder-class="tui-phcolor" class="tui-input" name="name" placeholder="请输入穿衣数据所属人"
+                       maxlength="15"
+                       type="text"/>
+            </view>
+        </tui-list-cell>
+        <tui-list-cell hover="{{false}}" padding="0">
+            <view class="tui-line-cell">
+                <view class="tui-title">身高</view>
+                <input placeholder-class="tui-phcolor" class="tui-input" name="name" placeholder="请输入收货人姓名"
+                       maxlength="15"
+                       type="text"/>
+            </view>
+        </tui-list-cell>
+        <tui-list-cell hover="{{false}}" padding="0">
+            <view class="tui-line-cell">
+                <view class="tui-title">体重</view>
+                <input placeholder-class="tui-phcolor" class="tui-input" name="mobile" placeholder="请输入收货人手机号码"
+                       maxlength="11"
+                       type="text"/>
+            </view>
+        </tui-list-cell>
+        <tui-list-cell arrow="{{true}}" padding="0">
+            <view class="tui-line-cell">
+                <view class="tui-title">
+                    <text class="tui-title-city-text">所在城市</text>
+                </view>
+                <input placeholder-class="tui-phcolor" class="tui-input" disabled name="city" placeholder="请选择城市"
+                       maxlength="50" type="text"/>
+            </view>
+        </tui-list-cell>
+        <!--      <tui-list-cell hover="{{false}}" padding="0">-->
+        <!--        <view class="tui-line-cell">-->
+        <!--          <view class="tui-title">收货地址</view>-->
+        <!--          <input placeholder-class="tui-phcolor" class="tui-input" name="address" placeholder="请输入详细的收货地址"-->
+        <!--                 maxlength="50" type="text"/>-->
+        <!--        </view>-->
+        <!--      </tui-list-cell>-->
+        <!--      <tui-list-cell hover="{{false}}" padding="0">-->
+        <!--        <view class="tui-line-cell">-->
+        <!--          <view class="tui-cell-title">地址类型</view>-->
+        <!--          <view class="tui-addr-label">-->
+        <!--            <text v-for="(item,index) in lists" :key="index" class="tui-label-item"-->
+        <!--                  :class="{'tui-label-active':index==1}">{{item}}</text>-->
+        <!--          </view>-->
+        <!--        </view>-->
+        <!--      </tui-list-cell>-->
 
-      <!-- 默认地址 -->
-      <tui-list-cell hover="{{false}}" padding="0">
-        <view class="tui-swipe-cell">
-          <view>设为默认</view>
-          <switch checked color="#30CC67" class="tui-switch-small"/>
+        <!-- 默认地址 -->
+        <tui-list-cell hover="{{false}}" padding="0">
+            <view class="tui-swipe-cell">
+                <view>设为默认</view>
+                <switch checked color="#30CC67" class="tui-switch-small"/>
+            </view>
+        </tui-list-cell>
+        <!-- 保存地址 -->
+        <view class="tui-addr-save">
+            <van-button type="danger" custom-style="height:88rpx;width:100%;">保存</van-button>
         </view>
-      </tui-list-cell>
-      <!-- 保存地址 -->
-      <view class="tui-addr-save">
-        <van-button type="danger" custom-style="height:88rpx;width:100%;" >保存</van-button>
-      </view>
 
     </form>
-  </view>
+</view>

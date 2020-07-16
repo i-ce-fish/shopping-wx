@@ -13,9 +13,6 @@
     "van-image": "@vant/weapp/image",
     "van-stepper": "@vant/weapp/stepper/index",
     "van-submit-bar": "@vant/weapp/submit-bar/index",
-
-
-
     "van-divider": "@vant/weapp/divider",
     "van-button": "@vant/weapp/button",
     "van-swipe-cell": "@vant/weapp/swipe-cell"

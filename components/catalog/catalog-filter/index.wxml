@@ -1,4 +1,4 @@
-<view class="y-flex y-flex-wrap  ">
+<view class="y-flex y-flex-wrap   ">
     <view wx:for="{{list}}" wx:key="index" class=" y-pt-20">
         <van-tag plain size="large" type="{{index === active?'primary':'default'}}"
                  data-index="{{index}}" bindtap="tap" style="margin-right:20rpx ;">

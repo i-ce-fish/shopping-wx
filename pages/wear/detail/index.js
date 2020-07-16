@@ -21,87 +21,102 @@ Component({
                 '穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装'
         },
         products: [{
-            title: '麻混纺半开领上衣',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other2/196-273/3.jpg',
-            intro: '搭配原因：黑色显瘦',
-
-
+            name: '麻混纺半开领上衣',
+            intro: '搭配原因：黑色显瘦, 风格百搭, 细节特征和穿法的关联',
+            minPrice: '99.99',
+            maxPrice: '299.99',
             list: [
                 {
                     id: '1',
-                    price: '99.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/first/1000/1.jpg'
+                    name: "麻混纺半开领上衣1",
+                    onsale_price: '99.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/model/rank1/other1/196-273/2.jpg'
                 },
                 {
                     id: '2',
-                    price: '199.00',
+                    name: "麻混纺半开领上衣2",
+                    onsale_price: '199.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/model/rank1/first/591-822/1.jpg'
+                },
+                {
+                    id: '3',
+                    name: "麻混纺半开领上衣3",
+                    onsale_price: '299.00',
                     url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other4/1000/5.jpg'
-                },
-                {
-                    id: '3',
-                    price: '299.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other1/1000/2.jpg'
                 }
-            ],
-            imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other2/196-273/3.jpg'},
-            ],
+            ]
         }, {
-            title: '雪纺打褶裙裤',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other3/196-273/4.jpg',
-            intro: '搭配原因：黑色显瘦',
-
-
+            name: '雪纺打褶裙裤',
+            intro: '搭配原因：黑色显瘦, 风格百搭, 细节特征和穿法的关联',
+            minPrice: '99.99',
+            maxPrice: '299.99',
             list: [
                 {
                     id: '1',
-                    price: '99.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/first/1000/1.jpg'
+                    name: '雪纺打褶裙裤1',
+                    onsale_price: '99.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000014626/model/rank2/other1/196-273/2.jpg'
                 },
                 {
                     id: '2',
-                    price: '199.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/1.jpg'
+                    name: '雪纺打褶裙裤2',
+
+                    onsale_price: '199.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000014626/model/rank1/other1/196-273/2.jpg'
                 },
                 {
                     id: '3',
-                    price: '299.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/2.jpg'
+                    name: '雪纺打褶裙裤3',
+                    onsale_price: '299.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000013233/color/196-273/4.jpg'
                 }
-            ],
-
-            imgs: [
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other3/196-273/4.jpg'}
             ]
         }, {
             id: '123',
-            title: '平底拖鞋',
-            miniImg: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank1/other1/196-273/2.jpg',
+            name: '平底拖鞋',
+            minPrice: '99.99',
+            maxPrice: '299.99',
             list: [
                 {
                     id: '1',
-                    price: '99.00',
+                    name: '平底拖鞋1',
+                    onsale_price: '99.00',
                     url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'
                 },
                 {
                     id: '2',
-                    price: '199.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other3/1000/1.jpg'
+                    name: '平底拖鞋2',
+                    onsale_price: '199.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/first/1000/1.jpg'
                 },
                 {
                     id: '3',
-                    price: '299.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/detail/393/2.jpg'
+                    name: '平底拖鞋3',
+                    onsale_price: '299.00',
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/model/rank3/other1/196-273/2.jpg'
                 }
-            ],
-            imgs: [
+            ]
 
-                {url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'}
-
-            ],
-            price: '99.00'
-
-        }]
+        }],
+        topStickyList: [
+            {
+                id: '1',
+                name: "麻混纺半开领上衣1",
+                onsale_price: '99.00',
+                url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/model/rank1/other1/196-273/2.jpg'
+            },
+            {
+                id: '1',
+                name: '雪纺打褶裙裤1',
+                onsale_price: '99.00',
+                url: 'https://www.uniqlo.cn/hmall/test/u0000000014626/model/rank2/other1/196-273/2.jpg'
+            }, {
+                id: '1',
+                name: '平底拖鞋1',
+                onsale_price: '99.00',
+                url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'
+            },
+        ]
 
     },
 
@@ -156,6 +171,7 @@ Component({
             let wHeight = wx.getSystemInfoSync().windowHeight;
             //最小高度为 375，最大750rpx
             let height_ = 0
+            let minHeight = 300
 
             // 超出一定的区间[0, 600)不需要setData
             if (position <= 0) {
@@ -170,7 +186,7 @@ Component({
                 return
             }
             if (position > 600) {
-                height_ = 375
+                height_ = minHeight
                 //减少不必要的setData
                 if (height_ === this.data.height) {
                     return;
@@ -181,7 +197,7 @@ Component({
                 return;
             }
             //根据滚动距离计算图片尺寸
-            height_ = wHeight - position > 375 ? wHeight - position : this.data.height
+            height_ = wHeight - position > minHeight ? wHeight - position : this.data.height
             this.setData({
                 height: height_
             })

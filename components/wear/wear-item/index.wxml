@@ -1,21 +1,21 @@
 <!--<view class="pro-box {{listView?'y-flex':''}}"-->
-<!--      bindtap="go" data-url="/pages/catagory/wear-detail/index"-->
-<!--      data-id="{{wear.id}}">-->
-<!--    <view class=" y-padding-b">-->
-<!--        <van-image src="{{wear.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>-->
+        <!--      bindtap="go" data-url="/pages/catagory/wear-detail/index"-->
+        <!--      data-id="{{wear.id}}">-->
+        <!--    <view class=" y-padding-b">-->
+        <!--        <van-image src="{{wear.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>-->
 
-<!--    </view>-->
+        <!--    </view>-->
 
-<!--    <view class="info-box y-box  y-padding-lr y-padding-b  y-line-height-200 {{listView?'list-box':''}}">-->
+        <!--    <view class="info-box y-box  y-padding-lr y-padding-b  y-line-height-200 {{listView?'list-box':''}}">-->
 
-<!--        <view class="y-font-xxl y-font-blod">-->
-<!--            {{wear.title}}-->
-<!--        </view>-->
-<!--        <view class=" y-font-xl">-->
-<!--            {{wear.subtitle}}-->
-<!--        </view>-->
-<!--        <view class="y-flex y-align-right y-underline">-->
-<!--            立即选购-->
-<!--        </view>-->
-<!--    </view>-->
-<!--</view>-->
+        <!--        <view class="y-font-xxl y-font-blod">-->
+        <!--            {{wear.title}}-->
+        <!--        </view>-->
+        <!--        <view class=" y-font-xl">-->
+        <!--            {{wear.subtitle}}-->
+        <!--        </view>-->
+        <!--        <view class="y-flex y-align-right y-underline">-->
+        <!--            立即选购-->
+        <!--        </view>-->
+        <!--    </view>-->
+        <!--</view>-->

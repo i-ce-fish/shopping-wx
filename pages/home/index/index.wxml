@@ -42,7 +42,8 @@
                 </view>
             </view>
             <view class="y-padding-none y-line-height-200">
-                <view wx:for="{{customerDiscount}}" wx:key="index" bindtap="onTapDetail" data-id="{{item.id}}">
+                <view wx:for="{{customerDiscount}}" wx:key="index" bindtap="go" data-url="/pages/rule/integral/index"
+                      data-id="{{item.id}}">
                     {{item.title}}
                 </view>
             </view>
@@ -90,16 +91,15 @@
                     <!--                    background-color:{{item.bgc}};-->
                     <view wx:for="{{activity}}" wx:key="index" style="padding: 20rpx 30rpx;"
                           class="y-border-b y-col-12">
-                        <view class="y-col-12">
+                        <view class="y-col-12"
+                              bindtap="go"
+                              data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
                             <view>{{item.subtitle}}</view>
                             <view class="y-flex y-align-center y-font-blod y-font-xxl y-line-height-200 y-color-red"
-                                  style="white-space: pre-wrap"
-                            >
+                                  style="white-space: pre-wrap">
                                 <view>{{item.title}}</view>
                             </view>
-                            <view class="y-flex y-align-right  y-vertical-center y-line-height-100"
-                                  bidntap="go"
-                                  data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
+                            <view class="y-flex y-align-right  y-vertical-center y-line-height-100">
                                 <view class=" y-underline">
                                     详情
                                 </view>
@@ -111,17 +111,20 @@
 
                     <!--                    卡片样式-->
                     <view class="y-col-5  y-flex-col y-align-between y-border-all y-box "
-                          style="margin: 30rpx 0 ;padding: 30rpx ; background-color:{{item.bgc}};" wx:for="{{activity}}"
-                          wx:key="index">
-                        <view>
-                            {{item.subtitle}}
-                        </view>
-                        <view class="y-flex y-align-center y-font-blod y-font-xxl y-padding-tb y-color-red"
-                              style="white-space: pre-wrap">
-                            {{item.title}}
-                        </view>
-                        <view class="y-underline y-right ">
-                            详情
+                          style="margin: 30rpx 0 ;padding: 30rpx ; background-color:{{item.bgc}};"
+                          wx:for="{{activity}}" wx:key="index">
+                        <view bindtap="go"
+                              data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
+                            <view>
+                                {{item.subtitle}}
+                            </view>
+                            <view class="y-flex y-align-center y-font-blod y-font-xxl y-padding-tb y-color-red"
+                                  style="white-space: pre-wrap">
+                                {{item.title}}
+                            </view>
+                            <view class="y-underline y-right ">
+                                详情
+                            </view>
                         </view>
                     </view>
                 </view>
@@ -154,7 +157,7 @@
                     <view slot="content">
                         <view>
                             <view class="y-flex y-bgc-white y-vertical-center y-shadow-b">
-                                <view class="y-pb-20 y-pl-20 y-pr-20">
+                                <view class="y-pb-20 y-padding-lr">
                                     <catalog-filter list="{{wearFilter}}" bindclick="tapWearFilter"></catalog-filter>
                                 </view>
                             </view>

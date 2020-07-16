@@ -36,7 +36,17 @@
         <!--            </view>-->
         <!--        </view>-->
         <view class="y-col-4">
-            <product-filter bindsuccess="" tabs="{{filterTabs}}" filterData="{{filter}}"></product-filter>
+            <view  class="y-border-lr y-padding-all  y-center y-flex-col " bindtap="tapFilter">
+                <view class="">
+                    <van-icon name="apps-o" size="40rpx"></van-icon>
+                </view>
+                <view>
+                    筛选
+                </view>
+            </view>
+
+            <filter-single-page id="filter-single-page"
+                                filterData="{{filterData}}"></filter-single-page>
         </view>
 
         <view class="y-padding-all   y-center y-col-2 y-flex-col " bindtap="tapListView">

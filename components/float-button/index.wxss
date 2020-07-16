@@ -24,18 +24,20 @@
     flex-direction: column;
 
 }
-button::after{
+
+button::after {
     border: 0 !important;
 
 }
+
 .text-btn {
     /*margin: 0!important;*/
     /*width: 100%!important;*/
     /*height: 100%!important;*/
     padding: 0 !important;
-    background-color:transparent;
-    border: not specified!important;
+    background-color: transparent;
+    border: not specified !important;
     color: #999999;
-    font-size: 24rpx!important;
-    line-height: 1!important;
+    font-size: 24rpx !important;
+    line-height: 1 !important;
 }

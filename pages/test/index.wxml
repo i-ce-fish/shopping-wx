@@ -109,8 +109,8 @@
                 </van-cell>
                 <view>
 
-                    <tui-sticky scrollTop="{{scrollTop}}" >
-                        <view  slot="header" class="y-flex y-bgc-white">
+                    <tui-sticky scrollTop="{{scrollTop}}">
+                        <view slot="header" class="y-flex y-bgc-white">
                             <view class="y-col-10">
                                 <catalog-filter list="{{wearFilter}}" bindclick="tapWearFilter"></catalog-filter>
                             </view>

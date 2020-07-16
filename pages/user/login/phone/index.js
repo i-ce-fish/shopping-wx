@@ -79,7 +79,7 @@ Page({
         // 'Content-Type': 'application/json',
         user.login(this.data.userForm).then(res => {
             wx.setStorageSync('token', res.token),
-            // globalData.userinfo = "test info"
+                // globalData.userinfo = "test info"
                 this.goHome()
         })
 

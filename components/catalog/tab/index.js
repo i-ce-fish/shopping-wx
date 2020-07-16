@@ -32,7 +32,7 @@ Component({
                 catalogs: this.data.catalogs
             })
 
-            this.triggerEvent('click',this.data.catalogs[e.currentTarget.dataset.index])
+            this.triggerEvent('click', this.data.catalogs[e.currentTarget.dataset.index])
         }
     }
 })

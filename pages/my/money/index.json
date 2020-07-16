@@ -5,7 +5,6 @@
     "tui-list-cell": "/components/list-cell/list-cell",
     "tui-list-view": "/components/list-view/list-view",
     "footer": "/components/footer/index",
-
     "van-tab": "@vant/weapp/tab",
     "van-tabs": "@vant/weapp/tabs",
     "van-cell": "@vant/weapp/cell",

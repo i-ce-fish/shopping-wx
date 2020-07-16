@@ -3,8 +3,9 @@ Page({
         questions: [
 
             {
-                item: ["中性", '帅哥', '美女'],
-                title: "希望着装性别"
+                item: ["有偏向", '帅哥', '美女'],
+                title: "希望着装性别",
+                type: "checkbox"
             },
             {
                 item: [
@@ -22,7 +23,8 @@ Page({
                     "自定义"
 
                 ],
-                title: "穿着者的实际年龄段位"
+                title: "穿着者的实际年龄段位",
+                type: "radio"
             },
             {
                 item: [
@@ -41,6 +43,8 @@ Page({
 
                 ],
                 title: "穿着者的希望穿着成的年龄段位"
+                , type: "radio"
+
             }, {
                 item: [
                     "较胖",
@@ -49,7 +53,9 @@ Page({
                     "偏瘦",
                     "较瘦"
                 ],
-                title: "穿着者的体型廓形"
+                title: "穿着者的体型廓形",
+                type: "checkbox"
+
             },
             {
                 item: [
@@ -60,7 +66,9 @@ Page({
                     "脖子短",
                     "自定义"
                 ],
-                title: "穿着者的特殊体型特征"
+                title: "穿着者的特殊体型特征",
+                type: "checkbox"
+
             },
             {
                 item: [
@@ -68,7 +76,9 @@ Page({
                     "有点个性",
                     "非常个性"
                 ],
-                title: "对着装个性程度要求"
+                title: "对着装个性程度要求",
+                type: "radio"
+
             },
             {
                 item: [
@@ -81,7 +91,9 @@ Page({
                     "娱乐圈",
                     "日韩"
                 ],
-                title: "穿着时尚目标流行地区"
+                title: "穿着时尚目标流行地区",
+                type: "checkbox"
+
             },
             {
                 item: [
@@ -95,7 +107,9 @@ Page({
                     "旅游度假",
                     "其他场合"
                 ],
-                title: "穿着场合"
+                title: "穿着场合",
+                type: "checkbox"
+
             },
             {
                 item: [
@@ -109,7 +123,9 @@ Page({
                     "寒冬",
                     "自定义"
                 ],
-                title: "穿着季节"
+                title: "穿着季节",
+                type: "radio"
+
             },
             {
                 item: [
@@ -126,7 +142,9 @@ Page({
                     "轻奢",
                     "自定义"
                 ],
-                title: "期望穿着风格"
+                title: "期望穿着风格",
+                type: "checkbox"
+
             },
             {
                 item: [
@@ -149,7 +167,9 @@ Page({
                     "超凡脱俗",
                     "自定义"
                 ],
-                title: "穿着气质"
+                title: "穿着气质",
+                type: "checkbox"
+
             },
             {
                 title: "面料要求",
@@ -158,7 +178,9 @@ Page({
                     "麻",
                     "羊毛",
                     "化纤"
-                ]
+                ],
+                type: "checkbox"
+
             },
             {
                 title: "价格区间要求",
@@ -167,9 +189,10 @@ Page({
                     "100-200",
                     "200-500",
                     "500以上"
-
-
                 ]
+                ,
+                type: "checkbox"
+
             }
 
         ]

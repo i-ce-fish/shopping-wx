@@ -6,11 +6,11 @@
         <view class="y-font-blod">
             配送方式
         </view>
-        <view >
+        <view>
             <van-radio-group value="{{ orderForm.delivery }}" data-prop="orderForm.delivery" bind:change="setDetail">
                 <view>
                     <van-radio custom-class="y-padding-t" name="1" checked-color="#1b1b1b">快递配送
-                     <!--                        <view>快递配送至丽水市云和县 7.00元</view>-->
+                        <!--                        <view>快递配送至丽水市云和县 7.00元</view>-->
                     </van-radio>
                     <van-radio custom-class="y-padding-t" name="2" checked-color="#1b1b1b">门店自提</van-radio>
                     <!--                    <van-radio name="3" checked-color="#1b1b1b">门店急送</van-radio>-->
@@ -98,7 +98,9 @@
                                 <van-button bindtap="selectAddress" data-item="{{item}}" hairline>
                                     <view class="y-flex y-align-center y-vertical-center">
                                         <text wx:if="{{item.is_default}}"><van-icon name="success" color="#28788c"
-                                                                                    size="32rpx"/>已</text>选择
+                                                                                    size="32rpx"/>已
+                                        </text>
+                                        选择
                                     </view>
                                 </van-button>
                             </view>
@@ -212,7 +214,9 @@
                         custom-class="submit-bar"
                         bind:submit="postOrder"
         >
-				<text>应付总额:<text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text></text>
+            <text>应付总额:
+                <text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text>
+            </text>
         </van-submit-bar>
     </view>
 

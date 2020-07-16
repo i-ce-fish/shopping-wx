@@ -1,21 +1,24 @@
 .container {
 
-  /* 底部栏的高度 + 提交订单高度 */
-  margin-bottom: 100px;
+    /* 底部栏的高度 + 提交订单高度 */
+    margin-bottom: 100px;
 }
+
 .submit-bar {
-  /* 底部栏的高度 */
-  margin-bottom: 50px;
+    /* 底部栏的高度 */
+    margin-bottom: 50px;
 
 }
-.total-price{
-  font-size: 38rpx;
-  padding-right: 10rpx;
+
+.total-price {
+    font-size: 38rpx;
+    padding-right: 10rpx;
 }
+
 .bar-class {
-  justify-content: space-between!important;
+    justify-content: space-between !important;
 }
 
 .button-class {
-  border-radius: 0 !important;
+    border-radius: 0 !important;
 }

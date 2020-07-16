@@ -77,7 +77,7 @@ Page({
             url: "../success/success"
         })
     },
-    onSubmit(){
+    onSubmit() {
         wx.$toast()
     }
 

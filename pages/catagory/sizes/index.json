@@ -1,14 +1,11 @@
 {
   "navigationBarTitleText": "商品尺码表",
-
   "usingComponents": {
     "van-collapse": "@vant/weapp/collapse",
     "van-collapse-item": "@vant/weapp/collapse-item",
-
     "van-divider": "@vant/weapp/divider",
     "van-image": "@vant/weapp/image/index",
     "tui-list-cell": "/components/list-cell/list-cell",
     "tui-list-view": "/components/list-view/list-view"
-
   }
 }

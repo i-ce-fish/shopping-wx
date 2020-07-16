@@ -7,7 +7,7 @@
 
         <view class="y-align-right y-col-12 y-flex y-vertical-center y-center y-underline y-color-gray "
               bindtap="tapMoreWear">
-            <product-filter useSlot tabs="{{tabs}}" filterData="{{filterData}}" >
+            <product-filter useSlot tabs="{{tabs}}" filterData="{{filterData}}">
 
                 <view class="y-pb-20 y-padding-lr y-flex y-vertical-center">
                     <view class="y-underline">

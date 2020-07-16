@@ -6,16 +6,17 @@
     margin-bottom: 20rpx;
 }
 
-.submit-bar{
-     box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.16);
+.submit-bar {
+    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.16);
     /*color: #f4f4f4;*/
 }
+
 .button-class {
-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
-.nav-bottom{
-/* 底部栏的高度 */
+.nav-bottom {
+    /* 底部栏的高度 */
     padding-bottom: 50px;
 
 }

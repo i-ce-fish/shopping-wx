@@ -4,7 +4,7 @@
             <view class="scroll-view-item_H " wx:for="{{list}}" wx:key="index" bindtap="onTap" data-index="{{index}}">
                 <van-image class="y-padding-lr" height="80rpx" width="80rpx" fit="fill" round
                            src="{{item[img]}}"></van-image>
-                <view class="title" >
+                <view class="title">
                     {{item[title]}}
                 </view>
             </view>

@@ -61,7 +61,8 @@
                 <view>
                     <van-radio-group value="{{ selectedList.length === products.length&& products.length>0?'1':'0' }}">
 
-                        <van-radio name="1" shape="square" bindtap="onSelectAll"><text class="y-font-blod ">全选</text>
+                        <van-radio name="1" shape="square" bindtap="onSelectAll">
+                            <text class="y-font-blod ">全选</text>
                         </van-radio>
                     </van-radio-group>
                 </view>

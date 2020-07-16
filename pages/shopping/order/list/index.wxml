@@ -88,7 +88,7 @@
                     <view class="products-box">
 
                         <!--            商品信息-->
-                        <tui-list-view nullTitle="{{true}}" unlined="all" >
+                        <tui-list-view nullTitle="{{true}}" unlined="all">
                             <view class="y-font-l y-font-blod y-padding-lr y-pt-18 y-pb-18 y-color-black">
                                 商品信息
                             </view>
@@ -196,7 +196,9 @@
         <van-submit-bar button-text="提交订单" bind:submit="go" data-url="/pages/shopping/order/item/index"
                         button-class="button-class"
         >
-				<text>应付总额:<text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text></text>
+            <text>应付总额:
+                <text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text>
+            </text>
         </van-submit-bar>
     </view>
 

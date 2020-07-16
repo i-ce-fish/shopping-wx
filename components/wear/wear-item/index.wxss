@@ -1,11 +1,12 @@
 /* components/test.wxss */
 
-.info-box{
+.info-box {
     /*height: 375rpx;*/
     /*width: 375rpx;*/
 
 }
-.list-box{
+
+.list-box {
     display: flex;
     flex-direction: column;
     /*justify-content: space-between;*/

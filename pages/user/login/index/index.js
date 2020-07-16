@@ -14,7 +14,7 @@ Page({
             username: 'maxazure'
         },
         cardHeight: '',
-        image:"/static/img/qrcode.jpg"
+        image: "/static/img/qrcode.jpg"
     },
 
     /**
@@ -105,8 +105,8 @@ Page({
         wx.login({
             success(res) {
                 console.log(res)
-                user.wxLogin({code:res.code}).then(
-                    res=>{
+                user.wxLogin({code: res.code}).then(
+                    res => {
                         wx.$toast(res)
                     }
                 )

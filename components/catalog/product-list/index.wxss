@@ -1,4 +1,4 @@
 /* components/test.wxss */
-.title-box{
-    padding:50rpx 30rpx
+.title-box {
+    padding: 50rpx 30rpx
 }

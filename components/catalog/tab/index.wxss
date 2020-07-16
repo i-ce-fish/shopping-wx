@@ -1,5 +1,5 @@
 /* components/test.wxss */
-.text-box{
+.text-box {
     height: 200rpx;
     border: 2rpx solid #dcdcdc;
     color: #aaaaaa;
@@ -7,14 +7,14 @@
 }
 
 
-.text-box-active{
+.text-box-active {
     height: 200rpx;
     border: 0;
     color: #000;
     background-color: white;
 }
 
-.under-line{
+.under-line {
     height: 3px;
     width: 100%;
     background-color: #378694;

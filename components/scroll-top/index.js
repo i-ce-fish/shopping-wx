@@ -23,9 +23,9 @@ Component({
             type: Number,
             value: 0
         },
-        text:{
-            type:String,
-            value:"TOP"
+        text: {
+            type: String,
+            value: "TOP"
         }
     },
     observers: {
