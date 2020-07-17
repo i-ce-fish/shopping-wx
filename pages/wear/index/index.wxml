@@ -20,8 +20,8 @@
         <wear-list list="{{wearList}}"></wear-list>
     </view>
 
-    <float-button text="帮我\n设计" bottom="238" bindtap="tapDesign"></float-button>
-    <float-button text="筛选" bottom="160" icon="share" bindtap="tapFilter"></float-button>
+    <float-button text="帮我设计穿法搭配" bottom="160" width="300rpx" size="34rpx"  bindtap="tapDesign"></float-button>
+    <float-button text="筛选" bottom="238" icon="share" bindtap="tapFilter"></float-button>
 
 
     <filter-single-page id="filter-single-page" filterData="{{filterData}}"></filter-single-page>

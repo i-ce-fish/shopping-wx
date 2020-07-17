@@ -1,6 +1,6 @@
 .scroll-top {
-    width: 76rpx;
-    height: 76rpx;
+    /*width: 76rpx;*/
+    /*height: 76rpx;*/
     background: rgba(255, 255, 255, .98);
     border: 1rpx solid #BCBCBC;
     display: flex;

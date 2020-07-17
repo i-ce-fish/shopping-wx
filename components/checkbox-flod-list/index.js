@@ -4,7 +4,13 @@ Component({
         ready() {
             // this.iconAni = wx.createAnimation()
             this.data.list.forEach(item => {
+
+                // if (item.type === 'checkbox') {
                 item.collapse = true
+                // }
+                // if (item.type === 'radio') {
+                //     item.checked
+                // }
             })
         }
     },
@@ -23,6 +29,7 @@ Component({
     },
     data: {},
     methods: {
+
         show: function (e) {
             //原点是指渲染完成的位置
             // this.setData({iconRotate: this.iconAni.export(), collapse: false})
@@ -44,6 +51,12 @@ Component({
             this.setData({
                 [e.currentTarget.dataset.prop]: e.detail
             })
+        },
+        tapRadio(e) {
+            this.setData({
+                [e.currentTarget.dataset.prop]: e.detail
+            })
+
 
         }
 

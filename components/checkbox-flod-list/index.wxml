@@ -1,6 +1,5 @@
 <!--折叠项-->
 <view wx:for="{{list}}" wx:key="index">
-
     <!--    多选-->
     <view wx:if="{{item.type ==='checkbox'}}">
         <van-checkbox-group value="{{item.checked}}" data-prop="list[{{index}}].checked"
@@ -25,7 +24,7 @@
                                   wx:for="{{item.collapse?num:item.item}}"
                                   wx:for-item="innerItem"
                                   wx:key="index">
-                        <!--                                    remark 神坑 text 标签不能换行写 否则内容也会换行-->
+                        <!-- remark 神坑 text 标签不能换行写 否则内容也会换行-->
                         <text class="y-color-gray">{{item.collapse?item.item[index]:innerItem}}</text>
                     </van-checkbox>
                 </view>
@@ -33,8 +32,6 @@
         </van-checkbox-group>
     </view>
 
-
-    <!--    todo  单选逻辑-->
     <!--    单选-->
     <view wx:if="{{item.type==='radio'}}">
         <van-radio-group value="{{item.checked}}" data-prop="list[{{index}}].checked"
@@ -59,14 +56,11 @@
                                wx:for="{{item.collapse?num:item.item}}"
                                wx:for-item="innerItem"
                                wx:key="index">
-                        <!--                                    remark 神坑 text 标签不能换行写 否则内容也会换行-->
+                        <!-- remark 神坑 text 标签不能换行写 否则内容也会换行-->
                         <text class="y-color-gray">{{item.collapse?item.item[index]:innerItem}}</text>
                     </van-radio>
                 </view>
             </view>
         </van-radio-group>
-
-
     </view>
-
 </view>

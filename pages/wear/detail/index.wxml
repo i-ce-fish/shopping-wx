@@ -15,7 +15,7 @@
     <card padding="0">
         <van-collapse value="{{activeColl}}" bindchange="setDetail" data-prop="activeColl">
             <van-collapse-item title="{{wear.title}}" name="1">
-                <view class="y-color-black text-wrap">{{wear.content}}</view>
+                <view class="y-color-black text-wrap">{{wear.intro}}</view>
             </van-collapse-item>
         </van-collapse>
     </card>
@@ -44,7 +44,8 @@
                 <van-image class="" height="250rpx" width="250rpx" fit="widthFix"
                            src="{{item.list[0].url}}"></van-image>
             </view>
-            <view class="y-flex-1 y-padding-lr y-line-height-150 y-flex-col y-align-between">
+            <view class="y-flex-1 y-padding-lr y-line-height-150 y-flex-col y-align-between"
+                  bindtap="go" data-url="/pages/catagory/product-detail/index?id={{item.id}}">
                 <view>
                     <!--                    合并空格，保留换行符-->
                     <view class="text-wrap">上衣的颜色描述+为什么
@@ -58,7 +59,6 @@
                     </view>
                 </view>
                 <view class="y-flex y-align-right y-underline "
-                      bindtap="go" data-url="/pages/catagory/product-detail/index?id={{item.id}}"
                 >详情
                 </view>
             </view>
@@ -78,6 +78,7 @@
         </view>
     </view>
     <float-button text="分享" icon="share" open-type="share"></float-button>
+    <float-button text="帮我设计穿法搭配" width="300rpx" size="34rpx" bottom="150" bindtap="tapFeedback"></float-button>
 
     <!--    <view class="y-padding-t"></view>-->
     <footer></footer>

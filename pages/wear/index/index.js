@@ -2,8 +2,8 @@ Page({
     data: {
         filterData: [
             {
-                item: ["全部", '帅哥', '美女', '中性'],
-                title: "适穿性别"
+                item: ['帅哥', '美女', '有倾向'],
+                title: "适穿性别", type: "checkbox"
             },
             {
                 item: [
@@ -21,7 +21,8 @@ Page({
                     "自定义"
 
                 ],
-                title: "适穿年龄"
+                title: "适穿年龄", type: "checkbox"
+
             }, {
                 item: [
                     "较胖",
@@ -31,6 +32,7 @@ Page({
                     "较瘦"
                 ],
                 title: "体型轮廓"
+                , type: "radio"
             },
             {
                 item: [
@@ -41,7 +43,8 @@ Page({
                     "脖子短",
                     "自定义"
                 ],
-                title: "特殊修饰"
+                title: "特殊修饰", type: "checkbox"
+
             },
             {
                 item: [
@@ -49,7 +52,8 @@ Page({
                     "有点个性",
                     "非常个性"
                 ],
-                title: "个性程度"
+                title: "个性程度", type: "radio"
+
             },
             {
                 item: [
@@ -58,7 +62,8 @@ Page({
                     "街头达人",
                     "其他来源"
                 ],
-                title: "穿法来源"
+                title: "穿法来源", type: "checkbox"
+
             },
             {
                 item: [
@@ -68,11 +73,11 @@ Page({
                     "巴黎街头",
                     "娱乐圈",
                     "剑桥哈佛",
-
                     "娱乐圈",
                     "日韩"
                 ],
-                title: "流行地区"
+                title: "流行地区", type: "checkbox"
+
             },
             {
                 item: [
@@ -86,7 +91,8 @@ Page({
                     "旅游度假",
                     "其他场合"
                 ],
-                title: "穿着场合"
+                title: "穿着场合", type: "checkbox"
+
             },
             {
                 item: [
@@ -103,61 +109,60 @@ Page({
                     "轻奢",
                     "自定义"
                 ],
-                title: "特殊修饰"
+                title: "特殊修饰", type: "checkbox"
+
             }],
         catalogs: [
             //穿法分类的一级筛选
-            {name: '明星穿法'},
-            {name: '显瘦穿法'},
-            {name: '广州流行'},
-            {name: '欧美校园'},
-            {name: '日韩最新'},
-            {name: '炫酷个性'},
-            {name: '通勤达人'},
-            {name: '轻奢简约'}
+            {name: '小学生'},
+            {name: '巴黎街头'},
+            {name: '街头达人'},
+            {name: '娱乐圈'},
+            {name: '正式商务'},
+            {name: '森女'}
         ],
         wearList: [
             {
                 img: 'https://img1.cache.netease.com/catchpic/4/44/447CDD5924DDF235067C7EAC5C25B11D.jpg',
                 code: 'CFA216541',
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
-                subtitle: ''
+                intro:"穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装"
             },
             {
                 img: 'https://img1.cache.netease.com/catchpic/4/40/401595388FAC4B49D519336E83F5AA11.jpg',
                 code: 'CFA216541',
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
-                subtitle: ''
+                intro:"穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装"
             },
             {
                 img: 'https://img1.cache.netease.com/catchpic/E/ED/ED4795F0EBF01DF790275D2FF7979485.jpg',
                 code: 'CFA216541',
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
-                subtitle: ''
+                intro:"穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装"
             },
             {
                 img: 'https://gd3.alicdn.com/imgextra/i3/63764294/O1CN019fn7pj1hahFQQaezH_!!63764294.jpg_400x400.jpg',
                 code: 'CFA216541',
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
-                subtitle: ''
+                intro:"穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装"
             },
             {
                 img: 'https://www.uniqlo.cn/hmall/test/u0000000013827/mobileDetail/3.jpg',
                 code: 'CFA216541',
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
-                subtitle: ''
+                intro:"穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装"
             },
             {
                 img: 'https://www.uniqlo.cn/hmall/test/u0000000013827/model/rank1/first/765-1065/1.jpg',
                 code: 'CFA216541',
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
-                subtitle: ''
+                intro:"穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装"
             },
             {
                 img: 'https://www.uniqlo.cn/cms/3d98fc35127b31778b998ad16f44243b.jpg',
                 code: 'CFA216541',
                 title: '夏日都市养眼大气清纯气质财运商务通勤装',
-                subtitle: ''
+                intro:"穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装"
             }
         ],
         total: "1234"

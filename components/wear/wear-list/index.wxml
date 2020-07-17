@@ -23,6 +23,9 @@
             <view class="y-line-height-180 y-font-blod y-font-l">
                 {{item.title}}
             </view>
+            <view class="y-pt-20">
+                {{item.intro}}
+            </view>
 
         </view>
         <view class="y-underline y-flex y-align-right">

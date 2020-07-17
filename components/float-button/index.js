@@ -2,6 +2,10 @@ Component({
 
     //使用此组件需要在页面调用onPageScroll设置scrollTop
     properties: {
+        //按钮高度
+        height: {type: String, value: '76rpx'},
+        //按钮宽度
+        width: {type: String, value: '76rpx'},
         //回顶部按钮距离底部距离 rpx
         bottom: {
             type: Number,
@@ -31,6 +35,10 @@ Component({
         },
         openType: {
             type: String,
+            value: ''
+        },
+        size: {
+            type: "String",
             value: ''
         }
 

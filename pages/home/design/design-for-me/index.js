@@ -195,9 +195,29 @@ Page({
 
             }
 
+        ],
+        proQuestions: [
+            {
+                title: '牛仔裤腰型',
+                item: ['高腰', '中腰', '低腰'],
+                type: 'radio'
+            }, {
+                title: '牛仔裤版型',
+                item: ['紧身', '宽松', '合体'],
+                type: 'radio'
+            },
+            {
+                title: '牛仔裤面料',
+                item: ['棉', '麻', '布', '纤维'],
+                type: 'checkbox'
+            }
         ]
     },
     onLoad: function (options) {
+        console.log('options', options)
+        if (options.type === 'pro') {
+            this.setData({questions: this.data.proQuestions})
+        }
 
     },
     go: function (e) {

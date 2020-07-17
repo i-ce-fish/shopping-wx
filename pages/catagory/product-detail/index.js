@@ -148,7 +148,7 @@ App.Page(filter.loginCheck({
         delivery: "1",
         // 折叠面板
         collapseSize: 5,
-        activeColl: [],
+        activeColl: ['2'],
 
     },
 
@@ -370,15 +370,22 @@ App.Page(filter.loginCheck({
         goods.get(this.data.id).then(res => {
             //todo add fade data
             let fadeData = {
+                label: ["欧洲最新轻薄高科技", "纽约时装周爆品", "纽约时装周爆品2"],
                 parm: {
                     code: '41870900345',
                     marketSeason: '2020夏季',
-                    styles: ['少淑', '简约', '北欧', '碎花', '拼接'],
+                    styles: ['少淑', '简约', '北欧', '碎花', '拼接', '自定义'],
                     details: ['高腰', '彼得潘领', '泡泡袖', 'H型裙', '拼接'],
                     washInfo: "机洗，水温60°C以下",
-                    material: '[{"key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"key":"填充物","value":"70%白鸭绒"},{"key":"内衬","value":"10%粘胶纤维"}]',
+                    templateType: ['超级紧身', '紧身', '修身', '合体', '宽松'],
+                    material: [
+                        {key: '大身', value: '棉80%  聚酯纤维20%  铜氨纤维12%'},
+                        {key: "填充物", value: "70%白鸭绒"},
+                        {key: "内衬", value: "10%粘胶纤维"}],
+
                     others: [{title: '自定义', content: '自定义参数'}]
                 },
+                // material: '[{"key":"大身","value":"棉80%  聚酯纤维20%  铜氨纤维12%"},{"key":"填充物","value":"70%白鸭绒"},{"key":"内衬","value":"10%粘胶纤维"}]',
                 introduction: {
                     style: {
                         type: "这款是经典的北欧简约风，线条简单，看起来就清爽，没有多余的口袋和细节",
@@ -655,8 +662,8 @@ App.Page(filter.loginCheck({
         if (e.currentTarget.dataset.index === 3) {
             wx.$go('/pages/catagory/bargain/index')
         }
-
+    },
+    tapFeedback(e) {
+        wx.$go("/pages/home/design/design-for-me/index", {id: 1, type: 'pro'})
     }
-
-
 }))

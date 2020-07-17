@@ -16,37 +16,37 @@ Component({
         ],
         wear: {
             title: '范爷范冰冰小海星牛仔外套童趣',
-            content: '穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装\n' +
+            intro: '穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装\n' +
                 '穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装\n' +
                 '穿法介绍：夏日都市养眼大气清纯气质财运商务通勤装'
         },
         products: [{
-            name: '麻混纺半开领上衣',
             intro: '搭配原因：黑色显瘦, 风格百搭, 细节特征和穿法的关联',
             minPrice: '99.99',
             maxPrice: '299.99',
             list: [
                 {
-                    id: '1',
+                    id: '2',
                     name: "麻混纺半开领上衣1",
                     onsale_price: '99.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/model/rank1/other1/196-273/2.jpg'
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/model/rank1/other1/196-273/2.jpg',
+                    showFirst: true
                 },
                 {
-                    id: '2',
+                    id: '3',
                     name: "麻混纺半开领上衣2",
                     onsale_price: '199.00',
                     url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/model/rank1/first/591-822/1.jpg'
                 },
                 {
-                    id: '3',
+                    id: '4',
                     name: "麻混纺半开领上衣3",
                     onsale_price: '299.00',
                     url: 'https://www.uniqlo.cn/hmall/test/u0000000015867/main/other4/1000/5.jpg'
                 }
             ]
         }, {
-            name: '雪纺打褶裙裤',
+
             intro: '搭配原因：黑色显瘦, 风格百搭, 细节特征和穿法的关联',
             minPrice: '99.99',
             maxPrice: '299.99',
@@ -55,7 +55,9 @@ Component({
                     id: '1',
                     name: '雪纺打褶裙裤1',
                     onsale_price: '99.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000014626/model/rank2/other1/196-273/2.jpg'
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000014626/model/rank2/other1/196-273/2.jpg',
+                    showFirst: true
+
                 },
                 {
                     id: '2',
@@ -72,8 +74,7 @@ Component({
                 }
             ]
         }, {
-            id: '123',
-            name: '平底拖鞋',
+
             minPrice: '99.99',
             maxPrice: '299.99',
             list: [
@@ -81,7 +82,9 @@ Component({
                     id: '1',
                     name: '平底拖鞋1',
                     onsale_price: '99.00',
-                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg'
+                    url: 'https://www.uniqlo.cn/hmall/test/u0000000015347/main/other4/1000/5.jpg',
+                    showFirst: true
+
                 },
                 {
                     id: '2',
@@ -245,6 +248,8 @@ Component({
             //     res[0].top       // #the-id节点的上边界坐标
             //     res[1].scrollTop // 显示区域的竖直滚动位置
             // })
+        }, tapFeedback(e) {
+            wx.$go("/pages/home/design/design-for-me/index")
         }
     }
 })

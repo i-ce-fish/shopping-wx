@@ -10,6 +10,5 @@
             <van-button type="primary" bindtap="go" data-url="/pages/home/design/role-list/index">下一步</van-button>
         </view>
     </view>
-
     <footer></footer>
 </view>

@@ -6,20 +6,21 @@ Component({
         //价格排序方向
         priceArrow: false,
         //列表视图切换
-        listView: false,
+        listView: true,
 
         //条件筛选tab标签页，api获取的数据和用来显示的tab分开
-        filterTabs: [
-            {icon: 'apps-o', title: '风格'},
-            {icon: 'apps-o', title: '尺码'},
-            {icon: 'apps-o', title: '颜色'},
-            {icon: 'apps-o', title: '价格'}
-        ],
+        // filterTabs: [
+        //     {icon: 'apps-o', title: '风格'},
+        //     {icon: 'apps-o', title: '尺码'},
+        //     {icon: 'apps-o', title: '颜色'},
+        //     {icon: 'apps-o', title: '价格'}
+        // ],
 
         filterData: [
             {
-                item: ["全部", '帅哥', '美女', '中性'],
-                title: "适穿性别"
+                item: ['帅哥', '美女', '倾向'],
+                title: "适穿性别",
+                type: 'checkbox'
             },
             {
                 item: [
@@ -37,7 +38,8 @@ Component({
                     "自定义"
 
                 ],
-                title: "适穿年龄"
+                title: "适穿年龄",
+                type: "checkbox"
             }, {
                 item: [
                     "较胖",
@@ -46,7 +48,9 @@ Component({
                     "偏瘦",
                     "较瘦"
                 ],
-                title: "体型轮廓"
+                title: "体型轮廓",
+                type: "checkbox"
+
             },
             {
                 item: [
@@ -57,7 +61,9 @@ Component({
                     "脖子短",
                     "自定义"
                 ],
-                title: "特殊修饰"
+                title: "特殊修饰",
+                type: "checkbox"
+
             },
             {
                 item: [
@@ -65,7 +71,9 @@ Component({
                     "有点个性",
                     "非常个性"
                 ],
-                title: "个性程度"
+                title: "个性程度",
+                type: "radio"
+
             },
             {
                 item: [
@@ -75,6 +83,8 @@ Component({
                     "其他来源"
                 ],
                 title: "穿法来源"
+                , type: "checkbox"
+
             },
             {
                 item: [
@@ -84,11 +94,11 @@ Component({
                     "巴黎街头",
                     "娱乐圈",
                     "剑桥哈佛",
-
                     "娱乐圈",
                     "日韩"
                 ],
-                title: "流行地区"
+                title: "流行地区", type: "checkbox"
+
             },
             {
                 item: [
@@ -102,7 +112,8 @@ Component({
                     "旅游度假",
                     "其他场合"
                 ],
-                title: "穿着场合"
+                title: "穿着场合", type: "checkbox"
+
             },
             {
                 item: [
@@ -119,10 +130,12 @@ Component({
                     "轻奢",
                     "自定义"
                 ],
-                title: "特殊修饰"
+                title: "特殊修饰", type: "checkbox"
+
             }, {
                 item: ['100以下', '100-200', '200-300', '500以上'],
-                title: '价格'
+                title: '价格', type: "checkbox"
+
             }
         ]
         ,

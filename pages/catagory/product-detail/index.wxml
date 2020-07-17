@@ -135,8 +135,8 @@
                             版型
                         </view>
                         <view class="y-flex y-flex-wrap ">
-                            <!--                            {{product.parm.templateType}}-->
-                            <view class="y-col-4" wx:for="{{['超级紧身','紧身','修身','合体','宽松']}}" wx:key="index">
+                            {{}}
+                            <view class="y-col-4" wx:for="{{product.parm.templateType}}" wx:key="index">
                                 {{item}}
                             </view>
                         </view>
@@ -148,8 +148,7 @@
                         </view>
                         <view class="y-flex-wrap y-flex ">
                             <view class="y-col-4"
-                                  wx:key="index" wx:for="{{['少淑', '简约', '北欧', '碎花', '拼接']}}">
-                                <!--                            {{product.parm.styles}}-->
+                                  wx:key="index" wx:for="{{product.parm.styles}}">
                                 {{item}}
 
                             </view>
@@ -159,9 +158,8 @@
                     <view>
                         <view class="y-font-blod y-pt-20">细节特征</view>
                         <view class="y-flex-wrap y-flex">
-                            <view wx:for="{{['高腰', '彼得潘领', '泡泡袖', 'H型裙', '拼接']}}" wx:key="index">
-
-                                <!--                                {{product.parm.details}}-->
+                            <view class="y-col-4"
+                                  wx:for="{{product.parm.details}}" wx:key="index">
                                 {{item}}
                             </view>
                         </view>
@@ -170,14 +168,13 @@
                     <view>
                         <view class="y-font-blod y-pt-20">洗涤信息</view>
                         <view>
-                            <!--                            {{product.parm.wash}}-->
-                            机洗，水温60°C以下
+                            {{product.parm.washInfo}}
                         </view>
                     </view>
                 </view>
 
             </van-collapse-item>
-            <van-collapse-item title=" 商品说明" name="2">
+            <van-collapse-item title=" 商品说明" name="2" disabled="{{true}}" is-link="{{false}}">
                 <!--                <van-image src="{{product.parm.explan}}" width="100%" fit="widthFix"></van-image>-->
                 <!--                todo -->
 
@@ -448,10 +445,11 @@
 
 
     <!--    分享-->
-    <float-button text="分享" icon="share" open-type="share"></float-button>
-    <float-button bottom="296" text="优化\n建议"></float-button>
+    <scroll-top scrollTop="{{scrollTop}}" bottom="290" text="TOP"></scroll-top>
+    <float-button text="分享" icon="share" open-type="share" bottom="220"></float-button>
+    <float-button text="帮我设计款式"  width="300rpx" size="34rpx" bottom="150"  bindtap="tapFeedback"></float-button>
+<!--    <float-button bottom="296" text="优化\n建议" bindtap="tapFeedback"></float-button>-->
     <!--    滚回去-->
-    <scroll-top scrollTop="{{scrollTop}}" text="TOP"></scroll-top>
 
     <!-- 底部栏 -->
     <van-goods-action custom-class="cus-goods-action">
