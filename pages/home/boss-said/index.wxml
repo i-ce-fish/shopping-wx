@@ -3,47 +3,14 @@
     <view class="y-p-20 y-line-height-180 y-color-gray y-font-xl ">
         开店20年了，承蒙您的厚爱，我努力成为时尚达人，我把一些经验和大家分享。
     </view>
-    <card>
-        <van-cell title="你也会挑衣服" is-link
+    <card wx:for="{{catalogList}}" wx:key="index">
+        <van-cell title="{{item.catalog_name}}" is-link
                   link-type="navigateTo"
-                  url="/pages/home/pick-clothes/list/index"
-                  title-class="cell-title"
-                  custom-class="cell-title-box">
-            <view slot="icon">
-                <van-icon name="home-o" size="40rpx"></van-icon>
-            </view>
-        </van-cell>
-
-        <view>
-            <view
-                    bindtap="go"
-                    data-url="/pages/home/detail/index?id=82"
-                    style="height:240rpx; background:url('{{chooseClothes.head.img}}'); position: relative">
-                <view class="title-bg">
-
-                    <view class="ellipsis y-color-white y-padding-lr y-font-l "
-                          style="position: absolute;bottom: 10rpx">
-                        {{chooseClothes.head.title}}
-                    </view>
-                </view>
-            </view>
-            <view class="y-padding-lr y-pt-20 y-line-height-180 y-color-gray">
-                {{chooseClothes.head.introduction}}
-            </view>
-
-            <van-divider custom-style="padding:0;margin:20rpx 0"/>
-
-        </view>
-        <article-list list="{{chooseClothes.list}}">
-        </article-list>
-    </card>
-    <card>
-        <van-cell title="你也能时尚" is-link
-                  link-type="navigateTo"
-                  url="/pages/home/pick-clothes/list/index"
                   title-class="cell-title"
                   custom-class="cell-title-box"
-        >
+                  bindtap="go"
+                  data-url="article/list"
+                  data-id="{{item.id}}">
             <view slot="icon">
                 <van-icon name="home-o" size="40rpx"></van-icon>
             </view>
@@ -52,23 +19,29 @@
         <view>
             <view
                     bindtap="go"
-                    data-url="/pages/home/detail/index?id=82"
-                    style="height:240rpx; background:url('{{fashions.head.img}}'); position: relative; ">
+                    data-url="article/detail"
+                    data-id="{{item.id}}"
+                    style="height:240rpx; background:url('{{item.head.img}}'); position: relative">
                 <view class="title-bg">
+
                     <view class="ellipsis y-color-white y-padding-lr y-font-l "
                           style="position: absolute;bottom: 10rpx">
-                        {{fashions.head.title}}
+                        {{item.head.title}}
                     </view>
                 </view>
             </view>
             <view class="y-padding-lr y-pt-20 y-line-height-180 y-color-gray">
-                {{fashions.head.introduction}}
+                {{item.head.introduction}}
             </view>
+
             <van-divider custom-style="padding:0;margin:20rpx 0"/>
+
         </view>
-        <article-list list="{{fashions.list}}">
+        <article-list list="{{item.list}}">
         </article-list>
     </card>
+
+
 </view>
 
 <footer></footer>

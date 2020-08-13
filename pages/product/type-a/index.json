@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "usingComponents": {
+    "product-list": "/components/product/product-list/index",
+    "van-icon": "@vant/weapp/icon",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "carousel": "/components/carousel/index",
+    "scroll-top": "/components/scroll-top/index",
+    "search-bar": "/components/search-bar/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "catalog-tab": "/components/product/tab/index",
+    "shop-title": "/components/shop-title/index",
+    "footer": "/components/footer/index"
+  }
+}

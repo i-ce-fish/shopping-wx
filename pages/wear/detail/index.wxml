@@ -45,7 +45,9 @@
                            src="{{item.list[0].url}}"></van-image>
             </view>
             <view class="y-flex-1 y-padding-lr y-line-height-150 y-flex-col y-align-between"
-                  bindtap="go" data-url="/pages/catagory/product-detail/index?id={{item.id}}">
+                  bindtap="go"
+                  data-url="product/product-detail"
+                  data-id="{{item.id}}">
                 <view>
                     <!--                    合并空格，保留换行符-->
                     <view class="text-wrap">上衣的颜色描述+为什么
@@ -67,7 +69,9 @@
         <view class="y-pb-20 y-pt-20 ">
             <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
                 <view class="scroll-view-item " wx:for="{{item.list}}" wx:key="index" bindtap="go"
-                      data-url="/pages/catagory/product-detail/index?id={{item.id}}">
+                      data-url="product/product-detail"
+                      data-id="{{item.id}}"
+                >
                     <van-image class="y-padding-lr" height="80rpx" width="80rpx" fit="fill" round
                                src="{{item.url}}"></van-image>
                     <view class="y-center">

@@ -2,7 +2,8 @@
 <view class=""
       wx:for="{{list}}" wx:key="index"
       bindtap="go"
-      data-url="/pages/home/detail/index?id=82"
+      data-url="article/detail"
+      data-id="{{item.id}}"
 >
     <view class="y-flex y-align-between y-vertical-center">
         <view class="y-padding-r ">

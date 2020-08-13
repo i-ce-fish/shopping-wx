@@ -25,7 +25,7 @@
     <!-- 新增地址 -->
     <view class="tui-address-new">
         <van-button type="danger" custom-style="height:88rpx;width:100%;" bindtap="go"
-                    data-url="/pages/my/wear-data/add/index">+ 新增穿衣数据
+                    data-url="my/wear-data/add">+ 新增穿衣数据
         </van-button>
     </view>
 </view>

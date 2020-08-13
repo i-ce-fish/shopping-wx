@@ -2,6 +2,7 @@
 
 
 let user = require('../../../../api/user')
+let app = getApp()
 
 Page({
 
@@ -85,8 +86,7 @@ Page({
 
     },
     goHome() {
-        wx.switchTab({
-            url: '/pages/home/index/index'
-        })
+
+        app.$router.switchTab('home')
     }
 })

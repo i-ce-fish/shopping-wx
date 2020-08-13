@@ -14,7 +14,8 @@
         </view>
     </view>
     <view class="y-col-6 y-padding-lr y-box y-flex-col y-align-between"
-          bindtap="go" data-url="/pages/wear/detail/index?id={{item.id}}"
+          bindtap="go" data-url="wear/detail"
+          data-id="{{item.id}}"
     >
         <view>
             <!--            <view class="y-line-height-180">-->

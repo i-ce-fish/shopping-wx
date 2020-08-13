@@ -3,6 +3,7 @@ let globalData = getApp().globalData;
 
 let address = require('../../../../api/address')
 let order = require('../../../../api/goodorder')
+let app = getApp()
 //Page不支持observers，区别在于方法放进method里
 Component({
     //监听地址数组长度，控制显示地址/添加按钮
@@ -112,14 +113,8 @@ Component({
     },
     methods: {
         onLoad: function (options) {
-            const eventChannel = this.getOpenerEventChannel()
-            // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
-            eventChannel.on('orderItems', function (data) {
-                data.orderItems.forEach(item => {
-                    //todo get data from api
-                    console.log(item.productCode)
-                })
-            })
+            console.error('options',options)
+            console.error('params',app.$router.params)
         },
 
         /**
@@ -235,11 +230,10 @@ Component({
             //todo add data
             order.add({id: new Date().getTime()}).then((res) => {
                 //todo remove wxstorage
-                wx.$go("/pages/shopping/order/success/index", {id: res.data.id});
+                getApp().$router.push('shopping/order/success')
             })
         },
         tapDelivery(e) {
-            console.log(e)
             this.setData({
                 ['orderForm.delivery']: e.detail
             })

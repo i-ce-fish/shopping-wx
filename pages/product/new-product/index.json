@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "新品上架",
+  "usingComponents": {
+    "shop-title": "/components/shop-title/index",
+    "catalog-filter": "/components/product/catalog-filter/index",
+    "product-filter": "/components/product-filter/index",
+    "product-list": "/components/product/product-list/index",
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

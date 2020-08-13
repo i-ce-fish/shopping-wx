@@ -3,6 +3,7 @@
 
 let user = require('../../../../api/user')
 let utils = require('../../../../utils/index')
+let app = getApp()
 Page({
 
     /**
@@ -89,9 +90,7 @@ Page({
 
     },
     goHome() {
-        wx.switchTab({
-            url: '/pages/home/index/index'
-        })
+   app.$router.switchTab('home')
     },
     init() {
         // card高度为整个视口
@@ -119,7 +118,7 @@ Page({
         console.log(e.detail.encryptedData)
     },
     phoneLogin() {
-        wx.$go('/pages/user/login/phone/index')
+        app.$router.push('user/login/phone')
     },
     //test
     // onPopupImage(){

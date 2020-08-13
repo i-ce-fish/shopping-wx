@@ -89,8 +89,9 @@ Page({
     onShareAppMessage: function () {
 
     },
-    go: function (e) {
-        wx.$go(e.currentTarget.dataset.url)
+   go(e) {
+        let dataset = e.currentTarget.dataset;
+        app.$router.push(dataset.url, {id: dataset.id})
     },
 
     onChange(e) {

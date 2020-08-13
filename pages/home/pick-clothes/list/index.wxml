@@ -1,8 +1,0 @@
-<view>
-    <search-bar></search-bar>
-
-    <view class="y-bgc-white y-padding-all">
-        <article-list list="{{pickClothes}}"/>
-    </view>
-    <footer></footer>
-</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "product-list": "/components/product/product-list/index",
+    "scroll-top": "/components/scroll-top/index",
+    "van-image": "@vant/weapp/image/index",
+    "top-sticky": "/components/product/top-sticky/index",
+    "shop-title": "/components/shop-title/index"
+  }
+}

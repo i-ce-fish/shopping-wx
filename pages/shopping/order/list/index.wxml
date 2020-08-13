@@ -11,7 +11,7 @@
                         <view class="  y-font-blod">
                             订单{{index+1}}-{{item.delivery.type}}
                         </view>
-                        <view class="y-underline y-font-s" bindtap="go" data-url="/pages/shopping/order/item/index">
+                        <view class="y-underline y-font-s" bindtap="go" data-url="shopping/order/item">
                             详情
                         </view>
                     </view>
@@ -193,7 +193,7 @@
 
     </view>
     <view class="bottom-bar-box">
-        <van-submit-bar button-text="提交订单" bind:submit="go" data-url="/pages/shopping/order/item/index"
+        <van-submit-bar button-text="提交订单" bind:submit="go" data-url="shopping/order/item"
                         button-class="button-class"
         >
             <text>应付总额:

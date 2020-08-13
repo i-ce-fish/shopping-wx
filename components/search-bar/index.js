@@ -1,3 +1,4 @@
+let app = getApp()
 Component({
     //启用aap.wxss全局样式
     options: {
@@ -39,12 +40,13 @@ Component({
         },
         search() {
             //todo add data
-            wx.$go('/pages/shopping/search/index')
+            app.$router.push( 'shopping/search')
+
         },
         tapScan() {
             wx.scanCode({
                 success(res) {
-                    wx.$go('/pages/shopping/search/index', {keyword: res.result})
+                    app.$router.push( 'shopping/search')
                 }
             })
         }

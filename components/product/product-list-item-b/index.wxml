@@ -1,0 +1,40 @@
+<!--高仿优衣库的商品列表展示   type-b 长条形-->
+
+<view class="y-flex y-padding-t y-padding-lr"
+      bindtap="go" data-url="/pages/product/product-detail/index"
+      data-id="{{product.id}}">
+    <view class="">
+        <van-image src="{{product.img}}" width="375rpx" height="460rpx" fit="fill" class=""/>
+    </view>
+
+    <view class="y-flex-col y-align-between">
+        <view class="y-flex-1  y-flex-col y-align-between y-box  y-padding-lr   y-line-height-200 ">
+            <!--        <view class="y-flex y-align-between y-font-s">-->
+            <!--            <view>-->
+            <!--                {{product.category}}-->
+            <!--            </view>-->
+            <!--            <view>-->
+            <!--                {{product.min_size}}-{{product.max_size}}-->
+            <!--            </view>-->
+            <!--        </view>-->
+            <view class="">
+                {{product.name}}
+            </view>
+            <view style="background-color:#de7373;border-radius:10rpx;padding:0 10rpx;color: #ffffff">
+                最新欧洲轻薄高科技
+            </view>
+            <view style="background-color:#ecba5e;border-radius:10rpx;padding:0 10rpx;color: #ffffff">
+
+                去年纽约时装周爆款，众多明星必备
+            </view>
+            <view class="y-font-xl y-font-blod y-color-red">
+                吊牌价￥{{product.onsale_price}}
+            </view>
+
+        </view>
+        <view class="y-right">
+            详情
+        </view>
+
+    </view>
+</view>

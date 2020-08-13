@@ -1,4 +1,5 @@
 // pages/shopping/address/list/main.js
+let app = getApp()
 Page({
 
     /**
@@ -64,8 +65,9 @@ Page({
     onShareAppMessage: function () {
 
     },
-    go: function (e) {
-        wx.$go(e.currentTarget.dataset.url)
+   go(e) {
+        let dataset = e.currentTarget.dataset;
+        app.$router.push(dataset.url, {id: dataset.id})
     },
     editAddr(index, addressType) {
         wx.$go('/pages/shopping/address/add/index')

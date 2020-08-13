@@ -2,7 +2,7 @@
   "navigationBarTitleText": "最新穿法",
   "usingComponents": {
     "shop-title": "/components/shop-title/index",
-    "catalog-filter": "/components/catalog/catalog-filter/index",
+    "catalog-filter": "/components/product/catalog-filter/index",
     "van-image": "@vant/weapp/image",
     "van-icon": "@vant/weapp/icon/index",
     "product-filter": "/components/product-filter/index",

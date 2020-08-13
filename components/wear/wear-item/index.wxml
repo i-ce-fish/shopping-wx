@@ -1,5 +1,5 @@
 <!--<view class="pro-box {{listView?'y-flex':''}}"-->
-        <!--      bindtap="go" data-url="/pages/catagory/wear-detail/index"-->
+        <!--      bindtap="go" data-url="/pages/product/wear-detail/index"-->
         <!--      data-id="{{wear.id}}">-->
         <!--    <view class=" y-padding-b">-->
         <!--        <van-image src="{{wear.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>-->

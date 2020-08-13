@@ -24,7 +24,6 @@
 // }
 
 
-
 const formatTime = date => {
     const year = date.getFullYear()
     const month = date.getMonth() + 1
@@ -33,7 +32,7 @@ const formatTime = date => {
     const minute = date.getMinutes()
     const second = date.getSeconds()
 
-    return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+    return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
 const formatNumber = n => {
@@ -54,11 +53,25 @@ function rpx2px(rpx) {
     return rpx / 750 * width
 }
 
+// 通过app调用的全局方法, 获取某个节点的坐标信息
+function getNodeViewport(selector) {
 
+    const query = wx.createSelectorQuery()
+    query.select(selector).boundingClientRect()
+    //返回一个promise函数
+    return new Promise((resolve, reject) => {
+        query.exec(function (res) {
+            // res[0].top       // #the-id节点的上边界坐标
+            resolve(res)
+        })
+    })
+}
 
 
 module.exports = {
     formatTime,
     px2rpx,
-    rpx2px
+    rpx2px,
+    getNodeViewport
+
 }

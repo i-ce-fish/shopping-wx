@@ -76,6 +76,6 @@ Page({
         })
     },
     onConfirm() {
-        wx.switchTab({url: '/pages/home/index/index'});
+        getApp().$router.backHome()
     }
 })

@@ -1,4 +1,5 @@
 // pages/shopping/order/paid-order/main.js
+let app = getApp()
 Page({
 
     /**
@@ -83,15 +84,16 @@ Page({
     onShareAppMessage: function () {
 
     },
-    go: function (e) {
-        wx.$go(e.currentTarget.dataset.url)
+   go(e) {
+        let dataset = e.currentTarget.dataset;
+        app.$router.push(dataset.url, {id: dataset.id})
     },
 
     change(e) {
         this.currentTab = e.index
     },
     detail() {
-        wx.$go('/pages/shopping/order/order-detail/index')
+       app.$router.push('shopping/order/order-detail')
     },
     onPullDownRefresh() {
         // setTimeout(() => {

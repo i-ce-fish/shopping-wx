@@ -1,5 +1,4 @@
 <view class="container ">
-
     <shop-title title="会员内购"></shop-title>
 
     <view class="swiper-box">
@@ -31,10 +30,10 @@
                     </view>
                     <view class="right-box y-col-2 y-flex-col y-align-between">
                         <view class="">
-                            <van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/index" size="32px"/>
+                            <van-icon name="qr" bindtap="go" data-url="my/qrcode" size="32px"/>
                         </view>
                         <view class="detail y-flex y-align-right y-center y-vertical-center" bindtap="go"
-                              data-url="/pages/my/qrcode/index">
+                              data-url="my/qrcode">
                             <view>详情</view>
                             <van-icon class="" name="arrow" size="15px"/>
                         </view>
@@ -42,7 +41,7 @@
                 </view>
             </view>
             <view class="y-padding-none y-line-height-200">
-                <view wx:for="{{customerDiscount}}" wx:key="index" bindtap="go" data-url="/pages/rule/integral/index"
+                <view wx:for="{{customerDiscount}}" wx:key="index" bindtap="go" data-url="rule/integral"
                       data-id="{{item.id}}">
                     {{item.title}}
                 </view>
@@ -77,7 +76,8 @@
             <card padding="0">
                 <van-cell title="今日门店会员优惠" is-link
                           link-type="navigateTo"
-                          url="/pages/shopping/search/index?keyword=keyword"
+                          bindtap="go"
+                          data-url="shopping/search"
                           title-class="cell-title"
                           custom-class="cell-title-box "
                 >
@@ -93,7 +93,7 @@
                           class="y-border-b y-col-12">
                         <view class="y-col-12"
                               bindtap="go"
-                              data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
+                              data-url="shopping/search">
                             <view>{{item.subtitle}}</view>
                             <view class="y-flex y-align-center y-font-blod y-font-xxl y-line-height-200 y-color-red"
                                   style="white-space: pre-wrap">
@@ -114,7 +114,7 @@
                           style="margin: 30rpx 0 ;padding: 30rpx ; background-color:{{item.bgc}};"
                           wx:for="{{activity}}" wx:key="index">
                         <view bindtap="go"
-                              data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
+                              data-url="shopping/search">
                             <view>
                                 {{item.subtitle}}
                             </view>
@@ -192,7 +192,8 @@
 
                         <van-cell title="新品上架" is-link
                                   link-type="navigateTo"
-                                  url="/pages/shopping/search/index?keyword=keyword"
+                                  data-url="shopping/search"
+                                  bindtap="go"
                                   title-class="cell-title"
                                   class="y-shadow-b"
                                   value="查看更多"
@@ -218,7 +219,7 @@
                             <!--                                        <catalog-filter list="{{newFilter}}" bindclick="tapWearFilter"></catalog-filter>-->
                             <!--                                    </view>-->
                             <!--                                    <view class="y-col-2 y-flex y-vertical-center y-center y-underline y-color-gray "-->
-                            <!--                                          bindtap="go" data-url="/pages/home/new-product/index">更多上新-->
+                            <!--                                          bindtap="go" data-url="product/new-product">更多上新-->
                             <!--                                    </view>-->
                             <!--                                </view>-->
 
@@ -230,7 +231,7 @@
 
                                 <view class=" y-p-20 y-flex y-align-right ">
                                     <van-button class="y-col-3" type="default" plain block bindtap="go"
-                                                data-url="/pages/shopping/search/index?keyword=keyword">查看更多
+                                                data-url="shopping/search">查看更多
                                     </van-button>
                                 </view>
 
@@ -250,7 +251,8 @@
             <card>
                 <van-cell title="老板娘说" is-link
                           link-type="navigateTo"
-                          url="/pages/shopping/search/index?keyword=keyword"
+                          data-url="shopping/search"
+                          bindtap="go"
                           title-class="cell-title"
                           custom-class="cell-title-box"
                 >
@@ -263,8 +265,8 @@
                 <!--                    <van-tab title="听老板娘说">-->
 
                 <view class="y-pt-20 y-flex y-align-around">
-                    <van-button type="default" bindtap="go" data-url="/pages/home/boss-said/index">听老板娘说</van-button>
-                    <van-button type="default" bindtap="go" data-url="/pages/home/customer-said/index">对老板娘说
+                    <van-button type="default" bindtap="go" data-url="home/boss-said">听老板娘说</van-button>
+                    <van-button type="default" bindtap="go" data-url="home/customer-said">对老板娘说
                     </van-button>
                 </view>
 

@@ -28,10 +28,10 @@
                     </view>
                     <view class="right-box y-col-2 y-flex-col y-align-between">
                         <view class="">
-                            <van-icon name="qr" bindtap="go" data-url="/pages/my/qrcode/index" size="32px"/>
+                            <van-icon name="qr" bindtap="go" data-url="my/qrcode" size="32px"/>
                         </view>
                         <view class="detail y-flex y-center y-vertical-center" bindtap="go"
-                              data-url="/pages/my/qrcode/index">
+                              data-url="my/qrcode">
                             <view>详情</view>
                             <van-icon class="" name="arrow" size="15px"/>
                         </view>
@@ -69,7 +69,7 @@
             <card>
                 <van-cell title="今日门店会员优惠" is-link
                           link-type="navigateTo"
-                          url="/pages/shopping/search/index?keyword=keyword"
+                          url="shopping/search"
                           title-class="cell-title"
                           custom-class="cell-title-box"
                 >
@@ -84,7 +84,7 @@
                             <view>{{item.title}}</view>
                         </view>
                         <view class="y-flex y-align-right  y-vertical-center y-line-height-100" bidntap="go"
-                              data-url="/pages/shopping/search/index?keyword='{{item.subtitle}}'">
+                              data-url="shopping/search">
                             <view>
                                 详情
                             </view>
@@ -136,7 +136,7 @@
             <card custom-class="y-padding-lr-none">
                 <van-cell title="新品上架" is-link
                           link-type="navigateTo"
-                          url="/pages/shopping/search/index?keyword=keyword"
+                          url="shopping/search"
                           title-class="cell-title"
                 >
                     <view slot="icon">
@@ -165,7 +165,7 @@
             <card>
                 <van-cell title="老板娘说" is-link
                           link-type="navigateTo"
-                          url="/pages/shopping/search/index?keyword=keyword"
+                          url="shopping/search"
                           title-class="cell-title"
                           custom-class="cell-title-box"
                 >

@@ -141,8 +141,9 @@ Component({
             }, 1000)
         },
 
-        go: function (e) {
-            wx.$go(e.currentTarget.dataset.url)
+        go(e) {
+            let dataset = e.currentTarget.dataset;
+            app.$router.push(dataset.url, {id: dataset.id})
         },
 
         activeEdit() {
@@ -208,24 +209,8 @@ Component({
             })
         },
         postOrder() {
-            wx.navigateTo({
-                url: '/pages/shopping/order/item/index',
-                events: {
-                    // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-                    acceptDataFromOpenedPage: function (data) {
-                        console.log(data)
-                    },
-                    someEvent: function (data) {
-                        console.log(data)
-                    }
-                },
-                success: function (res) {
-                    // 通过eventChannel向被打开页面传送数据
-                    // 数组格式pro，统一格式
-                    // res.eventChannel.emit('orderItems', {data: 'test'})
-                    res.eventChannel.emit('acceptDataFromOpenerPage', {data: 'test'})
-                }
-            })
+            app.$router.push('shopping/order/item',{id:957})
+            // wx.$go('pages/shopping/order/item/index?id=958')
         }
     }
 })

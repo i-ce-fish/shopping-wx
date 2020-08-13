@@ -20,7 +20,7 @@ function request(req) {
             url: ServerIP + req.url,
             data: req.data,
             method: req.method,
-            timeout: 10000,
+            timeout: 5000,
             //这几项必须设置
             header: {
                 'Accept': 'application/json',
@@ -30,22 +30,28 @@ function request(req) {
                 // 对于 POST 方法且 header['content-type'] 为 application/json 的数据，会对数据进行 JSON 序列化
                 //对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string
 
-                //get + query string不可用
+                //getList 不可用
                 // 'Content-Type': 'application/json',
-                //登录接口不可用
-                // 'Content-Type': 'json'
-
-                'Content-Type': 'application/x-www-form-urlencoded'
-
+                // 添加接口不可用
+                // "Content-Type": "json"
+                //getList使用json , 其他用默认值application/json
+                'Content-Type': req.contentType ? req.contentType : 'application/json'
             },
             success: function (res) {
 
 
                 console.warn('请求结果', res);
-                if (res.statusCode === 200 && res.data.code === 200) {
-                    resolve(res.data.data);
-                } else {
-                    console.warn("返回码校验失败", res.data)
+
+                switch (res.data.code) {
+                    case 200:
+                        resolve(res.data.data);
+                        break;
+                    //    服务器的token已过期/登录失效/未登录
+                    case 500:
+                       getApp().$router.push('user/login/index')
+                        break;
+                    default:
+                        console.warn("返回码校验失败", res.data);
                 }
             },
             fail: function (err) {

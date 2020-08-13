@@ -1,7 +1,7 @@
 import tool from "../../../utils/tool";
 
 let utils = require('../../../utils/index')
-
+let app = getApp()
 Component({
     data: {
         height: 750,
@@ -213,8 +213,9 @@ Component({
             })
         }
         ,
-        go: function (e) {
-            wx.$go(e.currentTarget.dataset.url)
+        go(e) {
+            let dataset = e.currentTarget.dataset;
+            app.$router.push(dataset.url, {id: dataset.id})
         },
 
         //大图预览图片列表
@@ -248,8 +249,9 @@ Component({
             //     res[0].top       // #the-id节点的上边界坐标
             //     res[1].scrollTop // 显示区域的竖直滚动位置
             // })
-        }, tapFeedback(e) {
-            wx.$go("/pages/home/design/design-for-me/index")
+        },
+        tapFeedback(e) {
+            app.$router().push('home/design/design-for-me')
         }
     }
 })

@@ -1,0 +1,13 @@
+/* pages/home/detail/main.wxss */
+
+
+
+/*去除最后一个子元素view的样式*/
+/*.border > view:not(:last-child) {*/
+/*    border-bottom: 1px solid #dadada;*/
+/*}*/
+
+.title {
+    font-size: 36rpx;
+    line-height: 3
+}

@@ -1,0 +1,62 @@
+<view>
+    <van-radio-group value="{{selected}}" data-prop="filterData.style.item[{{index}}].checked"
+                     data-index="{{index}}"
+                     bind:change="tapRole"
+                     wx:for="{{roles}}" wx:key="index">
+        <card custom-class="y-line-height-200 ">
+            <van-radio name="{{index}}">
+                {{item.name}}({{item.height}}cm/{{item.weight}}kg)
+            </van-radio>
+            <view class="y-pt-20">
+                <view class="y-flex y-align-around  y-border-all y-bgc">
+                    <view>肩宽</view>
+                    <view>胸围</view>
+                    <view>腰围</view>
+                    <view>臀围</view>
+                </view>
+                <view class="y-flex y-align-around  y-border-lr y-border-b">
+                    <view>{{item.shoulderWidth}}cm</view>
+                    <view>{{item.bust}}cm</view>
+                    <view>{{item.waist}}cm</view>
+                    <view>{{item.hips}}</view>
+                </view>
+            </view>
+            <view class="y-pt-20 y-right">
+                <van-button class="y-pr-20" bindtap="go" data-url="design/role-form?id=1">编辑
+                </van-button>
+                <van-button type="danger" bindtap="tapDel">删除</van-button>
+            </view>
+        </card>
+    </van-radio-group>
+
+    <view class="y-pt-20 y-shadow-b">
+        <van-cell title="添加其他角色尺码信息" isLink url="design/role-form"/>
+    </view>
+
+    <view class="y-padding-all">
+        尊敬的会员，店铺收到您的需求，
+        我们将通过微信联系您，您也可以打打电话联系我
+    </view>
+
+    <view class="y-center">
+        <van-button type="primary" bindtap="post">提交</van-button>
+    </view>
+
+    <!--    弹出层-->
+    <van-popup show="{{ showDel }}" bind:close="onCloseDel"
+               custom-style="height: 20%;background-color:#fff;"
+               closeable
+               position="bottom"
+    >
+        <view>
+            <view class="y-center y-font-blod y-font-xl">
+                确定删除?
+            </view>
+            <view class="y-flex y-align-around">
+                <van-button>取消</van-button>
+                <van-button type="danger">确定</van-button>
+            </view>
+        </view>
+
+    </van-popup>
+</view>

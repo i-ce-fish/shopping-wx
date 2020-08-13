@@ -1,5 +1,30 @@
 //app.js
 import Store from './utils/store.js';
+import MiniRouter from './route/router'
+
+//lodash的特殊配置
+Object.assign(global, {
+    Array: Array,
+    Date: Date,
+    Error: Error,
+    Function: Function,
+    Math: Math,
+    Object: Object,
+    RegExp: RegExp,
+    String: String,
+    TypeError: TypeError,
+    setTimeout: setTimeout,
+    clearTimeout: clearTimeout,
+    setInterval: setInterval,
+    clearInterval: clearInterval
+});
+/** 另一种方式
+ * 直接引入 lodash modularize 之后的包可以解决
+
+ npm install lodash.get
+ let get = require('./your_copy_path/lodash.get/index');
+ // 直接使用 get(obj, path);
+ */
 
 
 //wx直接调用的全局方法
@@ -16,12 +41,14 @@ wx.$go = function (url, data) {
         url: url + "?" + str
     })
 },
-    wx.$toast = function (text, duration, success) {
+
+
+    wx.$toast = function (text, duration, icon) {
         wx.showToast({
             title: text ? text : '未完善的功能',
-            icon: success ? 'success' : 'none',
+            icon: icon ? 'success' : 'none',
             duration: duration || 2000
-        })
+        });
     }
 
 //  全局状态管理
@@ -33,41 +60,51 @@ let store = new Store({
     openPart: true
 })
 
+Object.assign(global, {
+    Array: Array,
+    Date: Date,
+    Error: Error,
+    Function: Function,
+    Math: Math,
+    Object: Object,
+    RegExp: RegExp,
+    String: String,
+    TypeError: TypeError,
+    setTimeout: setTimeout,
+    clearTimeout: clearTimeout,
+    setInterval: setInterval,
+    clearInterval: clearInterval
+});
+
 App({
     store: store,
     onLaunch: function (options) {
-        //todo remove
-        // 展示本地存储能力
-        var logs = wx.getStorageSync('logs') || []
-        logs.unshift(Date.now())
-        wx.setStorageSync('logs', logs)
+        //创建路由
+        this.$router = new MiniRouter()
 
-        // 登录
-        wx.login({
-            success: res => {
-                // 发送 res.code 到后台换取 openId, sessionKey, unionId
-            }
-        })
+
         // 获取用户信息
-        wx.getSetting({
-            success: res => {
-                if (res.authSetting['scope.userInfo']) {
-                    // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-                    wx.getUserInfo({
-                        success: res => {
-                            // 可以将 res 发送给后台解码出 unionId
-                            this.globalData.userInfo = res.userInfo
-
-                            // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-                            // 所以此处加入 callback 以防止这种情况
-                            if (this.userInfoReadyCallback) {
-                                this.userInfoReadyCallback(res)
-                            }
-                        }
-                    })
-                }
-            }
-        })
+        // wx.getSetting({
+        //     success: res => {
+        //         if (res.authSetting['scope.userInfo']) {
+        //             // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+        //             wx.getUserInfo({
+        //                 success: res => {
+        //                     // 可以将 res 发送给后台解码出 unionId
+        //                     this.globalData.userInfo = res.userInfo
+        //
+        //                     // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+        //                     // 所以此处加入 callback 以防止这种情况
+        //                     if (this.userInfoReadyCallback) {
+        //                         this.userInfoReadyCallback(res)
+        //                     }
+        //                 }
+        //             })
+        //         }
+        //     }
+        // })
+    },
+    onLoad() {
     },
     onError(err) {
         //全局错误监听
@@ -83,18 +120,4 @@ App({
         activeTab: 0,
         shopTitle: '永康美斯特邦威 会员内购'
     },
-
-// 通过app调用的全局方法, 获取某个节点的坐标信息
-    getNodeViewport(selector) {
-
-        const query = wx.createSelectorQuery()
-        query.select(selector).boundingClientRect()
-        //返回一个promise函数
-        return new Promise((resolve, reject) => {
-            query.exec(function (res) {
-                // res[0].top       // #the-id节点的上边界坐标
-                resolve(res)
-            })
-        })
-    }
 })

@@ -2,22 +2,32 @@
   "pages": [
 
     "pages/home/index/index",
-    "pages/user/login/index/index",
-
-    "pages/home/design/role-list/index",
-    "pages/home/design/role-form/index",
-    "pages/home/customer-said/index",
     "pages/home/boss-said/index",
-    "pages/catagory/product-detail/index",
+    "pages/home/customer-said/index",
+
+
+    "pages/article/list/index",
+    "pages/article/detail/index",
+
+    "pages/design/role-list/index",
+    "pages/design/role-form/index",
+    "pages/design/post-success/index",
+    "pages/design/design-for-me/index",
+
     "pages/wear/index/index",
-    "pages/home/pick-clothes/list/index",
     "pages/wear/detail/index",
+
+    "pages/product/bargain/index",
+    "pages/product/can-wear/index",
+
+    "pages/product/new-product/index",
+    "pages/product/product-detail/index",
+    "pages/product/type-a/index",
+    "pages/product/type-b/index",
+    "pages/product/sizes/index",
+    "pages/product/colors/index",
+
     "pages/shopping/search/index",
-    "pages/home/new-product/index",
-    "pages/catagory/type-a/index",
-    "pages/catagory/type-b/index",
-    "pages/catagory/sizes/index",
-    "pages/catagory/colors/index",
     "pages/shopping/order/item/index",
     "pages/shopping/order/success/index",
     "pages/shopping/cart/index",
@@ -25,9 +35,11 @@
     "pages/shopping/order/order-detail/index",
     "pages/shopping/order/paid-order/index",
     "pages/shopping/order/submit-order/index",
+
     "pages/user/login/phone/index",
-    "pages/home/detail/index",
-    "pages/my/user/index",
+    "pages/user/login/index/index",
+
+    "pages/my/index/index",
     "pages/my/qrcode/index",
     "pages/my/copon/index",
     "pages/my/money/index",
@@ -36,17 +48,10 @@
     "pages/my/integral/index",
     "pages/my/wear-data/list/index",
     "pages/my/wear-data/add/index",
+
     "pages/rule/integral/index",
-    "pages/info/info-list/index",
 
-    "pages/test/index",
-
-    "pages/home/pick-clothes/detail/index",
-    "pages/catagory/bargain/index",
-    "pages/catagory/can-wear/index",
-    "pages/home/design/post-success/index",
-
-    "pages/home/design/design-for-me/index"
+    "pages/test/index"
   ],
   "permission": {
     "scope.userLocation": {
@@ -62,7 +67,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/catagory/type-a/index",
+        "pagePath": "pages/product/type-a/index",
         "text": "分类"
       },
       {
@@ -70,7 +75,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/my/user/index",
+        "pagePath": "pages/my/index/index",
         "text": "我的"
       }
     ]

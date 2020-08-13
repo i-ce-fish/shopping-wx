@@ -1,0 +1,127 @@
+<!--折叠项-->
+        <!--<view wx:for="{{list}}" wx:key="index">-->
+        <!--    单选-->
+<view wx:if="{{item.type==='radio'}}">
+    <van-radio-group value="{{checked}}" data-prop="checked"
+                     bind:change="tapCheckbox">
+        <view class=" y-padding-lr">
+            <!--            <view class="y-flex y-align-between y-vertical-center  y-padding-t">-->
+            <!--                <view class=" y-font-xl y-line-height-200">{{item.title}}-->
+            <!--                </view>-->
+            <!--                        折叠的时候只显示前三个-->
+            <!--                    <view wx:if="{{item.item.length>num}}" class="y-color-gray "-->
+            <!--                          bindtap="{{item.collapse?'hide':'show'}}"-->
+            <!--                          data-index="{{index}}">-->
+            <!--                        更多-->
+            <!--                        <van-icon-->
+            <!--                                name="{{item.collapse?'arrow-down':'arrow-up'}}"/>-->
+            <!--                    </view>-->
+            <!--            </view>-->
+            <view class="y-flex  y-flex-wrap y-vertical-center">
+                <van-radio class="y-col-4 y-pt-20 "
+                           checked-color="#378694"
+                           name="{{index}}"
+                           wx:for="{{item.item}}"
+                           wx:for-item="innerItem"
+                           wx:key="index">
+                    <!-- remark 神坑 text 标签不能换行写 否则内容也会换行-->
+                    <!--                    <text class="y-color-gray">{{innerItem}}</text>-->
+                    <view class="y-color-gray">
+                        {{item.collapse?item.item[index]:innerItem.text}}
+                    </view>
+
+                </van-radio>
+            </view>
+        </view>
+    </van-radio-group>
+</view>
+        <!--        <view  wx:else>-->
+<view wx:if="{{item.type==='checkbox'}}">
+    <!--    多选-->
+    <!--        <view wx:if="{{item.type ==='checkbox'}}">-->
+    <van-checkbox-group value="{{checked}}" data-prop="checked"
+                        bind:change="tapCheckbox">
+        <view class=" y-padding-lr">
+            <!--            <view class="y-flex y-align-between y-vertical-center  y-padding-t">-->
+            <!--                <view class=" y-font-xl y-line-height-200">{{item.title}}-->
+            <!--                </view>-->
+            <!--                        折叠的时候只显示前三个-->
+            <!--                    <view wx:if="{{item.item.length>num}}" class="y-color-gray "-->
+            <!--                          bindtap="{{item.collapse?'hide':'show'}}"-->
+            <!--                          data-index="{{index}}">-->
+            <!--                        更多-->
+            <!--                        <van-icon-->
+            <!--                                name="{{item.collapse?'arrow-down':'arrow-up'}}"/>-->
+            <!--                    </view>-->
+            <!--            </view>-->
+            <view class="y-flex  y-flex-wrap y-vertical-center">
+                <van-checkbox name="{{index}}" class="y-col-4 y-pt-20 "
+                              checked-color="#378694" shape="square"
+                              wx:for="{{item.item}}"
+                              wx:for-item="innerItem"
+                              wx:key="index">
+                    <!-- remark 神坑 text 标签不能换行写 否则内容也会换行-->
+                    <!--                    <text class="y-color-gray">{{innerItem}}</text>-->
+                    <view class="y-color-gray">
+                        {{item.collapse?item.item[index]:innerItem.text}}
+                    </view>
+
+                </van-checkbox>
+            </view>
+        </view>
+    </van-checkbox-group>
+    <!--        </view>-->
+</view>
+        <!--</view>-->
+
+<!--滑块组件-->
+<view wx:if="{{item.type==='axis'}}" class=" ">
+    <view class="y-pt-20 y-pb-20">
+        {{checked}}
+    </view>
+    <slider value="{{ checked }}"
+            min="{{item.min}}" step="{{item.step}}"
+            max="{{item.max}}"
+            bindchange="sliderEnd"
+            bindchanging="slidering"
+            show-value
+            style="margin: 0"
+    >
+        <!--            use-button-slot bind:drag="drag" -->
+        <!--        <view class="custom-button" slot="button">-->
+        <!--            {{ checked }}-->
+        <!--            <van-button size="mini" round>-->
+        <!--            </van-button>-->
+        <!--        </view>-->
+    </slider>
+    <view class="y-flex y-align-between y-padding-t y-color-gray y-col-11">
+        <view wx:for="{{item.item}}" wx:key="index"
+              class="{{item.active?'active':''}}"
+        >
+            <!--              bindtap="tapText" data-index="{{index}}" -->
+            {{item.text}}
+        </view>
+    </view>
+</view>
+
+        <!--日期时间组件-->
+        <!--time 21:22-->
+        <!--date 2010-01-01-->
+        <!--datetime 2010-01-01 21:22-->
+<view wx:if="{{item.type==='datetime'}}">
+    <view class="y-padding-lr">
+        <van-button bindtap="showDatetime">
+            {{checked?checked:'选择时间'}}
+        </van-button>
+    </view>
+    <van-popup show="{{ showDatetime }}" bind:close="closeDatetime"
+               position="bottom" custom-style="width: 100%"
+    >
+        <van-datetime-picker
+                type="datetime"
+                value="{{ currentDate }}"
+                bind:cancel="closeDatetime"
+                bind:confirm="confirmDatetime"
+        />
+    </van-popup>
+</view>
