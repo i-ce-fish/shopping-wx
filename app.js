@@ -18,13 +18,7 @@ Object.assign(global, {
     setInterval: setInterval,
     clearInterval: clearInterval
 });
-/** 另一种方式
- * 直接引入 lodash modularize 之后的包可以解决
 
- npm install lodash.get
- let get = require('./your_copy_path/lodash.get/index');
- // 直接使用 get(obj, path);
- */
 
 
 //wx直接调用的全局方法

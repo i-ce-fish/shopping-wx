@@ -1,6 +1,6 @@
-import tool from "../../../utils/tool";
+import {px2rpx} from "../../../utils/wx-util";
+import {throttle} from "../../../utils/util";
 
-let utils = require('../../../utils/index')
 let app = getApp()
 Component({
     data: {
@@ -159,7 +159,7 @@ Component({
          * todo  fixed元素抖动、官方bug
          * https://developers.weixin.qq.com/community/develop/doc/0000aab3a04f706b7e38e19bc5b400?highLine=fixed%25E5%2585%2583%25E7%25B4%25A0%25E6%258A%2596%25E5%258A%25A8
          */
-        onPageScroll: tool.throttle(function (e) {
+        onPageScroll: throttle(function (e) {
             this.obsImgHeight(e[0])
         }, 50),
 
@@ -170,7 +170,7 @@ Component({
          * @param e
          */
         obsImgHeight(e) {
-            let position = utils.px2rpx(e.scrollTop)
+            let position = px2rpx(e.scrollTop)
             let wHeight = wx.getSystemInfoSync().windowHeight;
             //最小高度为 375，最大750rpx
             let height_ = 0

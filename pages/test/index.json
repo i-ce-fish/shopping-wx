@@ -1,21 +1,6 @@
 {
-  "navigationBarTitleText": "永康美特斯邦威店",
   "usingComponents": {
-    "tui-list-cell": "/components/list-cell/list-cell",
-    "tui-list-view": "/components/list-view/list-view",
-    "carousel": "/components/carousel/index",
-    "van-image": "@vant/weapp/image",
-    "footer": "/components/footer/index",
-    "van-icon": "@vant/weapp/icon",
-    "card": "/components/card/index",
-    "shop-title": "/components/shop-title/index",
-    "van-cell": "@vant/weapp/cell/index",
-    "product-list": "/components/product/product-list/index",
-    "product-filter": "/components/product-filter/index",
-    "wear-item": "/components/wear/wear-item/index",
-    "scroll-top": "/components/scroll-top/index",
-    "catalog-filter": "/components/product/catalog-filter/index",
-    "van-sticky": "@vant/weapp/sticky",
-    "tui-sticky": "/components/tui-sticky/tui-sticky"
+    "recycle-view": "miniprogram-recycle-view/recycle-view",
+    "recycle-item": "miniprogram-recycle-view/recycle-item"
   }
 }

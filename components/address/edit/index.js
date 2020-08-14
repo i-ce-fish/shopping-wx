@@ -1,6 +1,7 @@
 // components/test.js
-const area = require('../../../utils/area')
-const address = require('../../../api/address')
+import {getAddress, putAddress} from "../../../api/address";
+import area from "../../../utils/area";
+
 Component({
     //启用aap.wxss全局样式
     options: {
@@ -17,11 +18,10 @@ Component({
     },
 
     observers: {
-        'value': function () {
-            address.get(this.data.value).then(res => {
-                this.setData({
-                    form: res
-                })
+        'value': async function () {
+            const res = await getAddress(this.data.value)
+            this.setData({
+                form: res
             })
         }
     },
@@ -30,7 +30,7 @@ Component({
      */
     data: {
         //    地图数据
-        areaList: area.area,
+        areaList: area,
         showArea: false,
         //form
         form: {}
@@ -76,10 +76,10 @@ Component({
             })
             this.closeArea()
         },
-        confirm() {
-            address.put(this.data.value, this.data.form).then(res => {
-                this.triggerEvent("success", {receipt: res})
-            })
+        async confirm() {
+            const res = await putAddress(this.data.value, this.data.form)
+            this.triggerEvent("success", {receipt: res})
+
         },
 
     }

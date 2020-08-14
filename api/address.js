@@ -1,47 +1,41 @@
-let rq = require('../utils/request')
-
-function getList(data) {
-    return rq.request({
+export function getAddresses(data) {
+    return request({
         url: 'addresses',
         method: 'get',
+        contentType: 'json',
+
         data
+
     })
 }
 
-function get(id) {
-    return rq.request({
+export function getAddress(id) {
+    return request({
         url: 'addresses/' + id,
         method: 'get'
     })
 }
 
-function add(data) {
-    return rq.request({
+export function addAddress(data) {
+    return request({
         url: 'addresses',
         method: 'post',
         data
     })
 }
 
-function put(id, data) {
-    return rq.request({
+export function putAddress(id, data) {
+    return request({
         url: 'addresses/' + id,
         method: 'put',
         data
     })
 }
 
-function del(id) {
-    return rq.request({
+export function delAddress(id) {
+    return request({
         url: 'addresses/' + id,
         method: 'delete'
     })
 }
 
-module.exports = {
-    getList,
-    get,
-    add,
-    put,
-    del
-}

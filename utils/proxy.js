@@ -4,7 +4,7 @@
  * @param fn 执行函数
  * @returns {*}
  */
-function login(fn) {
+function loginValidate(fn) {
     return new Proxy(fn, {
         apply(target, ctx, args) {
 
@@ -37,7 +37,7 @@ function log(fn) {
 }
 
 
-export default {
-    login,
+export  {
+    loginValidate,
     log
 };

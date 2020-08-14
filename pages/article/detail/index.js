@@ -1,7 +1,8 @@
 // pages/home/detail/main.js
 
-let articles = require("../../../api/article")
-let _ = require('../../../utils/lodash.min')
+import _ from "../../../utils/lodash.min"
+import {getArticle} from "../../../api/article";
+
 let app = getApp()
 //在使用的View中引入WxParse模块
 // var WxParse = require('../../../components/wxParse/wxParse');
@@ -27,7 +28,7 @@ Page({
     },
 
     async init() {
-        const res = await articles.get(app.$router.params.id)
+        const res = await getArticle(app.$router.params.id)
         /**
          *  todo
          *  匹配的范围太大, 可能有bug

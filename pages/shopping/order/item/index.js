@@ -1,8 +1,9 @@
 // pages/shopping/order/item/main.js
+import {delAddress, getAddresses, putAddress} from "../../../../api/address";
+import {addGoodorder} from "../../../../api/goodorder";
+
 let globalData = getApp().globalData;
 
-let address = require('../../../../api/address')
-let order = require('../../../../api/goodorder')
 let app = getApp()
 //Page不支持observers，区别在于方法放进method里
 Component({
@@ -113,8 +114,8 @@ Component({
     },
     methods: {
         onLoad: function (options) {
-            console.error('options',options)
-            console.error('params',app.$router.params)
+            console.error('options', options)
+            console.error('params', app.$router.params)
         },
 
         /**
@@ -125,22 +126,22 @@ Component({
         },
 
         //address
-        getAddresses() {
-            address.getList({customer_id: globalData.userInfo.id}).then(res => {
-                res.list.map(item => {
-                    item.is_default = item.is_default === 1
+        async getAddresses() {
+            const res = await getAddresses({customer_id: globalData.userInfo.id})
+            res.list.map(item => {
+                item.is_default = item.is_default === 1
 
-                    //设置默认的收货信息
-                    if (item.is_default) {
-                        this.setData({
-                            'form.receipt': item
-                        })
-                    }
-                })
-                this.setData({
-                    addresses: res.list
-                })
+                //设置默认的收货信息
+                if (item.is_default) {
+                    this.setData({
+                        'form.receipt': item
+                    })
+                }
             })
+            this.setData({
+                addresses: res.list
+            })
+
 
         },
         selectAddress(e) {
@@ -174,24 +175,23 @@ Component({
                 addressId: e.currentTarget.dataset.id
             })
         },
-        delAddress(e) {
-            address.del(e.currentTarget.dataset.id).then(res => {
-                this.getAddresses()
-            })
+        async delAddress(e) {
+            const res = await delAddress(e.currentTarget.dataset.id)
+            this.getAddresses()
+
         },
         confirmAddress() {
             //set api
-            this.data.addresses.map(item => {
+            this.data.addresses.map(async (item) => {
                 //数据转换
                 item.is_default = item.is_default ? 1 : 0
                 //todo 无法修改
-                address.put(item.id, item).then(() => {
-
-                    this.setData({
-                        addressActive: false,
-                        'form.receipt': item
-                    })
+                const res = await putAddress(item.id, item)
+                this.setData({
+                    addressActive: false,
+                    'form.receipt': item
                 })
+
             })
         },
         showAddAddress() {
@@ -212,7 +212,6 @@ Component({
         set(e) {
             let prop = e.currentTarget.dataset.prop
             let value = e.currentTarget.dataset.value
-            console.log(`setData:{${prop}:${value}`)
             this.setData({
                 [prop]: value
             })
@@ -226,12 +225,12 @@ Component({
                 [prop]: value
             })
         },
-        postOrder() {
+        async postOrder() {
             //todo add data
-            order.add({id: new Date().getTime()}).then((res) => {
-                //todo remove wxstorage
-                getApp().$router.push('shopping/order/success')
-            })
+            const res = await addGoodorder({id: new Date().getTime()})
+            //todo remove wxstorage
+            getApp().$router.push('shopping/order/success')
+
         },
         tapDelivery(e) {
             this.setData({

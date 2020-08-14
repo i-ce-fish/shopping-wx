@@ -24,23 +24,6 @@
 // }
 
 
-const formatTime = date => {
-    const year = date.getFullYear()
-    const month = date.getMonth() + 1
-    const day = date.getDate()
-    const hour = date.getHours()
-    const minute = date.getMinutes()
-    const second = date.getSeconds()
-
-    return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
-
-const formatNumber = n => {
-    n = n.toString()
-    return n[1] ? n : '0' + n
-}
-
-
 function px2rpx(px) {
     const width = wx.getSystemInfoSync().windowWidth
     return px * (750 / width)
@@ -49,8 +32,7 @@ function px2rpx(px) {
 
 // rpx  转px
 function rpx2px(rpx) {
-    const width = wx.getSystemInfoSync().windowWidth
-    return rpx / 750 * width
+    return (rpx / 750) * wx.getSystemInfoSync().windowWidth
 }
 
 // 通过app调用的全局方法, 获取某个节点的坐标信息
@@ -68,10 +50,8 @@ function getNodeViewport(selector) {
 }
 
 
-module.exports = {
-    formatTime,
+export {
     px2rpx,
     rpx2px,
     getNodeViewport
-
 }

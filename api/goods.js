@@ -1,12 +1,10 @@
-let rq = require('../utils/request')
+import request from "../utils/request";
 
-function get(id) {
-    return rq.request({
+export function getGood(id) {
+    return request({
         url: 'goods/' + id,
         method: 'GET'
     })
 }
 
-module.exports = {
-    get
-}
+

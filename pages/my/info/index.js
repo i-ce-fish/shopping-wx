@@ -1,5 +1,7 @@
 // pages/my/info/main.js
-let provinceList = require("../../../utils/area")
+
+import area from "../../../utils/area";
+
 Page({
 
     /**
@@ -24,7 +26,7 @@ Page({
         },
 
         showArea: false,
-        provinceList: provinceList,
+        provinceList: area,
         areaValue: "请选择城市",
         stepper: 1,
         showPicker: false,

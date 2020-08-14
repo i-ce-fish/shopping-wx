@@ -1,6 +1,5 @@
 import pages from 'pages'
 
-
 /**
  *
  * 单个 key 允许存储的最大数据长度为 1MB，所有数据存储上限为 10MB
@@ -46,7 +45,7 @@ function permission(page) {
     }
 }
 
-export default class Router {
+ class Router {
 
     /**
      * constructor 🚀
@@ -95,13 +94,7 @@ export default class Router {
         //序列化保证传参类型不改变
 
 
-        // let page
-        // try {
-        //     page = JSON.parse(JSON.stringify(this.getPageFor(name)))
-        // } catch (e) {
-        //     console.error(e)
-            // return
-        // }
+        // const page = _.cloneDeep(this.getPageFor(name))
         const page = JSON.parse(JSON.stringify(this.getPageFor(name)))
 
         //未登录
@@ -265,3 +258,5 @@ export default class Router {
         return wx.getStorageSync(key)
     }
 }
+export default Router
+

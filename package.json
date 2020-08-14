@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "@vant/weapp": "^1.0.7",
-    "lodash": "^4.17.19"
+    "miniprogram-recycle-view": "^0.1.5"
   },
   "devDependencies": {},
   "scripts": {

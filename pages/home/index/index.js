@@ -1,12 +1,8 @@
 // pages/home/index/main.js
 
-import tool from "../../../utils/tool";
-import proxy from '../../../utils/proxy'
 
-let article = require("../../../api/article")
-let customer = require("../../../api/customer")
-let catalog = require("../../../api/catalog")
 let app = getApp()
+import {getCustomer, getCustomers} from "../../../api/customer"
 
 Page({
 
@@ -271,6 +267,7 @@ Page({
         app.$router.push(dataset.url, {id: dataset.id})
     },
 
+    
 
     // onTapDetail(e) {
     //     wx.$go('article/detail', e.currentTarget.dataset)
@@ -278,10 +275,9 @@ Page({
 
 //  init data
     //todo 登录成功需要获取用户id
-    getUserInfo() {
-        customer.get(2).then(res => {
-            this.setData({user: res})
-        })
+    async getUserInfo() {
+        let res = await getCustomer(2)
+        this.setData({user: res})
     },
 
 //    获取头条

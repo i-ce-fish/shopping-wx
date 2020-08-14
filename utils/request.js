@@ -48,7 +48,7 @@ function request(req) {
                         break;
                     //    服务器的token已过期/登录失效/未登录
                     case 500:
-                       getApp().$router.push('user/login/index')
+                        getApp().$router.push('user/login/index')
                         break;
                     default:
                         console.warn("返回码校验失败", res.data);
@@ -72,4 +72,6 @@ function request(req) {
 }
 
 
-exports.request = request
+// exports.request = request
+
+export default request

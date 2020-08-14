@@ -1,7 +1,9 @@
-let rq = require('../utils/request')
+import request from "../utils/request";
 
-function getList(data) {
-    return rq.request({
+// import request from "../utils/request";
+
+export function getCatalogs(data) {
+    return request({
         url: 'catalogs',
         method: 'get',
         contentType: 'json',
@@ -9,6 +11,4 @@ function getList(data) {
     })
 }
 
-module.exports = {
-    getList
-}
+

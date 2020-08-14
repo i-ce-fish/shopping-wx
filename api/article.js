@@ -1,7 +1,9 @@
-let rq = require('../utils/request')
+import request from "../utils/request";
 
-function getList(data) {
-    return rq.request({
+
+
+export function getArticles(data) {
+    return request({
         url: 'articles',
         method: 'GET',
         contentType: 'json',
@@ -9,40 +11,34 @@ function getList(data) {
     })
 }
 
-function get(id) {
-    return rq.request({
+export function getArticle(id) {
+    return request({
         url: "articles/" + id,
         method: "GET"
     })
 }
 
-function add(data) {
-    return rq.request({
+export function addArticle(data) {
+    return request({
         url: "articles",
         method: "POST",
         data
     })
 }
 
-function put(id, data) {
-    return rq.request({
+export function putArticle(id, data) {
+    return request({
         url: "articles/" + id,
         method: "PUT",
         data
     })
 }
 
-function del(id) {
-    return rq.request({
+export function delArticle(id) {
+    return request({
         url: "articles/" + id,
         method: "DELETE"
     })
 }
 
-module.exports = {
-    getList,
-    get,
-    add,
-    put,
-    del
-}
+

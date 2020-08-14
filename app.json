@@ -1,6 +1,9 @@
 {
   "pages": [
 
+    "pages/test/index",
+
+
     "pages/home/index/index",
     "pages/home/boss-said/index",
     "pages/home/customer-said/index",
@@ -49,9 +52,8 @@
     "pages/my/wear-data/list/index",
     "pages/my/wear-data/add/index",
 
-    "pages/rule/integral/index",
+    "pages/rule/integral/index"
 
-    "pages/test/index"
   ],
   "permission": {
     "scope.userLocation": {

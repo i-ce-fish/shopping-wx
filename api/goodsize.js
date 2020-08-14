@@ -1,21 +1,18 @@
-let rq = require('../utils/request')
+import request from "../utils/request";
 
-function getList(data) {
-    return rq.request({
+export function getGoodsizes(data) {
+    return request({
         url: 'goodsizes',
         method: 'GET',
+        contentType: 'json',
         data
     })
 }
 
-function get(id) {
-    return rq.request({
+export function getGoodsize(id) {
+    return request({
         url: 'goodsizes/' + id,
         method: 'GET'
     })
 }
 
-module.exports = {
-    getList,
-    get
-}

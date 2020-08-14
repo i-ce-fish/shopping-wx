@@ -1,7 +1,7 @@
-let rq = require('../utils/request')
+import request from "../utils/request";
 
-function login(data) {
-    return rq.request({
+export function login(data) {
+    return request({
         url: 'auth/login',
         method: 'POST',
         data: data
@@ -9,16 +9,12 @@ function login(data) {
 }
 
 
-function wxLogin(data) {
-    return rq.request({
+export function wxLogin(data) {
+    return request({
         url: "auth/signin",
-        method:'POST',
+        method: 'POST',
         data
     })
 }
 
 
-
-module.exports = {
-    login,wxLogin
-}

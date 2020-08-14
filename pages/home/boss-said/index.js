@@ -1,7 +1,9 @@
+import * as catalog from "../../../api/catalog";
+
 let app = getApp()
-let article = require('../../../api/article')
-let catalog = require('../../../api/catalog')
-const _ = require('../../../utils/lodash.min');
+import _ from "../../../utils/lodash.min"
+import {getArticles} from "../../../api/article";
+import {getCatalogs} from "../../../api/catalog";
 
 Page({
     data: {},
@@ -10,8 +12,8 @@ Page({
     },
     async init() {
         //todo 查询参数无效
-        let {list: articleList} = await article.getList({is_header: true})
-        let {list: catalogList} = await catalog.getList()
+        let {list: articleList} = await getArticles({is_header: true})
+        let {list: catalogList} = await getCatalogs()
 
         catalogList = _.chain(catalogList)
             .forEach(o => {
