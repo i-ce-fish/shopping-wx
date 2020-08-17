@@ -13,7 +13,7 @@ function request(req) {
         wx.showLoading({
             title: '加载中',
             mask: true
-        })
+        });
 
 
         wx.request({

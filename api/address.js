@@ -3,7 +3,6 @@ export function getAddresses(data) {
         url: 'addresses',
         method: 'get',
         contentType: 'json',
-
         data
 
     })

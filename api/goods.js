@@ -8,3 +8,35 @@ export function getGood(id) {
 }
 
 
+export function getGoods(data) {
+    return request({
+        url: "goods",
+        method: "get",
+        contentType: 'json',
+        data
+    })
+}
+
+
+export function addGood(data) {
+    return request({
+        url: "goods",
+        method: "post",
+        data
+    })
+}
+
+export function putGood(id, data) {
+    return request({
+        url: `goods/${id}`,
+        method: "put",
+        data
+    })
+}
+
+export function delGood(id) {
+    return request({
+        url: `goods/${id}`,
+        method: "delete"
+    })
+}

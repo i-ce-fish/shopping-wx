@@ -1,13 +1,10 @@
 {
   "pages": [
-
+    "pages/home/index/index",
     "pages/test/index",
 
-
-    "pages/home/index/index",
     "pages/home/boss-said/index",
     "pages/home/customer-said/index",
-
 
     "pages/article/list/index",
     "pages/article/detail/index",
@@ -22,7 +19,6 @@
 
     "pages/product/bargain/index",
     "pages/product/can-wear/index",
-
     "pages/product/new-product/index",
     "pages/product/product-detail/index",
     "pages/product/type-a/index",

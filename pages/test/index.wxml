@@ -1,11 +1,15 @@
-<recycle-view batch="{{batchSetRecycleData}}" id="recycleId" batch-key="batchSetRecycleData"
+<recycle-view id="recycleId" batch="{{batchSetRecycleData}}" batch-key="batchSetRecycleData"
+              lower-threshold="100"
+              bindscrolltolower="reachBottom"
 >
     <view slot="before">
         不回收的区域
     </view>
     <recycle-item wx:for="{{recycleList}}" wx:key="index" class='item'>
         <view>
-            {{item.name}}
+            {{item.id}}
+            {{currentTotal}}-{{total}}
+            {{item.product_name}}
         </view>
     </recycle-item>
     <view slot="after">
