@@ -4,8 +4,8 @@
 <view wx:if="{{item.type==='radio'}}">
     <van-radio-group value="{{checked}}" data-prop="checked"
                      bind:change="tapCheckbox">
-        <view class=" y-padding-lr">
-            <!--            <view class="y-flex y-align-between y-vertical-center  y-padding-t">-->
+        <view class=" y-p-lr-30">
+            <!--            <view class="y-flex y-align-between y-vertical-center  y-p-t-30">-->
             <!--                <view class=" y-font-xl y-line-height-200">{{item.title}}-->
             <!--                </view>-->
             <!--                        折叠的时候只显示前三个-->
@@ -18,7 +18,7 @@
             <!--                    </view>-->
             <!--            </view>-->
             <view class="y-flex  y-flex-wrap y-vertical-center">
-                <van-radio class="y-col-4 y-pt-20 "
+                <van-radio class="y-col-4 y-p-t-20 "
                            checked-color="#378694"
                            name="{{index}}"
                            wx:for="{{item.item}}"
@@ -41,8 +41,8 @@
     <!--        <view wx:if="{{item.type ==='checkbox'}}">-->
     <van-checkbox-group value="{{checked}}" data-prop="checked"
                         bind:change="tapCheckbox">
-        <view class=" y-padding-lr">
-            <!--            <view class="y-flex y-align-between y-vertical-center  y-padding-t">-->
+        <view class=" y-p-lr-30">
+            <!--            <view class="y-flex y-align-between y-vertical-center  y-p-t-30">-->
             <!--                <view class=" y-font-xl y-line-height-200">{{item.title}}-->
             <!--                </view>-->
             <!--                        折叠的时候只显示前三个-->
@@ -55,7 +55,7 @@
             <!--                    </view>-->
             <!--            </view>-->
             <view class="y-flex  y-flex-wrap y-vertical-center">
-                <van-checkbox name="{{index}}" class="y-col-4 y-pt-20 "
+                <van-checkbox name="{{index}}" class="y-col-4 y-p-t-20 "
                               checked-color="#378694" shape="square"
                               wx:for="{{item.item}}"
                               wx:for-item="innerItem"
@@ -76,7 +76,7 @@
 
 <!--滑块组件-->
 <view wx:if="{{item.type==='axis'}}" class=" ">
-    <view class="y-pt-20 y-pb-20">
+    <view class="y-p-t-20 y-p-b-20">
         {{checked}}
     </view>
     <slider value="{{ checked }}"
@@ -94,7 +94,7 @@
         <!--            </van-button>-->
         <!--        </view>-->
     </slider>
-    <view class="y-flex y-align-between y-padding-t y-color-gray y-col-11">
+    <view class="y-flex y-align-between y-p-t-30 y-color-gray y-col-11">
         <view wx:for="{{item.item}}" wx:key="index"
               class="{{item.active?'active':''}}"
         >
@@ -109,7 +109,7 @@
         <!--date 2010-01-01-->
         <!--datetime 2010-01-01 21:22-->
 <view wx:if="{{item.type==='datetime'}}">
-    <view class="y-padding-lr">
+    <view class="y-p-lr-30">
         <van-button bindtap="showDatetime">
             {{checked?checked:'选择时间'}}
         </van-button>

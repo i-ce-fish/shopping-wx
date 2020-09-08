@@ -1,4 +1,4 @@
-<view wx:for="{{list}}" wx:key="index" class="y-flex y-mt-20 y-padding-tb y-shadow-b y-bgc-white"
+<view wx:for="{{list}}" wx:key="index" class="y-flex y-m-t-20 y-p-tb-30 y-shadow-b y-bgc-white"
       style="height: 600rpx;">
 
     <view class="y-col-6 y-flex y-center y-align-center" style="position: relative" bindtap="tapImg"
@@ -13,7 +13,7 @@
                        src="{{item.img}}"></van-image>
         </view>
     </view>
-    <view class="y-col-6 y-padding-lr y-box y-flex-col y-align-between"
+    <view class="y-col-6 y-p-lr-30 y-box y-flex-col y-align-between"
           bindtap="go" data-url="wear/detail"
           data-id="{{item.id}}"
     >
@@ -24,7 +24,7 @@
             <view class="y-line-height-180 y-font-blod y-font-l">
                 {{item.title}}
             </view>
-            <view class="y-pt-20">
+            <view class="y-p-t-20">
                 {{item.intro}}
             </view>
 

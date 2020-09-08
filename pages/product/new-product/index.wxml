@@ -9,7 +9,7 @@
               bindtap="tapMoreWear">
             <product-filter useSlot tabs="{{tabs}}" filterData="{{filterData}}">
 
-                <view class="y-pb-20 y-padding-lr y-flex y-vertical-center">
+                <view class="y-p-b-20 y-p-lr-30 y-flex y-vertical-center">
                     <view class="y-underline">
                         更多精准筛选
                     </view>

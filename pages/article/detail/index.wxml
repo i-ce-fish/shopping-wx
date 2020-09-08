@@ -1,10 +1,10 @@
 <!--pages/home/detail/main.wxml-->
-<view class="container y-padding-all y-bgc-white">
+<view class="container y-p-30 y-bgc-white">
 
     <!--    wxParse解析-->
     <!--    <van-panel>-->
     <!--        &lt;!&ndash; // 引入模板 &ndash;&gt;-->
-    <!--        <view class="y-flex y-align-center  y-padding-t y-font-blod y-font-xl">{{title}}</view>-->
+    <!--        <view class="y-flex y-align-center  y-p-t-30 y-font-blod y-font-xl">{{title}}</view>-->
 
     <!--        <view class="body">-->
     <!--            <import src="/components/wxParse/wxParse.wxml"/>-->
@@ -20,7 +20,7 @@
     <view class="y-bgc-white y-flex y-align-center  title" >{{title}}</view>
     <rich-text class="y-line-height-180" nodes="{{body}}" space="nbsp"></rich-text>
 
-    <view class="y-bgc-white y-shadow-b y-padding-all y-mt-20">
+    <view class="y-bgc-white y-shadow-b y-p-30 y-m-t-20">
         <view class="y-font-xl y-font-blod y-line-height-200">
             互动
         </view>
@@ -28,7 +28,7 @@
             <textarea height="150rpx" bindblur="bindTextAreaBlur" placeholder="请输入您的问题"/>
         </view>
 
-        <view class="y-right y-pt-20">
+        <view class="y-right y-p-t-20">
             <van-button size="small" type="primary">提交
             </van-button>
         </view>

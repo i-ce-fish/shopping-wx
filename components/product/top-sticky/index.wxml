@@ -2,7 +2,7 @@
     <view class="top-sticky">
         <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
             <view class="scroll-view-item_H " wx:for="{{list}}" wx:key="index" bindtap="onTap" data-index="{{index}}">
-                <van-image class="y-padding-lr" height="80rpx" width="80rpx" fit="fill" round
+                <van-image class="y-p-lr-30" height="80rpx" width="80rpx" fit="fill" round
                            src="{{item[img]}}"></van-image>
                 <view class="title">
                     {{item[title]}}

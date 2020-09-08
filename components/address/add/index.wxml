@@ -14,7 +14,7 @@
                  data-value="form.detail" bindblur="set"></y-input>
     </view>
 
-    <view class="y-padding-t">
+    <view class="y-p-t-30">
         <van-button bindtap="confirm" size="large" color="#1b1b1b">确定</van-button>
     </view>
 </big-card>

@@ -26,7 +26,7 @@
                             <tui-list-view nullTitle="{{true}}" unlined="all">
                                 <tui-list-cell hover="{{false}}" padding="0 30rpx 36rpx">
                                     <view>
-                                        <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
+                                        <view class="y-font-l y-font-blod y-p-t-18 y-p-b-18">
                                             {{item.delivery.type}}
                                         </view>
 
@@ -51,7 +51,7 @@
                             <tui-list-view nullTitle="{{true}}" unlined="all">
                                 <tui-list-cell hover="{{false}}" padding="0 30rpx 36rpx">
                                     <view class="y-col-12">
-                                        <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
+                                        <view class="y-font-l y-font-blod y-p-t-18 y-p-b-18">
                                             提货信息
                                         </view>
 
@@ -89,7 +89,7 @@
 
                         <!--            商品信息-->
                         <tui-list-view nullTitle="{{true}}" unlined="all">
-                            <view class="y-font-l y-font-blod y-padding-lr y-pt-18 y-pb-18 y-color-black">
+                            <view class="y-font-l y-font-blod y-p-lr-30 y-p-t-18 y-p-b-18 y-color-black">
                                 商品信息
                             </view>
 
@@ -115,13 +115,13 @@
                             <tui-list-cell hover="{{false}}">
 
                                 <view>
-                                    <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+                                    <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18">
                                         促销信息
                                     </view>
 
 
                                     <van-radio-group value="{{ radio }}" bind:change="onChange">
-                                        <view class="y-pt-18 y-pb-18" wx:for="{{item.promotion}}" wx:key="index">
+                                        <view class="y-p-t-18 y-p-b-18" wx:for="{{item.promotion}}" wx:key="index">
                                             <van-radio
                                                     shape="square"
                                                     name="{{item.name}}">
@@ -142,7 +142,7 @@
                                 <view class="y-col-12 ">
                                     <view class="y-flex y-align-between y-vertical-center">
 
-                                        <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+                                        <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18">
                                             优惠券
                                         </view>
                                         <view class="y-underline">
@@ -166,10 +166,10 @@
 
                                 <view class="y-flex y-align-between y-col-12">
 
-                                    <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+                                    <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18">
                                         订单金额
                                     </view>
-                                    <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18 y-color-red">
+                                    <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18 y-color-red">
                                         ￥1232.00
                                     </view>
                                 </view>
@@ -183,7 +183,7 @@
 
 
                 <!--            分隔线-->
-                <view class="y-mb-20"></view>
+                <view class="y-m-b-20"></view>
 
             </view>
 
@@ -197,7 +197,7 @@
                         button-class="button-class"
         >
             <text>应付总额:
-                <text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text>
+                <text class="y-color-red y-font-xl y-font-blod y-p-r-30">￥1232.00</text>
             </text>
         </van-submit-bar>
     </view>

@@ -6,7 +6,7 @@
       data-id="{{item.id}}"
 >
     <view class="y-flex y-align-between y-vertical-center">
-        <view class="y-padding-r ">
+        <view class="y-p-r-30 ">
             <view class="y-flex y-vertical-center y-line-height-180 y-font-l  ellipsis">
                 {{item.title}} {{item.title}} {{item.title}}
             </view>

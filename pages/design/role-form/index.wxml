@@ -3,7 +3,7 @@
         <view>
             <y-input label="角色名称"></y-input>
         </view>
-        <view class="y-pt-20">
+        <view class="y-p-t-20">
             <view class="y-color-gray ">性别</view>
             <van-radio-group value="{{form.sex}}" bind:change="tapSex">
                 <view class="y-flex y-align-around">
@@ -12,25 +12,25 @@
                 </view>
             </van-radio-group>
         </view>
-        <view class="y-pt-20">
+        <view class="y-p-t-20">
             <view class="y-color-gray">身高</view>
-            <view class="y-padding-lr  y-pt-20 y-pb-20">
+            <view class="y-p-lr-30  y-p-t-20 y-p-b-20">
                 <van-slider min="50" max="200" value="{{ form.height }}" bind:drag="dragHeight">
                 </van-slider>
-                <!--                <view class="y-pt-20 y-center y-font-xxl y-font-blod y-line-height-200">-->
+                <!--                <view class="y-p-t-20 y-center y-font-xxl y-font-blod y-line-height-200">-->
                 <!--                    {{ form.height }}cm-->
                 <!--                </view>-->
-                <view class="y-pt-20 y-center y-font-blod y-line-height-200" style="font-size: 36rpx">
+                <view class="y-p-t-20 y-center y-font-blod y-line-height-200" style="font-size: 36rpx">
                     {{ form.height }}cm
                 </view>
             </view>
         </view>
-        <view class="y-pt-20">
+        <view class="y-p-t-20">
             <view class="y-color-gray">体重</view>
-            <view class="y-padding-lr  y-pt-20 y-pb-20">
+            <view class="y-p-lr-30  y-p-t-20 y-p-b-20">
                 <van-slider min="30" max="120" value="{{ form.weight }}" bind:drag="dragWeight">
                 </van-slider>
-                <view class="y-pt-20 y-center y-font-blod y-line-height-200" style="font-size: 36rpx">
+                <view class="y-p-t-20 y-center y-font-blod y-line-height-200" style="font-size: 36rpx">
                     {{ form.weight }}kg
                 </view>
             </view>
@@ -43,23 +43,23 @@
                 </van-image>
             </view>
             <view class="y-col-4">
-                <view class="y-padding-t">
+                <view class="y-p-t-30">
                     <y-input label="肩宽(cm)" value="{{form.shoulderWidth}}"
                              data-prop="form.shoulderWidth" bindblur="set"></y-input>
                 </view>
-                <view class="y-padding-t">
+                <view class="y-p-t-30">
                     <y-input label="胸围(cm)"></y-input>
                 </view>
-                <view class="y-padding-t">
+                <view class="y-p-t-30">
                     <y-input label="腰围(cm)"></y-input>
                 </view>
-                <view class="y-padding-t">
+                <view class="y-p-t-30">
                     <y-input label="臀围(cm)"></y-input>
                 </view>
             </view>
         </view>
-        <view class="y-flex y-align-around y-padding-all">
-            <van-button class="y-pr-20">取消</van-button>
+        <view class="y-flex y-align-around y-p-30">
+            <van-button class="y-p-r-20">取消</van-button>
             <van-button type="primary">提交</van-button>
         </view>
 

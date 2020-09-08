@@ -6,9 +6,9 @@
         <!--            <van-tab title="详情">-->
         <!--            </van-tab>-->
         <van-tab title="咨询">
-            <view class="y-padding-tb advisory-box">
-                <tui-card class="y-padding-tb" title="{{advisory}}">
-                    <view slot="body" class="y-padding-all">
+            <view class="y-p-tb-30 advisory-box">
+                <tui-card class="y-p-tb-30" title="{{advisory}}">
+                    <view slot="body" class="y-p-30">
                         <view class="">
                             <textarea class="textarea" name="desc" placeholder="请输入你要咨询的内容" auto-focus/>
                         </view>
@@ -21,11 +21,11 @@
                 </tui-card>
 
 
-                <tui-card class="y-padding-tb" title="{{card}}" wx:for="{{3}}" wx:key="index">
-                    <view slot="body" class="y-padding-all">
+                <tui-card class="y-p-tb-30" title="{{card}}" wx:for="{{3}}" wx:key="index">
+                    <view slot="body" class="y-p-30">
                         很有弹性
                     </view>
-                    <view slot="footer" class="y-flex y-align-between y-padding-all">
+                    <view slot="footer" class="y-flex y-align-between y-p-30">
                         <view>查看全部回答</view>
                         <view>2020-04-24 00:00</view>
                     </view>

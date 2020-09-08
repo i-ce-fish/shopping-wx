@@ -9,10 +9,10 @@
         <view>
             <van-radio-group value="{{ orderForm.delivery }}" data-prop="orderForm.delivery" bind:change="setDetail">
                 <view>
-                    <van-radio custom-class="y-padding-t" name="1" checked-color="#1b1b1b">快递配送
+                    <van-radio custom-class="y-p-t-30" name="1" checked-color="#1b1b1b">快递配送
                         <!--                        <view>快递配送至丽水市云和县 7.00元</view>-->
                     </van-radio>
-                    <van-radio custom-class="y-padding-t" name="2" checked-color="#1b1b1b">门店自提</van-radio>
+                    <van-radio custom-class="y-p-t-30" name="2" checked-color="#1b1b1b">门店自提</van-radio>
                     <!--                    <van-radio name="3" checked-color="#1b1b1b">门店急送</van-radio>-->
                 </view>
             </van-radio-group>
@@ -26,7 +26,7 @@
             <!--门店信息-->
             <y-card>
                 <view>
-                    <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
+                    <view class="y-font-l y-font-blod y-p-t-18 y-p-b-18">
                         {{delivery.type}}
                     </view>
                     <view class="y-line-height-180">
@@ -49,7 +49,7 @@
             <!--            提货信息-->
 
             <y-card>
-                <view class="y-font-l y-font-blod y-pt-18 y-pb-18">
+                <view class="y-font-l y-font-blod y-p-t-18 y-p-b-18">
                     提货信息
                 </view>
                 <view class="y-line-height-150">
@@ -59,7 +59,7 @@
                              bindblur="setDetail">
                     </y-input>
 
-                    <view class="y-padding-t">
+                    <view class="y-p-t-30">
                         <y-input id="yInput" label="手机号码"
                                  value="{{orderForm.receipt.mobile}}"
                                  data-prop="orderForm.receipt.mobile"
@@ -76,7 +76,7 @@
             <!--快递信息-->
             <y-card>
 
-                <view class="y-flex y-align-between y-pt-18 y-pb-18">
+                <view class="y-flex y-align-between y-p-t-18 y-p-b-18">
                     <view class="y-font-l y-font-blod ">收货信息</view>
                     <!--                    未添加任何收货地址时，不显示编辑-->
                     <view class="y-underline" wx:if="{{!noAddress}}" bindtap="editAddress">编辑</view>
@@ -93,7 +93,7 @@
                         <view>{{item.province}}{{item.city}}{{item.detail}}</view>
                         <view>{{item.customer}}</view>
                         <view>{{item.mobile}}</view>
-                        <view class="y-flex y-align-between y-center  y-font-blod y-padding-t">
+                        <view class="y-flex y-align-between y-center  y-font-blod y-p-t-30">
                             <view class="y-flex-1">
                                 <van-button bindtap="selectAddress" data-item="{{item}}" hairline>
                                     <view class="y-flex y-align-center y-vertical-center">
@@ -114,18 +114,18 @@
 
 
                     </view>
-                    <view class="y-padding-t">
+                    <view class="y-p-t-30">
                         <van-button bindtap="confirmAddress" size="large" color="#1b1b1b">确定</van-button>
 
                     </view>
-                    <view class="y-padding-t">
+                    <view class="y-p-t-30">
 
                         <van-button bindtap="showAddAddress" size="large">新增收货地址</van-button>
                     </view>
                 </view>
                 <!--                没有地址-->
                 <view wx:if="{{noAddress}}">
-                    <view class="y-padding-t">
+                    <view class="y-p-t-30">
 
                         <van-button bindtap="showAddAddress" size="large">新增收货地址</van-button>
                     </view>
@@ -143,7 +143,7 @@
         <!--            商品信息-->
 
         <tui-list-view nullTitle="{{true}}">
-            <view class="y-bgc-white y-font-l y-font-blod y-padding-lr y-pt-18 y-pb-18">
+            <view class="y-bgc-white y-font-l y-font-blod y-p-lr-30 y-p-t-18 y-p-b-18">
                 商品信息
             </view>
 
@@ -152,7 +152,7 @@
                 <view class="y-col-12">
 
                     <product-item-order product="{{item}}">
-                        <view class="y-font-xl y-pt-18">x{{item.num}}</view>
+                        <view class="y-font-xl y-p-t-18">x{{item.num}}</view>
                     </product-item-order>
                 </view>
 
@@ -166,11 +166,11 @@
         <!--    促销信息-->
 
         <y-card>
-            <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+            <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18">
                 促销信息
             </view>
             <van-radio-group value="{{ orderForm.promotion }}" data-prop="orderForm.promotion" bind:change="setDetail">
-                <view class="y-pt-18 y-pb-18" wx:for="{{promotion}}" wx:key="index">
+                <view class="y-p-t-18 y-p-b-18" wx:for="{{promotion}}" wx:key="index">
                     <van-radio
                             name="{{item.name}}"
                             checked-color="#1b1b1b"
@@ -184,7 +184,7 @@
         <!--    优惠券-->
         <y-card>
             <view class="y-flex y-align-between y-vertical-center">
-                <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+                <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18">
                     优惠券
                 </view>
                 <view class="y-underline">
@@ -199,10 +199,10 @@
 
         <!--    金额-->
         <y-card>
-            <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18">
+            <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18">
                 订单金额
             </view>
-            <view class=" y-font-l y-font-blod  y-pt-18 y-pb-18 y-color-red">
+            <view class=" y-font-l y-font-blod  y-p-t-18 y-p-b-18 y-color-red">
                 ￥1232.00
             </view>
         </y-card>
@@ -215,7 +215,7 @@
                         bind:submit="postOrder"
         >
             <text>应付总额:
-                <text class="y-color-red y-font-xl y-font-blod y-padding-r">￥1232.00</text>
+                <text class="y-color-red y-font-xl y-font-blod y-p-r-30">￥1232.00</text>
             </text>
         </van-submit-bar>
     </view>

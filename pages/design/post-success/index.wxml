@@ -1,5 +1,5 @@
 <view>
-    <view class="y-center y-padding-tb">
+    <view class="y-center y-p-tb-30">
         <van-icon name="success" size="150rpx" color="rgb(7,193,96)"></van-icon>
         <view class="y-font-xxl y-font-blod y-line-height-200">
             提交成功, 联系客服获取为您设计的穿法
@@ -19,7 +19,7 @@
                     <van-button custom-style="width:80%" open-type="contact" type="primary">客服会话</van-button>
                 </view>
             </view>
-            <view class="y-flex y-align-between y-p-20 y-border-all y-mb-20 ">
+            <view class="y-flex y-align-between y-p-20 y-border-all y-m-b-20 ">
 
                 <view>
                     <view class="y-font-xl y-line-height-200">

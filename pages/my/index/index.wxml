@@ -1,5 +1,5 @@
 <view class="container">
-    <view class="head-box y-bgc-white y-padding-lr y-flex">
+    <view class="head-box y-bgc-white y-p-lr-30 y-flex">
         <view class="avatar  y-col-4 y-flex y-vertical-center">
             <van-image class="" round width="150rpx" height="150rpx" fit="fill" src="{{imgs[1]}}"/>
         </view>

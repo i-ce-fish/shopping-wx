@@ -69,7 +69,6 @@ page {
 }
 
 .y-line-height-150 {
-
     line-height: 150%;
 }
 
@@ -96,49 +95,49 @@ page {
 }
 
 /*无边距*/
-.y-padding-none {
+.y-p-0 {
     padding: 0 !important;
 }
 
 /*全部边距*/
-.y-padding-all {
+.y-p-30 {
     padding: 30rpx;
 }
 
 /*上下边距*/
-.y-padding-tb {
+.y-p-tb-30 {
     padding-top: 30rpx;
     padding-bottom: 30rpx;
 }
 
 /*左右边距*/
-.y-padding-lr {
+.y-p-lr-30 {
     padding-left: 30rpx;
     padding-right: 30rpx;
 }
 
 /*右边距*/
-.y-padding-r {
+.y-p-r-30 {
     padding-right: 30rpx;
 }
 
 /*left*/
-.y-padding-l {
+.y-p-l-30 {
     padding-left: 30rpx;
 }
 
 
 /*top*/
-.y-padding-t {
+.y-p-t-30 {
     padding-top: 30rpx;
 }
 
 /*bottom*/
-.y-padding-b {
+.y-p-b-30 {
     padding-bottom: 30rpx;
 }
 
-.y-pt-24 {
+.y-p-t-24 {
     padding-top: 24rpx;
 }
 
@@ -146,36 +145,36 @@ page {
     padding: 20rpx;
 }
 
-.y-pr-20 {
+.y-p-r-20 {
     padding-right: 20rpx;
 }
 
-.y-pb-20 {
+.y-p-b-20 {
     padding-bottom: 20rpx;
 }
 
-.y-pt-20 {
+.y-p-t-20 {
     padding-top: 20rpx;
 }
 
-.y-pl-20 {
+.y-p-l-20 {
     padding-left: 20rpx;
 }
 
 
-.y-pt-18 {
+.y-p-t-18 {
     padding-top: 18rpx;
 }
 
-.y-pb-18 {
+.y-p-b-18 {
     padding-bottom: 18rpx;
 }
 
-.y-mb-20 {
+.y-m-b-20 {
     margin-bottom: 20rpx;
 }
 
-.y-mt-20 {
+.y-m-t-20 {
     margin-top: 20rpx;
 }
 

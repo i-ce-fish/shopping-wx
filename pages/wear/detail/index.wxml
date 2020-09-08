@@ -19,10 +19,10 @@
             </van-collapse-item>
         </van-collapse>
     </card>
-    <view wx:for="{{products}}" wx:key="index" class="y-shadow-b y-bgc-white y-mt-20 ">
+    <view wx:for="{{products}}" wx:key="index" class="y-shadow-b y-bgc-white y-m-t-20 ">
         <!--        只是用来滚动定位的节点，因为顶部固定导航栏所以需要偏移 -->
         <view class="product-item-{{index}}" style="position:relative;top:-{{virtualPostion}}rpx"/>
-        <view class="  y-pt-20 y-pl-20 y-flex">
+        <view class="  y-p-t-20 y-p-l-20 y-flex">
 
             <!--            <view class="y-font-l y-font-blod y-line-height-200">-->
             <!--                {{item.title}}-->
@@ -44,7 +44,7 @@
                 <van-image class="" height="250rpx" width="250rpx" fit="widthFix"
                            src="{{item.list[0].url}}"></van-image>
             </view>
-            <view class="y-flex-1 y-padding-lr y-line-height-150 y-flex-col y-align-between"
+            <view class="y-flex-1 y-p-lr-30 y-line-height-150 y-flex-col y-align-between"
                   bindtap="go"
                   data-url="product/product-detail"
                   data-id="{{item.id}}">
@@ -66,13 +66,13 @@
             </view>
 
         </view>
-        <view class="y-pb-20 y-pt-20 ">
+        <view class="y-p-b-20 y-p-t-20 ">
             <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
                 <view class="scroll-view-item " wx:for="{{item.list}}" wx:key="index" bindtap="go"
                       data-url="product/product-detail"
                       data-id="{{item.id}}"
                 >
-                    <van-image class="y-padding-lr" height="80rpx" width="80rpx" fit="fill" round
+                    <van-image class="y-p-lr-30" height="80rpx" width="80rpx" fit="fill" round
                                src="{{item.url}}"></van-image>
                     <view class="y-center">
                         {{item.onsale_price}}
@@ -84,6 +84,6 @@
     <float-button text="分享" icon="share" open-type="share"></float-button>
     <float-button text="帮我设计穿法搭配" width="300rpx" size="34rpx" bottom="150" bindtap="tapFeedback"></float-button>
 
-    <!--    <view class="y-padding-t"></view>-->
+    <!--    <view class="y-p-t-30"></view>-->
     <footer></footer>
 </view>

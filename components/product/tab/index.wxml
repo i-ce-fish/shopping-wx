@@ -4,7 +4,7 @@
           bindtap="ontap" data-index="{{index}}"
     >
 
-        <view class="text y-padding-lr y-font-blod">
+        <view class="text y-p-lr-30 y-font-blod">
             {{item.title}}
             <view class="{{item.active?'under-line':''}} ">
 

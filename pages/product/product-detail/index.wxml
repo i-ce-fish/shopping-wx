@@ -7,7 +7,7 @@
     <view>
         <!--        <top-sticky list="{{topSticky}}" activeIndex="0" ></top-sticky>-->
 
-        <view class="y-mt-20">
+        <view class="y-m-t-20">
             <van-sticky>
 
                 <view class=" y-flex  y-align-around y-vertical-center y-bgc-white y-shadow-b "
@@ -29,7 +29,7 @@
 
     </view>
     <card padding="0">
-        <view class="pro-box-top y-padding-all y-bgc-white y-mt-20">
+        <view class="pro-box-top y-p-30 y-bgc-white y-m-t-20">
             <view class="y-font-l y-font-blod">{{product.category}} {{product.product_name}} {{product.product_sn}}
             </view>
         </view>
@@ -47,7 +47,7 @@
             <!--            <carousel imgs="{{product.carousels}}" height="750rpx"></carousel>-->
 
         </view>
-        <view class="y-padding-all y-bgc-white ">
+        <view class="y-p-30 y-bgc-white ">
             <view class="y-right y-font-s y-color-gray">
                 初上市价格(吊牌价)：￥{{product.original_price}}
             </view>
@@ -86,7 +86,7 @@
                         货号/款号: {{product.parm.code}}
                     </view>
                     <view>
-                        <view class="y-font-blod y-pt-20">
+                        <view class="y-font-blod y-p-t-20">
                             上市季节
                         </view>
                         <view>
@@ -94,7 +94,7 @@
                         </view>
                     </view>
                     <view>
-                        <view class="y-font-blod y-pt-20">
+                        <view class="y-font-blod y-p-t-20">
                             材质成分
                         </view>
                         <view>
@@ -105,7 +105,7 @@
                     </view>
 
                     <view>
-                        <view class="y-font-blod y-pt-20">
+                        <view class="y-font-blod y-p-t-20">
                             颜色/图案
                         </view>
                         <!--                        <text wx:for="{{product.parm.colors}}" wx:key="index">{{item.name}}{{item.code}}</text>-->
@@ -116,7 +116,7 @@
                     </view>
 
                     <view>
-                        <view class="y-font-blod y-pt-20">
+                        <view class="y-font-blod y-p-t-20">
                             上市尺码
                         </view>
                         <view class="y-flex y-flex-wrap">
@@ -131,7 +131,7 @@
                     </view>
 
                     <view>
-                        <view class="y-font-blod y-pt-20">
+                        <view class="y-font-blod y-p-t-20">
                             版型
                         </view>
                         <view class="y-flex y-flex-wrap ">
@@ -143,7 +143,7 @@
                     </view>
 
                     <view>
-                        <view class="y-font-blod y-pt-20">
+                        <view class="y-font-blod y-p-t-20">
                             风格/元素
                         </view>
                         <view class="y-flex-wrap y-flex ">
@@ -156,7 +156,7 @@
                     </view>
 
                     <view>
-                        <view class="y-font-blod y-pt-20">细节特征</view>
+                        <view class="y-font-blod y-p-t-20">细节特征</view>
                         <view class="y-flex-wrap y-flex">
                             <view class="y-col-4"
                                   wx:for="{{product.parm.details}}" wx:key="index">
@@ -166,7 +166,7 @@
                     </view>
 
                     <view>
-                        <view class="y-font-blod y-pt-20">洗涤信息</view>
+                        <view class="y-font-blod y-p-t-20">洗涤信息</view>
                         <view>
                             {{product.parm.washInfo}}
                         </view>
@@ -201,7 +201,7 @@
                                 <view class="y-color-gray y-line-height-180 y-wrap">
                                     {{product.introduction.style.fashion}}
                                 </view>
-                                <view class="y-pt-20 y-padding-b">
+                                <view class="y-p-t-20 y-p-b-30">
                                     <carousel imgs="{{product.introduction.style.carousels}}" interval="5000"
                                               width="100%"
                                               fit="widthFix"></carousel>
@@ -219,7 +219,7 @@
                                     {{product.introduction.style.detail}}
                                 </view>
                                 <!--                    todo imgs-->
-                                <view class="y-pt-20 y-padding-b">
+                                <view class="y-p-t-20 y-p-b-30">
                                     <view wx:for="{{product.introduction.style.detailImgs}}" wx:key="index">
                                         <van-image width="100%" fit="widthFix" src="{{item}}"></van-image>
                                     </view>
@@ -258,14 +258,14 @@
 
             </van-collapse-item>
 
-            <!--            <van-collapse-item title=" 搭配推荐" name="3" content-class="y-padding-none">-->
-            <!--                <view class="y-center y-font-xxl  y-padding-all">搭配推荐</view>-->
+            <!--            <van-collapse-item title=" 搭配推荐" name="3" content-class="y-p-0">-->
+            <!--                <view class="y-center y-font-xxl  y-p-30">搭配推荐</view>-->
             <!--                <van-image src="https://www.uniqlo.cn/hmall/test/u0000000015484/model/rank1/first/591-822/1.jpg"-->
             <!--                           width="100%" fit="widthFix"></van-image>-->
             <!--            </van-collapse-item>-->
 
-            <!--            <van-collapse-item title="商品细节" name="4" content-class="y-padding-none">-->
-            <!--                <view class="y-center y-font-xxl  y-padding-all">商品细节</view>-->
+            <!--            <van-collapse-item title="商品细节" name="4" content-class="y-p-0">-->
+            <!--                <view class="y-center y-font-xxl  y-p-30">商品细节</view>-->
             <!--                <van-image wx:for="{{product.details}}" wx:key="index" src="{{item.url}}" width="100%"-->
             <!--                           fit="widthFix"></van-image>-->
             <!--            </van-collapse-item>-->
@@ -276,7 +276,7 @@
                     <wear-list list="{{wearList}}"></wear-list>
                 </view>
             </van-collapse-item>
-            <van-collapse-item title="近似推荐" content-class="y-padding-none">
+            <van-collapse-item title="近似推荐" content-class="y-p-0">
                 <view>
                     <product-list products="{{similarProducts}}"></product-list>
                 </view>
@@ -291,9 +291,9 @@
 
     <!--    搭配推荐-->
 
-    <!--    <view custom-class="y-padding-none " class="y-bgc-white y-mt-20" id="wear-recommend">-->
+    <!--    <view custom-class="y-p-0 " class="y-bgc-white y-m-t-20" id="wear-recommend">-->
     <!--        <view class="">-->
-    <!--            <view class="y-font-l  y-font-blod y-padding-all">搭配推荐</view>-->
+    <!--            <view class="y-font-l  y-font-blod y-p-30">搭配推荐</view>-->
     <!--            <view>-->
     <!--                <wear-list list="{{wearList}}"></wear-list>-->
     <!--            </view>-->
@@ -302,9 +302,9 @@
 
 
     <!--近似推荐-->
-    <!--    <card custom-class="y-padding-none ">-->
+    <!--    <card custom-class="y-p-0 ">-->
     <!--        <view class="">-->
-    <!--            <view class="y-font-l  y-font-blod y-padding-all">近似推荐</view>-->
+    <!--            <view class="y-font-l  y-font-blod y-p-30">近似推荐</view>-->
     <!--            <product-list products="{{similarProducts}}"></product-list>-->
     <!--        </view>-->
     <!--    </card>-->
@@ -316,13 +316,13 @@
     <!-- 弹出层 -->
     <van-popup show="{{ showPopup }}" position="bottom" closeable custom-style="height: 100%;"
                bind:close="onClosePopup">
-        <view class="popup-box y-padding-all">
+        <view class="popup-box y-p-30">
 
-            <view class="popup-box-title y-padding-tb">
+            <view class="popup-box-title y-p-tb-30">
                 {{product.category}} {{product.product_name}}{{product.code}}
             </view>
             <view class="popup-box-top y-flex y-align-between">
-                <view class="y-col-4 y-padding-r">
+                <view class="y-col-4 y-p-r-30">
                     <van-image src="https://www.uniqlo.cn/hmall/test/u0000000016501/main/first/561/1.jpg" width="100%"
                                fit="widthFix">
                     </van-image>
@@ -330,7 +330,7 @@
                 <!-- todo  文本过长会允许横向滑动 -->
                 <view class="y-col-8">
                     <view class="y-font-xl y-color-red">内购价 ￥{{product.onsale_price}}</view>
-                    <view class="y-padding-tb y-flex">
+                    <view class="y-p-tb-30 y-flex">
 
                         <view>
                             已选:
@@ -356,7 +356,7 @@
                 </view>
                 <view class="y-flex">
                     <view wx:for="{{colors}}" wx:key="index"
-                          class="y-pt-20 y-pl-20 y-flex-col  ">
+                          class="y-p-t-20 y-p-l-20 y-flex-col  ">
                         <view class="color-box {{item.checked&&!item.disabled?'color-checked':''}}">
                             <view class="y-h-w-100 y-flex y-align-center y-vertical-center  y-center">
                                 <image style="height: 55rpx;width: 55rpx;{{item.disabled?'opacity:0.2;':''}};"
@@ -364,7 +364,7 @@
                                        src=" {{item.color_thumbnail}}"
                                        data-item="{{item}}" data-index="{{index}}" bindtap="onColor"/>
                             </view>
-                            <!--                            <view class="y-pt-20">-->
+                            <!--                            <view class="y-p-t-20">-->
                             <!--                                {{item.name}}-->
                             <!--                            </view>-->
                         </view>
@@ -432,8 +432,8 @@
                 </view>
             </view>
 
-            <!--            <view class="y-flex y-align-between y-padding-t">-->
-            <view class="y-padding-t">
+            <!--            <view class="y-flex y-align-between y-p-t-30">-->
+            <view class="y-p-t-30">
                 <van-button size="large" type="danger" bind:click="onConfirmCart">确定</van-button>
 
             </view>

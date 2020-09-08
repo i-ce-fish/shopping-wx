@@ -7,7 +7,7 @@
     <view class="">
         <catalog-tab bindclick="onTab"></catalog-tab>
     </view>
-    <view class="y-padding-t"></view>
+    <view class="y-p-t-30"></view>
     <carousel imgs="{{carousels}}" height="750rpx"></carousel>
 
 

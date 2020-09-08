@@ -1,6 +1,6 @@
 <!--高仿优衣库的商品列表展示   type-b 长条形-->
 
-<view class="y-flex y-padding-t y-padding-lr"
+<view class="y-flex y-p-t-30 y-p-lr-30"
       bindtap="go" data-url="/pages/product/product-detail/index"
       data-id="{{product.id}}">
     <view class="">
@@ -8,7 +8,7 @@
     </view>
 
     <view class="y-flex-col y-align-between">
-        <view class="y-flex-1  y-flex-col y-align-between y-box  y-padding-lr   y-line-height-200 ">
+        <view class="y-flex-1  y-flex-col y-align-between y-box  y-p-lr-30   y-line-height-200 ">
             <!--        <view class="y-flex y-align-between y-font-s">-->
             <!--            <view>-->
             <!--                {{product.category}}-->

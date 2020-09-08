@@ -8,9 +8,9 @@
     <view>
         <van-sticky>
             <!--width100%挡住关闭按钮-->
-            <view class="y-padding-all y-bgc-white y-flex y-align-between">
+            <view class="y-p-30 y-bgc-white y-flex y-align-between">
                 <view>
-                    <text class="y-font-blod y-font-xxl y-line-height-200 y-padding-r">查询条件</text>
+                    <text class="y-font-blod y-font-xxl y-line-height-200 y-p-r-30">查询条件</text>
                     <text>查询结果：1234件</text>
                 </view>
                 <view>
@@ -27,8 +27,8 @@
             <!--                                data-index="{{index}}"-->
             <!--                                bind:change="tapCheckbox"-->
             <!--                                wx:for="{{filterData}}" wx:key="index">-->
-            <!--                <view class=" y-padding-lr">-->
-            <!--                    <view class="y-flex y-align-between y-vertical-center  y-padding-t">-->
+            <!--                <view class=" y-p-lr-30">-->
+            <!--                    <view class="y-flex y-align-between y-vertical-center  y-p-t-30">-->
             <!--                        <view class="y-font-blod y-font-xl y-line-height-200">{{item.name}}-->
             <!--                        </view>-->
             <!--                        &lt;!&ndash;                        折叠的时候只显示前三个&ndash;&gt;-->
@@ -41,7 +41,7 @@
             <!--                        </view>-->
             <!--                    </view>-->
             <!--                    <view class="y-flex  y-flex-wrap y-vertical-center">-->
-            <!--                        <van-checkbox name="{{index}}" class="y-col-4 y-pt-20 "-->
+            <!--                        <van-checkbox name="{{index}}" class="y-col-4 y-p-t-20 "-->
             <!--                                      checked-color="#378694" shape="square"-->
             <!--                                      wx:for="{{item.collapse?3:item.item}}"-->
             <!--                                      wx:for-item="innerItem"-->

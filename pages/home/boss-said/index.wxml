@@ -24,13 +24,13 @@
                     style="height:240rpx; background:url('{{item.head.img}}'); position: relative">
                 <view class="title-bg">
 
-                    <view class="ellipsis y-color-white y-padding-lr y-font-l "
+                    <view class="ellipsis y-color-white y-p-lr-30 y-font-l "
                           style="position: absolute;bottom: 10rpx">
                         {{item.head.title}}
                     </view>
                 </view>
             </view>
-            <view class="y-padding-lr y-pt-20 y-line-height-180 y-color-gray">
+            <view class="y-p-lr-30 y-p-t-20 y-line-height-180 y-color-gray">
                 {{item.head.introduction}}
             </view>
 

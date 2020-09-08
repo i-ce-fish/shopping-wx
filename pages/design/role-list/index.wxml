@@ -7,7 +7,7 @@
             <van-radio name="{{index}}">
                 {{item.name}}({{item.height}}cm/{{item.weight}}kg)
             </van-radio>
-            <view class="y-pt-20">
+            <view class="y-p-t-20">
                 <view class="y-flex y-align-around  y-border-all y-bgc">
                     <view>肩宽</view>
                     <view>胸围</view>
@@ -21,19 +21,19 @@
                     <view>{{item.hips}}</view>
                 </view>
             </view>
-            <view class="y-pt-20 y-right">
-                <van-button class="y-pr-20" bindtap="go" data-url="design/role-form?id=1">编辑
+            <view class="y-p-t-20 y-right">
+                <van-button class="y-p-r-20" bindtap="go" data-url="design/role-form?id=1">编辑
                 </van-button>
                 <van-button type="danger" bindtap="tapDel">删除</van-button>
             </view>
         </card>
     </van-radio-group>
 
-    <view class="y-pt-20 y-shadow-b">
+    <view class="y-p-t-20 y-shadow-b">
         <van-cell title="添加其他角色尺码信息" isLink url="design/role-form"/>
     </view>
 
-    <view class="y-padding-all">
+    <view class="y-p-30">
         尊敬的会员，店铺收到您的需求，
         我们将通过微信联系您，您也可以打打电话联系我
     </view>

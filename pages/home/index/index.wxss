@@ -72,7 +72,7 @@
     padding-right: 0 !important;
 }
 
-.y-padding-lr-none {
+.y-p-lr-30-none {
     padding-right: 0 !important;
     padding-left: 0 !important;
 }

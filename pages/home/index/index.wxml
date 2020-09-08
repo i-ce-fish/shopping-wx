@@ -4,21 +4,21 @@
     <view class="swiper-box">
         <carousel imgs="{{imgs}}" interval="4000" height="375rpx" fit="fill"></carousel>
     </view>
-    <view class=" y-padding-all y-center y-bgc-white  y-line-height-200 y-underline "
+    <view class=" y-p-30 y-center y-bgc-white  y-line-height-200 y-underline "
           bindtap="tapAddress">
         店址: 丽水中山街店522号(百货大楼旁)
     </view>
     <card padding="0">
-        <view style="background-color:#fde3a7;" class="y-padding-all">
+        <view style="background-color:#fde3a7;" class="y-p-30">
             <view class="y-flex y-align-between y-line-height-200 ">
-                <view class="avatar y-col-2 y-flex y-vertical-center y-padding-r">
+                <view class="avatar y-col-2 y-flex y-vertical-center y-p-r-30">
                     <van-image round width="120rpx" height="120rpx" fit="fill" src="{{imgs[0]}}" bindtap="test"/>
                 </view>
                 <view class="y-col-10 y-flex ">
                     <view class="  y-col-10 ">
                         <view class="">{{user.name}}</view>
                         <view class=" y-flex ">
-                            <view class="y-padding-r">
+                            <view class="y-p-r-30">
                                 <view class="">{{user.vip_level}}级会员</view>
                                 <view class="">账户余额 ￥1788</view>
                             </view>
@@ -40,17 +40,15 @@
                     </view>
                 </view>
             </view>
-            <view class="y-padding-none y-line-height-200">
+            <view class="y-p-0 y-line-height-200">
                 <view wx:for="{{customerDiscount}}" wx:key="index" bindtap="go" data-url="rule/integral"
                       data-id="{{item.id}}">
                     {{item.title}}
                 </view>
             </view>
         </view>
-
-
     </card>
-    <view class="y-mt-20 " style="z-index: 999;height: 120rpx">
+    <view class="y-m-t-20 " style="z-index: 999;height: 120rpx">
 
         <tui-sticky scrollTop="{{scrollTop}}">
             <view slot="header">
@@ -81,7 +79,7 @@
                           title-class="cell-title"
                           custom-class="cell-title-box "
                 >
-                    <view slot="icon" class="y-padding-lr">
+                    <view slot="icon" class="y-p-lr-30">
                         <van-icon name="home-o" size="40rpx"></van-icon>
                     </view>
                 </van-cell>
@@ -118,7 +116,7 @@
                             <view>
                                 {{item.subtitle}}
                             </view>
-                            <view class="y-flex y-align-center y-font-blod y-font-xxl y-padding-tb y-color-red"
+                            <view class="y-flex y-align-center y-font-blod y-font-xxl y-p-tb-30 y-color-red"
                                   style="white-space: pre-wrap">
                                 {{item.title}}
                             </view>
@@ -157,7 +155,7 @@
                     <view slot="content">
                         <view>
                             <view class="y-flex y-bgc-white y-vertical-center y-shadow-b">
-                                <view class="y-pb-20 y-padding-lr">
+                                <view class="y-p-b-20 y-p-lr-30">
                                     <catalog-filter list="{{wearFilter}}" bindclick="tapWearFilter"></catalog-filter>
                                 </view>
                             </view>
@@ -181,7 +179,7 @@
         </view>
         <view class="position-rel">
             <view class="scroll-item-2 scroll-item"></view>
-            <card custom-class="y-padding-lr-none">
+            <card custom-class="y-p-lr-30-none">
                 <!--                todo -->
                 <tui-sticky scrollTop="{{scrollTop}}" container="true" id="newWear" bindsticky="bindSticky"
                             data-index="2">
@@ -207,7 +205,7 @@
                     <view slot="content">
                         <view>
                             <view class="y-flex y-bgc-white y-vertical-center y-shadow-b">
-                                <view class="y-pb-20 y-pr-20 y-pl-20 y-col-12">
+                                <view class="y-p-b-20 y-p-r-20 y-p-l-20 y-col-12">
                                     <catalog-filter list="{{newFilter}}" bindclick="tapWearFilter"></catalog-filter>
                                 </view>
                             </view>
@@ -264,13 +262,13 @@
                 <!--                <van-tabs>-->
                 <!--                    <van-tab title="听老板娘说">-->
 
-                <view class="y-pt-20 y-flex y-align-around">
+                <view class="y-p-t-20 y-flex y-align-around">
                     <van-button type="default" bindtap="go" data-url="home/boss-said">听老板娘说</van-button>
                     <van-button type="default" bindtap="go" data-url="home/customer-said">对老板娘说
                     </van-button>
                 </view>
 
-                <view class="y-pt-20">
+                <view class="y-p-t-20">
                     <video
                             style="width: 100%"
                             src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
@@ -280,7 +278,7 @@
                     >
                     </video>
                 </view>
-                <view class="y-flex y-align-around y-vertical-center y-pt-20">
+                <view class="y-flex y-align-around y-vertical-center y-p-t-20">
                     <view class="y-col-6 y-line-height-180 y-wrap">{{shop.introduction}}
                     </view>
                     <view class="y-center y-col-6">
@@ -311,7 +309,7 @@
         <!--                &lt;!&ndash;                   <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{false}}">&ndash;&gt;-->
         <!--                &lt;!&ndash;                       <view class="y-color-white">{{item.catalog_name}}</view>&ndash;&gt;-->
         <!--                &lt;!&ndash;                   </tui-list-cell>&ndash;&gt;-->
-        <!--                &lt;!&ndash;                   <view class="item-box y-padding-lr y-bgc-white   ">&ndash;&gt;-->
+        <!--                &lt;!&ndash;                   <view class="item-box y-p-lr-30 y-bgc-white   ">&ndash;&gt;-->
         <!--                &lt;!&ndash;                       <view wx:for="{{item.childList}}" wx:key="index"&ndash;&gt;-->
         <!--                &lt;!&ndash;                             bindtap="onTapDetail" data-id="{{item.id}}">{{item.title}}&ndash;&gt;-->
         <!--                &lt;!&ndash;                       </view>&ndash;&gt;-->
@@ -324,7 +322,7 @@
         <!--                          custom-class="test"-->
         <!--                >-->
         <!--                </van-cell>-->
-        <!--                <view class="item-box y-padding-lr y-bgc-white   ">-->
+        <!--                <view class="item-box y-p-lr-30 y-bgc-white   ">-->
         <!--                    <view wx:for="{{item.childList}}" wx:key="index"-->
         <!--                          bindtap="onTapDetail" data-id="{{item.id}}">-->
         <!--                        {{item.title}}-->
@@ -339,7 +337,7 @@
         <!--                <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">-->
         <!--                    <view class="y-font-l y-color-white">导购帮我找货</view>-->
         <!--                </tui-list-cell>-->
-        <!--                <view class="item-box  y-padding-lr y-bgc-white ">-->
+        <!--                <view class="item-box  y-p-lr-30 y-bgc-white ">-->
         <!--                    <view class="">1、请告诉店铺&#45;&#45;是谁穿：</view>-->
         <!--                    <view class="y-flex y-align-right">男女，年龄，身高，身材，肤色，职业</view>-->
         <!--                    <view class="">2、请告诉店铺&#45;&#45;要什么：</view>-->
@@ -353,7 +351,7 @@
         <!--                <tui-list-cell bgcolor="#EE4225" hover="{{false}}" arrow="{{true}}">-->
         <!--                    <view class="y-font-l y-color-white">我的好友圈</view>-->
         <!--                </tui-list-cell>-->
-        <!--                <view class="item-box  y-padding-lr y-bgc-white ">-->
+        <!--                <view class="item-box  y-p-lr-30 y-bgc-white ">-->
         <!--                    <view class="">衷心感谢您介绍亲友照顾店铺生意！</view>-->
         <!--                    <view class="y-color-red">您的亲友可以享受您的待遇</view>-->
         <!--                    <view class="">另送您一点薄礼以示谢意！</view>-->

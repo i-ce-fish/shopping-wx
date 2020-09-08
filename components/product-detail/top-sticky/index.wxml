@@ -1,4 +1,4 @@
-<view class="y-mt-20">
+<view class="y-m-t-20">
     <van-sticky>
 
         <view class="top-box y-flex  y-align-around y-vertical-center y-bgc-white y-shadow-b ">

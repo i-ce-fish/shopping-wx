@@ -5,8 +5,8 @@
         <van-checkbox-group value="{{item.checked}}" data-prop="list[{{index}}].checked"
                             data-index="{{index}}"
                             bind:change="tapCheckbox">
-            <view class=" y-padding-lr">
-                <view class="y-flex y-align-between y-vertical-center  y-padding-t">
+            <view class=" y-p-lr-30">
+                <view class="y-flex y-align-between y-vertical-center  y-p-t-30">
                     <view class=" y-font-xl y-line-height-200">{{item.title}}
                     </view>
                     <!--                        折叠的时候只显示前三个-->
@@ -19,7 +19,7 @@
                     </view>
                 </view>
                 <view class="y-flex  y-flex-wrap y-vertical-center">
-                    <van-checkbox name="{{index}}" class="y-col-{{12/num}} y-pt-20 "
+                    <van-checkbox name="{{index}}" class="y-col-{{12/num}} y-p-t-20 "
                                   checked-color="#378694" shape="square"
                                   wx:for="{{item.collapse?num:item.item}}"
                                   wx:for-item="innerItem"
@@ -37,8 +37,8 @@
         <van-radio-group value="{{item.checked}}" data-prop="list[{{index}}].checked"
                          data-index="{{index}}"
                          bind:change="tapCheckbox">
-            <view class=" y-padding-lr">
-                <view class="y-flex y-align-between y-vertical-center  y-padding-t">
+            <view class=" y-p-lr-30">
+                <view class="y-flex y-align-between y-vertical-center  y-p-t-30">
                     <view class=" y-font-xl y-line-height-200">{{item.title}}
                     </view>
                     <!--                        折叠的时候只显示前三个-->
@@ -51,7 +51,7 @@
                     </view>
                 </view>
                 <view class="y-flex  y-flex-wrap y-vertical-center">
-                    <van-radio name="{{index}}" class="y-col-{{12/num}} y-pt-20 "
+                    <van-radio name="{{index}}" class="y-col-{{12/num}} y-p-t-20 "
                                checked-color="#378694"
                                wx:for="{{item.collapse?num:item.item}}"
                                wx:for-item="innerItem"

@@ -2,12 +2,12 @@
 <view class=" {{listView?'y-flex':'y-flex-col y-align-between'}}"
       bindtap="go" data-url="/pages/product/product-detail/index"
       data-id="{{product.id}}">
-    <view class=" y-padding-b">
+    <view class=" y-p-b-30">
         <van-image src="{{product.img}}" width="375rpx" height="375rpx" fit="fill" class=""/>
 
     </view>
 
-    <view class="y-box  y-padding-lr y-padding-b  y-line-height-200 {{listView?'y-flex-col':''}}">
+    <view class="y-box  y-p-lr-30 y-p-b-30  y-line-height-200 {{listView?'y-flex-col':''}}">
         <view>
             <van-image style="padding-right: 10rpx"
                        wx:for="{{product.colors}}" wx:key="index"

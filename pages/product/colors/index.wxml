@@ -1,6 +1,6 @@
 <!--pages/product/colors/main.wxml-->
 <view class="container">
-    <view class="pro-box-top y-padding-all">
+    <view class="pro-box-top y-p-30">
         <view class="y-font-l y-font-blod">{{product.category}} {{product.name}} {{product.code}}</view>
         <!-- <view class="y-color-red">初上市尺码范围: XS-XXL</view> -->
 
@@ -17,7 +17,7 @@
 
     <view class="colors-box y-flex y-align-center y-bgc-white">
         <view wx:for="{{product.colors}}" wx:key="index"
-              class="y-padding-t y-padding-r y-flex-col y-center">
+              class="y-p-t-30 y-p-r-30 y-flex-col y-center">
             <van-image src=" {{item.color_thumbnail}}" width="50rpx" fit="widthFix"></van-image>
             {{item.code}}{{item.name}}
         </view>

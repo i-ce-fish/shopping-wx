@@ -1,7 +1,7 @@
 <view>
     <search-bar></search-bar>
 
-    <view class="y-bgc-white y-padding-all">
+    <view class="y-bgc-white y-p-30">
         <article-list list="{{list}}"/>
     </view>
     <footer></footer>

@@ -12,7 +12,7 @@ Component({
         pagesize: 10,
         //列表总长
         total: 0,
-        //已加载长度
+        //已加载列表长度
         currentTotal: 0
     },
 

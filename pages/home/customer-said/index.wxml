@@ -1,5 +1,5 @@
 <view>
-    <view class="y-font-xl y-color-gray y-line-height-180 y-pt-20 y-padding-all">
+    <view class="y-font-xl y-color-gray y-line-height-180 y-p-t-20 y-p-30">
         {{shop.introduction}}
     </view>
     <big-card title="有4种方式能找到我">
@@ -11,7 +11,7 @@
                 <van-button custom-style="width:80%" open-type="contact" type="primary">客服会话</van-button>
             </view>
         </view>
-        <view class="y-flex y-align-between y-p-20 y-border-all y-mb-20 ">
+        <view class="y-flex y-align-between y-p-20 y-border-all y-m-b-20 ">
 
             <view>
                 <view class="y-font-xl y-line-height-200">
@@ -58,7 +58,7 @@
         </view>
     </big-card>
 
-    <view class="y-padding-all y-center">
+    <view class="y-p-30 y-center">
 
         <van-button type="primary" bindtap="tapCall">对货品有建议和需求，请点击这里</van-button>
     </view>

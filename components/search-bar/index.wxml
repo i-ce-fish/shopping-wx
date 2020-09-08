@@ -1,6 +1,6 @@
 <view class="search-bar-box">
     <view class="box {{show?'':'shadow' }} y-flex y-vertical-center ">
-        <view class="y-padding-l" wx:if="{{scanable}}" bindtap="tapScan">
+        <view class="y-p-l-30" wx:if="{{scanable}}" bindtap="tapScan">
             <van-icon name="scan" size="40rpx"></van-icon>
         </view>
         <view class="sb-box y-col-11">
