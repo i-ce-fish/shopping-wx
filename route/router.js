@@ -99,7 +99,7 @@ function permission(page) {
 
         //未登录
         // if (!wx.getStorageSync('token')) {
-        //     this.push('user/login/index')
+        //     wx.redirect({url:'path'})
         // }
         //没有权限
         if (!permission(page)) {
