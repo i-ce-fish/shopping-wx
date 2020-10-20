@@ -20,10 +20,12 @@ Object.assign(global, {
 });
 
 
-
-//wx直接调用的全局方法
-// 路由跳转并传参
-//ps url已经带有参数的情况未处理
+/**
+ //wx直接调用的全局方法
+ // 路由跳转并传参
+ //ps url已经带有参数的情况未处理
+ * @已废弃, 需要统一使用app.$router的方式进行跳转
+ */
 wx.$go = function (url, data) {
     // 拼接参数
     let str = ""
